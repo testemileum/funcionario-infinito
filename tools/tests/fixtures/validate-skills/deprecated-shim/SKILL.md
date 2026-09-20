@@ -1,9 +1,9 @@
 ---
 name: deprecated-shim
-description: 'DEPRECATED — consolidated into bmad-foo; this skill will be removed in v7 in favor of `bmad-foo`.'
+description: 'DEPRECATED — consolidated into funcionario-foo; this skill will be removed in v7 in favor of `funcionario-foo`.'
 ---
 
-# DEPRECATED — forwards to bmad-foo
+# DEPRECATED — forwards to funcionario-foo
 
-This skill was consolidated into `bmad-foo` and is retained as a thin compatibility
-shim so existing invocations keep working. New work should invoke `bmad-foo` directly.
+This skill was consolidated into `funcionario-foo` and is retained as a thin compatibility
+shim so existing invocations keep working. New work should invoke `funcionario-foo` directly.

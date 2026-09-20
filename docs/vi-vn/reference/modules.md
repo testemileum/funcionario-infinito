@@ -5,19 +5,19 @@ sidebar:
   order: 5
 ---
 
-BMad được mở rộng thông qua các module chính thức mà bạn chọn trong quá trình cài đặt. Những module bổ sung này cung cấp agent, workflow và task chuyên biệt cho các lĩnh vực cụ thể, vượt ra ngoài phần lõi tích hợp sẵn và BMM (Agile suite).
+Funcionário Infinito được mở rộng thông qua các module chính thức mà bạn chọn trong quá trình cài đặt. Những module bổ sung này cung cấp agent, workflow và task chuyên biệt cho các lĩnh vực cụ thể, vượt ra ngoài phần lõi tích hợp sẵn và BMM (Agile suite).
 
 :::tip[Cài đặt module]
-Chạy `npx bmad-method install` rồi chọn những module bạn muốn. Trình cài đặt sẽ tự xử lý phần tải về, cấu hình và tích hợp vào IDE.
+Chạy `npx funcionario-method install` rồi chọn những module bạn muốn. Trình cài đặt sẽ tự xử lý phần tải về, cấu hình và tích hợp vào IDE.
 :::
 
-## BMad Builder
+## Funcionário Infinito Builder
 
-Tạo agent tùy chỉnh, workflow tùy chỉnh và module chuyên biệt theo lĩnh vực với sự hỗ trợ có hướng dẫn. BMad Builder là meta-module để mở rộng chính framework này.
+Tạo agent tùy chỉnh, workflow tùy chỉnh và module chuyên biệt theo lĩnh vực với sự hỗ trợ có hướng dẫn. Funcionário Infinito Builder là meta-module để mở rộng chính framework này.
 
 - **Mã:** `bmb`
-- **npm:** [`bmad-builder`](https://www.npmjs.com/package/bmad-builder)
-- **GitHub:** [bmad-code-org/bmad-builder](https://github.com/bmad-code-org/bmad-builder)
+- **npm:** [`funcionario-builder`](https://www.npmjs.com/package/funcionario-builder)
+- **GitHub:** [funcionario-infinito/funcionario-builder](https://github.com/funcionario-infinito/funcionario-builder)
 
 **Cung cấp:**
 
@@ -31,8 +31,8 @@ Tạo agent tùy chỉnh, workflow tùy chỉnh và module chuyên biệt theo l
 Bộ công cụ vận hành bởi AI dành cho sáng tạo có cấu trúc, phát ý tưởng và đổi mới trong giai đoạn đầu phát triển. Bộ này cung cấp nhiều agent giúp brainstorming, design thinking và giải quyết vấn đề bằng các framework đã được kiểm chứng.
 
 - **Mã:** `cis`
-- **npm:** [`bmad-creative-intelligence-suite`](https://www.npmjs.com/package/bmad-creative-intelligence-suite)
-- **GitHub:** [bmad-code-org/bmad-module-creative-intelligence-suite](https://github.com/bmad-code-org/bmad-module-creative-intelligence-suite)
+- **npm:** [`funcionario-creative-intelligence-suite`](https://www.npmjs.com/package/funcionario-creative-intelligence-suite)
+- **GitHub:** [funcionario-infinito/funcionario-module-creative-intelligence-suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)
 
 **Cung cấp:**
 
@@ -46,8 +46,8 @@ Bộ công cụ vận hành bởi AI dành cho sáng tạo có cấu trúc, phá
 Các workflow phát triển game có cấu trúc, được điều chỉnh cho Unity, Unreal, Godot và các engine tùy chỉnh. Hỗ trợ độ sâu planning từ prototype nhanh đến sản xuất toàn diện; implementation hội tụ vào Build.
 
 - **Mã:** `gds`
-- **npm:** [`bmad-game-dev-studio`](https://www.npmjs.com/package/bmad-game-dev-studio)
-- **GitHub:** [bmad-code-org/bmad-module-game-dev-studio](https://github.com/bmad-code-org/bmad-module-game-dev-studio)
+- **npm:** [`funcionario-game-dev-studio`](https://www.npmjs.com/package/funcionario-game-dev-studio)
+- **GitHub:** [funcionario-infinito/funcionario-module-game-dev-studio](https://github.com/funcionario-infinito/funcionario-module-game-dev-studio)
 
 **Cung cấp:**
 
@@ -61,8 +61,8 @@ Các workflow phát triển game có cấu trúc, được điều chỉnh cho U
 Chiến lược kiểm thử cấp doanh nghiệp, hướng dẫn tự động hóa và quyết định release gate thông qua một agent chuyên gia cùng chín workflow có cấu trúc. TEA vượt xa QA agent tích hợp sẵn nhờ ưu tiên theo rủi ro và truy vết yêu cầu.
 
 - **Mã:** `tea`
-- **npm:** [`bmad-method-test-architecture-enterprise`](https://www.npmjs.com/package/bmad-method-test-architecture-enterprise)
-- **GitHub:** [bmad-code-org/bmad-method-test-architecture-enterprise](https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise)
+- **npm:** [`funcionario-method-test-architecture-enterprise`](https://www.npmjs.com/package/funcionario-method-test-architecture-enterprise)
+- **GitHub:** [funcionario-infinito/funcionario-method-test-architecture-enterprise](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)
 
 **Cung cấp:**
 
@@ -73,4 +73,4 @@ Chiến lược kiểm thử cấp doanh nghiệp, hướng dẫn tự động h
 
 ## Community Modules
 
-Các module cộng đồng và một chợ module đang được chuẩn bị. Hãy theo dõi [tổ chức BMad trên GitHub](https://github.com/bmad-code-org) để cập nhật.
+Các module cộng đồng và một chợ module đang được chuẩn bị. Hãy theo dõi [tổ chức Funcionário Infinito trên GitHub](https://github.com/funcionario-infinito) để cập nhật.

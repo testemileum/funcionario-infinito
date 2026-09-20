@@ -1,17 +1,17 @@
 ---
 title: 自主开发循环
-description: 以 bmad-build-auto 作为单次迭代 worker，自动执行 Build 实施模型的参考说明
+description: 以 funcionario-build-auto 作为单次迭代 worker，自动执行 Build 实施模型的参考说明
 sidebar:
   order: 7
 ---
 
-`bmad-build-auto` 是标准 [Build](../explanation/build.md) 实施模型的无人值守自动化入口。它接受同样广泛的直接意图和已规划工作，保留澄清、规划、实现和审查阶段，同时输出 orchestrator 可处理的终态。它自动执行同一实施循环，不定义第二条实施路径。
+`funcionario-build-auto` 是标准 [Build](../explanation/build.md) 实施模型的无人值守自动化入口。它接受同样广泛的直接意图和已规划工作，保留澄清、规划、实现和审查阶段，同时输出 orchestrator 可处理的终态。它自动执行同一实施循环，不定义第二条实施路径。
 
-这里有一条重要的架构边界：`bmad-build-auto` 负责 implementation run 及其生成的 spec artifact，但不负责 backlog policy。当 review 发现真实但不属于当前 story 的问题时，skill 会把 finding 记录在自己负责的 spec 中，仅此而已。是排入队列、去重、升级还是忽略，由 orchestrator 决定。
+这里有一条重要的架构边界：`funcionario-build-auto` 负责 implementation run 及其生成的 spec artifact，但不负责 backlog policy。当 review 发现真实但不属于当前 story 的问题时，skill 会把 finding 记录在自己负责的 spec 中，仅此而已。是排入队列、去重、升级还是忽略，由 orchestrator 决定。
 
 ## 它做什么
 
-`bmad-build-auto` 执行一次无人值守的开发循环迭代：
+`funcionario-build-auto` 执行一次无人值守的开发循环迭代：
 
 1. 澄清传入 intent
 2. 创建（或找到并恢复）spec 文件
@@ -21,7 +21,7 @@ sidebar:
 
 ## 前置条件
 
-该 skill 依赖运行 subagent 的能力。若 subagent 不可用，workflow 会以 `blocked` 和 `no subagents`  halt。若你在 subagent 会话里调用 skill 本身（例如「嘿 Claude，用 bmad-build-auto skill 跑 story 2–10，每个 story 一个 subagent」），该会话需要能 spawn 自己的 subagent。
+该 skill 依赖运行 subagent 的能力。若 subagent 不可用，workflow 会以 `blocked` 和 `no subagents`  halt。若你在 subagent 会话里调用 skill 本身（例如「嘿 Claude，用 funcionario-build-auto skill 跑 story 2–10，每个 story 一个 subagent」），该会话需要能 spawn 自己的 subagent。
 
 版本控制可选但强烈建议。若使用，working tree 必须 clean，且 agent 必须能够更新 repository metadata。
 
@@ -29,7 +29,7 @@ sidebar:
 
 ### 主要调用输入
 
-主输入是 invocation prompt。`bmad-build-auto` 把该 prompt 当作 workflow 输入，而不是 finished implementation plan。
+主输入是 invocation prompt。`funcionario-build-auto` 把该 prompt 当作 workflow 输入，而不是 finished implementation plan。
 
 支持的 intent 形态包括：
 
@@ -76,13 +76,13 @@ workflow 读取 `<spec-folder>/stories.yaml`，查找 `id` 匹配的条目。它
 
 激活时，workflow 解析：
 
-- `_bmad/config.toml`、`_bmad/config.user.toml`，以及 `_bmad/custom/` 下可选的团队/用户 override
+- `_funcionario/config.toml`、`_funcionario/config.user.toml`，以及 `_funcionario/custom/` 下可选的团队/用户 override
 - `customize.toml`、团队 override、用户 override 中的 workflow 自定义
 - workflow 配置中列出的 persistent facts —— 除非你主动添加，否则为空，默认不会加载任何内容
 
 还可能查看：
 
-- BMAD planning artifacts
+- FUNCIONARIO planning artifacts
 - epic 工作的 cached 或新编译 epic context 文件
 - 同一 epic 最近完成的 prior-story spec，以保持 continuity
 - folder+id dispatch 下同 spec 文件夹的其他 `stories/*.md` 记录（见 Folder+ID Dispatch）
@@ -197,7 +197,7 @@ halt 发生在尚无法从 story title  derive slug 时，write-back 回退到�
 
 workflow 在尚无 valid `spec_file` 时 halt（folder+id dispatch 外 —— 见上），写入：
 
-`{implementation_artifacts}/bmad-build-auto-result-<slug-or-timestamp>.md`
+`{implementation_artifacts}/funcionario-build-auto-result-<slug-or-timestamp>.md`
 
 记录 terminal status 和 blocking condition。
 
@@ -210,7 +210,7 @@ workflow 在尚无 valid `spec_file` 时 halt（folder+id dispatch 外 —— �
 
 ## Orchestrator 职责
 
-集成 `bmad-build-auto` 的 orchestrator 应：
+集成 `funcionario-build-auto` 的 orchestrator 应：
 
 - 一次传一个 coherent intent
 - Resume 时优先传 spec 路径 —— 或 folder+id dispatch 下同一 spec 文件夹和 story id
@@ -223,4 +223,4 @@ workflow 在尚无 valid `spec_file` 时 halt（folder+id dispatch 外 —— �
 
 实践中，`blocked` 通常表示 workflow 碰到 unattended 执行会不安全的局面。这往往是更高层 orchestrator、其他 workflow 或人工接手的节点。
 
-解决 blocked run 后，orchestrator 通常应启动新的 `bmad-build-auto` run。若要复用 prior work，应传 explicit known-good spec 路径，而不是依赖 implicit discovery。
+解决 blocked run 后，orchestrator 通常应启动新的 `funcionario-build-auto` run。若要复用 prior work，应传 explicit known-good spec 路径，而不是依赖 implicit discovery。

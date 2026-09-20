@@ -1,6 +1,6 @@
 ---
-title: Build Software with BMad
-description: BMad helps you decide what to build and then build it. Start here to install it, make your first change, or find the path that fits the work in front of you.
+title: Build Software with Funcionário Infinito
+description: Funcionário Infinito helps you decide what to build and then build it. Start here to install it, make your first change, or find the path that fits the work in front of you.
 hero:
   title: 'Turn ideas into software.<br>At any scale.'
   tagline: Think it through, then build it. You make the calls, so you understand what you ship.
@@ -8,24 +8,24 @@ hero:
     - text: Build your first change
       link: ./start/build-your-first-change/
       variant: primary
-    - text: Install BMad
-      link: ./start/install-bmad/
+    - text: Install Funcionário Infinito
+      link: ./start/install-funcionario/
       variant: secondary
 ---
 
-BMad adds a set of named commands, called skills, to AI coding tools such as
+Funcionário Infinito adds a set of named commands, called skills, to AI coding tools such as
 Claude Code and Cursor. Some of them help you think: explore an idea, research
 it, argue against it, and write down what you have settled on. Others help you
-build: give `bmad-build` a change you want made, and it writes the code and
+build: give `funcionario-build` a change you want made, and it writes the code and
 reviews it.
 
 You can use either group on its own. Many people run the thinking skills and
-never ask BMad to write a line of code, and a small fix can go straight to
+never ask Funcionário Infinito to write a line of code, and a small fix can go straight to
 building with no planning at all.
 
 ## Find Your Starting Point
 
-![The BMad delivery loop: a vague notion starts at Clarify, a big clear idea at Plan, and a small change at Build and verify; Learn and adjust loops back to Plan](/diagrams/bmad-delivery-loop.svg)
+![The Funcionário Infinito delivery loop: a vague notion starts at Clarify, a big clear idea at Plan, and a small change at Build and verify; Learn and adjust loops back to Plan](/diagrams/funcionario-delivery-loop.svg)
 
 Every path runs the same loop. Bigger work enters it earlier and goes round it
 more often; it does not become a different way of delivering.
@@ -38,15 +38,15 @@ more often; it does not become a different way of delivering.
 empty project.
 
 **You know exactly what needs to change, and it is small.**
-Run `bmad-build` and describe the change. See [Build a Change](./build/build-a-change.md).
+Run `funcionario-build` and describe the change. See [Build a Change](./build/build-a-change.md).
 
 **You are working in an existing codebase.**
-Consider running `bmad-project-context`, then build as usual. See
+Consider running `funcionario-project-context`, then build as usual. See
 [Start in an Existing Codebase](./existing-codebases/start-in-an-existing-codebase.md) and
 [Set and Maintain Project Context](./existing-codebases/set-and-maintain-project-context.md).
 
 **You are building a larger feature or a whole product.**
-If you can give `bmad-spec` a complete intent, start there. If you need to
+If you can give `funcionario-spec` a complete intent, start there. If you need to
 go through the ideation/planning paces first, choose a path in
 [Choose a Planning Path](./plan/choose-a-planning-path.md).
 
@@ -54,11 +54,11 @@ go through the ideation/planning paces first, choose a path in
 Generate options or [pressure-test the idea](./plan/explore-and-validate-an-idea.md),
 then gather evidence with [Deep Recon](./plan/research-a-decision.md).
 
-**You want BMad to follow your team's own rules and practices.**
-See [Customize BMad](./customize/customize-bmad.md) and
-[Adopt BMad Across a Team](./customize/adopt-bmad-across-a-team.md).
+**You want Funcionário Infinito to follow your team's own rules and practices.**
+See [Customize Funcionário Infinito](./customize/customize-funcionario.md) and
+[Adopt Funcionário Infinito Across a Team](./customize/adopt-funcionario-across-a-team.md).
 
 :::tip[Unsure where to start?]
-Run `bmad-help`. If that is not enough, see
-[Get Answers About BMad](./start/get-answers-about-bmad.md).
+Run `funcionario-help`. If that is not enough, see
+[Get Answers About Funcionário Infinito](./start/get-answers-about-funcionario.md).
 :::

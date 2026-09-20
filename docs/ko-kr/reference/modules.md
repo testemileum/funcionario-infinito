@@ -5,19 +5,19 @@ sidebar:
   order: 5
 ---
 
-BMad는 설치 중 선택하는 공식 모듈로 확장됩니다. 이러한 추가 모듈은 내장 핵심 기능과 BMM(애자일 제품군)을 넘어 특정 도메인을 위한 전문 에이전트, 워크플로, 작업을 제공합니다.
+Funcionário Infinito는 설치 중 선택하는 공식 모듈로 확장됩니다. 이러한 추가 모듈은 내장 핵심 기능과 BMM(애자일 제품군)을 넘어 특정 도메인을 위한 전문 에이전트, 워크플로, 작업을 제공합니다.
 
 :::tip[모듈 설치]
-`npx bmad-method install`을 실행하고 원하는 모듈을 선택하세요. 설치 프로그램이 다운로드, 설정, IDE 통합을 자동으로 처리합니다.
+`npx funcionario-method install`을 실행하고 원하는 모듈을 선택하세요. 설치 프로그램이 다운로드, 설정, IDE 통합을 자동으로 처리합니다.
 :::
 
-## BMad 빌더(BMB)
+## Funcionário Infinito 빌더(BMB)
 
-단계별 안내를 받으며 커스텀 에이전트, 워크플로, 도메인 특화 모듈을 만듭니다. BMad 빌더는 프레임워크 자체를 확장하는 메타 모듈입니다.
+단계별 안내를 받으며 커스텀 에이전트, 워크플로, 도메인 특화 모듈을 만듭니다. Funcionário Infinito 빌더는 프레임워크 자체를 확장하는 메타 모듈입니다.
 
 - **코드:** `bmb`
-- **npm:** [`bmad-builder`](https://www.npmjs.com/package/bmad-builder)
-- **GitHub:** [bmad-code-org/bmad-builder](https://github.com/bmad-code-org/bmad-builder)
+- **npm:** [`funcionario-builder`](https://www.npmjs.com/package/funcionario-builder)
+- **GitHub:** [funcionario-infinito/funcionario-builder](https://github.com/funcionario-infinito/funcionario-builder)
 
 **제공:**
 
@@ -31,8 +31,8 @@ BMad는 설치 중 선택하는 공식 모듈로 확장됩니다. 이러한 추�
 초기 개발 단계의 구조화된 창의성, 아이디어 발상, 혁신을 위한 AI 기반 도구입니다. 이 제품군은 검증된 프레임워크를 사용해 브레인스토밍, 디자인 사고, 문제 해결을 진행하는 여러 에이전트를 제공합니다.
 
 - **코드:** `cis`
-- **npm:** [`bmad-creative-intelligence-suite`](https://www.npmjs.com/package/bmad-creative-intelligence-suite)
-- **GitHub:** [bmad-code-org/bmad-module-creative-intelligence-suite](https://github.com/bmad-code-org/bmad-module-creative-intelligence-suite)
+- **npm:** [`funcionario-creative-intelligence-suite`](https://www.npmjs.com/package/funcionario-creative-intelligence-suite)
+- **GitHub:** [funcionario-infinito/funcionario-module-creative-intelligence-suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)
 
 **제공:**
 
@@ -46,8 +46,8 @@ BMad는 설치 중 선택하는 공식 모듈로 확장됩니다. 이러한 추�
 Unity, Unreal, Godot, 커스텀 엔진에 맞춘 구조화된 게임 개발 워크플로입니다. 신속한 프로토타이핑부터 에픽 중심 스프린트를 사용하는 전체 규모 제작까지 다양한 계획 깊이를 지원합니다. 구현은 Build로 통합됩니다.
 
 - **코드:** `gds`
-- **npm:** [`bmad-game-dev-studio`](https://www.npmjs.com/package/bmad-game-dev-studio)
-- **GitHub:** [bmad-code-org/bmad-module-game-dev-studio](https://github.com/bmad-code-org/bmad-module-game-dev-studio)
+- **npm:** [`funcionario-game-dev-studio`](https://www.npmjs.com/package/funcionario-game-dev-studio)
+- **GitHub:** [funcionario-infinito/funcionario-module-game-dev-studio](https://github.com/funcionario-infinito/funcionario-module-game-dev-studio)
 
 **제공:**
 
@@ -61,8 +61,8 @@ Unity, Unreal, Godot, 커스텀 엔진에 맞춘 구조화된 게임 개발 워�
 전문가 에이전트와 구조화된 워크플로 9개로 엔터프라이즈급 테스트 전략, 자동화 가이드, 릴리스 게이트 결정을 지원합니다. TEA는 위험도 기반 우선순위와 요구사항 추적성까지 제공해 내장 QA 스킬보다 훨씬 넓은 범위를 다룹니다. 두 경로 중 어느 쪽을 선택할지는 [완료된 작업 테스트하기](../build/test-completed-work.md)를 참고하세요.
 
 - **코드:** `tea`
-- **npm:** [`bmad-method-test-architecture-enterprise`](https://www.npmjs.com/package/bmad-method-test-architecture-enterprise)
-- **GitHub:** [bmad-code-org/bmad-method-test-architecture-enterprise](https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise)
+- **npm:** [`funcionario-method-test-architecture-enterprise`](https://www.npmjs.com/package/funcionario-method-test-architecture-enterprise)
+- **GitHub:** [funcionario-infinito/funcionario-method-test-architecture-enterprise](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)
 
 **제공:**
 
@@ -73,4 +73,4 @@ Unity, Unreal, Godot, 커스텀 엔진에 맞춘 구조화된 게임 개발 워�
 
 ## 커뮤니티 모듈
 
-커뮤니티 모듈과 모듈 마켓플레이스가 준비 중입니다. 업데이트는 [BMad GitHub 조직](https://github.com/bmad-code-org)을 확인하세요.
+커뮤니티 모듈과 모듈 마켓플레이스가 준비 중입니다. 업데이트는 [Funcionário Infinito GitHub 조직](https://github.com/funcionario-infinito)을 확인하세요.

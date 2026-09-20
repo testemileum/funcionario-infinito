@@ -23,7 +23,7 @@ function page(lang) {
 }
 
 function withFixture(files, run) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'bmad-locale-'));
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'funcionario-locale-'));
   try {
     for (const [relativePath, content] of Object.entries(files)) {
       const full = path.join(root, relativePath);
@@ -39,12 +39,12 @@ function withFixture(files, run) {
 test('reports a page whose content language is not the locale', () => {
   withFixture(
     {
-      'site/fr/start/install-bmad/index.html': page('en'),
-      'site/fr/how-to/install-bmad/index.html': page('fr-FR'),
+      'site/fr/start/install-funcionario/index.html': page('en'),
+      'site/fr/how-to/install-funcionario/index.html': page('fr-FR'),
     },
     (root) => {
       const found = findFallbacks(path.join(root, 'site'));
-      assert.deepEqual(found.fr, ['start/install-bmad']);
+      assert.deepEqual(found.fr, ['start/install-funcionario']);
     },
   );
 });
@@ -68,8 +68,8 @@ test('leaves a locale with no build output empty rather than failing', () => {
 });
 
 test('counts a new fallback as added and a fixed one as resolved', () => {
-  const { added, resolved } = diffAgainstBaseline({ fr: ['start/install-bmad'], cs: [] }, { fr: ['plan/research-a-decision'], cs: [] });
-  assert.deepEqual(added, ['fr/start/install-bmad']);
+  const { added, resolved } = diffAgainstBaseline({ fr: ['start/install-funcionario'], cs: [] }, { fr: ['plan/research-a-decision'], cs: [] });
+  assert.deepEqual(added, ['fr/start/install-funcionario']);
   assert.deepEqual(resolved, ['fr/plan/research-a-decision']);
 });
 
@@ -98,41 +98,41 @@ test('summarises translated against total routes per locale', () => {
 });
 
 test('fails on a fallback the baseline does not record', () => {
-  withFixture({ 'site/fr/start/install-bmad/index.html': page('en') }, (root) => {
+  withFixture({ 'site/fr/start/install-funcionario/index.html': page('en') }, (root) => {
     const baselinePath = path.join(root, 'baseline.json');
     fs.writeFileSync(baselinePath, '{}');
     assert.throws(
       () => validateLocaleCoverage(path.join(root, 'site'), { baselinePath }),
-      /now serve English under another locale[\s\S]*fr\/start\/install-bmad/,
+      /now serve English under another locale[\s\S]*fr\/start\/install-funcionario/,
     );
   });
 });
 
 test('fails on a baseline entry that no longer falls back', () => {
-  withFixture({ 'site/fr/start/install-bmad/index.html': page('fr-FR') }, (root) => {
+  withFixture({ 'site/fr/start/install-funcionario/index.html': page('fr-FR') }, (root) => {
     const baselinePath = path.join(root, 'baseline.json');
-    fs.writeFileSync(baselinePath, JSON.stringify({ fr: ['start/install-bmad'] }));
+    fs.writeFileSync(baselinePath, JSON.stringify({ fr: ['start/install-funcionario'] }));
     assert.throws(
       () => validateLocaleCoverage(path.join(root, 'site'), { baselinePath }),
-      /no longer falling back[\s\S]*fr\/start\/install-bmad/,
+      /no longer falling back[\s\S]*fr\/start\/install-funcionario/,
     );
   });
 });
 
 test('passes when the fallbacks are exactly the ones recorded', () => {
-  withFixture({ 'site/fr/start/install-bmad/index.html': page('en') }, (root) => {
+  withFixture({ 'site/fr/start/install-funcionario/index.html': page('en') }, (root) => {
     const baselinePath = path.join(root, 'baseline.json');
-    fs.writeFileSync(baselinePath, JSON.stringify({ fr: ['start/install-bmad'] }));
+    fs.writeFileSync(baselinePath, JSON.stringify({ fr: ['start/install-funcionario'] }));
     assert.doesNotThrow(() => validateLocaleCoverage(path.join(root, 'site'), { baselinePath }));
   });
 });
 
 test('--update rewrites the baseline instead of failing', () => {
-  withFixture({ 'site/fr/start/install-bmad/index.html': page('en') }, (root) => {
+  withFixture({ 'site/fr/start/install-funcionario/index.html': page('en') }, (root) => {
     const baselinePath = path.join(root, 'baseline.json');
     fs.writeFileSync(baselinePath, '{}');
     validateLocaleCoverage(path.join(root, 'site'), { baselinePath, update: true });
-    assert.deepEqual(JSON.parse(fs.readFileSync(baselinePath, 'utf-8')).fr, ['start/install-bmad']);
+    assert.deepEqual(JSON.parse(fs.readFileSync(baselinePath, 'utf-8')).fr, ['start/install-funcionario']);
   });
 });
 

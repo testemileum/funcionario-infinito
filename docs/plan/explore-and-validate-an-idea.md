@@ -16,24 +16,24 @@ Start from your situation, not from a preferred skill.
 
 | Situation                                                         | Use                                                                                                           |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| "I have a topic and want far more ideas on it than I'd get alone" | `bmad-brainstorming`                                                                                          |
-| "I hold an idea and want it clarified, tested, or made better"    | `bmad-forge-idea`                                                                                             |
-| "I need to understand the market, domain, or technology first"    | `bmad-deep-recon` — see [Research a Decision](./research-a-decision.md)                                       |
+| "I have a topic and want far more ideas on it than I'd get alone" | `funcionario-brainstorming`                                                                                          |
+| "I hold an idea and want it clarified, tested, or made better"    | `funcionario-forge-idea`                                                                                             |
+| "I need to understand the market, domain, or technology first"    | `funcionario-deep-recon` — see [Research a Decision](./research-a-decision.md)                                       |
 | "I already have conviction and want it written down"              | A product brief — see [Define Requirements and a Specification](./define-requirements-and-a-specification.md) |
 | "I have a product concept and want it proven customer-first"      | A PRFAQ — see [Define Requirements and a Specification](./define-requirements-and-a-specification.md)         |
-| "I want my agents to discuss or decide together"                  | `bmad-party-mode` — see [Run Multi-Agent Discussions](../customize/run-multi-agent-discussions.md)            |
+| "I want my agents to discuss or decide together"                  | `funcionario-party-mode` — see [Run Multi-Agent Discussions](../customize/run-multi-agent-discussions.md)            |
 
 None of these are stages. Run whichever fit, in any order, and condense what
 comes out before the next step.
 
 :::tip[Not Sure?]
-Run `bmad-help` and describe your situation. It recommends a starting point
+Run `funcionario-help` and describe your situation. It recommends a starting point
 based on what you have already produced.
 :::
 
 ## Generate Options with Brainstorming
 
-Run `bmad-brainstorming` when you have a topic and want to push past the
+Run `funcionario-brainstorming` when you have a topic and want to push past the
 obvious ideas on it. You choose the stance for the session:
 
 - **Facilitator**: the coach never supplies ideas. It runs techniques and asks
@@ -48,12 +48,12 @@ wrap. Say when you want to narrow and it switches to prioritizing and
 deciding. Sessions can be paused and resumed.
 
 You get an HTML record of the session, and a short `brainstorm-intent.md`
-holding only the chosen discoveries, shaped to feed `bmad-spec`,
-`bmad-product-brief`, or `bmad-prd`.
+holding only the chosen discoveries, shaped to feed `funcionario-spec`,
+`funcionario-product-brief`, or `funcionario-prd`.
 
 ## Pressure-Test an Idea with Forge Idea
 
-Run `bmad-forge-idea` with a half-formed idea and it questions the idea, one
+Run `funcionario-forge-idea` with a half-formed idea and it questions the idea, one
 question at a time, until you can act on it with conviction or drop it. It
 works on a software feature, a business model, or a decision you keep
 circling. Better thinking is the goal; a written file is optional. A
@@ -98,8 +98,8 @@ and each is a valid result:
 | **Killed**   | The idea does not hold up. The report records why.                                                                                           |
 | **Clearer**  | You understand the idea better, but there is nothing to hand off. The session log is the record.                                             |
 
-`forged-idea.md` should be short enough to feed `bmad-spec`, `bmad-prd`, or
-`bmad-prfaq`. If it reads like a document, it is too long.
+`forged-idea.md` should be short enough to feed `funcionario-spec`, `funcionario-prd`, or
+`funcionario-prfaq`. If it reads like a document, it is too long.
 
 :::note[Example]
 **You:** "I want AI-generated weekly summaries in the app. Users get a digest email every Monday."
@@ -118,12 +118,12 @@ bet you could test with a plain email and no model at all.
 
 ## Improve a Draft
 
-Point `bmad-advanced-elicitation` at a recent piece of output (a section, a
+Point `funcionario-advanced-elicitation` at a recent piece of output (a section, a
 plan, a draft, a decision) and it offers a short menu of critique methods,
 such as pre-mortem, first principles, or red team, runs the ones you pick, and
 shows proposed changes for you to apply or reject. The brief, PRD, UX, and
 spec skills offer it at their own pauses. See
-[`bmad-advanced-elicitation`](../reference/skills-and-agents.md#bmad-advanced-elicitation).
+[`funcionario-advanced-elicitation`](../reference/skills-and-agents.md#funcionario-advanced-elicitation).
 
 ## What Comes Next
 

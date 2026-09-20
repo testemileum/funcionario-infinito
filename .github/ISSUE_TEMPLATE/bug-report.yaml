@@ -1,5 +1,5 @@
 name: Bug Report
-description: File a bug report to help us improve BMad Method
+description: File a bug report to help us improve Funcionário Infinito
 title: '[BUG] '
 labels: bug
 assignees: []
@@ -25,7 +25,7 @@ body:
       label: Steps to reproduce
       description: Step-by-step instructions to reproduce the behavior
       placeholder: |
-        1. Run 'npx bmad-method install'
+        1. Run 'npx funcionario-method install'
         2. Select option X
         3. Run workflow Y
         4. See error
@@ -61,10 +61,10 @@ body:
     id: module
     attributes:
       label: Which module is this for?
-      description: Select the BMad module this issue relates to
+      description: Select the Funcionário Infinito module this issue relates to
       options:
-        - BMad Method (BMM) - Core Framework
-        - BMad Builder (BMB) - Agent Builder Tool
+        - Funcionário Infinito (BMM) - Core Framework
+        - Funcionário Infinito Builder (BMB) - Agent Builder Tool
         - Test Architect (TEA) - Test Strategy Module
         - Game Dev Studio (BMGD) - Game Development Module
         - Creative Intelligence Suite (CIS) - Innovation Module
@@ -75,9 +75,9 @@ body:
   - type: input
     id: version
     attributes:
-      label: BMad Version
-      description: Ask your agent for `bmad update`. On 6.12 (npm install), run `npx
-        bmad-method --version`.
+      label: Funcionário Infinito Version
+      description: Ask your agent for `funcionario update`. On 6.12 (npm install), run `npx
+        funcionario-method --version`.
       placeholder: e.g., 6.13.0
     validations:
       required: true

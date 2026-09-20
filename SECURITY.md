@@ -9,7 +9,7 @@ We release security patches for the following versions:
 | Latest   | :white_check_mark: |
 | < Latest | :x:                |
 
-We recommend always using the latest version of BMad Method to ensure you have the most recent security updates.
+We recommend always using the latest version of Funcionário Infinito to ensure you have the most recent security updates.
 
 ## Reporting a Vulnerability
 
@@ -21,13 +21,13 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 Instead, please report them via one of these methods:
 
-1. **GitHub Security Advisories** (Preferred): Use [GitHub's private vulnerability reporting](https://github.com/bmad-code-org/BMAD-METHOD/security/advisories/new) to submit a confidential report.
+1. **GitHub Security Advisories** (Preferred): Use [GitHub's private vulnerability reporting](https://github.com/funcionario-infinito/funcionario-infinito/security/advisories/new) to submit a confidential report.
 
-2. **Email**: Send a report to [security@bmadcode.com](mailto:security@bmadcode.com). Please avoid including exploit code in the body if the issue is severe — send a short description and we will arrange a channel for details.
+2. **Email**: Send a report to [security@funcionario-infinito.com.br](mailto:security@funcionario-infinito.com.br). Please avoid including exploit code in the body if the issue is severe — send a short description and we will arrange a channel for details.
 
-3. **Discord**: Contact a maintainer directly via DM on our [Discord server](https://discord.gg/gk8jAdXWmj).
+3. **Discord**: Contact a maintainer directly via DM on our [Discord server](https://discord.gg/SEU-CONVITE-AQUI).
 
-BMad Method is an open source project maintained by a small team. We do not operate a paid bug bounty program, and we cannot offer payment for reports. We do credit reporters in published advisories.
+Funcionário Infinito is an open source project maintained by a small team. We do not operate a paid bug bounty program, and we cannot offer payment for reports. We do credit reporters in published advisories.
 
 ### What to Include
 
@@ -59,7 +59,7 @@ If you have not heard from us within two weeks, please follow up by email or on 
 
 ## Security Model
 
-BMad Method is a framework in which AI agents read instructions from markdown files and act on them. **Executing instructions found in files is the intended design, not a vulnerability.** Understanding this is essential to judging what counts as a security issue.
+Funcionário Infinito is a framework in which AI agents read instructions from markdown files and act on them. **Executing instructions found in files is the intended design, not a vulnerability.** Understanding this is essential to judging what counts as a security issue.
 
 The framework's security boundary is this: content that a user did not author or knowingly install should not be able to change agent behavior in ways the user did not intend, and agent actions should stay within the file system scope the user configured.
 
@@ -69,7 +69,7 @@ A report is most useful when it names the specific boundary being crossed.
 
 ### In Scope
 
-- Vulnerabilities in BMad Method core framework code, installer, or update mechanism
+- Vulnerabilities in Funcionário Infinito core framework code, installer, or update mechanism
 - Untrusted content — web pages, API responses, issue or PR bodies, dependency metadata, or other data pulled in at runtime — altering agent behavior in ways the user did not intend
 - Path traversal or file system access outside the configured project scope
 - Escapes from configured file-access or tool-permission limits
@@ -79,19 +79,19 @@ A report is most useful when it names the specific boundary being crossed.
 
 ### Out of Scope
 
-- **An agent following the instructions in a module the user installed.** Installing a BMad module is equivalent to running its code. Users are responsible for vetting modules they install, including third-party ones.
+- **An agent following the instructions in a module the user installed.** Installing a Funcionário Infinito module is equivalent to running its code. Users are responsible for vetting modules they install, including third-party ones.
 - **An agent following instructions the user wrote.** Custom agents, workflows, and prompts do what their author tells them to do.
 - Security issues in user-created custom agents or modules
-- Vulnerabilities in third-party AI providers (Claude, GPT, etc.) or in the AI IDEs and CLIs that host BMad
+- Vulnerabilities in third-party AI providers (Claude, GPT, etc.) or in the AI IDEs and CLIs that host Funcionário Infinito
 - Model behavior in general — hallucination, inaccurate output, or an agent making a poor decision is a quality issue, not a vulnerability
 - Issues that require physical access to a user's machine
 - Social engineering attacks
 - Denial of service attacks that don't exploit a specific vulnerability
-- Findings from automated scanners without a demonstrated, reachable impact in BMad Method
+- Findings from automated scanners without a demonstrated, reachable impact in Funcionário Infinito
 
 ## Security Best Practices for Users
 
-When using BMad Method:
+When using Funcionário Infinito:
 
 1. **Vet What You Install**: Treat installing a module or expansion pack as running its code — review modules from sources you do not know
 2. **Review Agent Outputs**: Always review AI-generated code before executing it
@@ -102,8 +102,8 @@ When using BMad Method:
 
 ## Acknowledgments
 
-We appreciate the security research community's efforts in helping keep BMad Method secure. Contributors who report valid security issues will be acknowledged in our security advisories.
+We appreciate the security research community's efforts in helping keep Funcionário Infinito secure. Contributors who report valid security issues will be acknowledged in our security advisories.
 
 ---
 
-Thank you for helping keep BMad Method and our community safe.
+Thank you for helping keep Funcionário Infinito and our community safe.

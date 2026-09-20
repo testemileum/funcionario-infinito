@@ -5,13 +5,13 @@ sidebar:
   order: 2
 ---
 
-Utilisez l’installateur BMad pour ajouter des modules depuis le registre communautaire, des dépôts Git tiers ou des chemins locaux.
+Utilisez l’installateur Funcionário Infinito pour ajouter des modules depuis le registre communautaire, des dépôts Git tiers ou des chemins locaux.
 
 ## Quand l’utiliser
 
-- Installer un module contribué par la communauté depuis le registre BMad
+- Installer un module contribué par la communauté depuis le registre Funcionário Infinito
 - Installer un module depuis un dépôt Git tiers (GitHub, GitLab, Bitbucket, auto-hébergé)
-- Tester un module que vous développez localement avec BMad Builder
+- Tester un module que vous développez localement avec Funcionário Infinito Builder
 - Installer des modules depuis un serveur Git privé ou auto-hébergé
 
 :::note[Prérequis]
@@ -20,12 +20,12 @@ Nécessite [Node.js](https://nodejs.org) v20.12+ et `npx` (inclus avec npm). Les
 
 ## Modules communautaires
 
-Les modules communautaires sont regroupés dans le [marketplace de plugins BMad](https://github.com/bmad-code-org/bmad-plugins-marketplace). Ils sont organisés par catégorie et épinglés à un commit approuvé pour des raisons de sécurité.
+Les modules communautaires sont regroupés dans le [marketplace de plugins Funcionário Infinito](https://github.com/funcionario-infinito/funcionario-plugins-marketplace). Ils sont organisés par catégorie et épinglés à un commit approuvé pour des raisons de sécurité.
 
 ### 1. Lancer l’installateur
 
 ```bash
-npx bmad-method install
+npx funcionario-method install
 ```
 
 ### 2. Parcourir le catalogue communautaire
@@ -81,7 +81,7 @@ L’installateur clone le dépôt (pour les URL) ou lit directement depuis le di
 Utilisez l’option `--custom-source` pour installer des modules personnalisés depuis la ligne de commande :
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory . \
   --custom-source /path/to/my-module \
   --tools claude-code \
@@ -91,7 +91,7 @@ npx bmad-method install \
 Quand `--custom-source` est fourni sans `--modules`, seuls le cœur et les modules personnalisés sont installés. Pour inclure également les modules officiels, ajoutez `--modules` :
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory . \
   --modules bmm \
   --custom-source https://gitlab.com/myorg/my-module \
@@ -122,10 +122,10 @@ Le chemin `.claude-plugin/marketplace.json` est une convention standard adoptée
 
 ## Flux de travail en développement local
 
-Si vous construisez un module avec [BMad Builder](https://github.com/bmad-code-org/bmad-builder), vous pouvez l’installer directement depuis votre répertoire de travail :
+Si vous construisez un module avec [Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder), vous pouvez l’installer directement depuis votre répertoire de travail :
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory ~/my-project \
   --custom-source ~/my-module-repo/skills \
   --tools claude-code \
@@ -135,16 +135,16 @@ npx bmad-method install \
 Les sources locales sont référencées par leur chemin, non copiées dans un cache. Lorsque vous mettez à jour la source de votre module et réinstallez, l’installateur récupère les dernières modifications.
 
 :::caution[Suppression de la source]
-Si vous supprimez le répertoire source local après l’installation, les fichiers du module installé dans `_bmad/` sont préservés. Le module sera ignoré lors des mises à jour tant que le chemin source n’est pas restauré.
+Si vous supprimez le répertoire source local après l’installation, les fichiers du module installé dans `_funcionario/` sont préservés. Le module sera ignoré lors des mises à jour tant que le chemin source n’est pas restauré.
 :::
 
 ## Ce que vous obtenez
 
-Après l’installation, les modules personnalisés apparaissent dans `_bmad/` aux côtés des modules officiels :
+Après l’installation, les modules personnalisés apparaissent dans `_funcionario/` aux côtés des modules officiels :
 
 ```
 your-project/
-├── _bmad/
+├── _funcionario/
 │   ├── core/              # Module cœur intégré
 │   ├── bmm/               # Module officiel (si sélectionné)
 │   ├── my-module/         # Votre module personnalisé
@@ -167,14 +167,14 @@ Les modules personnalisés participent au flux de mise à jour normal :
 
 ## Créer vos propres modules
 
-Utilisez [BMad Builder](https://github.com/bmad-code-org/bmad-builder) pour créer des modules que d’autres pourront installer :
+Utilisez [Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder) pour créer des modules que d’autres pourront installer :
 
-1. Exécutez `bmad-module-builder` pour générer la structure de votre module
-2. Ajoutez des skills, agents et workflows avec les divers outils BMad Builder
+1. Exécutez `funcionario-module-builder` pour générer la structure de votre module
+2. Ajoutez des skills, agents et workflows avec les divers outils Funcionário Infinito Builder
 3. Publiez dans un dépôt Git ou partagez le dossier
 4. D’autres installent avec `--custom-source <url-de-votre-dépôt>`
 
-Pour que les modules supportent le mode découverte, incluez un fichier `.claude-plugin/marketplace.json` à la racine de votre dépôt (c’est une convention multi-outils, pas spécifique à Claude). Consultez la [documentation BMad Builder](https://github.com/bmad-code-org/bmad-builder) pour le format du fichier `marketplace.json`.
+Pour que les modules supportent le mode découverte, incluez un fichier `.claude-plugin/marketplace.json` à la racine de votre dépôt (c’est une convention multi-outils, pas spécifique à Claude). Consultez la [documentation Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder) pour le format du fichier `marketplace.json`.
 
 :::tip[Tester localement d’abord]
 Pendant le développement, installez votre module avec un chemin local pour itérer rapidement avant de publier dans un dépôt Git.

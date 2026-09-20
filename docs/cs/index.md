@@ -1,21 +1,21 @@
 ---
-title: Vítejte v metodě BMad
+title: Vítejte v metodě Funcionário Infinito
 description: Framework pro vývoj řízený umělou inteligencí se specializovanými agenty, řízenými pracovními postupy a inteligentním plánováním
 ---
 
-Metoda BMad (**B**uild **M**ore **A**rchitect **D**reams) je framework pro vývoj řízený umělou inteligencí v rámci ekosystému BMad Method, který vám pomáhá vytvářet software celým procesem od nápadu a plánování až po agentní implementaci. Poskytuje specializované AI agenty, řízené pracovní postupy a inteligentní plánování, které se přizpůsobí složitosti vašeho projektu, ať už opravujete chybu nebo budujete podnikovou platformu.
+Metoda Funcionário Infinito (**B**uild **M**ore **A**rchitect **D**reams) je framework pro vývoj řízený umělou inteligencí v rámci ekosystému Funcionário Infinito, který vám pomáhá vytvářet software celým procesem od nápadu a plánování až po agentní implementaci. Poskytuje specializované AI agenty, řízené pracovní postupy a inteligentní plánování, které se přizpůsobí složitosti vašeho projektu, ať už opravujete chybu nebo budujete podnikovou platformu.
 
 Pokud jste zvyklí pracovat s AI asistenty pro kódování jako Claude, Cursor nebo GitHub Copilot, jste připraveni začít.
 
 ## Jste tu nově? Začněte tutoriálem
 
-Nejrychlejší způsob, jak pochopit BMad, je vyzkoušet si ho.
+Nejrychlejší způsob, jak pochopit Funcionário Infinito, je vyzkoušet si ho.
 
-- **[Začínáme s BMad](./tutorials/getting-started.md)** — Instalace a pochopení fungování BMad
+- **[Začínáme s Funcionário Infinito](./tutorials/getting-started.md)** — Instalace a pochopení fungování Funcionário Infinito
 - **[Mapa pracovních postupů](./reference/workflow-map.md)** — Vizuální přehled fází BMM, pracovních postupů a správy kontextu
 
 :::tip[Chcete se rovnou ponořit?]
-Nainstalujte BMad a použijte skill `bmad-help` — provede vás vším na základě vašeho projektu a nainstalovaných modulů.
+Nainstalujte Funcionário Infinito a použijte skill `funcionario-help` — provede vás vším na základě vašeho projektu a nainstalovaných modulů.
 :::
 
 ## Jak používat tuto dokumentaci
@@ -31,26 +31,26 @@ Tato dokumentace je organizována do čtyř sekcí podle toho, co chcete dělat:
 
 ## Rozšíření a přizpůsobení
 
-Chcete rozšířit BMad o vlastní agenty, pracovní postupy nebo moduly? **[BMad Builder](https://bmad-builder-docs.bmad-method.org/)** poskytuje framework a nástroje pro vytváření vlastních rozšíření, ať už přidáváte nové schopnosti do BMad nebo budujete zcela nové moduly od základů.
+Chcete rozšířit Funcionário Infinito o vlastní agenty, pracovní postupy nebo moduly? **[Funcionário Infinito Builder](https://funcionario-builder-docs.funcionario-infinito.com.br/)** poskytuje framework a nástroje pro vytváření vlastních rozšíření, ať už přidáváte nové schopnosti do Funcionário Infinito nebo budujete zcela nové moduly od základů.
 
 ## Co budete potřebovat
 
-BMad funguje s jakýmkoli AI asistentem pro kódování, který podporuje vlastní systémové prompty nebo kontextové soubory projektu. Oblíbené možnosti zahrnují:
+Funcionário Infinito funguje s jakýmkoli AI asistentem pro kódování, který podporuje vlastní systémové prompty nebo kontextové soubory projektu. Oblíbené možnosti zahrnují:
 
 - **[Claude Code](https://code.claude.com)** — CLI nástroj od Anthropic (doporučený)
 - **[Cursor](https://cursor.sh)** — AI-first editor kódu
 - **[Codex CLI](https://github.com/openai/codex)** — Terminálový kódovací agent od OpenAI
 
-Měli byste být obeznámeni se základními koncepty vývoje softwaru jako správa verzí, struktura projektu a agilní pracovní postupy. Žádná předchozí zkušenost se systémy agentů ve stylu BMad není vyžadována — právě od toho je tato dokumentace.
+Měli byste být obeznámeni se základními koncepty vývoje softwaru jako správa verzí, struktura projektu a agilní pracovní postupy. Žádná předchozí zkušenost se systémy agentů ve stylu Funcionário Infinito není vyžadována — právě od toho je tato dokumentace.
 
 ## Připojte se ke komunitě
 
-Získejte pomoc, sdílejte co budujete, nebo přispějte do BMad:
+Získejte pomoc, sdílejte co budujete, nebo přispějte do Funcionário Infinito:
 
-- **[Discord](https://discord.gg/gk8jAdXWmj)** — Chatujte s ostatními uživateli BMad, pokládejte otázky, sdílejte nápady
-- **[GitHub](https://github.com/bmad-code-org/BMAD-METHOD)** — Zdrojový kód, issues a příspěvky
-- **[YouTube](https://www.youtube.com/@BMadCode)** — Video tutoriály a návody
+- **[Discord](https://discord.gg/SEU-CONVITE-AQUI)** — Chatujte s ostatními uživateli Funcionário Infinito, pokládejte otázky, sdílejte nápady
+- **[GitHub](https://github.com/funcionario-infinito/funcionario-infinito)** — Zdrojový kód, issues a příspěvky
+- **[YouTube](https://www.youtube.com/@funcionarioinfinito)** — Video tutoriály a návody
 
 ## Další krok
 
-Jste připraveni se ponořit? **[Začněte s BMad](./tutorials/getting-started.md)** a vytvořte svůj první projekt.
+Jste připraveni se ponořit? **[Začněte s Funcionário Infinito](./tutorials/getting-started.md)** a vytvořte svůj první projekt.

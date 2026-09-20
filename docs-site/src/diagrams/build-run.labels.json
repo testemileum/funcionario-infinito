@@ -1,6 +1,6 @@
 {
   "en": {
-    "title": "The bmad-build run: intent is clarified, planned, specified, implemented, then reviewed. Review can patch the work, send it back to plan or clarification, void it, or defer it, before the result is presented to you.",
+    "title": "The funcionario-build run: intent is clarified, planned, specified, implemented, then reviewed. Review can patch the work, send it back to plan or clarification, void it, or defer it, before the result is presented to you.",
     "initial-intent": "Initial intent",
     "clarify": "Clarify and route",
     "plan": "Plan",
@@ -32,7 +32,7 @@
     "actor-spec-review-2": "optional"
   },
   "fr-FR": {
-    "title": "Le déroulé de bmad-build : l'intention est clarifiée, planifiée, spécifiée, implémentée, puis passée en revue. La revue peut corriger le travail, le renvoyer à la planification ou à la clarification, l'abandonner ou le reporter, avant que le résultat ne vous soit présenté.",
+    "title": "Le déroulé de funcionario-build : l'intention est clarifiée, planifiée, spécifiée, implémentée, puis passée en revue. La revue peut corriger le travail, le renvoyer à la planification ou à la clarification, l'abandonner ou le reporter, avant que le résultat ne vous soit présenté.",
     "initial-intent": "Intention initiale",
     "clarify": "Clarifier et router",
     "plan": "Planifier",
@@ -64,7 +64,7 @@
     "actor-spec-review-2": "optionnelle"
   },
   "ko-KR": {
-    "title": "bmad-build 실행 흐름: 의도를 구체화하고, 계획과 사양을 거쳐 구현한 뒤 검토합니다. 검토는 작업을 수정하거나, 계획 또는 구체화 단계로 되돌리거나, 폐기하거나, 보류할 수 있으며 그 뒤 결과를 제시합니다.",
+    "title": "funcionario-build 실행 흐름: 의도를 구체화하고, 계획과 사양을 거쳐 구현한 뒤 검토합니다. 검토는 작업을 수정하거나, 계획 또는 구체화 단계로 되돌리거나, 폐기하거나, 보류할 수 있으며 그 뒤 결과를 제시합니다.",
     "initial-intent": "초기 의도",
     "clarify": "구체화 및 라우팅",
     "plan": "계획",

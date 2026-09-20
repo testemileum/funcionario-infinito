@@ -1,9 +1,9 @@
 ---
 title: '웹 번들 사용하기'
-description: BMad 웹 번들을 Google Gemini Gem 또는 ChatGPT Custom GPT로 설치하기
+description: Funcionário Infinito 웹 번들을 Google Gemini Gem 또는 ChatGPT Custom GPT로 설치하기
 ---
 
-웹 번들은 **[bmadcode.com/web-bundles](https://bmadcode.com/web-bundles/)**에서 설치합니다.
+웹 번들은 **[funcionario-infinito.com.br/web-bundles](https://funcionario-infinito.com.br/web-bundles/)**에서 설치합니다.
 
 ## 한 곳에서 설치하는 이유
 
@@ -28,7 +28,7 @@ description: BMad 웹 번들을 Google Gemini Gem 또는 ChatGPT Custom GPT로 �
 
 ## 얻는 것
 
-- BMad의 계획 기능 하나에 특화된 재사용 가능한 Gem 또는 Custom GPT.
+- Funcionário Infinito의 계획 기능 하나에 특화된 재사용 가능한 Gem 또는 Custom GPT.
 - 구현을 위해 IDE에 바로 넣을 수 있는 다듬어진 산출물(제품 개요, PRD, 리서치 보고서, UX 사양).
 - 계획 대화가 토큰 사용량에 따라 과금되는 IDE가 아니라 기존 웹 LLM 구독에서 실행됩니다.
 
@@ -38,4 +38,4 @@ description: BMad 웹 번들을 Google Gemini Gem 또는 ChatGPT Custom GPT로 �
 
 ## 직접 만들기
 
-기존 BMad 스킬을 웹 번들로 바꾸려면 [bmad-utility-skills](https://github.com/bmad-code-org/bmad-utility-skills)의 `bmad-os-skill-to-bundle` 유틸리티 스킬을 사용하세요. 이 스킬은 담당 에이전트의 페르소나를 상속하고 목소리가 확연히 다른 페르소나 교체 예시를 포함한 번들 파일을 만듭니다. 번들을 카탈로그에 제출하려면 `web-bundles/bundles.json` 항목과 번들 디렉터리를 추가하는 PR을 [BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD)에 여세요.
+기존 Funcionário Infinito 스킬을 웹 번들로 바꾸려면 [funcionario-utility-skills](https://github.com/funcionario-infinito/funcionario-utility-skills)의 `funcionario-os-skill-to-bundle` 유틸리티 스킬을 사용하세요. 이 스킬은 담당 에이전트의 페르소나를 상속하고 목소리가 확연히 다른 페르소나 교체 예시를 포함한 번들 파일을 만듭니다. 번들을 카탈로그에 제출하려면 `web-bundles/bundles.json` 항목과 번들 디렉터리를 추가하는 PR을 [funcionario-infinito](https://github.com/funcionario-infinito/funcionario-infinito)에 여세요.

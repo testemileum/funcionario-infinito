@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.11"
 
 [[package]]
-name = "bmad-method"
+name = "funcionario-method"
 version = "0"
 source = { virtual = "." }
 

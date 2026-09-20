@@ -11,7 +11,7 @@ description: Google 스타일과 Diataxis 구조를 바탕으로 한 프로젝�
 
 - 첫머리에서 문서의 목적과 독자가 알아야 할 내용을 분명히 밝힙니다.
 - 구체적이고 익숙한 단어와 짧은 문장을 사용합니다.
-- BMad를 사용하는 데 필요한 전문 용어만 씁니다. 낯선 용어는 처음 나올 때 정의합니다.
+- Funcionário Infinito를 사용하는 데 필요한 전문 용어만 씁니다. 낯선 용어는 처음 나올 때 정의합니다.
 - 문자 그대로 명확하게 씁니다. 장식적인 비유를 피하세요. 작동 방식을 설명하는 대신 비유로 얼버무리지 않습니다.
 - 조건과 세부 작동 방식을 설명하기 전에 요점부터 제시합니다.
 - 구현 세부 사항은 독자가 문서의 목적을 이해하거나 행동하는 데 도움이 될 때만 넣습니다. 정확한 작동 방식과 계약은 참조 문서나 링크한 심층 자료에 둡니다.
@@ -76,8 +76,8 @@ description: Google 스타일과 Diataxis 구조를 바탕으로 한 프로젝�
 ```md
 | 스킬 | 에이전트 | 목적 |
 | --- | --- | --- |
-| `bmad-brainstorming` | 분석가 | 새 프로젝트 브레인스토밍 |
-| `bmad-prd` | PM | 제품 요구사항 문서 생성 |
+| `funcionario-brainstorming` | 분석가 | 새 프로젝트 브레인스토밍 |
+| `funcionario-prd` | PM | 제품 요구사항 문서 생성 |
 ```
 
 ## 폴더 구조 블록
@@ -87,8 +87,8 @@ description: Google 스타일과 Diataxis 구조를 바탕으로 한 프로젝�
 ````md
 ```
 your-project/
-├── _bmad/                                   # BMad 설정
-├── _bmad-output/
+├── _funcionario/                                   # Funcionário Infinito 설정
+├── _funcionario-output/
 │   ├── planning-artifacts/
 │   │   └── PRD.md                           # 요구사항 문서
 │   ├── implementation-artifacts/
@@ -337,7 +337,7 @@ Starlight는 헤더에서 오른쪽 "이 페이지에서" 탐색을 생성합니
 범위가 제한된 용어는 정의 시작에 이탤릭 컨텍스트를 추가합니다.
 
 - `*직접 진입 구현 전용.*`
-- `*BMad Method/엔터프라이즈.*`
+- `*Funcionário Infinito/엔터프라이즈.*`
 - `*N단계.*`
 - `*BMGD.*`
 - `*기존 프로젝트.*`
@@ -365,7 +365,7 @@ Starlight는 헤더에서 오른쪽 "이 페이지에서" 탐색을 생성합니
 
 ### 나중에 계획을 바꿀 수 있나요?
 
-예. `bmad-correct-course` 워크플로가 구현 중 범위 변경을 처리합니다.
+예. `funcionario-correct-course` 워크플로가 구현 중 범위 변경을 처리합니다.
 
 **여기에 답이 없는 질문이 있나요?** [이슈를 열거나](...) [Discord](...)에서 물어보세요.
 ```

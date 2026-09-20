@@ -42,7 +42,7 @@ const MAIN_LANG_RE = /<main\b[^>]*\blang="([^"]+)"/;
 /**
  * Every built page under a directory, as routes relative to it.
  * @param {string} dir - Absolute path to a locale's build output.
- * @returns {string[]} Routes such as `start/install-bmad`, sorted.
+ * @returns {string[]} Routes such as `start/install-funcionario`, sorted.
  */
 function builtRoutes(dir) {
   if (!fs.existsSync(dir)) return [];

@@ -1,13 +1,13 @@
 ---
 title: 'Choose a Planning Path'
-description: Choose the smallest BMad path that safely fits a software change, from a trivial edit to a multi-epic project.
+description: Choose the smallest Funcionário Infinito path that safely fits a software change, from a trivial edit to a multi-epic project.
 sidebar:
   order: 1
 ---
 
 Use this page to decide how much planning a change needs. The answer turns on
 one question: is the intent already well defined? If it is, feed it to
-`bmad-spec`, which shapes it to the size of the work, and build. If it is not,
+`funcionario-spec`, which shapes it to the size of the work, and build. If it is not,
 the other pages in this chapter are how you get a defined intent. If the work
 belongs to an organization, with a PRD other people must approve and several
 engineers building in parallel, read
@@ -22,26 +22,26 @@ could build it without guessing, and no longer than that. Where it came from
 does not matter: a sentence, an issue, a forged idea, a research report, a
 PRD.
 
-Keep the input short. `bmad-spec` reads everything you give it in one pass,
+Keep the input short. `funcionario-spec` reads everything you give it in one pass,
 and the practical ceiling is a few tens of thousands of tokens, roughly a
 40-page document. Hand it a pile of raw documents several times that size and
 it silently loses the parts that mattered; condense them first. If the spec
 says the input is too thin, you are not done on this chapter yet.
 
-- **Well-defined intent**: run `bmad-spec` with it. A spec that fits one Build
-  session goes straight to `bmad-build`; an epic-sized one gets Story Breakdown
+- **Well-defined intent**: run `funcionario-spec` with it. A spec that fits one Build
+  session goes straight to `funcionario-build`; an epic-sized one gets Story Breakdown
   and a Build per story. See
   [Define Requirements and a Specification](./define-requirements-and-a-specification.md).
 - **Anything else**: the intent is not ready yet. Use the pages below until it
-  is, then run `bmad-spec`. The spec skill writes the contract; it does not
+  is, then run `funcionario-spec`. The spec skill writes the contract; it does not
   help you figure out what you want.
 
 If the change fits one implementation session, you are on the Build page's
 territory, not this chapter's: [Build a Change](../build/build-a-change.md)
-covers sizing a session and whether a small change needs BMad at all.
+covers sizing a session and whether a small change needs Funcionário Infinito at all.
 
 :::note[Prerequisites]
-Install BMad before using Build or another BMad workflow. You don't need BMad
+Install Funcionário Infinito before using Build or another Funcionário Infinito workflow. You don't need Funcionário Infinito
 for an obvious, low-risk edit.
 :::
 
@@ -49,7 +49,7 @@ for an obvious, low-risk edit.
 
 These are independent tools, not stages. Pick the ones the gap calls for, in
 any order. None of them build anything. Condense what they produce and hand
-`bmad-spec` the result, not the raw pile.
+`funcionario-spec` the result, not the raw pile.
 
 | The intent is missing                                            | Do this                                                                                                      |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -61,7 +61,7 @@ any order. None of them build anything. Condense what they produce and hand
 
 A short list of decisions is often enough on its own. You need a PRD when more
 than one person must agree on what the product is, or more than one epic must
-not diverge; otherwise skip it. A multi-epic product runs `bmad-spec` once per
+not diverge; otherwise skip it. A multi-epic product runs `funcionario-spec` once per
 epic with those documents as sources.
 
 ## Planning Skills and What They Produce
@@ -69,27 +69,27 @@ epic with those documents as sources.
 Every skill in this chapter writes a document you can hand on. The table runs
 from analysis through planning to solutioning; each chapter page is linked
 from the first skill it covers and explains when its skills fit. In an
-installed project, `bmad-help` recommends the next one.
+installed project, `funcionario-help` recommends the next one.
 
 | Skill                           | Purpose                                                                                                                                        | Produces                                                                            |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `bmad-brainstorming`            | Generate ideas with a facilitated session ([Explore and Validate an Idea](./explore-and-validate-an-idea.md))                                  | `brainstorm.html` keepsake plus an optional `brainstorm-intent.md`                  |
-| `bmad-forge-idea`               | Pressure-test an idea until it hardens, proves out, or dies cheaply                                                                            | `forge-report.html` every run; `forged-idea.md` when the idea hardens               |
-| `bmad-deep-recon`               | Research a subject to support a decision ([Research a Decision](./research-a-decision.md))                                                     | Cited `research.md` plus an optional HTML briefing                                  |
-| `bmad-product-brief`            | Capture the product vision when the concept is clear ([Define Requirements and a Specification](./define-requirements-and-a-specification.md)) | `brief.md` + `addendum.md`                                                          |
-| `bmad-prfaq`                    | Stress-test a product concept customer-first, working backwards from the press release                                                         | `prfaq-<project>.md`                                                                |
-| `bmad-prd`                      | Create, update, or validate a PRD                                                                                                              | Create/update: `prd.md`, `addendum.md`, `.memlog.md`; validate: HTML + `.md` report |
-| `bmad-ux`                       | Record how the product looks and behaves ([Design UX and Architecture](./design-ux-and-architecture.md))                                       | `DESIGN.md`, `EXPERIENCE.md`, `.memlog.md`                                          |
-| `bmad-spec`                     | Condense any intent into a short contract; break it into stories on request                                                                    | `SPEC.md` + companions under `specs/spec-<slug>/`; optional `stories.yaml`          |
-| `bmad-architecture`             | Make the technical decisions that keep separately built parts consistent                                                                       | `ARCHITECTURE-SPINE.md` by default                                                  |
-| `bmad-create-epics-and-stories` | Break requirements into epics and stories ([Break Work into Stories and Track It](./break-work-into-stories-and-track-it.md))                  | Epic files with stories                                                             |
-| `bmad-sprint-planning`          | Check readiness before implementation, then track story status                                                                                 | PASS/CONCERNS/FAIL + `sprint-status.yaml`                                           |
+| `funcionario-brainstorming`            | Generate ideas with a facilitated session ([Explore and Validate an Idea](./explore-and-validate-an-idea.md))                                  | `brainstorm.html` keepsake plus an optional `brainstorm-intent.md`                  |
+| `funcionario-forge-idea`               | Pressure-test an idea until it hardens, proves out, or dies cheaply                                                                            | `forge-report.html` every run; `forged-idea.md` when the idea hardens               |
+| `funcionario-deep-recon`               | Research a subject to support a decision ([Research a Decision](./research-a-decision.md))                                                     | Cited `research.md` plus an optional HTML briefing                                  |
+| `funcionario-product-brief`            | Capture the product vision when the concept is clear ([Define Requirements and a Specification](./define-requirements-and-a-specification.md)) | `brief.md` + `addendum.md`                                                          |
+| `funcionario-prfaq`                    | Stress-test a product concept customer-first, working backwards from the press release                                                         | `prfaq-<project>.md`                                                                |
+| `funcionario-prd`                      | Create, update, or validate a PRD                                                                                                              | Create/update: `prd.md`, `addendum.md`, `.memlog.md`; validate: HTML + `.md` report |
+| `funcionario-ux`                       | Record how the product looks and behaves ([Design UX and Architecture](./design-ux-and-architecture.md))                                       | `DESIGN.md`, `EXPERIENCE.md`, `.memlog.md`                                          |
+| `funcionario-spec`                     | Condense any intent into a short contract; break it into stories on request                                                                    | `SPEC.md` + companions under `specs/spec-<slug>/`; optional `stories.yaml`          |
+| `funcionario-architecture`             | Make the technical decisions that keep separately built parts consistent                                                                       | `ARCHITECTURE-SPINE.md` by default                                                  |
+| `funcionario-create-epics-and-stories` | Break requirements into epics and stories ([Break Work into Stories and Track It](./break-work-into-stories-and-track-it.md))                  | Epic files with stories                                                             |
+| `funcionario-sprint-planning`          | Check readiness before implementation, then track story status                                                                                 | PASS/CONCERNS/FAIL + `sprint-status.yaml`                                           |
 
-`bmad-prd` has three intents, create, update, and validate; say which one you
-want when you invoke it, or it will ask. `bmad-product-brief` feeds `bmad-prd`,
+`funcionario-prd` has three intents, create, update, and validate; say which one you
+want when you invoke it, or it will ask. `funcionario-product-brief` feeds `funcionario-prd`,
 which reads the brief during discovery, but neither requires the other.
 
-![Three columns of planning skills and the files each writes: analysis (brainstorming, forge idea, deep recon, product brief, PRFAQ), planning (PRD, UX, spec), and solutioning (architecture, epics and stories, sprint planning), all handing off to bmad-build, one session per unit](/diagrams/planning-skills.svg)
+![Three columns of planning skills and the files each writes: analysis (brainstorming, forge idea, deep recon, product brief, PRFAQ), planning (PRD, UX, spec), and solutioning (architecture, epics and stories, sprint planning), all handing off to funcionario-build, one session per unit](/diagrams/planning-skills.svg)
 
 ## Size Follows the Intent
 
@@ -115,7 +115,7 @@ coherent outcome.
 
 **Define and divide the epic**
 
-1. Run `bmad-spec` with the epic intent. See
+1. Run `funcionario-spec` with the epic intent. See
    [Define Requirements and a Specification](./define-requirements-and-a-specification.md)
    for what a spec contains and when it is enough on its own.
 2. Ask for Story Breakdown. This creates the ordered `stories.yaml` beside
@@ -128,7 +128,7 @@ constraint, a better division, or a conflict between stories.
 
 **Establish the implementation pattern**
 
-Implement important, risky, or foundational stories with `bmad-build`. Early
+Implement important, risky, or foundational stories with `funcionario-build`. Early
 stories often settle the architecture, initial project structure, and repeated
 patterns that later stories will follow. Give those decisions human attention
 before automating repetitions of them.
@@ -139,18 +139,18 @@ record under the spec folder and keeps it linked to the parent spec.
 **Finish the epic**
 
 Verify the stories together, not only one at a time. Then run
-`bmad-retrospective` with the spec folder. Retrospective reads `stories.yaml`
+`funcionario-retrospective` with the spec folder. Retrospective reads `stories.yaml`
 as the epic inventory and judges the combined result against the parent spec.
 See [Finish an Epic](../build/finish-an-epic.md).
 
 ### 2. Start Project-Sized Work
 
-Use the full BMad flow for a greenfield product, a multi-epic initiative, or
+Use the full Funcionário Infinito flow for a greenfield product, a multi-epic initiative, or
 work likely to need roughly 20 or more implementation sessions.
 
 Prepare only the planning the project actually needs from the table above
 ([Plan Inside an Organization](./plan-inside-an-organization.md) covers who
-owns which document and where sign-off happens). Then run `bmad-spec` per epic,
+owns which document and where sign-off happens). Then run `funcionario-spec` per epic,
 track the stories with
 [Break Work into Stories and Track It](./break-work-into-stories-and-track-it.md),
 and close each epic with [Finish an Epic](../build/finish-an-epic.md).
@@ -168,7 +168,7 @@ and specs exist so later sessions can still see the whole.
 
 ## After Decisions Stabilize
 
-`bmad-build-auto` runs one session without waiting for human input. It does
+`funcionario-build-auto` runs one session without waiting for human input. It does
 not choose the next story or own the backlog. Use it after the important
 implementation decisions are stable. For the worker contract, see
 [Autonomous Development Loops](../build/autonomous-development-loops.md).

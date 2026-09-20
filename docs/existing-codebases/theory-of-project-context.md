@@ -1,12 +1,12 @@
 ---
 title: 'The Theory of Project Context'
-description: Why bmad-project-context captures so little, what belongs in a repository's agent instructions, and what is left out.
+description: Why funcionario-project-context captures so little, what belongs in a repository's agent instructions, and what is left out.
 sidebar:
   order: 4
 ---
 
 Most documentation written for AI agents makes them worse.
-`bmad-project-context` captures little on purpose. This page is the evidence
+`funcionario-project-context` captures little on purpose. This page is the evidence
 and the rules. For how to run the skill, see
 [Set and Maintain Project Context](./set-and-maintain-project-context.md).
 
@@ -152,13 +152,13 @@ why refresh and audit exist as their own commands.
 
 ## Versus the two replaced skills
 
-`bmad-document-project` scanned an existing repo and generated a documentation
+`funcionario-document-project` scanned an existing repo and generated a documentation
 tree — overview, source tree, per-area deep dives. Large, unverified, stale on
 arrival: the kind of context that makes agents worse. Its valid instinct —
 understand the repo before working in it — survives as the discovery pass,
 which now feeds verification instead of prose.
 
-`bmad-generate-project-context` had the right instinct: a single small rules
+`funcionario-generate-project-context` had the right instinct: a single small rules
 file of unobvious, project-specific facts. What it lacked was everything
 around the file — no verification, no maintenance loop, no way to tell an
 inference from a confirmed fact.

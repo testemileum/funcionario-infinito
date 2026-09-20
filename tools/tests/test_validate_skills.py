@@ -22,7 +22,7 @@ JS_JSON_MISSING_TRIGGER = [
         "severity": "HIGH",
         "file": "SKILL.md",
         "line": None,
-        "detail": 'name "missing-trigger" does not match pattern: /^(?:bmad|bmad-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
+        "detail": 'name "missing-trigger" does not match pattern: /^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
         "fix": "Rename to comply with lowercase letters, numbers, and hyphens only (max 64 chars).",
     },
     {
@@ -81,8 +81,8 @@ class FixtureCase(unittest.TestCase):
     def test_active_skill_with_use_when_is_not_flagged(self):
         self.assertFalse(self.has_trigger_finding("with-trigger"))
 
-    def test_canonical_bmad_root_skill_satisfies_name_format(self):
-        self.assertFalse(any(f["rule"] == "SKILL-04" for f in self.findings("bmad")))
+    def test_canonical_funcionario_root_skill_satisfies_name_format(self):
+        self.assertFalse(any(f["rule"] == "SKILL-04" for f in self.findings("funcionario")))
 
     def _json_for(self, name: str) -> list[dict]:
         out = io.StringIO()
@@ -107,7 +107,7 @@ class FixtureCase(unittest.TestCase):
             any(f["rule"] == "SKILL-06" and re.search(r"trigger phrase", f["detail"], re.I) for f in with_trigger)
         )
 
-        self.assertEqual(self._json_for("bmad"), [])
+        self.assertEqual(self._json_for("funcionario"), [])
 
 
 class ProjectCase(unittest.TestCase):
@@ -156,7 +156,7 @@ class ProjectCase(unittest.TestCase):
 
 class TestRules(ProjectCase):
     def test_skill_01_missing_skill_md(self):
-        skill = self.skills / "bmad-empty"
+        skill = self.skills / "funcionario-empty"
         skill.mkdir()
         findings = self.findings_for(skill)
         self.assertEqual([f["rule"] for f in findings], ["SKILL-01"])
@@ -165,11 +165,11 @@ class TestRules(ProjectCase):
 
     def test_skill_02_name_absent_vs_empty(self):
         absent = self.add_skill(
-            "bmad-no-name",
+            "funcionario-no-name",
             "---\ndescription: 'Does a thing. Use when testing.'\n---\n\n# Body\n",
         )
         empty = self.add_skill(
-            "bmad-empty-name",
+            "funcionario-empty-name",
             "---\nname: ''\ndescription: 'Does a thing. Use when testing.'\n---\n\n# Body\n",
         )
         absent_f = findings_by_rule(self.findings_for(absent), "SKILL-02")
@@ -182,8 +182,8 @@ class TestRules(ProjectCase):
         self.assertEqual(empty_f[0]["fix"], "Set `name` to the skill directory name (kebab-case).")
 
     def test_skill_03_description_absent_vs_empty(self):
-        absent = self.add_skill("bmad-no-desc", "---\nname: bmad-no-desc\n---\n\n# Body\n")
-        empty = self.add_skill("bmad-empty-desc", "---\nname: bmad-empty-desc\ndescription: ''\n---\n\n# Body\n")
+        absent = self.add_skill("funcionario-no-desc", "---\nname: funcionario-no-desc\n---\n\n# Body\n")
+        empty = self.add_skill("funcionario-empty-desc", "---\nname: funcionario-empty-desc\ndescription: ''\n---\n\n# Body\n")
         absent_f = findings_by_rule(self.findings_for(absent), "SKILL-03")
         empty_f = findings_by_rule(self.findings_for(empty), "SKILL-03")
         self.assertEqual(len(absent_f), 1)
@@ -193,14 +193,14 @@ class TestRules(ProjectCase):
         self.assertEqual(empty_f[0]["detail"], "Frontmatter `description` field is empty.")
 
     def test_skill_03_removed_description_strict_exits_1(self):
-        skill = self.add_skill("bmad-canary", "---\nname: bmad-canary\n---\n\n# Body\n")
+        skill = self.add_skill("funcionario-canary", "---\nname: funcionario-canary\n---\n\n# Body\n")
         code, out, _ = self.run_validator(skill_dir=skill, strict=True)
         self.assertEqual(code, 1)
         self.assertIn("[CRITICAL] SKILL-03", out)
 
     def test_skill_04_invalid_name_uses_js_regex_literal(self):
         skill = self.add_skill(
-            "bmad-bad",
+            "funcionario-bad",
             skill_md("NotValid", "Does a thing. Use when testing name format."),
         )
         findings = findings_by_rule(self.findings_for(skill), "SKILL-04")
@@ -208,64 +208,64 @@ class TestRules(ProjectCase):
         self.assertEqual(findings[0]["severity"], "HIGH")
         self.assertEqual(
             findings[0]["detail"],
-            'name "NotValid" does not match pattern: /^(?:bmad|bmad-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
+            'name "NotValid" does not match pattern: /^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
         )
 
     def test_skill_05_name_must_match_directory(self):
         skill = self.add_skill(
-            "bmad-dir",
-            skill_md("bmad-other", "Does a thing. Use when testing directory match."),
+            "funcionario-dir",
+            skill_md("funcionario-other", "Does a thing. Use when testing directory match."),
         )
         findings = findings_by_rule(self.findings_for(skill), "SKILL-05")
         self.assertEqual(len(findings), 1)
         self.assertEqual(
             findings[0]["detail"],
-            'name "bmad-other" does not match directory name "bmad-dir".',
+            'name "funcionario-other" does not match directory name "funcionario-dir".',
         )
 
     def test_skill_06_length_and_trigger_subchecks(self):
         long_desc = "Use when testing. " + ("x" * 1024)
-        long_skill = self.add_skill("bmad-long", skill_md("bmad-long", long_desc))
+        long_skill = self.add_skill("funcionario-long", skill_md("funcionario-long", long_desc))
         length = findings_by_rule(self.findings_for(long_skill), "SKILL-06")
         self.assertEqual(len(length), 1)
         self.assertIn("characters (max 1024)", length[0]["detail"])
         self.assertNotRegex(length[0]["detail"], re.compile("trigger phrase", re.I))
 
         missing = self.add_skill(
-            "bmad-no-trigger",
-            skill_md("bmad-no-trigger", "Generates a thing and writes it to disk."),
+            "funcionario-no-trigger",
+            skill_md("funcionario-no-trigger", "Generates a thing and writes it to disk."),
         )
         trigger = findings_by_rule(self.findings_for(missing), "SKILL-06")
         self.assertEqual(len(trigger), 1)
         self.assertIn("trigger phrase", trigger[0]["detail"])
 
         exact = self.add_skill(
-            "bmad-exact",
-            skill_md("bmad-exact", ("Use when x. " + ("y" * (1024 - len("Use when x. "))))),
+            "funcionario-exact",
+            skill_md("funcionario-exact", ("Use when x. " + ("y" * (1024 - len("Use when x. "))))),
         )
         self.assertEqual(findings_by_rule(self.findings_for(exact), "SKILL-06"), [])
 
     def test_skill_06_deprecated_and_use_if_exempt(self):
         deprecated = self.add_skill(
-            "bmad-old",
-            skill_md("bmad-old", "DEPRECATED — use bmad-new instead."),
+            "funcionario-old",
+            skill_md("funcionario-old", "DEPRECATED — use funcionario-new instead."),
         )
         self.assertEqual(findings_by_rule(self.findings_for(deprecated), "SKILL-06"), [])
 
         use_if = self.add_skill(
-            "bmad-if",
-            skill_md("bmad-if", "Does a thing. Use if the user already has a file."),
+            "funcionario-if",
+            skill_md("funcionario-if", "Does a thing. Use if the user already has a file."),
         )
         self.assertEqual(findings_by_rule(self.findings_for(use_if), "SKILL-06"), [])
 
     def test_skill_07_empty_body_and_unclosed_frontmatter(self):
         empty = self.add_skill(
-            "bmad-nobody",
-            "---\nname: bmad-nobody\ndescription: 'Does a thing. Use when testing.'\n---\n",
+            "funcionario-nobody",
+            "---\nname: funcionario-nobody\ndescription: 'Does a thing. Use when testing.'\n---\n",
         )
         unclosed = self.add_skill(
-            "bmad-unclosed",
-            "---\nname: bmad-unclosed\ndescription: 'Does a thing. Use when testing.'\n",
+            "funcionario-unclosed",
+            "---\nname: funcionario-unclosed\ndescription: 'Does a thing. Use when testing.'\n",
         )
         empty_f = findings_by_rule(self.findings_for(empty), "SKILL-07")
         unclosed_f = findings_by_rule(self.findings_for(unclosed), "SKILL-07")
@@ -275,7 +275,7 @@ class TestRules(ProjectCase):
 
     def test_path_02_frontmatter_key_and_content_line(self):
         skill = self.valid(
-            "bmad-path",
+            "funcionario-path",
             {
                 "notes.md": "---\ninstalled_path: .\n---\n\nSee {installed_path}/foo.md\n",
             },
@@ -287,14 +287,14 @@ class TestRules(ProjectCase):
 
     def test_path_02_ignores_code_blocks(self):
         skill = self.valid(
-            "bmad-path-code",
+            "funcionario-path-code",
             {"notes.md": "```\ninstalled_path\n```\n"},
         )
         self.assertEqual(findings_by_rule(self.findings_for(skill), "PATH-02"), [])
 
     def test_seq_02_patterns_one_per_line_and_eta_case(self):
         skill = self.valid(
-            "bmad-seq",
+            "funcionario-seq",
             {
                 "workflow.md": "\n".join(
                     [
@@ -317,7 +317,7 @@ class TestRules(ProjectCase):
 
     def test_tpl_01_does_not_strip_code_blocks(self):
         skill = self.valid(
-            "bmad-tpl",
+            "funcionario-tpl",
             {
                 "template.md": "plain {{ config.name }} {{placeholder}}\n```\nfenced {{workflow.other}}\n```\n",
                 "notes.md": "{{ config.ignored }}\n",
@@ -330,7 +330,7 @@ class TestRules(ProjectCase):
         self.assertTrue(any("{{workflow.other}}" in f["detail"] for f in findings))
 
     def test_read_err_on_unreadable_file_continues(self):
-        skill = self.valid("bmad-perm", {"secret.md": "ok\n"})
+        skill = self.valid("funcionario-perm", {"secret.md": "ok\n"})
         target = skill / "secret.md"
         os.chmod(target, 0)
         self.addCleanup(os.chmod, target, 0o644)
@@ -342,7 +342,7 @@ class TestRules(ProjectCase):
 
 class TestCliAndOutput(ProjectCase):
     def test_clean_tree_strict_exits_zero(self):
-        self.valid("bmad-clean")
+        self.valid("funcionario-clean")
         code, out, err = self.run_validator(strict=True)
         self.assertEqual(code, 0)
         self.assertEqual(err, "")
@@ -351,19 +351,19 @@ class TestCliAndOutput(ProjectCase):
         self.assertIn("All skills passed validation!", out)
 
     def test_strict_high_plus_exits_one(self):
-        self.add_skill("bmad-high", skill_md("Nope", "Does a thing. Use when testing."))
+        self.add_skill("funcionario-high", skill_md("Nope", "Does a thing. Use when testing."))
         code, out, _ = self.run_validator(strict=True)
         self.assertEqual(code, 1)
         self.assertIn("[STRICT MODE] HIGH+ findings found — exiting with failure.", out)
 
     def test_strict_medium_only_exits_zero(self):
-        self.add_skill("bmad-med", skill_md("bmad-med", "Generates a thing with no trigger."))
+        self.add_skill("funcionario-med", skill_md("funcionario-med", "Generates a thing with no trigger."))
         code, out, _ = self.run_validator(strict=True)
         self.assertEqual(code, 0)
         self.assertIn("[STRICT MODE] Only MEDIUM/LOW findings — pass.", out)
 
     def test_warning_mode_high_still_exits_zero(self):
-        self.add_skill("bmad-warn", skill_md("Nope", "Does a thing. Use when testing."))
+        self.add_skill("funcionario-warn", skill_md("Nope", "Does a thing. Use when testing."))
         code, out, _ = self.run_validator(strict=False)
         self.assertEqual(code, 0)
         self.assertIn("Run with --strict to treat HIGH+ findings as errors.", out)
@@ -386,8 +386,8 @@ class TestCliAndOutput(ProjectCase):
         self.assertEqual(err, f'Error: "{file_path}" is not a valid directory.\n')
 
     def test_json_shape_and_severity_sort(self):
-        self.add_skill("bmad-json", skill_md("bmad-json", "Generates a thing with no trigger."))
-        self.valid("bmad-seq", {"notes.md": "ETA on this line\n"})
+        self.add_skill("funcionario-json", skill_md("funcionario-json", "Generates a thing with no trigger."))
+        self.valid("funcionario-seq", {"notes.md": "ETA on this line\n"})
         code, out, _ = self.run_validator(json_output=True, strict=True)
         self.assertEqual(code, 0)
         payload = json.loads(out)
@@ -400,7 +400,7 @@ class TestCliAndOutput(ProjectCase):
             self.assertEqual(set(item), required)
 
     def test_json_mode_skips_gha_and_step_summary(self):
-        skill = self.add_skill("bmad-json-gha", skill_md("Nope", "Does a thing. Use when testing."))
+        skill = self.add_skill("funcionario-json-gha", skill_md("Nope", "Does a thing. Use when testing."))
         summary = self.root / "summary.md"
         os.environ["GITHUB_ACTIONS"] = "1"
         os.environ["GITHUB_STEP_SUMMARY"] = str(summary)
@@ -411,8 +411,8 @@ class TestCliAndOutput(ProjectCase):
 
     def test_github_actions_annotation_and_step_summary(self):
         skill = self.add_skill(
-            "bmad-gha",
-            skill_md("bmad-gha", "Does a thing. Use when testing GHA."),
+            "funcionario-gha",
+            skill_md("funcionario-gha", "Does a thing. Use when testing GHA."),
             {"notes.md": "Ship 100% with ETA\n"},
         )
         summary = self.root / "summary.md"
@@ -421,36 +421,36 @@ class TestCliAndOutput(ProjectCase):
         code, out, _ = self.run_validator(skill_dir=skill, strict=True)
         self.assertEqual(code, 0)
         self.assertIn(
-            '::notice file=skills/bmad-gha/notes.md,line=1::SEQ-02: Time estimate pattern found: "Ship 100%25 with ETA"',
+            '::notice file=skills/funcionario-gha/notes.md,line=1::SEQ-02: Time estimate pattern found: "Ship 100%25 with ETA"',
             out,
         )
         text = summary.read_text(encoding="utf-8")
         self.assertTrue(text.startswith("## Skill Validation\n"))
         self.assertIn("| Skill | Rule | Severity | File | Detail |", text)
-        self.assertIn("| skills/bmad-gha | SEQ-02 | LOW | notes.md |", text)
+        self.assertIn("| skills/funcionario-gha | SEQ-02 | LOW | notes.md |", text)
         self.assertIn("**1 skills scanned, 1 findings**", text)
 
     def test_nested_skills_discovered_and_sorted(self):
-        self.valid("bmad-z")
-        nested = self.skills / "group" / "bmad-a"
+        self.valid("funcionario-z")
+        nested = self.skills / "group" / "funcionario-a"
         write(
             nested / "SKILL.md",
-            skill_md("bmad-a", "Nested skill. Use when testing discovery."),
+            skill_md("funcionario-a", "Nested skill. Use when testing discovery."),
         )
-        skipped = self.skills / "node_modules" / "bmad-skip"
+        skipped = self.skills / "node_modules" / "funcionario-skip"
         write(
             skipped / "SKILL.md",
-            skill_md("bmad-skip", "Should be skipped. Use when never."),
+            skill_md("funcionario-skip", "Should be skipped. Use when never."),
         )
         code, out, _ = self.run_validator(strict=True)
         self.assertEqual(code, 0)
         self.assertIn("Skills scanned: 2", out)
 
     def test_single_skill_outside_repo(self):
-        outside = Path(self._tmp.name) / "outside" / "bmad-out"
+        outside = Path(self._tmp.name) / "outside" / "funcionario-out"
         write(
             outside / "SKILL.md",
-            skill_md("bmad-out", "Outside skill. Use when testing absolute paths."),
+            skill_md("funcionario-out", "Outside skill. Use when testing absolute paths."),
         )
         code, out, _ = self.run_validator(skill_dir=outside, strict=True)
         self.assertEqual(code, 0)
@@ -464,9 +464,9 @@ class TestParsers(unittest.TestCase):
         self.assertEqual(vs.parse_frontmatter("---\nname: 'quoted'\n---\n"), {"name": "quoted"})
 
     def test_parse_frontmatter_multiline_continuation_and_comments(self):
-        content = "---\nname: bmad-x\ndescription: line1\n  line2\n# ignored\n  line3\n---\n\nBody\n"
+        content = "---\nname: funcionario-x\ndescription: line1\n  line2\n# ignored\n  line3\n---\n\nBody\n"
         fm = vs.parse_frontmatter_multiline(content)
-        self.assertEqual(fm["name"], "bmad-x")
+        self.assertEqual(fm["name"], "funcionario-x")
         self.assertEqual(fm["description"], "line1\n  line2\n  line3")
 
 

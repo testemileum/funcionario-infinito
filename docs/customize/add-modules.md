@@ -5,8 +5,8 @@ sidebar:
   order: 3
 ---
 
-BMad extends through modules. Official modules are selected during
-`npx bmad-method install` and add agents, workflows, and tasks for a domain
+Funcionário Infinito extends through modules. Official modules are selected during
+`npx funcionario-method install` and add agents, workflows, and tasks for a domain
 beyond the built-in core and BMM (Agile suite). Custom and community
 modules come from any Git repository or local directory and install through
 the same installer. Pick an official module first; if you need something
@@ -14,17 +14,17 @@ the official set does not cover, install it from a custom source.
 
 ## Official modules
 
-Run `npx bmad-method install` and select the modules you want. The installer
+Run `npx funcionario-method install` and select the modules you want. The installer
 downloads, configures, and installs them into your IDE. Each module's own
 documentation describes its workflows.
 
-### BMad Builder
+### Funcionário Infinito Builder
 
 Create custom agents, workflows, and domain-specific modules.
 
 - **Code:** `bmb`
-- **npm:** [`bmad-builder`](https://www.npmjs.com/package/bmad-builder)
-- **GitHub:** [bmad-code-org/bmad-builder](https://github.com/bmad-code-org/bmad-builder)
+- **npm:** [`funcionario-builder`](https://www.npmjs.com/package/funcionario-builder)
+- **GitHub:** [funcionario-infinito/funcionario-builder](https://github.com/funcionario-infinito/funcionario-builder)
 
 **Provides:**
 
@@ -39,8 +39,8 @@ Agents and frameworks for brainstorming, design thinking, and early
 problem-solving.
 
 - **Code:** `cis`
-- **npm:** [`bmad-creative-intelligence-suite`](https://www.npmjs.com/package/bmad-creative-intelligence-suite)
-- **GitHub:** [bmad-code-org/bmad-module-creative-intelligence-suite](https://github.com/bmad-code-org/bmad-module-creative-intelligence-suite)
+- **npm:** [`funcionario-creative-intelligence-suite`](https://www.npmjs.com/package/funcionario-creative-intelligence-suite)
+- **GitHub:** [funcionario-infinito/funcionario-module-creative-intelligence-suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)
 
 **Provides:**
 
@@ -56,8 +56,8 @@ from a prototype through to a planned production. Implementation uses
 Build.
 
 - **Code:** `gds`
-- **npm:** [`bmad-game-dev-studio`](https://www.npmjs.com/package/bmad-game-dev-studio)
-- **GitHub:** [bmad-code-org/bmad-module-game-dev-studio](https://github.com/bmad-code-org/bmad-module-game-dev-studio)
+- **npm:** [`funcionario-game-dev-studio`](https://www.npmjs.com/package/funcionario-game-dev-studio)
+- **GitHub:** [funcionario-infinito/funcionario-module-game-dev-studio](https://github.com/funcionario-infinito/funcionario-module-game-dev-studio)
 
 **Provides:**
 
@@ -69,15 +69,15 @@ Build.
 ### Test Architect (TEA)
 
 Test strategy, automation guidance, and release-gate decisions through an
-agent and nine workflows. Its `bmad-testarch-automate` skill generates
-heavier test coverage than the built-in `bmad-qa-generate-e2e-tests`:
+agent and nine workflows. Its `funcionario-testarch-automate` skill generates
+heavier test coverage than the built-in `funcionario-qa-generate-e2e-tests`:
 fixtures, more test levels, and knowledge-base patterns. See
 [Test Completed Work](../build/test-completed-work.md) to choose between
 the two.
 
 - **Code:** `tea`
-- **npm:** [`bmad-method-test-architecture-enterprise`](https://www.npmjs.com/package/bmad-method-test-architecture-enterprise)
-- **GitHub:** [bmad-code-org/bmad-method-test-architecture-enterprise](https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise)
+- **npm:** [`funcionario-method-test-architecture-enterprise`](https://www.npmjs.com/package/funcionario-method-test-architecture-enterprise)
+- **GitHub:** [funcionario-infinito/funcionario-method-test-architecture-enterprise](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)
 
 **Provides:**
 
@@ -91,7 +91,7 @@ the two.
 A custom module is any module the installer reads from a Git repository or
 a local directory instead of the official list. Community modules install
 the same way; the
-[bmad-plugins-marketplace](https://github.com/bmad-code-org/bmad-plugins-marketplace)
+[funcionario-plugins-marketplace](https://github.com/funcionario-infinito/funcionario-plugins-marketplace)
 repository is where to find their URLs.
 
 :::note[Prerequisites]
@@ -102,7 +102,7 @@ existing installation.
 
 ### Interactive installation
 
-Run `npx bmad-method install`. After the official module selection, the
+Run `npx funcionario-method install`. After the official module selection, the
 installer asks:
 
 :::note[Installer prompt]
@@ -110,7 +110,7 @@ Do you want to install custom or community modules (Git URL or local path)?
 :::
 
 Answer yes and enter a source. For a URL source the installer warns
-**UNVERIFIED MODULE: This module has not been reviewed by the BMad team.
+**UNVERIFIED MODULE: This module has not been reviewed by the Funcionário Infinito team.
 Only install modules from sources you trust.** For a local path it notes
 that changes take effect on reinstall. It then lists the modules it
 found so you can pick which to install; modules that are already installed
@@ -133,7 +133,7 @@ Use the `--custom-source` flag to install from the command line. Every
 module discovered in the source is installed.
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory . \
   --custom-source /path/to/my-module \
   --tools claude-code \
@@ -144,7 +144,7 @@ npx bmad-method install \
 modules. To include official modules as well, add `--modules`:
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory . \
   --modules bmm \
   --custom-source https://gitlab.com/myorg/my-module \
@@ -180,11 +180,11 @@ tool you use.
 ## Develop a module locally
 
 If you are building a module with
-[BMad Builder](https://github.com/bmad-code-org/bmad-builder), install it
+[Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder), install it
 directly from your working directory:
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory ~/my-project \
   --custom-source ~/my-module-repo/skills \
   --tools claude-code \
@@ -196,18 +196,18 @@ your module source and reinstall, the installer picks up the latest changes.
 
 :::caution[Source removal]
 If you delete the local source directory after installation, the installed
-module files in `_bmad/` are preserved. The module is skipped during updates
+module files in `_funcionario/` are preserved. The module is skipped during updates
 until the source path is restored.
 :::
 
 ## What you get
 
-After installation, custom modules appear in `_bmad/` alongside official
+After installation, custom modules appear in `_funcionario/` alongside official
 modules:
 
 ```
 your-project/
-├── _bmad/
+├── _funcionario/
 │   ├── core/              # Built-in core module
 │   ├── bmm/               # Official module (if selected)
 │   ├── my-module/         # Your custom module
@@ -238,17 +238,17 @@ Custom modules participate in the normal update flow:
 
 ## Create your own module
 
-Use [BMad Builder](https://github.com/bmad-code-org/bmad-builder) to create
+Use [Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder) to create
 modules that others can install:
 
-1. Run `bmad-module-builder` to scaffold your module structure
-2. Add skills, agents, and workflows with the BMad Builder tools
+1. Run `funcionario-module-builder` to scaffold your module structure
+2. Add skills, agents, and workflows with the Funcionário Infinito Builder tools
 3. Publish to a Git repository or share the folder
 4. Others install with `--custom-source <your-repo-url>`
 
 For modules to support discovery mode, include a
 `.claude-plugin/marketplace.json` in your repository root. See the
-[BMad Builder documentation](https://github.com/bmad-code-org/bmad-builder)
+[Funcionário Infinito Builder documentation](https://github.com/funcionario-infinito/funcionario-builder)
 for the `marketplace.json` format.
 
 :::tip[Test locally first]

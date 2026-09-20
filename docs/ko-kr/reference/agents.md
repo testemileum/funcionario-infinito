@@ -7,24 +7,24 @@ sidebar:
 
 ## 기본 에이전트
 
-이 페이지는 BMad Method와 함께 설치되는 기본 BMM(애자일 제품군) 에이전트를 스킬 ID, 메뉴 트리거, 주요 워크플로와 함께 나열합니다. 각 에이전트는 스킬로 호출됩니다.
+이 페이지는 Funcionário Infinito와 함께 설치되는 기본 BMM(애자일 제품군) 에이전트를 스킬 ID, 메뉴 트리거, 주요 워크플로와 함께 나열합니다. 각 에이전트는 스킬로 호출됩니다.
 
 ## 참고
 
-- 각 에이전트는 설치 프로그램이 생성하는 스킬로 제공됩니다. 스킬 ID(예: `bmad-agent-dev`)를 사용해 에이전트를 호출합니다.
+- 각 에이전트는 설치 프로그램이 생성하는 스킬로 제공됩니다. 스킬 ID(예: `funcionario-agent-dev`)를 사용해 에이전트를 호출합니다.
 - 트리거는 각 에이전트 메뉴에 표시되는 짧은 메뉴 코드(예: `PRD`)와 유사 매칭 항목입니다.
-- QA 테스트 생성은 개발자 에이전트에서 실행할 수 있는 `bmad-qa-generate-e2e-tests` 워크플로 스킬이 처리합니다. 전체 테스트 설계자(TEA)는 별도 모듈에 있습니다. [완료된 작업 테스트하기](../build/test-completed-work.md)를 참고하세요.
+- QA 테스트 생성은 개발자 에이전트에서 실행할 수 있는 `funcionario-qa-generate-e2e-tests` 워크플로 스킬이 처리합니다. 전체 테스트 설계자(TEA)는 별도 모듈에 있습니다. [완료된 작업 테스트하기](../build/test-completed-work.md)를 참고하세요.
 
 | 에이전트 | 스킬 ID | 트리거 | 주요 워크플로 |
 | --- | --- | --- | --- |
-| 분석가(Mary) | `bmad-agent-analyst` | `BP`, `MR`, `DR`, `TR`, `CB`, `WB`, `PC` | 브레인스토밍, 시장 리서치, 도메인 리서치, 기술 리서치, 개요 작성, PRFAQ 챌린지, 프로젝트 컨텍스트 |
-| 제품 관리자(John) | `bmad-agent-pm` | `PRD`, `CE`, `IR`, `CC` | PRD 생성/업데이트/검증, 에픽과 스토리 생성, 구현 준비 상태(스프린트 계획 게이트), 방향 수정 |
-| 아키텍트(Winston) | `bmad-agent-architect` | `CA`, `IR` | 아키텍처 생성, 구현 준비 상태(스프린트 계획 게이트) |
-| 개발자(Amelia) | `bmad-agent-dev` | `BD`, `QA`, `CR`, `SP`, `ER` | Build, QA 테스트 생성, 코드 리뷰, 스프린트 계획, 에픽 회고 |
-| UX 디자이너(Sally) | `bmad-agent-ux-designer` | `CU` | UX 설계 생성 |
+| 분석가(Mary) | `funcionario-agent-analyst` | `BP`, `MR`, `DR`, `TR`, `CB`, `WB`, `PC` | 브레인스토밍, 시장 리서치, 도메인 리서치, 기술 리서치, 개요 작성, PRFAQ 챌린지, 프로젝트 컨텍스트 |
+| 제품 관리자(John) | `funcionario-agent-pm` | `PRD`, `CE`, `IR`, `CC` | PRD 생성/업데이트/검증, 에픽과 스토리 생성, 구현 준비 상태(스프린트 계획 게이트), 방향 수정 |
+| 아키텍트(Winston) | `funcionario-agent-architect` | `CA`, `IR` | 아키텍처 생성, 구현 준비 상태(스프린트 계획 게이트) |
+| 개발자(Amelia) | `funcionario-agent-dev` | `BD`, `QA`, `CR`, `SP`, `ER` | Build, QA 테스트 생성, 코드 리뷰, 스프린트 계획, 에픽 회고 |
+| UX 디자이너(Sally) | `funcionario-agent-ux-designer` | `CU` | UX 설계 생성 |
 
 :::note[Paige는 어디에 있나요?]
-기술 작성자 Paige는 잠시 쉬고 있습니다. 앞으로 더 많은 역량을 갖춰 돌아올 예정입니다. 그동안 프로젝트 컨텍스트 기능은 계속 사용할 수 있습니다. 분석가의 `PC`(Project Context) 트리거를 사용하거나 `bmad-project-context` 스킬을 직접 호출하세요.
+기술 작성자 Paige는 잠시 쉬고 있습니다. 앞으로 더 많은 역량을 갖춰 돌아올 예정입니다. 그동안 프로젝트 컨텍스트 기능은 계속 사용할 수 있습니다. 분석가의 `PC`(Project Context) 트리거를 사용하거나 `funcionario-project-context` 스킬을 직접 호출하세요.
 :::
 
 ## 트리거 유형

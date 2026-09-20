@@ -9,17 +9,17 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 STAMPER = REPO_ROOT / "tools" / "stamp_release.py"
-SETUP_PY = REPO_ROOT / "skills" / "bmad" / "scripts" / "setup.py"
+SETUP_PY = REPO_ROOT / "skills" / "funcionario" / "scripts" / "setup.py"
 
 MANIFEST = (
     'module = "{module}"\n'
     'version = "{version}"\n'
-    'update_source = "github:bmad-code-org/BMAD-METHOD/skills"\n'
-    'knowledge = "`references/help.md` in the `bmad` skill"\n'
+    'update_source = "github:funcionario-infinito/funcionario-infinito/skills"\n'
+    'knowledge = "`references/help.md` in the `funcionario` skill"\n'
 )
 
-METHOD_SKILLS = ("bmad", "bmad-build", "bmad-spec")
-TOOLBOX_SKILLS = ("bmad-flow",)
+METHOD_SKILLS = ("funcionario", "funcionario-build", "funcionario-spec")
+TOOLBOX_SKILLS = ("funcionario-flow",)
 
 
 def load_module(name: str, path: Path):
@@ -32,7 +32,7 @@ def load_module(name: str, path: Path):
 
 
 sr = load_module("stamp_release", STAMPER)
-setup = load_module("bmad_setup_stamp_contract", SETUP_PY)
+setup = load_module("funcionario_setup_stamp_contract", SETUP_PY)
 
 
 def write(path: Path, content: str) -> None:
@@ -77,12 +77,12 @@ class StampReleaseTests(unittest.TestCase):
         method = {(self.root / "skills" / s / "module-manifest.toml").read_bytes() for s in METHOD_SKILLS}
         self.assertEqual(len(method), 1)  # byte-identical within the module
         self.assertIn(b'version = "1.2.0"\n', method.pop())
-        toolbox = (self.root / "skills" / "bmad-flow" / "module-manifest.toml").read_text(encoding="utf-8")
+        toolbox = (self.root / "skills" / "funcionario-flow" / "module-manifest.toml").read_text(encoding="utf-8")
         self.assertIn('module = "toolbox"', toolbox)
         self.assertIn('version = "1.2.0"', toolbox)
         self.assertIn("Stamped version 1.2.0 into 4 files", out)
-        self.assertIn("skills/bmad/module-manifest.toml", out)
-        self.assertIn("skills/bmad-flow/module-manifest.toml", out)
+        self.assertIn("skills/funcionario/module-manifest.toml", out)
+        self.assertIn("skills/funcionario-flow/module-manifest.toml", out)
 
     def test_non_semver_version_touches_nothing(self):
         make_tree(self.root)
@@ -120,33 +120,33 @@ class StampReleaseTests(unittest.TestCase):
 
     def test_manifest_missing_version_key_names_file_and_touches_nothing(self):
         make_tree(self.root)
-        broken = self.root / "skills" / "bmad-build" / "module-manifest.toml"
+        broken = self.root / "skills" / "funcionario-build" / "module-manifest.toml"
         write(
             broken,
             'module = "method"\n'
-            'update_source = "github:bmad-code-org/BMAD-METHOD/skills"\n'
-            'knowledge = "`references/help.md` in the `bmad` skill"\n',
+            'update_source = "github:funcionario-infinito/funcionario-infinito/skills"\n'
+            'knowledge = "`references/help.md` in the `funcionario` skill"\n',
         )
         before = snapshot(self.root)
         code, _, err = run_stamper(self.root, "1.2.0")
         self.assertEqual(code, 1)
-        self.assertIn("skills/bmad-build/module-manifest.toml", err)
+        self.assertIn("skills/funcionario-build/module-manifest.toml", err)
         self.assertEqual(snapshot(self.root), before)
 
     def test_manifest_extra_key_rejected(self):
         make_tree(self.root)
-        broken = self.root / "skills" / "bmad-build" / "module-manifest.toml"
+        broken = self.root / "skills" / "funcionario-build" / "module-manifest.toml"
         write(broken, MANIFEST.format(module="method", version="6.11.0-next") + 'extra = "no"\n')
         before = snapshot(self.root)
         code, _, err = run_stamper(self.root, "1.2.0")
         self.assertEqual(code, 1)
         self.assertIn("keys must be exactly", err)
-        self.assertIn("skills/bmad-build", err)
+        self.assertIn("skills/funcionario-build", err)
         self.assertEqual(snapshot(self.root), before)
 
     def test_unknown_module_rejected(self):
         make_tree(self.root)
-        broken = self.root / "skills" / "bmad-spec" / "module-manifest.toml"
+        broken = self.root / "skills" / "funcionario-spec" / "module-manifest.toml"
         write(broken, MANIFEST.format(module="other", version="6.11.0-next"))
         before = snapshot(self.root)
         code, _, err = run_stamper(self.root, "1.2.0")
@@ -156,13 +156,13 @@ class StampReleaseTests(unittest.TestCase):
 
     def test_wrong_update_source_rejected(self):
         make_tree(self.root)
-        broken = self.root / "skills" / "bmad-spec" / "module-manifest.toml"
+        broken = self.root / "skills" / "funcionario-spec" / "module-manifest.toml"
         write(
             broken,
             'module = "method"\n'
             'version = "6.11.0-next"\n'
             'update_source = "github:o/r/skills"\n'
-            'knowledge = "`references/help.md` in the `bmad` skill"\n',
+            'knowledge = "`references/help.md` in the `funcionario` skill"\n',
         )
         before = snapshot(self.root)
         code, _, err = run_stamper(self.root, "1.2.0")
@@ -172,12 +172,12 @@ class StampReleaseTests(unittest.TestCase):
 
     def test_wrong_knowledge_rejected(self):
         make_tree(self.root)
-        broken = self.root / "skills" / "bmad-spec" / "module-manifest.toml"
+        broken = self.root / "skills" / "funcionario-spec" / "module-manifest.toml"
         write(
             broken,
             'module = "method"\n'
             'version = "6.11.0-next"\n'
-            'update_source = "github:bmad-code-org/BMAD-METHOD/skills"\n'
+            'update_source = "github:funcionario-infinito/funcionario-infinito/skills"\n'
             'knowledge = "elsewhere.md"\n',
         )
         before = snapshot(self.root)
@@ -188,23 +188,23 @@ class StampReleaseTests(unittest.TestCase):
 
     def test_skill_directory_without_manifest_fails_and_touches_nothing(self):
         make_tree(self.root)
-        write(self.root / "skills" / "bmad-orphan" / "SKILL.md", "# orphan\n")
+        write(self.root / "skills" / "funcionario-orphan" / "SKILL.md", "# orphan\n")
         before = snapshot(self.root)
         code, _, err = run_stamper(self.root, "1.2.0")
         self.assertEqual(code, 1)
-        self.assertIn("skills/bmad-orphan", err)
+        self.assertIn("skills/funcionario-orphan", err)
         self.assertIn("module-manifest.toml", err)
         self.assertEqual(snapshot(self.root), before)
 
     def test_formatting_drift_within_module_trips_byte_identity_after_stamp(self):
         make_tree(self.root)
-        drifted = self.root / "skills" / "bmad-spec" / "module-manifest.toml"
+        drifted = self.root / "skills" / "funcionario-spec" / "module-manifest.toml"
         write(
             drifted,
             'module = "method"\n'
             'version = "6.11.0-next"\n'
-            'update_source   =   "github:bmad-code-org/BMAD-METHOD/skills"\n'
-            'knowledge = "`references/help.md` in the `bmad` skill"\n',
+            'update_source   =   "github:funcionario-infinito/funcionario-infinito/skills"\n'
+            'knowledge = "`references/help.md` in the `funcionario` skill"\n',
         )
         code, _, err = run_stamper(self.root, "1.2.0")
         self.assertEqual(code, 1)
@@ -222,12 +222,12 @@ class StampReleaseTests(unittest.TestCase):
         make_tree(self.root)
         code, _, err = run_stamper(self.root, "6.12.0-next.1")
         self.assertEqual(code, 0, err)
-        data = tomllib.loads((self.root / "skills" / "bmad" / "module-manifest.toml").read_text(encoding="utf-8"))
+        data = tomllib.loads((self.root / "skills" / "funcionario" / "module-manifest.toml").read_text(encoding="utf-8"))
         self.assertEqual(data["version"], "6.12.0-next.1")
 
 
 class InstallerContractTests(unittest.TestCase):
-    """Pin the version rules duplicated from skills/bmad/scripts/setup.py.
+    """Pin the version rules duplicated from skills/funcionario/scripts/setup.py.
 
     If setup.py's rules drift, these fail instead of shipping a release the
     installed copies cannot order.

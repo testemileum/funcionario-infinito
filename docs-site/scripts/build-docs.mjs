@@ -1,5 +1,5 @@
 /**
- * BMAD Documentation Build Pipeline
+ * FUNCIONARIO Documentation Build Pipeline
  *
  * Validates documentation links and builds the Astro+Starlight site.
  *
@@ -26,7 +26,7 @@ const BUILD_DIR = path.join(PROJECT_ROOT, 'build');
 // =============================================================================
 // Main Entry Point
 /**
- * Orchestrates the full BMAD documentation build pipeline.
+ * Orchestrates the full FUNCIONARIO documentation build pipeline.
  *
  * Executes the high-level build steps in sequence: prints headers and paths, validates internal
  * documentation links, cleans the build directory, builds the Astro site, and prints a final
@@ -41,7 +41,7 @@ async function main() {
   }
 
   console.log();
-  printBanner('BMAD Documentation Build Pipeline');
+  printBanner('FUNCIONARIO Documentation Build Pipeline');
   console.log();
   console.log(`Project root: ${PROJECT_ROOT}`);
   console.log(`Build directory: ${BUILD_DIR}`);

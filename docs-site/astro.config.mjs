@@ -5,7 +5,7 @@ import { unified } from '@astrojs/markdown-remark';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
-import bmadDiagrams from './src/integrations/diagrams.js';
+import funcionarioDiagrams from './src/integrations/diagrams.js';
 import rehypeInlineDiagrams from './src/rehype-inline-diagrams.js';
 import rehypeMarkdownLinks from './src/rehype-markdown-links.js';
 import rehypeBasePaths from './src/rehype-base-paths.js';
@@ -23,11 +23,11 @@ export default defineConfig({
   base: basePath,
   outDir: '../build/site',
   redirects: {
-    '/how-to/install-bmad': `${basePath}start/install-bmad/`,
-    '/how-to/non-interactive-installation': `${basePath}start/install-bmad/`,
+    '/how-to/install-funcionario': `${basePath}start/install-funcionario/`,
+    '/how-to/non-interactive-installation': `${basePath}start/install-funcionario/`,
     '/tutorials/getting-started': `${basePath}start/build-your-first-change/`,
-    '/how-to/get-answers-about-bmad': `${basePath}start/get-answers-about-bmad/`,
-    '/how-to/upgrade-to-v6': `${basePath}start/install-bmad/`,
+    '/how-to/get-answers-about-funcionario': `${basePath}start/get-answers-about-funcionario/`,
+    '/how-to/upgrade-to-v6': `${basePath}start/install-funcionario/`,
     '/how-to/quick-fixes': `${basePath}build/build-a-change/`,
     '/explanation/build': `${basePath}build/build-a-change/`,
     '/explanation/checkpoint-preview': `${basePath}build/walk-through-a-change/`,
@@ -67,20 +67,20 @@ export default defineConfig({
     '/explanation/project-context': `${basePath}existing-codebases/set-and-maintain-project-context/`,
     '/explanation/project-context-theory': `${basePath}existing-codebases/theory-of-project-context/`,
     '/tutorials/getting-deeper': `${basePath}existing-codebases/getting-deeper/`,
-    '/how-to/customize-bmad': `${basePath}customize/customize-bmad/`,
-    '/explanation/named-agents': `${basePath}customize/customize-bmad/`,
-    '/how-to/expand-bmad-for-your-org': `${basePath}customize/adopt-bmad-across-a-team/`,
+    '/how-to/customize-funcionario': `${basePath}customize/customize-funcionario/`,
+    '/explanation/named-agents': `${basePath}customize/customize-funcionario/`,
+    '/how-to/expand-funcionario-for-your-org': `${basePath}customize/adopt-funcionario-across-a-team/`,
     '/how-to/install-custom-modules': `${basePath}customize/add-modules/`,
     '/reference/modules': `${basePath}customize/add-modules/`,
     '/how-to/use-web-bundles': `${basePath}customize/use-web-bundles/`,
     '/explanation/web-bundles': `${basePath}customize/use-web-bundles/`,
     '/explanation/party-mode': `${basePath}customize/run-multi-agent-discussions/`,
-    '/cs/explanation/named-agents': `${basePath}cs/customize/customize-bmad/`,
-    '/fr/how-to/non-interactive-installation': `${basePath}fr/how-to/install-bmad/`,
-    '/cs/how-to/non-interactive-installation': `${basePath}cs/how-to/install-bmad/`,
-    '/ko-kr/how-to/non-interactive-installation': `${basePath}ko-kr/start/install-bmad/`,
-    '/vi-vn/how-to/non-interactive-installation': `${basePath}vi-vn/how-to/install-bmad/`,
-    '/zh-cn/how-to/non-interactive-installation': `${basePath}zh-cn/how-to/install-bmad/`,
+    '/cs/explanation/named-agents': `${basePath}cs/customize/customize-funcionario/`,
+    '/fr/how-to/non-interactive-installation': `${basePath}fr/how-to/install-funcionario/`,
+    '/cs/how-to/non-interactive-installation': `${basePath}cs/how-to/install-funcionario/`,
+    '/ko-kr/how-to/non-interactive-installation': `${basePath}ko-kr/start/install-funcionario/`,
+    '/vi-vn/how-to/non-interactive-installation': `${basePath}vi-vn/how-to/install-funcionario/`,
+    '/zh-cn/how-to/non-interactive-installation': `${basePath}zh-cn/how-to/install-funcionario/`,
   },
 
   // Disable aggressive caching in dev mode
@@ -110,21 +110,21 @@ export default defineConfig({
 
   integrations: [
     // must come before the pages that embed diagrams are rendered
-    bmadDiagrams(),
+    funcionarioDiagrams(),
     // Exclude custom 404 pages (all locales) from the sitemap — they are
     // treated as normal content docs by Starlight even with disable404Route.
     sitemap({
       filter: (page) => !/\/404(\/|$)/.test(new URL(page).pathname),
     }),
     starlight({
-      title: 'BMad Method',
+      title: 'Funcionário Infinito',
 
       // i18n: locale config from shared module (docs-site/src/lib/locales.mjs)
       defaultLocale: 'root',
       locales,
 
-      // The BMad tile: the same mark the header carries, and byte-for-byte the
-      // drawing bmadcode.com and blog.bmadcode.com serve. The SVG is what modern
+      // The Funcionário Infinito tile: the same mark the header carries, and byte-for-byte the
+      // drawing funcionario-infinito.com.br and blog.funcionario-infinito.com.br serve. The SVG is what modern
       // browsers pick up; the .ico and the apple-touch-icon are generated from
       // it, for the ones that ignore `image/svg+xml` and for iOS home screens.
       favicon: '/favicon.svg',
@@ -141,9 +141,9 @@ export default defineConfig({
 
       // Social links
       social: [
-        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/gk8jAdXWmj' },
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/bmad-code-org/BMAD-METHOD' },
-        { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@BMadCode' },
+        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/SEU-CONVITE-AQUI' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/funcionario-infinito/funcionario-infinito' },
+        { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@funcionarioinfinito' },
       ],
 
       // Show last updated timestamps
@@ -165,15 +165,15 @@ export default defineConfig({
               slug: 'index',
             },
             {
-              label: 'Install BMad',
+              label: 'Install Funcionário Infinito',
               translations: {
-                'ko-KR': 'BMad 설치',
-                'vi-VN': 'Cách cài đặt BMad',
-                'zh-CN': '如何安装 BMad',
-                'fr-FR': 'Comment installer BMad',
-                'cs-CZ': 'Jak nainstalovat BMad',
+                'ko-KR': 'Funcionário Infinito 설치',
+                'vi-VN': 'Cách cài đặt Funcionário Infinito',
+                'zh-CN': '如何安装 Funcionário Infinito',
+                'fr-FR': 'Comment installer Funcionário Infinito',
+                'cs-CZ': 'Jak nainstalovat Funcionário Infinito',
               },
-              slug: 'start/install-bmad',
+              slug: 'start/install-funcionario',
             },
             {
               label: 'Build Your First Change',
@@ -187,15 +187,15 @@ export default defineConfig({
               slug: 'start/build-your-first-change',
             },
             {
-              label: 'Get Answers About BMad',
+              label: 'Get Answers About Funcionário Infinito',
               translations: {
-                'ko-KR': 'BMad 관련 질문에 답을 얻는 방법',
-                'vi-VN': 'Cách tìm câu trả lời về BMad',
-                'zh-CN': '如何获取关于 BMad 的答案',
-                'fr-FR': 'Comment obtenir des réponses à propos de BMad',
-                'cs-CZ': 'Jak získat odpovědi o BMad',
+                'ko-KR': 'Funcionário Infinito 관련 질문에 답을 얻는 방법',
+                'vi-VN': 'Cách tìm câu trả lời về Funcionário Infinito',
+                'zh-CN': '如何获取关于 Funcionário Infinito 的答案',
+                'fr-FR': 'Comment obtenir des réponses à propos de Funcionário Infinito',
+                'cs-CZ': 'Jak získat odpovědi o Funcionário Infinito',
               },
-              slug: 'start/get-answers-about-bmad',
+              slug: 'start/get-answers-about-funcionario',
             },
           ],
         },
@@ -425,26 +425,26 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              label: 'Customize BMad',
+              label: 'Customize Funcionário Infinito',
               translations: {
-                'ko-KR': 'BMad 커스터마이즈',
-                'vi-VN': 'Tùy chỉnh BMad',
-                'zh-CN': '自定义 BMad',
-                'fr-FR': 'Personnaliser BMad',
-                'cs-CZ': 'Přizpůsobit BMad',
+                'ko-KR': 'Funcionário Infinito 커스터마이즈',
+                'vi-VN': 'Tùy chỉnh Funcionário Infinito',
+                'zh-CN': '自定义 Funcionário Infinito',
+                'fr-FR': 'Personnaliser Funcionário Infinito',
+                'cs-CZ': 'Přizpůsobit Funcionário Infinito',
               },
-              slug: 'customize/customize-bmad',
+              slug: 'customize/customize-funcionario',
             },
             {
-              label: 'Adopt BMad Across a Team',
+              label: 'Adopt Funcionário Infinito Across a Team',
               translations: {
-                'ko-KR': '팀 전체에 BMad 도입하기',
-                'vi-VN': 'Áp dụng BMad cho cả nhóm',
-                'zh-CN': '在团队中采用 BMad',
-                'fr-FR': 'Adopter BMad dans toute une équipe',
-                'cs-CZ': 'Zavést BMad v celém týmu',
+                'ko-KR': '팀 전체에 Funcionário Infinito 도입하기',
+                'vi-VN': 'Áp dụng Funcionário Infinito cho cả nhóm',
+                'zh-CN': '在团队中采用 Funcionário Infinito',
+                'fr-FR': 'Adopter Funcionário Infinito dans toute une équipe',
+                'cs-CZ': 'Zavést Funcionário Infinito v celém týmu',
               },
-              slug: 'customize/adopt-bmad-across-a-team',
+              slug: 'customize/adopt-funcionario-across-a-team',
             },
             {
               label: 'Add Modules',
@@ -489,26 +489,26 @@ export default defineConfig({
         },
         // TEA docs moved to standalone module site; keep BMM sidebar focused.
         {
-          label: 'BMad Ecosystem',
+          label: 'Funcionário Infinito Ecosystem',
           translations: {
-            'ko-KR': 'BMad 생태계',
-            'vi-VN': 'Hệ sinh thái BMad',
-            'zh-CN': 'BMad 生态系统',
-            'fr-FR': 'Écosystème BMad',
-            'cs-CZ': 'Ekosystém BMad',
+            'ko-KR': 'Funcionário Infinito 생태계',
+            'vi-VN': 'Hệ sinh thái Funcionário Infinito',
+            'zh-CN': 'Funcionário Infinito 生态系统',
+            'fr-FR': 'Écosystème Funcionário Infinito',
+            'cs-CZ': 'Ekosystém Funcionário Infinito',
           },
           collapsed: false,
           items: [
             {
-              label: 'BMad Builder',
+              label: 'Funcionário Infinito Builder',
               translations: {
-                'ko-KR': 'BMad Builder',
-                'vi-VN': 'BMad Builder',
-                'zh-CN': 'BMad 构建器',
-                'fr-FR': 'BMad Builder',
-                'cs-CZ': 'BMad Builder',
+                'ko-KR': 'Funcionário Infinito Builder',
+                'vi-VN': 'Funcionário Infinito Builder',
+                'zh-CN': 'Funcionário Infinito 构建器',
+                'fr-FR': 'Funcionário Infinito Builder',
+                'cs-CZ': 'Funcionário Infinito Builder',
               },
-              link: 'https://bmad-builder-docs.bmad-method.org/',
+              link: 'https://funcionario-builder-docs.funcionario-infinito.com.br/',
               attrs: { target: '_blank' },
             },
             {
@@ -520,7 +520,7 @@ export default defineConfig({
                 'fr-FR': "Suite d'Intelligence Créative",
                 'cs-CZ': 'Sada kreativní inteligence',
               },
-              link: 'https://cis-docs.bmad-method.org/',
+              link: 'https://cis-docs.funcionario-infinito.com.br/',
               attrs: { target: '_blank' },
             },
             {
@@ -532,7 +532,7 @@ export default defineConfig({
                 'fr-FR': 'Studio de Développement de Jeux',
                 'cs-CZ': 'Herní vývojové studio',
               },
-              link: 'https://game-dev-studio-docs.bmad-method.org/',
+              link: 'https://game-dev-studio-docs.funcionario-infinito.com.br/',
               attrs: { target: '_blank' },
             },
             {
@@ -544,7 +544,7 @@ export default defineConfig({
                 'fr-FR': 'Architecte de Tests (TEA)',
                 'cs-CZ': 'Testovací architekt (TEA)',
               },
-              link: 'https://bmad-code-org.github.io/bmad-method-test-architecture-enterprise/',
+              link: 'https://funcionario-infinito.github.io/funcionario-method-test-architecture-enterprise/',
               attrs: { target: '_blank' },
             },
           ],

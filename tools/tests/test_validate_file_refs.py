@@ -61,7 +61,7 @@ class TestMarkdownExtraction(unittest.TestCase):
     def test_all_pattern_types(self):
         content = "\n".join(
             [
-                "See {project-root}/_bmad/scripts/memlog.py for details.",
+                "See {project-root}/_funcionario/scripts/memlog.py for details.",
                 "Load `references/help.md` and `steps/step-02.md` now.",
                 "Also `data/things.toml` applies.",
             ]
@@ -82,20 +82,20 @@ class TestMarkdownExtraction(unittest.TestCase):
                 "Globs like `references/mode-*.md` are prose.",
                 "Placeholders `stories/<id>-file.md` and `custom/{skill-name}.toml` too.",
                 "Absolute `/etc/conf.md`, dotted `./x/y.md` and `../up/z.md`,",
-                "install-side `_bmad/config.toml`, and at-form `@dir/AGENTS.md`.",
+                "install-side `_funcionario/config.toml`, and at-form `@dir/AGENTS.md`.",
                 "Bare filenames like `prd.md` have no slash and are ignored.",
             ]
         )
         self.assertEqual(self.extract(content), [])
 
     def test_line_numbers(self):
-        content = "one\ntwo\n{project-root}/_bmad/bmm/x.md\nsee `references/y.md`\n"
+        content = "one\ntwo\n{project-root}/_funcionario/bmm/x.md\nsee `references/y.md`\n"
         refs = self.extract(content)
         self.assertEqual([(r.raw, r.line) for r in refs], [("bmm/x.md", 3), ("references/y.md", 4)])
 
     def test_code_blocks_stripped(self):
         content = (
-            "```\n{project-root}/_bmad/bmm/fenced.md\n`references/fenced.md`\n```\n{project-root}/_bmad/bmm/live.md\n"
+            "```\n{project-root}/_funcionario/bmm/fenced.md\n`references/fenced.md`\n```\n{project-root}/_funcionario/bmm/live.md\n"
         )
         refs = self.extract(content)
         self.assertEqual([r.raw for r in refs], ["bmm/live.md"])
@@ -106,16 +106,16 @@ class TestMarkdownExtraction(unittest.TestCase):
         self.assertEqual(self.extract(content), [])
 
     def test_unresolvable_refs_skipped(self):
-        content = "Mustache {project-root}/_bmad/bmm/{{name}}/file.md is skipped.\n"
+        content = "Mustache {project-root}/_funcionario/bmm/{{name}}/file.md is skipped.\n"
         self.assertEqual(self.extract(content), [])
 
 
 class TestYamlExtraction(unittest.TestCase):
     def test_refs_with_lines_and_keys(self):
-        content = "steps:\n  - file: '{project-root}/_bmad/bmm/workflows/w.md'\n"
+        content = "steps:\n  - file: '{project-root}/_funcionario/bmm/workflows/w.md'\n"
         refs = vfr.extract_yaml_refs("/x/file.yaml", content)
         self.assertEqual(len(refs), 1)
-        self.assertEqual(refs[0].raw, "{project-root}/_bmad/bmm/workflows/w.md")
+        self.assertEqual(refs[0].raw, "{project-root}/_funcionario/bmm/workflows/w.md")
         self.assertEqual(refs[0].type, "project-root")
         self.assertEqual(refs[0].line, 2)
         self.assertEqual(refs[0].key, "steps[0].file")
@@ -125,11 +125,11 @@ class TestYamlExtraction(unittest.TestCase):
         self.assertEqual(vfr.extract_yaml_refs("/x/f.yaml", content), [])
 
     def test_multi_document_yaml_scans_all_documents(self):
-        content = "a: '{project-root}/_bmad/bmm/one.md'\n---\nb: '{project-root}/_bmad/bmm/two.md'\n"
+        content = "a: '{project-root}/_funcionario/bmm/one.md'\n---\nb: '{project-root}/_funcionario/bmm/two.md'\n"
         refs = vfr.extract_yaml_refs("/x/f.yaml", content)
         self.assertEqual(
             [(r.raw, r.line) for r in refs],
-            [("{project-root}/_bmad/bmm/one.md", 1), ("{project-root}/_bmad/bmm/two.md", 3)],
+            [("{project-root}/_funcionario/bmm/one.md", 1), ("{project-root}/_funcionario/bmm/two.md", 3)],
         )
 
     def test_invalid_yaml_returns_empty(self):
@@ -141,17 +141,17 @@ class TestMapping(unittest.TestCase):
         return vfr.map_installed_to_source(ref, "/repo/skills")
 
     def test_mappings(self):
-        self.assertEqual(self.map("{project-root}/_bmad/scripts/memlog.py"), "/repo/skills/bmad/scripts/memlog.py")
-        self.assertEqual(self.map("{_bmad}/scripts/resolve_config.py"), "/repo/skills/bmad/scripts/resolve_config.py")
-        self.assertEqual(self.map("_bmad/scripts/render_skill.py"), "/repo/skills/bmad/scripts/render_skill.py")
+        self.assertEqual(self.map("{project-root}/_funcionario/scripts/memlog.py"), "/repo/skills/funcionario/scripts/memlog.py")
+        self.assertEqual(self.map("{_funcionario}/scripts/resolve_config.py"), "/repo/skills/funcionario/scripts/resolve_config.py")
+        self.assertEqual(self.map("_funcionario/scripts/render_skill.py"), "/repo/skills/funcionario/scripts/render_skill.py")
         self.assertEqual(self.map("other/file.md"), "/repo/skills/other/file.md")
 
     def test_install_only_paths_skipped(self):
         for ref in (
             "_config/settings.yaml",
             "custom/mine.md",
-            "render/bmad-build/x.md",
-            "render/bmad-build-auto/x.md",
+            "render/funcionario-build/x.md",
+            "render/funcionario-build-auto/x.md",
         ):
             self.assertIsNone(self.map(ref), ref)
 
@@ -191,7 +191,7 @@ class TestRunClassification(ProjectCase):
         (self.skill / "references").mkdir()
         write(
             self.skill / "doc.md",
-            "Read `references/gone.md` now.\nAlso {project-root}/_bmad/core/no-such-dir here.\n",
+            "Read `references/gone.md` now.\nAlso {project-root}/_funcionario/core/no-such-dir here.\n",
         )
         code, out = self.run_validator(strict=True)
         self.assertEqual(code, 1)
@@ -238,7 +238,7 @@ class TestRunClassification(ProjectCase):
         self.assertIn("Run with --strict to treat warnings as errors.", out)
 
     def test_install_only_ref_not_counted_as_broken(self):
-        write(self.skill / "doc.md", "Uses {project-root}/_bmad/_config/settings.yaml here.\n")
+        write(self.skill / "doc.md", "Uses {project-root}/_funcionario/_config/settings.yaml here.\n")
         code, out = self.run_validator(strict=True)
         self.assertEqual(code, 0)
         # extracted (counted) but skipped by the install-only list, so not broken
@@ -246,10 +246,10 @@ class TestRunClassification(ProjectCase):
         self.assertIn("Broken references: 0", out)
 
     def test_yaml_file_scanned(self):
-        write(self.skill / "wf.yaml", "step: '{project-root}/_bmad/bmm/missing.md'\n")
+        write(self.skill / "wf.yaml", "step: '{project-root}/_funcionario/bmm/missing.md'\n")
         code, out = self.run_validator(strict=True)
         self.assertEqual(code, 1)
-        self.assertIn("[BROKEN] {project-root}/_bmad/bmm/missing.md (line 1)", out)
+        self.assertIn("[BROKEN] {project-root}/_funcionario/bmm/missing.md (line 1)", out)
 
     def test_invalid_utf8_does_not_crash(self):
         (self.skill / "references").mkdir()
@@ -274,7 +274,7 @@ class TestRunClassification(ProjectCase):
         self.assertIn("1 issues found", summary)
 
     def test_csv_files_not_scanned(self):
-        write(self.skill / "data.csv", "workflow-file\n{project-root}/_bmad/bmm/missing.md\n")
+        write(self.skill / "data.csv", "workflow-file\n{project-root}/_funcionario/bmm/missing.md\n")
         code, out = self.run_validator(strict=True)
         self.assertEqual(code, 0)
         self.assertIn("Files scanned: 0", out)

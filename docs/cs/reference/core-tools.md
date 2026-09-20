@@ -5,10 +5,10 @@ sidebar:
   order: 3
 ---
 
-Každá instalace BMad zahrnuje **základní modul** — malou sadu skills, které fungují napříč všemi projekty, všemi moduly a všemi fázemi. Tato stránka pokrývá těchto sedm základních skills: čtyři jádrové nástroje plus tři **myšlenkové skills** (brainstorming, forge idea, party mode).
+Každá instalace Funcionário Infinito zahrnuje **základní modul** — malou sadu skills, které fungují napříč všemi projekty, všemi moduly a všemi fázemi. Tato stránka pokrývá těchto sedm základních skills: čtyři jádrové nástroje plus tři **myšlenkové skills** (brainstorming, forge idea, party mode).
 
 :::tip[Rychlá cesta]
-Spusťte jakýkoli nástroj zadáním jeho názvu skillu (např. `bmad-help`) ve vašem IDE. Nevyžaduje relaci agenta.
+Spusťte jakýkoli nástroj zadáním jeho názvu skillu (např. `funcionario-help`) ve vašem IDE. Nevyžaduje relaci agenta.
 :::
 
 ## Přehled
@@ -17,31 +17,31 @@ Spusťte jakýkoli nástroj zadáním jeho názvu skillu (např. `bmad-help`) ve
 
 | Nástroj                                                   | Účel                                                                                                                      |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [`bmad-help`](#bmad-help)                                 | Kontextové poradenství, co dělat dál                                                                                      |
-| [`bmad-advanced-elicitation`](#bmad-advanced-elicitation) | Iterativní zdokonalování LLM výstupu                                                                                      |
-| [`bmad-review`](#bmad-review)                             | Revize z více perspektiv — adversariální, hraniční případy a mezery ve verifikaci pro kód; struktura a text pro dokumenty |
-| [`bmad-customize`](#bmad-customize)                       | Vytváření a ověřování přizpůsobení BMad                                                                                   |
+| [`funcionario-help`](#funcionario-help)                                 | Kontextové poradenství, co dělat dál                                                                                      |
+| [`funcionario-advanced-elicitation`](#funcionario-advanced-elicitation) | Iterativní zdokonalování LLM výstupu                                                                                      |
+| [`funcionario-review`](#funcionario-review)                             | Revize z více perspektiv — adversariální, hraniční případy a mezery ve verifikaci pro kód; struktura a text pro dokumenty |
+| [`funcionario-customize`](#funcionario-customize)                       | Vytváření a ověřování přizpůsobení Funcionário Infinito                                                                                   |
 
 **Myšlenkové skills:**
 
 | Nástroj                                     | Účel                                                                   |
 | ------------------------------------------- | ---------------------------------------------------------------------- |
-| [`bmad-brainstorming`](#bmad-brainstorming) | Facilitace interaktivních brainstormingových sezení                    |
-| [`bmad-forge-idea`](#bmad-forge-idea)       | Zátěžový test nápadu, dokud se nezpevní, nepotvrdí, nebo levně nezemře |
-| [`bmad-party-mode`](#bmad-party-mode)       | Orchestrace skupinových diskuzí více agentů                            |
+| [`funcionario-brainstorming`](#funcionario-brainstorming) | Facilitace interaktivních brainstormingových sezení                    |
+| [`funcionario-forge-idea`](#funcionario-forge-idea)       | Zátěžový test nápadu, dokud se nezpevní, nepotvrdí, nebo levně nezemře |
+| [`funcionario-party-mode`](#funcionario-party-mode)       | Orchestrace skupinových diskuzí více agentů                            |
 
 :::note[Přesunuto a odstraněno]
-`bmad-spec` se nyní dodává s modulem BMM jako plánovací workflow Fáze 2 — viz [Mapa workflow](./workflow-map.md). Utility `bmad-shard-doc` a `bmad-index-docs` byly odstraněny. Dřívější skills `bmad-editorial-review`, `bmad-editorial-review-prose`, `bmad-editorial-review-structure`, `bmad-review-adversarial-general`, `bmad-review-edge-case-hunter` a `bmad-review-verification-gap` jsou všechny sloučeny do `bmad-review`, jehož redakční perspektivy nahrazují samostatný redakční skill; staré identifikátory se stále rozliší přes přesměrování kvůli kompatibilitě.
+`funcionario-spec` se nyní dodává s modulem BMM jako plánovací workflow Fáze 2 — viz [Mapa workflow](./workflow-map.md). Utility `funcionario-shard-doc` a `funcionario-index-docs` byly odstraněny. Dřívější skills `funcionario-editorial-review`, `funcionario-editorial-review-prose`, `funcionario-editorial-review-structure`, `funcionario-review-adversarial-general`, `funcionario-review-edge-case-hunter` a `funcionario-review-verification-gap` jsou všechny sloučeny do `funcionario-review`, jehož redakční perspektivy nahrazují samostatný redakční skill; staré identifikátory se stále rozliší přes přesměrování kvůli kompatibilitě.
 :::
 
-## bmad-help
+## funcionario-help
 
 **Váš inteligentní průvodce tím, co přijde dál.** — Zkoumá stav vašeho projektu, detekuje, co bylo uděláno, a doporučuje další povinný nebo volitelný krok.
 
 **Použijte když:**
 
 - Dokončili jste workflow a chcete vědět, co dál
-- Jste noví v BMad a potřebujete orientaci
+- Jste noví v Funcionário Infinito a potřebujete orientaci
 - Jste uvízlí a chcete kontextovou radu
 - Nainstalovali jste nové moduly a chcete vidět, co je dostupné
 
@@ -52,13 +52,13 @@ Spusťte jakýkoli nástroj zadáním jeho názvu skillu (např. `bmad-help`) ve
 3. Doporučuje další kroky v pořadí priority — nejprve povinné, pak volitelné
 4. Prezentuje každé doporučení s příkazem skillu a stručným popisem
 
-**Vstup:** Volitelný dotaz v přirozeném jazyce (např. `bmad-help I have a SaaS idea, where do I start?`)
+**Vstup:** Volitelný dotaz v přirozeném jazyce (např. `funcionario-help I have a SaaS idea, where do I start?`)
 
 **Výstup:** Prioritizovaný seznam doporučených dalších kroků s příkazy skills
 
-## bmad-advanced-elicitation
+## funcionario-advanced-elicitation
 
-**Přiměje LLM přehodnotit, zdokonalit a vylepšit svůj nedávný výstup.** — Sdílený zdokonalovací checkpoint BMad: ostatní skills jej vyvolávají při přirozených pauzách a vy jej můžete zavolat přímo na cokoli nedávného v konverzaci.
+**Přiměje LLM přehodnotit, zdokonalit a vylepšit svůj nedávný výstup.** — Sdílený zdokonalovací checkpoint Funcionário Infinito: ostatní skills jej vyvolávají při přirozených pauzách a vy jej můžete zavolat přímo na cokoli nedávného v konverzaci.
 
 **Použijte když:**
 
@@ -78,7 +78,7 @@ Spusťte jakýkoli nástroj zadáním jeho názvu skillu (např. `bmad-help`) ve
 
 **Výstup:** Vylepšená verze obsahu s aplikovanými zlepšeními
 
-## bmad-review
+## funcionario-review
 
 **Revize z více perspektiv nad jakýmkoli diffem, dokumentem nebo artefaktem.** — Spouští revizní perspektivy — každou s vlastní metodou a postojem — a hlásí každý nález v jednom kanonickém tvaru. Nula nálezů je platný výsledek; nikdy nedoplňuje, aby vypadal důkladně. Každá perspektiva deklaruje, na co se vztahuje: diff vyvolá perspektivy pro kód, dokument ty redakční.
 
@@ -121,9 +121,9 @@ Sada není pevná: přepis v `customize.toml` může perspektivy přidat nebo na
 
 **Výstup:** JSON pole nálezů a/nebo markdown report seskupený podle perspektiv. Vlastní perspektivy lze přidat — a dodávané doladit či vypnout — přes `customize.toml` skillu
 
-## bmad-customize
+## funcionario-customize
 
-**Vytváření a ověřování přizpůsobení.** — Pomůže vám změnit chování nainstalovaného BMad agenta nebo workflow bez ručního psaní TOML.
+**Vytváření a ověřování přizpůsobení.** — Pomůže vám změnit chování nainstalovaného Funcionário Infinito agenta nebo workflow bez ručního psaní TOML.
 
 **Použijte když:**
 
@@ -133,20 +133,20 @@ Sada není pevná: přepis v `customize.toml` může perspektivy přidat nebo na
 
 **Jak to funguje:**
 
-1. Skenuje nainstalované BMad skills pro přizpůsobitelné plochy
+1. Skenuje nainstalované Funcionário Infinito skills pro přizpůsobitelné plochy
 2. Vybere správný rozsah pro požadovanou změnu
-3. Zapíše přepisové soubory pod `_bmad/custom/`
+3. Zapíše přepisové soubory pod `_funcionario/custom/`
 4. Ověří sloučenou konfiguraci
 
 **Vstup:** Popis požadovaného přizpůsobení v přirozeném jazyce
 
-**Výstup:** TOML přepisové soubory pod `_bmad/custom/`. Podrobný návod viz [Jak přizpůsobit BMad](../how-to/customize-bmad.md)
+**Výstup:** TOML přepisové soubory pod `_funcionario/custom/`. Podrobný návod viz [Jak přizpůsobit Funcionário Infinito](../how-to/customize-funcionario.md)
 
 ## Myšlenkové skills
 
 Tři skills níže doplňují základní modul — obecné myšlenkové nástroje, o které se může opřít kterákoli fáze či modul.
 
-### bmad-brainstorming
+### funcionario-brainstorming
 
 **Generování různorodých nápadů prostřednictvím interaktivních kreativních technik.** — Facilitované brainstormingové sezení, které načítá osvědčené ideační metody z knihovny technik a vede vás k 100+ nápadům před organizací.
 
@@ -171,7 +171,7 @@ Tři skills níže doplňují základní modul — obecné myšlenkové nástroj
 Kouzlo se děje v nápadech 50–100. Workflow povzbuzuje generování 100+ nápadů před organizací.
 :::
 
-### bmad-forge-idea
+### funcionario-forge-idea
 
 **Zátěžový test nápadu, dokud se nezpevní, nepotvrdí, nebo levně nezemře.** — Adversariální tazatel žene napůl zformovaný nápad otázku po otázce, do každého větvení přivádí dvě postavy, dokud to, co přežije, není něco, na čem můžete s přesvědčením stavět.
 
@@ -193,9 +193,9 @@ Kouzlo se děje v nápadech 50–100. Workflow povzbuzuje generování 100+ náp
 
 **Výstup:** Destilát `forged-idea.md`, když se nápad zpevní (volitelné), plus `forge-report.html` z každého běhu
 
-### bmad-party-mode
+### funcionario-party-mode
 
-**Orchestrace skupinových diskuzí více agentů.** — Načte všechny nainstalované BMad agenty a facilituje přirozenou konverzaci, kde každý agent přispívá svou unikátní odborností a osobností.
+**Orchestrace skupinových diskuzí více agentů.** — Načte všechny nainstalované Funcionário Infinito agenty a facilituje přirozenou konverzaci, kde každý agent přispívá svou unikátní odborností a osobností.
 
 **Použijte když:**
 

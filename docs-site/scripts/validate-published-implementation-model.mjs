@@ -2,10 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const FORBIDDEN_TERMS = [
-  /\bbmad-(?:quick-dev|dev-auto)\b/gi,
+  /\bfuncionario-(?:quick-dev|dev-auto)\b/gi,
   /\bQuick[ -]?Dev\b/gi,
   /\bDev[ -]?Auto\b/gi,
-  /\bbmad-(?:create|dev)-story\b/gi,
+  /\bfuncionario-(?:create|dev)-story\b/gi,
   /\b(?:create-story|dev-story)\b/gi,
   /\b(?:Create Story|Dev Story)\b/g,
   /\b(?:createStory|devStory|create_story|dev_story)\b/g,

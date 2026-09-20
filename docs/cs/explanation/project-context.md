@@ -21,10 +21,10 @@ Soubor `project-context.md` toto řeší dokumentací toho, co agenti potřebuj�
 Každý implementační workflow automaticky načítá `project-context.md`, pokud existuje. Architektonický workflow ho také načítá, aby respektoval vaše technické preference při navrhování architektury.
 
 **Načítán těmito workflow:**
-- `bmad-architecture` — respektuje technické preference během solutioningu
-- `bmad-code-review` — validuje proti standardům projektu
-- `bmad-build` — aplikuje vzory při plánování a implementaci přímých záměrů i stories
-- `bmad-sprint-planning`, `bmad-retrospective`, `bmad-correct-course` — poskytuje celkový kontext projektu
+- `funcionario-architecture` — respektuje technické preference během solutioningu
+- `funcionario-code-review` — validuje proti standardům projektu
+- `funcionario-build` — aplikuje vzory při plánování a implementaci přímých záměrů i stories
+- `funcionario-sprint-planning`, `funcionario-retrospective`, `funcionario-correct-course` — poskytuje celkový kontext projektu
 
 ## Kdy ho vytvořit
 
@@ -32,10 +32,10 @@ Soubor `project-context.md` je užitečný v jakékoli fázi projektu:
 
 | Scénář                               | Kdy vytvořit                                    | Účel                                                                 |
 | ------------------------------------ | ----------------------------------------------- | -------------------------------------------------------------------- |
-| **Nový projekt, před architekturou** | Ručně, před `bmad-architecture`          | Dokumentujte vaše technické preference, aby je architekt respektoval |
-| **Nový projekt, po architektuře**    | Přes `bmad-generate-project-context` nebo ručně | Zachyťte architektonická rozhodnutí pro implementační agenty         |
-| **Existující projekt**               | Přes `bmad-generate-project-context`            | Objevte existující vzory, aby agenti dodržovali zavedené konvence    |
-| **Přímý vstup do implementace**      | Před nebo během `bmad-build`                | Zajistěte, aby implementace bez upstream plánování respektovala vaše vzory |
+| **Nový projekt, před architekturou** | Ručně, před `funcionario-architecture`          | Dokumentujte vaše technické preference, aby je architekt respektoval |
+| **Nový projekt, po architektuře**    | Přes `funcionario-generate-project-context` nebo ručně | Zachyťte architektonická rozhodnutí pro implementační agenty         |
+| **Existující projekt**               | Přes `funcionario-generate-project-context`            | Objevte existující vzory, aby agenti dodržovali zavedené konvence    |
+| **Přímý vstup do implementace**      | Před nebo během `funcionario-build`                | Zajistěte, aby implementace bez upstream plánování respektovala vaše vzory |
 
 :::tip[Doporučeno]
 Pro nové projekty ho vytvořte ručně před architekturou, pokud máte silné technické preference. Jinak ho vygenerujte po architektuře pro zachycení těchto rozhodnutí.
@@ -93,32 +93,32 @@ Máte tři možnosti:
 
 ### Ruční vytvoření
 
-Vytvořte soubor na `_bmad-output/project-context.md` a přidejte svá pravidla:
+Vytvořte soubor na `_funcionario-output/project-context.md` a přidejte svá pravidla:
 
 ```bash
 # V kořeni projektu
-mkdir -p _bmad-output
-touch _bmad-output/project-context.md
+mkdir -p _funcionario-output
+touch _funcionario-output/project-context.md
 ```
 
 Upravte ho s vaším technologickým stackem a pravidly implementace. Architektonický a implementační workflow ho automaticky najdou a načtou.
 
 ### Generování po architektuře
 
-Spusťte workflow `bmad-generate-project-context` po dokončení architektury:
+Spusťte workflow `funcionario-generate-project-context` po dokončení architektury:
 
 ```bash
-bmad-generate-project-context
+funcionario-generate-project-context
 ```
 
 Toto skenuje váš dokument architektury a soubory projektu a generuje kontextový soubor zachycující učiněná rozhodnutí.
 
 ### Generování pro existující projekty
 
-Pro existující projekty spusťte `bmad-generate-project-context` pro objevení existujících vzorů:
+Pro existující projekty spusťte `funcionario-generate-project-context` pro objevení existujících vzorů:
 
 ```bash
-bmad-generate-project-context
+funcionario-generate-project-context
 ```
 
 Workflow analyzuje vaši kódovou bázi, identifikuje konvence a vygeneruje kontextový soubor, který můžete zkontrolovat a upřesnit.
@@ -148,8 +148,8 @@ Soubor `project-context.md` je živý dokument. Aktualizujte ho, když:
 - Vzory se vyvíjejí během implementace
 - Identifikujete mezery z chování agentů
 
-Můžete ho kdykoli ručně upravit, nebo přegenerovat `bmad-generate-project-context` po významných změnách.
+Můžete ho kdykoli ručně upravit, nebo přegenerovat `funcionario-generate-project-context` po významných změnách.
 
 :::note[Umístění souboru]
-Výchozí umístění je `_bmad-output/project-context.md`. Workflow ho tam hledají a také kontrolují `**/project-context.md` kdekoli ve vašem projektu.
+Výchozí umístění je `_funcionario-output/project-context.md`. Workflow ho tam hledají a také kontrolují `**/project-context.md` kdekoli ve vašem projektu.
 :::

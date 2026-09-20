@@ -1,11 +1,11 @@
 ---
 title: "기존 프로젝트 FAQ"
-description: 기존 프로젝트에서 BMad Method를 사용할 때의 일반 질문
+description: 기존 프로젝트에서 Funcionário Infinito를 사용할 때의 일반 질문
 sidebar:
   order: 10
 ---
 
-BMad Method(BMM)로 기존 프로젝트에서 작업할 때 자주 묻는 질문에 빠르게 답합니다.
+Funcionário Infinito(BMM)로 기존 프로젝트에서 작업할 때 자주 묻는 질문에 빠르게 답합니다.
 
 ## 질문
 
@@ -16,7 +16,7 @@ BMad Method(BMM)로 기존 프로젝트에서 작업할 때 자주 묻는 질문
 
 ### 프로젝트 문서화를 먼저 실행해야 하나요?
 
-`bmad-document-project`는 더 이상 사용하지 않습니다. 이를 대체하는 [`bmad-project-context`](project-context.md)는 별도의 문서를 생성하지 않고 저장소의 `AGENTS.md`에 작고 검증된 블록을 작성합니다. 특히 다음 상황에서는 먼저 실행하는 것이 좋습니다.
+`funcionario-document-project`는 더 이상 사용하지 않습니다. 이를 대체하는 [`funcionario-project-context`](project-context.md)는 별도의 문서를 생성하지 않고 저장소의 `AGENTS.md`에 작고 검증된 블록을 작성합니다. 특히 다음 상황에서는 먼저 실행하는 것이 좋습니다.
 
 - 기존 문서가 없습니다
 - 문서가 오래되었습니다
@@ -26,11 +26,11 @@ BMad Method(BMM)로 기존 프로젝트에서 작업할 때 자주 묻는 질문
 
 ### 프로젝트 문서화 실행을 잊었다면 어떻게 하나요?
 
-걱정하지 마세요. 언제든 `bmad-project-context`를 실행할 수 있습니다. Refresh와 Audit을 실행하면 프로젝트 도중이나 이후에도 컨텍스트를 정확하게 유지합니다. 이미 생성한 문서도 검증할 소스로 활용합니다.
+걱정하지 마세요. 언제든 `funcionario-project-context`를 실행할 수 있습니다. Refresh와 Audit을 실행하면 프로젝트 도중이나 이후에도 컨텍스트를 정확하게 유지합니다. 이미 생성한 문서도 검증할 소스로 활용합니다.
 
 ### 기존 프로젝트에서는 구현을 어떻게 하나요?
 
-새 프로젝트와 마찬가지로 `bmad-build`를 실행하세요. Build는 다음을 수행합니다.
+새 프로젝트와 마찬가지로 `funcionario-build`를 실행하세요. Build는 다음을 수행합니다.
 
 - 기존 기술 스택 자동 감지
 - 기존 코드 패턴 분석
@@ -48,4 +48,4 @@ Build는 관례를 감지한 뒤 "이 기존 관례를 따를까요?"라고 묻�
 
 BMM은 선택을 존중합니다. 현대화를 강제하지 않지만 필요한 제안은 합니다.
 
-**여기에 답이 없는 질문이 있나요?** [GitHub Issue](https://github.com/bmad-code-org/BMAD-METHOD/issues)를 열거나 [Discord](https://discord.gg/gk8jAdXWmj)에서 물어보세요. 추가하겠습니다.
+**여기에 답이 없는 질문이 있나요?** [GitHub Issue](https://github.com/funcionario-infinito/funcionario-infinito/issues)를 열거나 [Discord](https://discord.gg/SEU-CONVITE-AQUI)에서 물어보세요. 추가하겠습니다.

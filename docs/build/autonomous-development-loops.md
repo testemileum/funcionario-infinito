@@ -1,11 +1,11 @@
 ---
 title: Autonomous Development Loops
-description: Run bmad-build-auto as the unattended worker for one session-sized unit, and let an orchestrator drive many of them.
+description: Run funcionario-build-auto as the unattended worker for one session-sized unit, and let an orchestrator drive many of them.
 sidebar:
   order: 6
 ---
 
-`bmad-build-auto` is the unattended worker for one session-sized unit in the
+`funcionario-build-auto` is the unattended worker for one session-sized unit in the
 canonical [Build a Change](./build-a-change.md) implementation model. One invocation
 clarifies, plans, implements, and reviews one intent or story, then exposes a
 terminal status that a human or orchestrator can act on.
@@ -13,11 +13,11 @@ terminal status that a human or orchestrator can act on.
 Build Auto does not choose the next story, repeat across a backlog, coordinate
 epics, or run a retrospective. It owns only its implementation run and the
 record it creates or resumes. A human or an orchestrator, such as an AI coding
-session or bmad-loop, owns backlog policy and dispatch.
+session or funcionario-loop, owns backlog policy and dispatch.
 
 ## What It Does
 
-`bmad-build-auto` performs one unattended implementation run:
+`funcionario-build-auto` performs one unattended implementation run:
 
 1. Clarify the incoming intent
 2. Create (or find and resume) a spec file
@@ -38,7 +38,7 @@ Version control, while optional, is strongly recommended. If present, the workin
 
 ### Primary Invocation Input
 
-The main input is the invocation prompt. `bmad-build-auto` treats that prompt as workflow input, not as a finished implementation plan.
+The main input is the invocation prompt. `funcionario-build-auto` treats that prompt as workflow input, not as a finished implementation plan.
 
 Supported intent shapes include:
 
@@ -103,16 +103,16 @@ than depending on which Build workflow produced the record.
 Build Auto is the worker in each option below. The orchestrator selects a unit,
 starts one worker, reads its result, and decides what happens next.
 
-### Run an ordered manifest with bmad-loop
+### Run an ordered manifest with funcionario-loop
 
-The optional [bmad-loop](https://github.com/bmad-code-org/bmad-loop)
+The optional [funcionario-loop](https://github.com/funcionario-infinito/funcionario-loop)
 orchestrator processes a spec folder's `stories.yaml` in list order. It is a
 linear scheduler: it does not infer a dependency graph. Arrange the list so
 each story's prerequisites appear first.
 
 Selecting one story runs only that story. It does not mean “start here and run
-the remainder.” Retrospective is a separate epic-closing activity; bmad-loop
-may recommend it, but `bmad-retrospective` performs it.
+the remainder.” Retrospective is a separate epic-closing activity; funcionario-loop
+may recommend it, but `funcionario-retrospective` performs it.
 
 ### Use an AI coding session as the orchestrator
 
@@ -126,20 +126,20 @@ consistent with the larger intent.
 
 Project-level parallelism needs a higher coordination layer or separate epic
 owners. Independent epic streams can run in parallel when dependencies and
-integration boundaries are explicit. bmad-loop's ordered story scheduler does
+integration boundaries are explicit. funcionario-loop's ordered story scheduler does
 not provide that project-level coordination.
 
 ## Context Inputs
 
 On activation, the workflow resolves:
 
-- `_bmad/config.toml`, `_bmad/config.user.toml`, and optional team/user overrides under `_bmad/custom/`
+- `_funcionario/config.toml`, `_funcionario/config.user.toml`, and optional team/user overrides under `_funcionario/custom/`
 - Any configured workflow customizations from `customize.toml`, team overrides, and user overrides
 - Persistent facts listed in workflow config — empty unless you opt in, so nothing is loaded here by default
 
 It may also look at:
 
-- BMAD planning artifacts
+- FUNCIONARIO planning artifacts
 - A cached or newly compiled epic context file for epic-based work
 - The most recent completed prior-story spec from the same epic for continuity
 - Other `stories/*.md` records in the same spec folder, under folder+id dispatch (see Folder+ID Dispatch above)
@@ -256,7 +256,7 @@ If the resolved path already exists, the workflow updates its `status` frontmatt
 
 If the workflow halts before it has a valid `spec_file` (outside folder+id dispatch — see above), it writes:
 
-`{implementation_artifacts}/bmad-build-auto-result-<slug-or-timestamp>.md`
+`{implementation_artifacts}/funcionario-build-auto-result-<slug-or-timestamp>.md`
 
 This records the terminal status and blocking condition.
 
@@ -269,7 +269,7 @@ Depending on the route, the workflow may also write:
 
 ## Orchestrator Responsibilities
 
-An orchestrator integrating `bmad-build-auto` should:
+An orchestrator integrating `funcionario-build-auto` should:
 
 - Pass one coherent intent at a time
 - Prefer passing a spec path when resuming prior work — or the same spec folder and story id, under folder+id dispatch
@@ -282,4 +282,4 @@ An orchestrator integrating `bmad-build-auto` should:
 
 In practice, `blocked` usually means the workflow ran into a situation where unattended execution would be unsafe. That is often the point where a higher-level orchestrator, another workflow, or a human should take over.
 
-After resolving a blocked run, the orchestrator should usually start a fresh `bmad-build-auto` run. If it reuses prior work, it should pass an explicit known-good spec path rather than relying on implicit discovery.
+After resolving a blocked run, the orchestrator should usually start a fresh `funcionario-build-auto` run. If it reuses prior work, it should pass an explicit known-good spec path rather than relying on implicit discovery.

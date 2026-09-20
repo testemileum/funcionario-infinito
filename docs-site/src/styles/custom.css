@@ -1,5 +1,5 @@
 /**
- * BMAD Method documentation — the bmadcode.com design system, applied to Starlight.
+ * Funcionário Infinito documentation — the funcionario-infinito.com.br design system, applied to Starlight.
  *
  * The marketing site is built from four type registers and almost nothing else:
  *
@@ -15,7 +15,7 @@
  * No shadows, no tinted panels, no hover lifts. The restraint is the design —
  * a docs page should read as an article on that ground, not as a control panel.
  *
- * The ramp is the one bmadcode.com uses, unchanged. Starlight's token contract
+ * The ramp is the one funcionario-infinito.com.br uses, unchanged. Starlight's token contract
  * is aliased onto it below, so the built-in components inherit this look
  * rather than imposing their own.
  *
@@ -29,42 +29,42 @@
    The ramp
    --------------------------------------------------------------- */
 :root {
-  --bmad-white: #ffffff;
-  --bmad-paper: #f6f7f9;
-  --bmad-paper-2: #edeff3;
-  --bmad-line: #d3d8de;
-  --bmad-line-2: #b6bdc7;
-  --bmad-muted-ink: #5f6b7c;
-  --bmad-muted-ink-2: #7c8797;
-  --bmad-ink: #000000;
-  --bmad-ink-2: #1c2127;
+  --funcionario-white: #ffffff;
+  --funcionario-paper: #f6f7f9;
+  --funcionario-paper-2: #edeff3;
+  --funcionario-line: #d3d8de;
+  --funcionario-line-2: #b6bdc7;
+  --funcionario-muted-ink: #5f6b7c;
+  --funcionario-muted-ink-2: #7c8797;
+  --funcionario-ink: #000000;
+  --funcionario-ink-2: #1c2127;
 
-  --bmad-dark: #111418;
-  --bmad-dark-2: #1a1e24;
-  --bmad-dark-3: #22272e;
-  --bmad-dark-line: #2e353e;
-  --bmad-dark-line-2: #404854;
-  --bmad-dark-muted: #a2acb9;
+  --funcionario-dark: #111418;
+  --funcionario-dark-2: #1a1e24;
+  --funcionario-dark-3: #22272e;
+  --funcionario-dark-line: #2e353e;
+  --funcionario-dark-line-2: #404854;
+  --funcionario-dark-muted: #a2acb9;
 
-  --bmad-blue: #0f35e0;
-  --bmad-blue-on-dark: #7fa0ff;
-  --bmad-green: #1f6b3b;
-  --bmad-copper: #8a5a00;
-  --bmad-signal: #8c2018;
+  --funcionario-blue: #0f35e0;
+  --funcionario-blue-on-dark: #7fa0ff;
+  --funcionario-green: #1f6b3b;
+  --funcionario-copper: #8a5a00;
+  --funcionario-signal: #8c2018;
 
-  --bmad-sans: 'Archivo', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --bmad-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  --bmad-display: 'Instrument Serif', Georgia, serif;
+  --funcionario-sans: 'Archivo', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --funcionario-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --funcionario-display: 'Instrument Serif', Georgia, serif;
 
-  /* the 64px nav row bmadcode.com uses */
+  /* the 64px nav row funcionario-infinito.com.br uses */
   --sl-nav-height: 4rem;
   --sl-nav-pad-x: 1.5rem;
 
   /* an article measure: ~72 characters of 17px Archivo */
   --sl-content-width: 46rem;
 
-  --sl-font: var(--bmad-sans);
-  --sl-font-mono: var(--bmad-mono);
+  --sl-font: var(--funcionario-sans);
+  --sl-font-mono: var(--funcionario-mono);
   --sl-text-base: 1.0625rem;
   --sl-text-body: 1.0625rem;
   --sl-text-body-sm: 0.9375rem;
@@ -83,37 +83,37 @@
 :root,
 :root[data-theme='light'] {
   --sl-color-accent-low: #e6ebfd;
-  --sl-color-accent: var(--bmad-blue);
-  --sl-color-accent-high: var(--bmad-blue);
+  --sl-color-accent: var(--funcionario-blue);
+  --sl-color-accent-high: var(--funcionario-blue);
 
   /* Starlight's `white` is its highest-contrast text, not a literal white */
-  --sl-color-white: var(--bmad-ink);
-  --sl-color-gray-1: var(--bmad-ink-2);
-  --sl-color-gray-2: var(--bmad-muted-ink);
+  --sl-color-white: var(--funcionario-ink);
+  --sl-color-gray-1: var(--funcionario-ink-2);
+  --sl-color-gray-2: var(--funcionario-muted-ink);
   /* One step lighter than gray-2, but not so light that it fails: the label
-     register sets 11px uppercase mono in this colour, and --bmad-muted-ink-2
+     register sets 11px uppercase mono in this colour, and --funcionario-muted-ink-2
      (#7c8797) is only 3.64:1 on white where AA wants 4.5. #687383 is 4.81:1
      and still reads as a step below the body's muted ink. */
   --sl-color-gray-3: #687383;
-  --sl-color-gray-4: var(--bmad-line-2);
-  --sl-color-gray-5: var(--bmad-line);
-  --sl-color-gray-6: var(--bmad-paper-2);
-  --sl-color-gray-7: var(--bmad-paper);
-  --sl-color-black: var(--bmad-white);
+  --sl-color-gray-4: var(--funcionario-line-2);
+  --sl-color-gray-5: var(--funcionario-line);
+  --sl-color-gray-6: var(--funcionario-paper-2);
+  --sl-color-gray-7: var(--funcionario-paper);
+  --sl-color-black: var(--funcionario-white);
 
-  --sl-color-bg: var(--bmad-white);
-  --sl-color-bg-nav: var(--bmad-white);
-  --sl-color-bg-sidebar: var(--bmad-white);
-  --sl-color-bg-inline-code: var(--bmad-paper-2);
-  --sl-color-hairline: var(--bmad-line);
-  --sl-color-hairline-light: var(--bmad-line);
-  --sl-color-hairline-shade: var(--bmad-line);
-  --sl-color-text: var(--bmad-ink-2);
-  --sl-color-text-accent: var(--bmad-blue);
-  --sl-color-text-invert: var(--bmad-white);
+  --sl-color-bg: var(--funcionario-white);
+  --sl-color-bg-nav: var(--funcionario-white);
+  --sl-color-bg-sidebar: var(--funcionario-white);
+  --sl-color-bg-inline-code: var(--funcionario-paper-2);
+  --sl-color-hairline: var(--funcionario-line);
+  --sl-color-hairline-light: var(--funcionario-line);
+  --sl-color-hairline-shade: var(--funcionario-line);
+  --sl-color-text: var(--funcionario-ink-2);
+  --sl-color-text-accent: var(--funcionario-blue);
+  --sl-color-text-invert: var(--funcionario-white);
 
-  --bmad-accent: var(--bmad-blue);
-  --bmad-tint: var(--bmad-paper);
+  --funcionario-accent: var(--funcionario-blue);
+  --funcionario-tint: var(--funcionario-paper);
 }
 
 /* ---------------------------------------------------------------
@@ -122,45 +122,45 @@
    --------------------------------------------------------------- */
 :root[data-theme='dark'] {
   --sl-color-accent-low: rgba(127, 160, 255, 0.14);
-  --sl-color-accent: var(--bmad-blue-on-dark);
+  --sl-color-accent: var(--funcionario-blue-on-dark);
   --sl-color-accent-high: #a8beff;
 
   --sl-color-white: #ffffff;
   --sl-color-gray-1: #e6eaf0;
-  --sl-color-gray-2: var(--bmad-dark-muted);
+  --sl-color-gray-2: var(--funcionario-dark-muted);
   --sl-color-gray-3: #8c96a3;
   --sl-color-gray-4: #6b7684;
-  --sl-color-gray-5: var(--bmad-dark-line-2);
-  --sl-color-gray-6: var(--bmad-dark-line);
-  --sl-color-gray-7: var(--bmad-dark-2);
-  --sl-color-black: var(--bmad-dark);
+  --sl-color-gray-5: var(--funcionario-dark-line-2);
+  --sl-color-gray-6: var(--funcionario-dark-line);
+  --sl-color-gray-7: var(--funcionario-dark-2);
+  --sl-color-black: var(--funcionario-dark);
 
-  --sl-color-bg: var(--bmad-dark);
-  --sl-color-bg-nav: var(--bmad-dark);
-  --sl-color-bg-sidebar: var(--bmad-dark);
-  --sl-color-bg-inline-code: var(--bmad-dark-3);
-  --sl-color-hairline: var(--bmad-dark-line);
-  --sl-color-hairline-light: var(--bmad-dark-line);
-  --sl-color-hairline-shade: var(--bmad-dark-line);
-  --sl-color-text: var(--bmad-dark-muted);
-  --sl-color-text-accent: var(--bmad-blue-on-dark);
-  --sl-color-text-invert: var(--bmad-dark);
+  --sl-color-bg: var(--funcionario-dark);
+  --sl-color-bg-nav: var(--funcionario-dark);
+  --sl-color-bg-sidebar: var(--funcionario-dark);
+  --sl-color-bg-inline-code: var(--funcionario-dark-3);
+  --sl-color-hairline: var(--funcionario-dark-line);
+  --sl-color-hairline-light: var(--funcionario-dark-line);
+  --sl-color-hairline-shade: var(--funcionario-dark-line);
+  --sl-color-text: var(--funcionario-dark-muted);
+  --sl-color-text-accent: var(--funcionario-blue-on-dark);
+  --sl-color-text-invert: var(--funcionario-dark);
 
-  --bmad-accent: var(--bmad-blue-on-dark);
-  --bmad-tint: var(--bmad-dark-2);
+  --funcionario-accent: var(--funcionario-blue-on-dark);
+  --funcionario-tint: var(--funcionario-dark-2);
 }
 
 /* ---------------------------------------------------------------
    Base
    --------------------------------------------------------------- */
 body {
-  font-family: var(--bmad-sans);
+  font-family: var(--funcionario-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 :focus-visible {
-  outline: 2px solid var(--bmad-accent);
+  outline: 2px solid var(--funcionario-accent);
   outline-offset: 2px;
 }
 
@@ -180,7 +180,7 @@ html {
 .sidebar-content .top-level > li > a,
 starlight-toc h2,
 .content-panel footer .meta {
-  font-family: var(--bmad-mono);
+  font-family: var(--funcionario-mono);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.09em;
@@ -193,7 +193,7 @@ starlight-toc h2,
    the space does that work.
    --------------------------------------------------------------- */
 .content-panel h1#_top {
-  font-family: var(--bmad-display);
+  font-family: var(--funcionario-display);
   font-weight: 400;
   letter-spacing: -0.014em;
   line-height: 1.04;
@@ -244,7 +244,7 @@ starlight-toc h2,
 }
 
 .sl-markdown-content :is(h2, h3, h4, h5, h6) {
-  font-family: var(--bmad-sans);
+  font-family: var(--funcionario-sans);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.14;
@@ -288,10 +288,10 @@ starlight-toc h2,
 }
 
 .sl-markdown-content a:not(:where(.not-content *)) {
-  color: var(--bmad-accent);
+  color: var(--funcionario-accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  text-decoration-color: color-mix(in srgb, var(--bmad-accent) 35%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--funcionario-accent) 35%, transparent);
 }
 
 .sl-markdown-content a:not(:where(.not-content *)):hover {
@@ -305,7 +305,7 @@ starlight-toc h2,
 
 /* the site sets its emphasis in serif italic */
 .sl-markdown-content em {
-  font-family: var(--bmad-display);
+  font-family: var(--funcionario-display);
   font-style: italic;
   font-size: 1.08em;
   letter-spacing: 0;
@@ -315,7 +315,7 @@ starlight-toc h2,
    Quotes, code, tables
    --------------------------------------------------------------- */
 .sl-markdown-content blockquote {
-  border-inline-start: 2px solid var(--bmad-accent);
+  border-inline-start: 2px solid var(--funcionario-accent);
   padding-inline-start: 1.1rem;
   background: none;
   border-radius: 0;
@@ -324,7 +324,7 @@ starlight-toc h2,
 }
 
 .sl-markdown-content code:not(:where(.not-content *)) {
-  font-family: var(--bmad-mono);
+  font-family: var(--funcionario-mono);
   font-size: 0.85em;
   border-radius: 2px;
 }
@@ -333,8 +333,8 @@ starlight-toc h2,
 :root {
   --ec-brdRad: 2px;
   --ec-brdCol: var(--sl-color-hairline);
-  --ec-uiFontFml: var(--bmad-mono);
-  --ec-codeFontFml: var(--bmad-mono);
+  --ec-uiFontFml: var(--funcionario-mono);
+  --ec-codeFontFml: var(--funcionario-mono);
   --ec-codeFontSize: 0.875rem;
   --ec-frm-frameBoxShdCssVal: none;
   --ec-frm-edTabBrdRad: 2px;
@@ -368,14 +368,14 @@ starlight-toc h2,
    every colour lives here, so a second diagram written against the
    same class vocabulary matches the first for free.
    --------------------------------------------------------------- */
-.bmad-diagram {
-  --dg-surface: var(--bmad-paper);
-  --dg-line: var(--bmad-line);
-  --dg-ink: var(--bmad-ink-2);
-  --dg-muted: var(--bmad-muted-ink-2);
-  --dg-edge: var(--bmad-muted-ink-2);
-  --dg-ground: var(--bmad-white);
-  --dg-accent: var(--bmad-accent);
+.funcionario-diagram {
+  --dg-surface: var(--funcionario-paper);
+  --dg-line: var(--funcionario-line);
+  --dg-ink: var(--funcionario-ink-2);
+  --dg-muted: var(--funcionario-muted-ink-2);
+  --dg-edge: var(--funcionario-muted-ink-2);
+  --dg-ground: var(--funcionario-white);
+  --dg-accent: var(--funcionario-accent);
   --dg-ok: #1f6b3b;
   --dg-ok-tint: #edf6f0;
   --dg-warn: #8a5a00;
@@ -385,23 +385,23 @@ starlight-toc h2,
   width: 100%;
   height: auto;
   margin-inline: auto;
-  font-family: var(--bmad-sans);
+  font-family: var(--funcionario-sans);
 }
 
-:root[data-theme='dark'] .bmad-diagram {
-  --dg-surface: var(--bmad-dark-2);
-  --dg-line: var(--bmad-dark-line-2);
+:root[data-theme='dark'] .funcionario-diagram {
+  --dg-surface: var(--funcionario-dark-2);
+  --dg-line: var(--funcionario-dark-line-2);
   --dg-ink: #e6eaf0;
   --dg-muted: #8c96a3;
   --dg-edge: #8c96a3;
-  --dg-ground: var(--bmad-dark);
+  --dg-ground: var(--funcionario-dark);
   --dg-ok: #6fcf97;
   --dg-ok-tint: rgba(111, 207, 151, 0.1);
   --dg-warn: #e0b25f;
   --dg-warn-tint: rgba(224, 178, 95, 0.1);
 }
 
-.bmad-diagram .node {
+.funcionario-diagram .node {
   fill: var(--dg-surface);
   stroke: var(--dg-line);
   stroke-width: 1;
@@ -409,11 +409,11 @@ starlight-toc h2,
 
 /* the one emphasised node in a diagram, where the drawing needs to point at
    a destination; the ok/warn tones stay reserved for status */
-.bmad-diagram .node.hot {
+.funcionario-diagram .node.hot {
   stroke: var(--dg-accent);
 }
 
-.bmad-diagram .gate {
+.funcionario-diagram .gate {
   fill: var(--dg-ground);
   stroke: var(--dg-accent);
   stroke-width: 1.5;
@@ -421,115 +421,115 @@ starlight-toc h2,
 
 /* Outcome chips share the aside palette, so a green in a diagram is the
    same green as a tip. */
-.bmad-diagram .chip {
+.funcionario-diagram .chip {
   fill: var(--dg-surface);
   stroke: var(--dg-line);
   stroke-width: 1;
 }
 
-.bmad-diagram .chip.ok {
+.funcionario-diagram .chip.ok {
   fill: var(--dg-ok-tint);
   stroke: var(--dg-ok);
 }
 
-.bmad-diagram .chip.warn {
+.funcionario-diagram .chip.warn {
   fill: var(--dg-warn-tint);
   stroke: var(--dg-warn);
 }
 
 /* a band groups a row of the drawing; it is ground, not a box */
-.bmad-diagram .band {
+.funcionario-diagram .band {
   fill: var(--dg-surface);
   stroke: var(--dg-line);
   stroke-opacity: 0.28;
   stroke-width: 1;
 }
 
-.bmad-diagram .panel {
+.funcionario-diagram .panel {
   fill: none;
   stroke: var(--dg-line);
   stroke-width: 1;
   stroke-dasharray: 4 4;
 }
 
-.bmad-diagram .edge {
+.funcionario-diagram .edge {
   fill: none;
   stroke: var(--dg-edge);
   stroke-width: 1.5;
 }
 
-.bmad-diagram .edge.soft {
+.funcionario-diagram .edge.soft {
   stroke-width: 1.25;
   stroke-dasharray: 4 4;
   opacity: 0.85;
 }
 
-.bmad-diagram .edge.lens {
+.funcionario-diagram .edge.lens {
   opacity: 0.5;
 }
 
 /* An edge the drawing needs to single out - where work joins a loop, say.
    Same job the accent does for `.node.hot`. */
-.bmad-diagram .edge.entry {
+.funcionario-diagram .edge.entry {
   stroke: var(--dg-accent);
 }
 
-.bmad-diagram .head {
+.funcionario-diagram .head {
   fill: var(--dg-edge);
 }
 
-.bmad-diagram .head.accent {
+.funcionario-diagram .head.accent {
   fill: var(--dg-accent);
 }
 
-.bmad-diagram .glyph {
+.funcionario-diagram .glyph {
   fill: var(--dg-muted);
 }
 
-.bmad-diagram .glyph .fold {
+.funcionario-diagram .glyph .fold {
   fill: var(--dg-ground);
   opacity: 0.5;
 }
 
-.bmad-diagram text {
+.funcionario-diagram text {
   fill: var(--dg-ink);
 }
 
-.bmad-diagram .n {
+.funcionario-diagram .n {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.012em;
   text-anchor: middle;
 }
 
-.bmad-diagram .n.small {
+.funcionario-diagram .n.small {
   font-size: 12.5px;
   font-weight: 600;
   text-anchor: start;
 }
 
-.bmad-diagram .sub {
+.funcionario-diagram .sub {
   font-size: 11.5px;
   fill: var(--dg-muted);
 }
 
-.bmad-diagram .sub.mid {
+.funcionario-diagram .sub.mid {
   text-anchor: middle;
 }
 
-.bmad-diagram .mono {
-  font-family: var(--bmad-mono);
+.funcionario-diagram .mono {
+  font-family: var(--funcionario-mono);
 }
 
-.bmad-diagram .k {
-  font-family: var(--bmad-mono);
+.funcionario-diagram .k {
+  font-family: var(--funcionario-mono);
   font-size: 10px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   fill: var(--dg-muted);
 }
 
-.bmad-diagram .panel-title {
+.funcionario-diagram .panel-title {
   fill: var(--dg-accent);
 }
 
@@ -543,21 +543,21 @@ starlight-toc h2,
    hue. The site has no second hue to borrow: its copper is a status colour
    (`tag-warn`, the gate's CONCERNS heading) and reads as a problem anywhere
    else. */
-.bmad-diagram .slogan {
-  font-family: var(--bmad-mono);
+.funcionario-diagram .slogan {
+  font-family: var(--funcionario-mono);
   font-size: 16px;
   letter-spacing: 0.085em;
   text-transform: uppercase;
   fill: var(--dg-accent);
 }
 
-.bmad-diagram .slogan.alt {
+.funcionario-diagram .slogan.alt {
   fill: var(--dg-muted);
 }
 
 /* A ruled field behind a drawing. Faint enough to be texture, never structure:
    at this opacity it survives both ramps without competing with the edges. */
-.bmad-diagram .grid {
+.funcionario-diagram .grid {
   fill: none;
   stroke: var(--dg-line);
   stroke-opacity: 0.35;
@@ -566,11 +566,11 @@ starlight-toc h2,
 
 /* The dark line sits further from its ground than the light one does, so the
    same opacity reads as structure there rather than texture. */
-:root[data-theme='dark'] .bmad-diagram .grid {
+:root[data-theme='dark'] .funcionario-diagram .grid {
   stroke-opacity: 0.22;
 }
 
-.bmad-diagram .rule {
+.funcionario-diagram .rule {
   fill: none;
   stroke: var(--dg-line);
   stroke-width: 1;
@@ -580,7 +580,7 @@ starlight-toc h2,
    Asides
    A tinted plate, an icon and a heading in the hue — the shape the
    docs had before, drawn in the site's palette: the hues are the ones
-   bmadcode.com tints its status tags with, squared off to 2px with no
+   funcionario-infinito.com.br tints its status tags with, squared off to 2px with no
    border and no shadow. The blue for `note` is derived in the same key,
    since the site has no blue tag.
    --------------------------------------------------------------- */
@@ -597,7 +597,7 @@ starlight-toc h2,
   align-items: center;
   gap: 0.55rem;
   margin-bottom: 0.6rem;
-  font-family: var(--bmad-sans);
+  font-family: var(--funcionario-sans);
   font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: -0.014em;
@@ -621,29 +621,29 @@ starlight-toc h2,
 }
 
 .starlight-aside--note {
-  --aside-mark: var(--bmad-blue);
+  --aside-mark: var(--funcionario-blue);
   --aside-tint: #eef2fd;
 }
 
 .starlight-aside--tip {
-  --aside-mark: var(--bmad-green);
+  --aside-mark: var(--funcionario-green);
   --aside-tint: #edf6f0;
 }
 
 .starlight-aside--caution {
-  --aside-mark: var(--bmad-copper);
+  --aside-mark: var(--funcionario-copper);
   --aside-tint: #fbf5e7;
 }
 
 .starlight-aside--danger {
-  --aside-mark: var(--bmad-signal);
+  --aside-mark: var(--funcionario-signal);
   --aside-tint: #faeeec;
 }
 
 /* on the dark ramp the tints are the same hues held at low alpha over
    #111418, so the panel lifts without turning into a colour block */
 :root[data-theme='dark'] .starlight-aside--note {
-  --aside-mark: var(--bmad-blue-on-dark);
+  --aside-mark: var(--funcionario-blue-on-dark);
   --aside-tint: rgba(127, 160, 255, 0.1);
 }
 
@@ -678,7 +678,7 @@ starlight-toc h2,
 .sl-link-card:hover {
   transform: none;
   box-shadow: none;
-  border-color: var(--bmad-accent);
+  border-color: var(--funcionario-accent);
 }
 
 .card .title {
@@ -687,7 +687,7 @@ starlight-toc h2,
 }
 
 .card .icon {
-  color: var(--bmad-accent);
+  color: var(--funcionario-accent);
 }
 
 .sl-link-button {
@@ -709,8 +709,8 @@ starlight-toc h2,
 }
 
 .sl-link-button.primary:hover {
-  background: var(--bmad-accent);
-  border-color: var(--bmad-accent);
+  background: var(--funcionario-accent);
+  border-color: var(--funcionario-accent);
   color: #ffffff;
 }
 
@@ -745,18 +745,18 @@ header.header .header.sl-flex {
 site-search button {
   border-color: var(--sl-color-hairline);
   border-radius: 2px;
-  font-family: var(--bmad-sans);
+  font-family: var(--funcionario-sans);
   font-size: 0.9375rem;
   color: var(--sl-color-gray-2);
 }
 
 site-search button:hover {
-  border-color: var(--bmad-accent);
+  border-color: var(--funcionario-accent);
   color: var(--sl-color-white);
 }
 
 site-search button kbd {
-  font-family: var(--bmad-mono);
+  font-family: var(--funcionario-mono);
   font-size: 0.6875rem;
   background: none;
   color: var(--sl-color-gray-3);
@@ -768,7 +768,7 @@ site-search button kbd {
 }
 
 .social-icons a:hover {
-  color: var(--bmad-accent);
+  color: var(--funcionario-accent);
   background: none;
 }
 
@@ -841,10 +841,10 @@ site-search button kbd {
 }
 
 .sidebar-content .top-level a[aria-current='page'] {
-  color: var(--bmad-accent);
+  color: var(--funcionario-accent);
   font-weight: 500;
   background: var(--sl-color-gray-7);
-  border-inline-start-color: var(--bmad-accent);
+  border-inline-start-color: var(--funcionario-accent);
 }
 
 .sidebar-content summary::marker,
@@ -871,7 +871,7 @@ starlight-toc a:hover {
 }
 
 starlight-toc a[aria-current='true'] {
-  color: var(--bmad-accent);
+  color: var(--funcionario-accent);
   font-weight: 500;
 }
 

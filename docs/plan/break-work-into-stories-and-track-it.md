@@ -8,7 +8,7 @@ sidebar:
 Use this page to turn a plan into stories you can build in one session and
 keep track of them. The path depends on the plan: a spec-backed epic gets
 Story Breakdown; a project with a PRD gets epics and stories, then
-`bmad-sprint-planning`.
+`funcionario-sprint-planning`.
 
 :::note[v7 preview]
 A ticket-based alternative to this path is in preview. See [Help Test v7 Previews](./help-test-v7-previews.md).
@@ -18,22 +18,22 @@ A ticket-based alternative to this path is in preview. See [Help Test v7 Preview
 
 | Plan                                          | Do this                                                          | Tracking artifact                       |
 | --------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------- |
-| One epic backed by `SPEC.md`                  | Ask `bmad-spec` for Story Breakdown                              | Ordered `stories.yaml` beside `SPEC.md` |
-| A project with a PRD (and UX or architecture) | Run `bmad-create-epics-and-stories`, then `bmad-sprint-planning` | Epic files plus `sprint-status.yaml`    |
+| One epic backed by `SPEC.md`                  | Ask `funcionario-spec` for Story Breakdown                              | Ordered `stories.yaml` beside `SPEC.md` |
+| A project with a PRD (and UX or architecture) | Run `funcionario-create-epics-and-stories`, then `funcionario-sprint-planning` | Epic files plus `sprint-status.yaml`    |
 
 For a spec-backed epic, `stories.yaml` is the whole tracking file. Build
 creates each story's implementation record under the spec folder, and
 [Finish an Epic](../build/finish-an-epic.md) reads `stories.yaml` as the inventory.
 No sprint-status file is involved.
 
-For a project, `bmad-create-epics-and-stories` works with you as a product
+For a project, `funcionario-create-epics-and-stories` works with you as a product
 partner to turn the PRD's requirements and the architecture's decisions into
 epic files organized by user value, each story carrying acceptance criteria a
 developer can implement against. Everything from here on is about that path.
 
 ## Gate Readiness
 
-Run `bmad-sprint-planning` at the boundary between planning and
+Run `funcionario-sprint-planning` at the boundary between planning and
 implementation. Before any tracking exists, it judges the plan like a
 skeptical senior developer reading a handoff. It inventories whatever planning
 documents the project actually has — briefs, PRFAQs, PRDs, specs, UX output,
@@ -82,26 +82,26 @@ confirm it. Then it regenerates a clean file and validates it. Repair is the
 only path that can mark a story as less complete than it was, because it
 reflects confirmed reality.
 
-Old names still work: `bmad-check-implementation-readiness` and
-`bmad-sprint-status` forward here. Move any
-`_bmad/custom/bmad-sprint-status.toml` overrides to
-`bmad-sprint-planning.toml`.
+Old names still work: `funcionario-check-implementation-readiness` and
+`funcionario-sprint-status` forward here. Move any
+`_funcionario/custom/funcionario-sprint-status.toml` overrides to
+`funcionario-sprint-planning.toml`.
 
 ## Correct Course
 
-Run `bmad-correct-course` when a change is too big for one story to absorb: a
+Run `funcionario-correct-course` when a change is too big for one story to absorb: a
 requirement turned out to be wrong, an architecture decision has to change, or
 a dependency changed. It reads the PRD, epics, architecture, and UX documents,
 assesses the impact, and produces a sprint change proposal — what changes,
 what stays, and in what order. Once you approve it, it updates
 `sprint-status.yaml` and hands the document edits off. Apply them, then create
 the new or changed stories. For a large restructure, re-run Story Breakdown or
-`bmad-sprint-planning` for the affected epics instead. Finished work stays
+`funcionario-sprint-planning` for the affected epics instead. Finished work stays
 finished.
 
 ## What Comes Next
 
-Implement each story with [`bmad-build`](../build/build-a-change.md), or with
-[`bmad-build-auto`](../build/autonomous-development-loops.md) once the decisions are stable.
+Implement each story with [`funcionario-build`](../build/build-a-change.md), or with
+[`funcionario-build-auto`](../build/autonomous-development-loops.md) once the decisions are stable.
 When the epic's stories are done, close it with
 [Finish an Epic](../build/finish-an-epic.md).

@@ -1,15 +1,15 @@
 ---
 title: '프로젝트 컨텍스트 관리하기'
-description: bmad-project-context로 저장소의 에이전트 지침을 설정하고 유지하기
+description: funcionario-project-context로 저장소의 에이전트 지침을 설정하고 유지하기
 sidebar:
   order: 6
 ---
 
-`bmad-project-context`는 AI 에이전트가 저장소에서 제대로 작업할 수 있는 환경을 마련합니다. 새 프로젝트와 기존 코드베이스에서 모두 쓸 수 있고 BMad 설치 여부도 상관없습니다. 결과는 `AGENTS.md`에 들어가는 간결하고 검증된 규칙 블록입니다.
+`funcionario-project-context`는 AI 에이전트가 저장소에서 제대로 작업할 수 있는 환경을 마련합니다. 새 프로젝트와 기존 코드베이스에서 모두 쓸 수 있고 Funcionário Infinito 설치 여부도 상관없습니다. 결과는 `AGENTS.md`에 들어가는 간결하고 검증된 규칙 블록입니다.
 
 :::note[필수 조건]
 
-- BMad Method가 설치된 저장소와 아무것도 설치되지 않은 저장소를 모두 지원합니다.
+- Funcionário Infinito가 설치된 저장소와 아무것도 설치되지 않은 저장소를 모두 지원합니다.
   :::
 
 ## 사용 시점
@@ -23,7 +23,7 @@ sidebar:
 ## 1단계: 실행하기
 
 ```bash
-bmad-project-context
+funcionario-project-context
 ```
 
 "`AGENTS.md`를 설정해 줘", "기존 `AGENTS.md`를 받아들여 줘", "컨텍스트를 새로 고쳐 줘", "컨텍스트를 감사해 줘", "에이전트가 계속 잘못된 테스트 러너를 사용해"처럼 원하는 작업을 일반 문장으로 말하면 스킬이 알맞은 의도를 선택합니다. 스킬이 작성하지 않은 기존 지침이 있으면 Adopt를 사용하고, 이전에 스킬이 작성한 지침이 있으면 해당 내용을 갱신합니다. Setup은 보존할 지침이 없는 저장소에서만 사용합니다.
@@ -46,7 +46,7 @@ bmad-project-context
 
 ## 4단계: 블록 승인하기
 
-파일을 쓰기 전에 전체 블록을 먼저 보여줍니다. 사용자가 승인해야만 `<!-- bmad:context -->`와 `<!-- /bmad:context -->` 사이에 내용을 넣습니다. 마커 밖에 사용자가 작성한 내용은 바이트 단위로 그대로 보존합니다.
+파일을 쓰기 전에 전체 블록을 먼저 보여줍니다. 사용자가 승인해야만 `<!-- funcionario:context -->`와 `<!-- /funcionario:context -->` 사이에 내용을 넣습니다. 마커 밖에 사용자가 작성한 내용은 바이트 단위로 그대로 보존합니다.
 
 스킬은 커밋하지 않습니다. 사용자가 검토할 수 있도록 변경 사항을 작업 트리에 남겨 둡니다.
 
@@ -66,7 +66,7 @@ bmad-project-context
 
 ## 폐기된 이전 스킬
 
-:::note[bmad-generate-project-context 또는 bmad-document-project를 찾고 있나요?]
+:::note[funcionario-generate-project-context 또는 funcionario-document-project를 찾고 있나요?]
 두 스킬 모두 폐기되었으며 이제 이 스킬로 연결됩니다. 기존 트리거 문구는 계속 작동합니다. 기존 `project-context.md`가 있다면 Setup 과정에서 내용을 흡수할지 제안하므로 그대로 방치되지 않습니다.
 :::
 

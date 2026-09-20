@@ -1,39 +1,39 @@
 ---
 title: '기존 프로젝트'
-description: 기존 코드베이스에서 BMad Method를 사용하는 방법
+description: 기존 코드베이스에서 Funcionário Infinito를 사용하는 방법
 sidebar:
   order: 4
 ---
 
-기존 프로젝트와 레거시 코드베이스에서 작업할 때 BMad Method를 효과적으로 사용하세요.
+기존 프로젝트와 레거시 코드베이스에서 작업할 때 Funcionário Infinito를 효과적으로 사용하세요.
 
-이 가이드는 BMad Method로 기존 프로젝트에 적응하는 핵심 워크플로를 다룹니다.
+이 가이드는 Funcionário Infinito로 기존 프로젝트에 적응하는 핵심 워크플로를 다룹니다.
 
 :::note[필수 조건]
 
-- BMad Method 설치(`npx bmad-method install`)
+- Funcionário Infinito 설치(`npx funcionario-method install`)
 - 작업하려는 기존 코드베이스
 - AI 기반 IDE(Claude Code 또는 Cursor) 접근 권한
 :::
 
 ## 1단계: 완료된 계획 산출물 정리
 
-BMad 과정으로 모든 PRD 에픽과 스토리를 완료했다면 해당 파일을 정리하세요. 필요하다면 보관하거나 삭제하거나 버전 기록에 의존하세요. 다음 위치에 이 파일들을 계속 두지 마세요.
+Funcionário Infinito 과정으로 모든 PRD 에픽과 스토리를 완료했다면 해당 파일을 정리하세요. 필요하다면 보관하거나 삭제하거나 버전 기록에 의존하세요. 다음 위치에 이 파일들을 계속 두지 마세요.
 
 - `docs/`
-- `_bmad-output/planning-artifacts/`
-- `_bmad-output/implementation-artifacts/`
+- `_funcionario-output/planning-artifacts/`
+- `_funcionario-output/implementation-artifacts/`
 
 ## 2단계: 프로젝트 컨텍스트 만들기
 
 :::tip[기존 프로젝트에 권장]
-프로젝트 컨텍스트 시스템을 구축해 변경을 구현하는 AI 에이전트가 기존 관례를 따르게 하세요. 기존 프로젝트에서 BMad를 시작하는 권장 경로입니다.
+프로젝트 컨텍스트 시스템을 구축해 변경을 구현하는 AI 에이전트가 기존 관례를 따르게 하세요. 기존 프로젝트에서 Funcionário Infinito를 시작하는 권장 경로입니다.
 :::
 
 프로젝트 컨텍스트 스킬을 실행합니다.
 
 ```bash
-bmad-project-context
+funcionario-project-context
 ```
 
 이 스킬은 기존 자료를 읽고 현재 상태를 평가한 뒤 에이전트가 지켜야 할 규칙을 묻습니다. 나머지 정보는 직접 찾아 검증하며, 명령은 기록하기 전에 모두 실행해 확인합니다. 생성 문서를 늘리지 않고 저장소의 `AGENTS.md`에 간결하고 검증된 규칙 블록을 작성합니다. 사람이 직접 관리해 온 파일은 개선할 기준으로 삼고, 비대한 `docs/` 폴더는 내용을 더 보태지 않은 채 코드와 대조할 자료로 사용합니다.
@@ -49,34 +49,34 @@ bmad-project-context
 - 아키텍처
 - 그 밖의 관련 프로젝트 정보
 
-`bmad-project-context`는 이 가운데 에이전트가 읽는 부분을 감사하고 유지합니다. 컨텍스트가 오래됐다고 느껴지면 감사를 실행하세요. 내용을 계속 쌓는 대신 줄이고 다시 검증합니다. 이전 `bmad-document-project` 워크플로는 더 이상 사용하지 않으며 이 스킬로 연결됩니다.
+`funcionario-project-context`는 이 가운데 에이전트가 읽는 부분을 감사하고 유지합니다. 컨텍스트가 오래됐다고 느껴지면 감사를 실행하세요. 내용을 계속 쌓는 대신 줄이고 다시 검증합니다. 이전 `funcionario-document-project` 워크플로는 더 이상 사용하지 않으며 이 스킬로 연결됩니다.
 
 ## 4단계: 도움 받기
 
-### BMad 도움말: 시작점
+### Funcionário Infinito 도움말: 시작점
 
-**다음에 무엇을 해야 할지 확실하지 않을 때 언제든 `bmad-help`를 실행하세요.** 이 지능형 가이드는 다음을 수행합니다.
+**다음에 무엇을 해야 할지 확실하지 않을 때 언제든 `funcionario-help`를 실행하세요.** 이 지능형 가이드는 다음을 수행합니다.
 
 - 프로젝트를 검사해 이미 완료된 작업을 확인합니다
 - 설치된 모듈을 기준으로 선택지를 보여줍니다
 - 자연어 질문을 이해합니다
 
 ```
-bmad-help 기존 Rails 앱이 있는데 어디서 시작하면 좋나요?
-bmad-help 이 변경을 구현하기 전에 계획이 얼마나 필요한가요?
-bmad-help 사용할 수 있는 워크플로를 보여 주세요
+funcionario-help 기존 Rails 앱이 있는데 어디서 시작하면 좋나요?
+funcionario-help 이 변경을 구현하기 전에 계획이 얼마나 필요한가요?
+funcionario-help 사용할 수 있는 워크플로를 보여 주세요
 ```
 
-BMad 도움말은 **모든 워크플로 끝에서 자동으로 실행되어** 다음에 무엇을 해야 할지 명확히 안내합니다.
+Funcionário Infinito 도움말은 **모든 워크플로 끝에서 자동으로 실행되어** 다음에 무엇을 해야 할지 명확히 안내합니다.
 
 ### 계획 깊이 선택
 
-모든 구현에는 `bmad-build`를 사용합니다. 범위에 따라 먼저 준비할 컨텍스트가 달라집니다.
+모든 구현에는 `funcionario-build`를 사용합니다. 범위에 따라 먼저 준비할 컨텍스트가 달라집니다.
 
 | 범위 | 권장 준비 사항 |
 | --- | --- |
-| **명확한 업데이트나 추가** | 요청, 이슈 또는 기존 사양을 전달해 `bmad-build`로 바로 시작합니다. |
-| **큰 변경이나 추가** | 필요한 PRD, UX, 아키텍처, 에픽, 스토리, 준비 상태, 스프린트 컨텍스트를 마련한 다음 선택한 작업을 `bmad-build`에 전달합니다. |
+| **명확한 업데이트나 추가** | 요청, 이슈 또는 기존 사양을 전달해 `funcionario-build`로 바로 시작합니다. |
+| **큰 변경이나 추가** | 필요한 PRD, UX, 아키텍처, 에픽, 스토리, 준비 상태, 스프린트 컨텍스트를 마련한 다음 선택한 작업을 `funcionario-build`에 전달합니다. |
 
 ### PRD 작성 중
 

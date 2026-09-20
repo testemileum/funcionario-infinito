@@ -5,13 +5,13 @@ sidebar:
   order: 1
 ---
 
-BMad 설치 프로그램을 사용해 커뮤니티 레지스트리, 서드파티 Git 저장소, 로컬 파일 경로에서 모듈을 추가하세요.
+Funcionário Infinito 설치 프로그램을 사용해 커뮤니티 레지스트리, 서드파티 Git 저장소, 로컬 파일 경로에서 모듈을 추가하세요.
 
 ## 사용 시점
 
-- BMad 레지스트리에서 커뮤니티 기여 모듈을 설치합니다
+- Funcionário Infinito 레지스트리에서 커뮤니티 기여 모듈을 설치합니다
 - 서드파티 Git 저장소(GitHub, GitLab, Bitbucket, 자체 호스팅)에서 모듈을 설치합니다
-- BMad 빌더로 로컬에서 개발 중인 모듈을 테스트합니다
+- Funcionário Infinito 빌더로 로컬에서 개발 중인 모듈을 테스트합니다
 - 비공개 또는 자체 호스팅 Git 서버에서 모듈을 설치합니다
 
 :::note[필수 조건]
@@ -20,12 +20,12 @@ BMad 설치 프로그램을 사용해 커뮤니티 레지스트리, 서드파티
 
 ## 커뮤니티 모듈
 
-커뮤니티 모듈은 [BMad 플러그인 마켓플레이스](https://github.com/bmad-code-org/bmad-plugins-marketplace)에서 선별됩니다. 카테고리별로 구성되고 안전을 위해 승인된 커밋에 고정됩니다.
+커뮤니티 모듈은 [Funcionário Infinito 플러그인 마켓플레이스](https://github.com/funcionario-infinito/funcionario-plugins-marketplace)에서 선별됩니다. 카테고리별로 구성되고 안전을 위해 승인된 커밋에 고정됩니다.
 
 ### 1. 설치 프로그램 실행
 
 ```bash
-npx bmad-method install
+npx funcionario-method install
 ```
 
 ### 2. 커뮤니티 카탈로그 둘러보기
@@ -81,7 +81,7 @@ Would you like to install from a custom source (Git URL or local path)?
 명령줄에서 커스텀 모듈을 설치하려면 `--custom-source` 플래그를 사용하세요.
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory . \
   --custom-source /path/to/my-module \
   --tools claude-code \
@@ -91,7 +91,7 @@ npx bmad-method install \
 `--modules` 없이 `--custom-source`를 제공하면 core와 커스텀 모듈만 설치됩니다. 공식 모듈도 포함하려면 `--modules`를 추가하세요.
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory . \
   --modules bmm \
   --custom-source https://gitlab.com/myorg/my-module \
@@ -122,10 +122,10 @@ npx bmad-method install \
 
 ## 로컬 개발 워크플로
 
-[BMad 빌더](https://github.com/bmad-code-org/bmad-builder)로 모듈을 만들고 있다면 작업 디렉터리에서 직접 설치할 수 있습니다.
+[Funcionário Infinito 빌더](https://github.com/funcionario-infinito/funcionario-builder)로 모듈을 만들고 있다면 작업 디렉터리에서 직접 설치할 수 있습니다.
 
 ```bash
-npx bmad-method install \
+npx funcionario-method install \
   --directory ~/my-project \
   --custom-source ~/my-module-repo/skills \
   --tools claude-code \
@@ -135,16 +135,16 @@ npx bmad-method install \
 로컬 소스는 캐시에 복사되지 않고 경로로 참조됩니다. 모듈 소스를 업데이트하고 다시 설치하면 설치 프로그램이 최신 변경을 가져옵니다.
 
 :::caution[소스 제거]
-설치 후 로컬 소스 디렉터리를 삭제해도 `_bmad/`에 설치된 모듈 파일은 보존됩니다. 소스 경로가 복원될 때까지 업데이트 중 해당 모듈은 건너뜁니다.
+설치 후 로컬 소스 디렉터리를 삭제해도 `_funcionario/`에 설치된 모듈 파일은 보존됩니다. 소스 경로가 복원될 때까지 업데이트 중 해당 모듈은 건너뜁니다.
 :::
 
 ## 얻는 결과
 
-설치 후 커스텀 모듈은 공식 모듈과 함께 `_bmad/`에 나타납니다.
+설치 후 커스텀 모듈은 공식 모듈과 함께 `_funcionario/`에 나타납니다.
 
 ```
 your-project/
-├── _bmad/
+├── _funcionario/
 │   ├── core/              # 내장 core 모듈
 │   ├── bmm/               # 공식 모듈(선택한 경우)
 │   ├── my-module/         # 커스텀 모듈
@@ -167,14 +167,14 @@ your-project/
 
 ## 직접 모듈 만들기
 
-다른 사람이 설치할 수 있는 모듈을 만들려면 [BMad 빌더](https://github.com/bmad-code-org/bmad-builder)를 사용하세요.
+다른 사람이 설치할 수 있는 모듈을 만들려면 [Funcionário Infinito 빌더](https://github.com/funcionario-infinito/funcionario-builder)를 사용하세요.
 
-1. `bmad-module-builder`를 실행해 모듈 초기 구조를 생성합니다
-2. 여러 BMad 빌더 도구로 스킬, 에이전트, 워크플로를 추가합니다
+1. `funcionario-module-builder`를 실행해 모듈 초기 구조를 생성합니다
+2. 여러 Funcionário Infinito 빌더 도구로 스킬, 에이전트, 워크플로를 추가합니다
 3. Git 저장소에 게시하거나 폴더 컬렉션을 공유합니다
 4. 다른 사용자는 `--custom-source <your-repo-url>`로 설치합니다
 
-모듈이 발견 모드를 지원하려면 저장소 루트에 `.claude-plugin/marketplace.json`을 포함하세요(Claude 전용이 아닌 도구 간 관례입니다). marketplace.json 형식은 [BMad 빌더 문서](https://github.com/bmad-code-org/bmad-builder)를 참고하세요.
+모듈이 발견 모드를 지원하려면 저장소 루트에 `.claude-plugin/marketplace.json`을 포함하세요(Claude 전용이 아닌 도구 간 관례입니다). marketplace.json 형식은 [Funcionário Infinito 빌더 문서](https://github.com/funcionario-infinito/funcionario-builder)를 참고하세요.
 
 :::tip[먼저 로컬에서 테스트]
 개발 중에는 Git 저장소에 게시하기 전에 로컬 경로로 모듈을 설치해 빠르게 수정하고 확인하세요.

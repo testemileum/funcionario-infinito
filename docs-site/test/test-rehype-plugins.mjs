@@ -62,7 +62,7 @@ function assert(condition, testName, errorMessage = '') {
 const CONTENT_DIR = '/project/src/content/docs';
 const STD_FILE = { path: '/project/src/content/docs/guide/intro.md' };
 const STD_OPTS = { contentDir: CONTENT_DIR };
-const BASE = '/BMAD-METHOD/';
+const BASE = '/funcionario-infinito/';
 
 function transform(tree, file, options = {}) {
   const plugin = rehypeMarkdownLinks(options);
@@ -122,12 +122,12 @@ const DIAGRAM_LOCALES = { root: { lang: 'en' }, fr: { lang: 'fr-FR' }, 'ko-kr': 
 
 /** A site root holding one diagram and its labels, thrown away after the run. */
 function makeDiagramFixture() {
-  const root = mkdtempSync(join(tmpdir(), 'bmad-diagrams-'));
+  const root = mkdtempSync(join(tmpdir(), 'funcionario-diagrams-'));
   mkdirSync(join(root, 'src', 'diagrams'), { recursive: true });
   writeDiagram(
     root,
     'flow',
-    '<svg class="bmad-diagram" viewBox="0 0 10 10"><text data-i18n="start">Start</text><text data-i18n="end">End</text></svg>',
+    '<svg class="funcionario-diagram" viewBox="0 0 10 10"><text data-i18n="start">Start</text><text data-i18n="end">End</text></svg>',
   );
   writeFileSync(
     join(root, 'src', 'diagrams', 'flow.labels.json'),
@@ -616,14 +616,14 @@ function runTests() {
 
   {
     const tree = makeAnchorTree('page.md');
-    transform(tree, STD_FILE, { ...STD_OPTS, base: '/BMAD-METHOD/' });
-    assert(getHref(tree) === '/BMAD-METHOD/guide/page/', 'Base /BMAD-METHOD/ -> /BMAD-METHOD/guide/page/', `Got ${getHref(tree)}`);
+    transform(tree, STD_FILE, { ...STD_OPTS, base: '/funcionario-infinito/' });
+    assert(getHref(tree) === '/funcionario-infinito/guide/page/', 'Base /funcionario-infinito/ -> /funcionario-infinito/guide/page/', `Got ${getHref(tree)}`);
   }
 
   {
     const tree = makeAnchorTree('page.md');
-    transform(tree, STD_FILE, { ...STD_OPTS, base: '/BMAD-METHOD' });
-    assert(getHref(tree) === '/BMAD-METHOD/guide/page/', 'Base /BMAD-METHOD (no trailing slash) -> same result', `Got ${getHref(tree)}`);
+    transform(tree, STD_FILE, { ...STD_OPTS, base: '/funcionario-infinito' });
+    assert(getHref(tree) === '/funcionario-infinito/guide/page/', 'Base /funcionario-infinito (no trailing slash) -> same result', `Got ${getHref(tree)}`);
   }
 
   {
@@ -647,7 +647,7 @@ function runTests() {
 
   {
     const tree = makeAnchorTree('page.md');
-    transform(tree, STD_FILE, { ...STD_OPTS, base: '/BMAD-METHOD/' });
+    transform(tree, STD_FILE, { ...STD_OPTS, base: '/funcionario-infinito/' });
     assert(!getHref(tree).includes('//'), 'No // in output for subpath base', `Got ${getHref(tree)}`);
   }
 
@@ -712,14 +712,14 @@ function runTests() {
 
   {
     const tree = makeAnchorTree('/page/');
-    transformBase(tree, { base: '/BMAD-METHOD/' });
-    assert(getHref(tree) === '/BMAD-METHOD/page/', 'Base /BMAD-METHOD/ prefixes', `Got ${getHref(tree)}`);
+    transformBase(tree, { base: '/funcionario-infinito/' });
+    assert(getHref(tree) === '/funcionario-infinito/page/', 'Base /funcionario-infinito/ prefixes', `Got ${getHref(tree)}`);
   }
 
   {
     const tree = makeAnchorTree('/page/');
-    transformBase(tree, { base: '/BMAD-METHOD' });
-    assert(getHref(tree) === '/BMAD-METHOD/page/', 'Base /BMAD-METHOD normalizes (adds trailing slash)', `Got ${getHref(tree)}`);
+    transformBase(tree, { base: '/funcionario-infinito' });
+    assert(getHref(tree) === '/funcionario-infinito/page/', 'Base /funcionario-infinito normalizes (adds trailing slash)', `Got ${getHref(tree)}`);
   }
 
   {
@@ -744,20 +744,20 @@ function runTests() {
   {
     const tree = makeAnchorTree('/page/');
     transformBase(tree, { base: BASE });
-    assert(getHref(tree) === '/BMAD-METHOD/page/', 'a[href] prefixed', `Got ${getHref(tree)}`);
+    assert(getHref(tree) === '/funcionario-infinito/page/', 'a[href] prefixed', `Got ${getHref(tree)}`);
   }
 
   {
     const tree = makeElementTree('img', { src: '/img/logo.png' });
     transformBase(tree, { base: BASE });
-    assert(getSrc(tree) === '/BMAD-METHOD/img/logo.png', 'img[src] prefixed', `Got ${getSrc(tree)}`);
+    assert(getSrc(tree) === '/funcionario-infinito/img/logo.png', 'img[src] prefixed', `Got ${getSrc(tree)}`);
   }
 
   {
     const tree = makeElementTree('link', { href: '/styles/main.css' });
     transformBase(tree, { base: BASE });
     assert(
-      tree.children[0].properties.href === '/BMAD-METHOD/styles/main.css',
+      tree.children[0].properties.href === '/funcionario-infinito/styles/main.css',
       'link[href] prefixed',
       `Got ${tree.children[0].properties.href}`,
     );
@@ -772,19 +772,19 @@ function runTests() {
   {
     const tree = makeElementTree('video', { src: '/media/intro.mp4' });
     transformBase(tree, { base: BASE });
-    assert(getSrc(tree) === '/BMAD-METHOD/media/intro.mp4', 'video[src] prefixed', `Got ${getSrc(tree)}`);
+    assert(getSrc(tree) === '/funcionario-infinito/media/intro.mp4', 'video[src] prefixed', `Got ${getSrc(tree)}`);
   }
 
   {
     const tree = makeElementTree('audio', { src: '/media/clip.mp3' });
     transformBase(tree, { base: BASE });
-    assert(getSrc(tree) === '/BMAD-METHOD/media/clip.mp3', 'audio[src] prefixed', `Got ${getSrc(tree)}`);
+    assert(getSrc(tree) === '/funcionario-infinito/media/clip.mp3', 'audio[src] prefixed', `Got ${getSrc(tree)}`);
   }
 
   {
     const tree = makeElementTree('iframe', { src: '/embed/widget' });
     transformBase(tree, { base: BASE });
-    assert(getSrc(tree) === '/BMAD-METHOD/embed/widget', 'iframe[src] prefixed', `Got ${getSrc(tree)}`);
+    assert(getSrc(tree) === '/funcionario-infinito/embed/widget', 'iframe[src] prefixed', `Got ${getSrc(tree)}`);
   }
 
   {
@@ -800,7 +800,7 @@ function runTests() {
   {
     const tree = makeElementTree('source', { src: '/media/alt.mp4' });
     transformBase(tree, { base: BASE });
-    assert(getSrc(tree) === '/BMAD-METHOD/media/alt.mp4', 'source[src] prefixed', `Got ${getSrc(tree)}`);
+    assert(getSrc(tree) === '/funcionario-infinito/media/alt.mp4', 'source[src] prefixed', `Got ${getSrc(tree)}`);
   }
 
   console.log('');
@@ -866,9 +866,9 @@ function runTests() {
   }
 
   {
-    const tree = makeAnchorTree('/BMAD-METHOD/page/');
+    const tree = makeAnchorTree('/funcionario-infinito/page/');
     transformBase(tree, { base: BASE });
-    assert(getHref(tree) === '/BMAD-METHOD/page/', 'Already prefixed skipped', `Got ${getHref(tree)}`);
+    assert(getHref(tree) === '/funcionario-infinito/page/', 'Already prefixed skipped', `Got ${getHref(tree)}`);
   }
 
   {
@@ -962,7 +962,7 @@ function runTests() {
       children: [{ type: 'raw', value: '<img src="/img/logo.png">' }],
     };
     transformBase(tree, { base: BASE });
-    assert(getRawValue(tree) === '<img src="/BMAD-METHOD/img/logo.png">', 'Raw img src rewritten', `Got ${getRawValue(tree)}`);
+    assert(getRawValue(tree) === '<img src="/funcionario-infinito/img/logo.png">', 'Raw img src rewritten', `Got ${getRawValue(tree)}`);
   }
 
   {
@@ -971,7 +971,7 @@ function runTests() {
       children: [{ type: 'raw', value: '<a href="/page/">link</a>' }],
     };
     transformBase(tree, { base: BASE });
-    assert(getRawValue(tree) === '<a href="/BMAD-METHOD/page/">link</a>', 'Raw a href rewritten', `Got ${getRawValue(tree)}`);
+    assert(getRawValue(tree) === '<a href="/funcionario-infinito/page/">link</a>', 'Raw a href rewritten', `Got ${getRawValue(tree)}`);
   }
 
   {
@@ -989,12 +989,12 @@ function runTests() {
       children: [
         {
           type: 'raw',
-          value: '<img src="/BMAD-METHOD/img/logo.png">',
+          value: '<img src="/funcionario-infinito/img/logo.png">',
         },
       ],
     };
     transformBase(tree, { base: BASE });
-    assert(getRawValue(tree) === '<img src="/BMAD-METHOD/img/logo.png">', 'Raw already prefixed unchanged', `Got ${getRawValue(tree)}`);
+    assert(getRawValue(tree) === '<img src="/funcionario-infinito/img/logo.png">', 'Raw already prefixed unchanged', `Got ${getRawValue(tree)}`);
   }
 
   {
@@ -1009,7 +1009,7 @@ function runTests() {
     };
     transformBase(tree, { base: BASE });
     assert(
-      getRawValue(tree) === '<a href="/BMAD-METHOD/page/"><img src="/BMAD-METHOD/img/logo.png"></a>',
+      getRawValue(tree) === '<a href="/funcionario-infinito/page/"><img src="/funcionario-infinito/img/logo.png"></a>',
       'Raw multiple attributes rewritten',
       `Got ${getRawValue(tree)}`,
     );
@@ -1052,7 +1052,7 @@ function runTests() {
     transform(tree, STD_FILE, { ...STD_OPTS, base: BASE });
     transformBase(tree, { base: BASE });
     const href = getHref(tree);
-    assert(href === '/BMAD-METHOD/guide/sibling/', './sibling.md through both -> no double prefix', `Got ${href}`);
+    assert(href === '/funcionario-infinito/guide/sibling/', './sibling.md through both -> no double prefix', `Got ${href}`);
   }
 
   {
@@ -1060,7 +1060,7 @@ function runTests() {
     const tree = makeElementTree('img', { src: '/img/logo.png' });
     // markdown-links doesn't touch img elements, so just run base-paths
     transformBase(tree, { base: BASE });
-    assert(getSrc(tree) === '/BMAD-METHOD/img/logo.png', 'img /img/logo.png -> only base-paths prefixes', `Got ${getSrc(tree)}`);
+    assert(getSrc(tree) === '/funcionario-infinito/img/logo.png', 'img /img/logo.png -> only base-paths prefixes', `Got ${getSrc(tree)}`);
   }
 
   {
@@ -1076,7 +1076,7 @@ function runTests() {
     const tree = makeAnchorTree('/page/');
     transform(tree, STD_FILE, { ...STD_OPTS, base: BASE });
     transformBase(tree, { base: BASE });
-    assert(getHref(tree) === '/BMAD-METHOD/page/', '/page/ (non-.md) -> only base-paths prefixes', `Got ${getHref(tree)}`);
+    assert(getHref(tree) === '/funcionario-infinito/page/', '/page/ (non-.md) -> only base-paths prefixes', `Got ${getHref(tree)}`);
   }
 
   console.log('');
@@ -1140,7 +1140,7 @@ function runTests() {
     );
 
     // the dev server is one long-lived process: an edited diagram must be re-read
-    writeDiagram(dRoot, 'flow', '<svg class="bmad-diagram" viewBox="0 0 10 10"><text data-i18n="start">Redrawn</text></svg>');
+    writeDiagram(dRoot, 'flow', '<svg class="funcionario-diagram" viewBox="0 0 10 10"><text data-i18n="start">Redrawn</text></svg>');
     const future = Date.now() / 1000 + 10;
     utimesSync(join(dRoot, 'src', 'diagrams', 'flow.svg'), future, future);
     const reread = inlineDiagrams(makeImgTree('/diagrams/flow.svg'), EN_PAGE, dRoot);

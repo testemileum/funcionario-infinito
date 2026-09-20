@@ -1,19 +1,19 @@
 ---
 title: 'Use Web Bundles'
-description: Decide whether to run BMad planning in a Gemini Gem or ChatGPT Custom GPT, install a bundle, keep it updated, and customize it without losing updates.
+description: Decide whether to run Funcionário Infinito planning in a Gemini Gem or ChatGPT Custom GPT, install a bundle, keep it updated, and customize it without losing updates.
 sidebar:
   order: 4
 ---
 
-Plan in the web, build in the IDE. A web bundle runs BMad planning on your
+Plan in the web, build in the IDE. A web bundle runs Funcionário Infinito planning on your
 Gemini or ChatGPT subscription. You copy the artifact into your repo and
 continue in Claude Code or Cursor.
 
 ## What a web bundle is
 
-A web bundle is a BMad skill repackaged for installation as a **Google
+A web bundle is a Funcionário Infinito skill repackaged for installation as a **Google
 Gemini Gem** or **ChatGPT Custom GPT**. Once installed, it is a reusable
-Gem or Custom GPT scoped to one BMad planning capability. Each bundle
+Gem or Custom GPT scoped to one Funcionário Infinito planning capability. Each bundle
 contains:
 
 - `SKILL.md`, the protocol, uploaded as a knowledge file.
@@ -54,16 +54,16 @@ Stay in the IDE when:
 ## The shelf
 
 The current bundles cover the analysis and planning phases. Each carries a
-default persona (from the matching BMad agent, when there is one) and a
+default persona (from the matching Funcionário Infinito agent, when there is one) and a
 contrasting swap persona that shows the voice-change pattern.
 
 | Bundle | Phase | Default persona | Swap persona |
 | --- | --- | --- | --- |
-| Brainstorming Coach | Analysis | Carson (Osborn lineage) | Mary (BMad analyst) |
-| Product Brief Coach | Analysis | Mary (BMad analyst) | Iris (thinking-partner voice) |
-| PRFAQ Coach | Analysis | Mary (BMad analyst) | Bezos (Working Backwards) |
-| PRD Coach | Planning | John (BMad PM, Cagan lineage) | Ezra (calmer coaching) |
-| UX Coach | Planning | Sally (BMad UX designer, Norman method) | Kenji (Rams and Zhuo discipline) |
+| Brainstorming Coach | Analysis | Carson (Osborn lineage) | Mary (Funcionário Infinito analyst) |
+| Product Brief Coach | Analysis | Mary (Funcionário Infinito analyst) | Iris (thinking-partner voice) |
+| PRFAQ Coach | Analysis | Mary (Funcionário Infinito analyst) | Bezos (Working Backwards) |
+| PRD Coach | Planning | John (Funcionário Infinito PM, Cagan lineage) | Ezra (calmer coaching) |
+| UX Coach | Planning | Sally (Funcionário Infinito UX designer, Norman method) | Kenji (Rams and Zhuo discipline) |
 | Market & Industry Research | Analysis | Mary (Porter and Christensen anchors) | Geoff (Moore and Dunford lineage) |
 
 ## How a session works
@@ -71,7 +71,7 @@ contrasting swap persona that shows the voice-change pattern.
 1. **Open the Gem or Custom GPT.** The persona greets in character and opens conversational discovery.
 2. **Discover scope.** The persona asks what you are trying to do, what you have on hand, and what constraints apply. It does not use a form.
 3. **Do the work in Canvas.** The protocol opens Canvas at session start and updates it continuously. Mermaid diagrams and HTML tables go in alongside the prose.
-4. **Hand off.** You finish with a Canvas document you can export, paste into your repo, or feed to a BMad skill in your IDE for the next phase.
+4. **Hand off.** You finish with a Canvas document you can export, paste into your repo, or feed to a Funcionário Infinito skill in your IDE for the next phase.
 
 Market & Industry Research is the bundle that uses Deep Research. Its
 persona drafts a Deep Research brief mid-session for you to paste into
@@ -79,7 +79,7 @@ Gemini's or ChatGPT's Deep Research mode, then ingests the returned report.
 
 ## Install a bundle
 
-Install from **[bmadcode.com/web-bundles](https://bmadcode.com/web-bundles/)**.
+Install from **[funcionario-infinito.com.br/web-bundles](https://funcionario-infinito.com.br/web-bundles/)**.
 The site is the only supported install path. It keeps the steps current as
 Gemini and ChatGPT change, and it always points at the newest tagged
 release. Setup is not one-click, but every bundle follows the same pattern.
@@ -132,13 +132,13 @@ files as shipped so you can refresh them without losing your changes.
 
 ## Build your own
 
-To turn an existing BMad skill into a web bundle, use the
-`bmad-os-skill-to-bundle` utility skill from
-[bmad-utility-skills](https://github.com/bmad-code-org/bmad-utility-skills).
-Point it at any BMad skill folder. It produces the bundle files, using
+To turn an existing Funcionário Infinito skill into a web bundle, use the
+`funcionario-os-skill-to-bundle` utility skill from
+[funcionario-utility-skills](https://github.com/funcionario-infinito/funcionario-utility-skills).
+Point it at any Funcionário Infinito skill folder. It produces the bundle files, using
 the skill's agent as the default persona and adding a contrasting swap
 example.
 
 To submit your bundle to the shelf, open a PR on
-[BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD) that adds the
+[funcionario-infinito](https://github.com/funcionario-infinito/funcionario-infinito) that adds the
 bundle directory and an entry in `web-bundles/bundles.json`.

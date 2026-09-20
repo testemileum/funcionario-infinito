@@ -5,7 +5,7 @@ sidebar:
   order: 3
 ---
 
-변경 구현이 끝나면 자동화 테스트를 더 추가해야 하는지, 어떤 BMad 경로로 만들지 결정하세요. 내장 스킬인 `bmad-qa-generate-e2e-tests`는 이미 구현된 코드에 API 및 E2E 테스트를 생성합니다. 테스트 전략, 위험 기반 계획 또는 출시 게이트가 필요하다면 테스트 설계자(Test Architect, TEA) 모듈을 설치하세요. 전체 실행 과정은 [`bmad-qa-generate-e2e-tests` 실행하기](#bmad-qa-generate-e2e-tests-실행하기)에서 확인할 수 있습니다.
+변경 구현이 끝나면 자동화 테스트를 더 추가해야 하는지, 어떤 Funcionário Infinito 경로로 만들지 결정하세요. 내장 스킬인 `funcionario-qa-generate-e2e-tests`는 이미 구현된 코드에 API 및 E2E 테스트를 생성합니다. 테스트 전략, 위험 기반 계획 또는 출시 게이트가 필요하다면 테스트 설계자(Test Architect, TEA) 모듈을 설치하세요. 전체 실행 과정은 [`funcionario-qa-generate-e2e-tests` 실행하기](#funcionario-qa-generate-e2e-tests-실행하기)에서 확인할 수 있습니다.
 
 여기서는 완성된 작업의 테스트 커버리지를 생성합니다. 코드 리뷰가 아니며 [변경 사항 둘러보기](walk-through-a-change.md)에서 제안하는 수동 확인도 아닙니다.
 
@@ -20,19 +20,19 @@ sidebar:
 | **전략** | 정상 경로와 몇 가지 주요 오류 | 위험 기반 우선순위(P0~P3) |
 
 :::tip[내장 QA로 시작]
-대부분의 프로젝트는 `bmad-qa-generate-e2e-tests`로 시작하면 됩니다. 이 스킬이 제공하지 않는 테스트 전략, 품질 게이트 또는 요구사항 추적성이 필요해질 때 TEA를 설치하세요.
+대부분의 프로젝트는 `funcionario-qa-generate-e2e-tests`로 시작하면 됩니다. 이 스킬이 제공하지 않는 테스트 전략, 품질 게이트 또는 요구사항 추적성이 필요해질 때 TEA를 설치하세요.
 :::
 
-## `bmad-qa-generate-e2e-tests` 실행하기
+## `funcionario-qa-generate-e2e-tests` 실행하기
 
 **새 채팅**을 열고 스킬 이름을 말하세요. 명령 전후나 명령과 함께 기능, 디렉터리 또는 "테스트되지 않은 부분을 찾아 줘"처럼 대상을 설명할 수 있습니다.
 
 ```text
-/bmad-qa-generate-e2e-tests
+/funcionario-qa-generate-e2e-tests
 ```
 
 ```text
-/bmad-qa-generate-e2e-tests 로그인 흐름의 API 및 E2E 테스트를 만들어 줘.
+/funcionario-qa-generate-e2e-tests 로그인 흐름의 API 및 E2E 테스트를 만들어 줘.
 ```
 
 프로젝트에서 이미 사용하는 테스트 프레임워크를 그대로 활용합니다. 프레임워크가 없다면 기술 스택을 확인하고 하나를 제안합니다.
@@ -56,7 +56,7 @@ sidebar:
 
 ## 제한 사항
 
-`bmad-qa-generate-e2e-tests`는 테스트만 생성합니다. 구현을 검토하지 않습니다. 구현 중에는 `bmad-build`가 검토하고 추가 검토가 필요하면 `bmad-code-review`를 사용하세요.
+`funcionario-qa-generate-e2e-tests`는 테스트만 생성합니다. 구현을 검토하지 않습니다. 구현 중에는 `funcionario-build`가 검토하고 추가 검토가 필요하면 `funcionario-code-review`를 사용하세요.
 
 테스트 전략, 위험 순위, 요구사항 추적성, NFR 근거, 출시 여부를 결정하는 게이트는 만들지 않습니다. PRD나 아키텍처를 불러와 요구사항과 커버리지를 연결하지도 않습니다. 정상 경로와 몇 가지 주요 오류까지만 다루며 더 많은 엣지 케이스는 후속 작업으로 남습니다.
 
@@ -70,10 +70,10 @@ sidebar:
 - 테스트를 작성하기 전에 테스트 전략이 필요할 때
 - 하나의 테스트 생성·실행 스킬로 다루기에는 작업이 너무 커졌을 때
 
-TEA는 별도 모듈입니다. 현재 워크플로, 명령, 설정 방법은 [TEA 문서](https://bmad-code-org.github.io/bmad-method-test-architecture-enterprise/)를 참고하세요. 다른 BMad 모듈과 함께 설치할 수 있습니다. 모듈 선택 방법은 [공식 모듈](../reference/modules.md)에서 확인하세요.
+TEA는 별도 모듈입니다. 현재 워크플로, 명령, 설정 방법은 [TEA 문서](https://funcionario-infinito.github.io/funcionario-method-test-architecture-enterprise/)를 참고하세요. 다른 Funcionário Infinito 모듈과 함께 설치할 수 있습니다. 모듈 선택 방법은 [공식 모듈](../reference/modules.md)에서 확인하세요.
 
 ## 워크플로에서의 위치
 
-[`bmad-build`](build-a-change.md)는 변경을 구현하고 기존 테스트 모음이 있다면 모두 통과하는 상태로 작업을 마칩니다. 그다음 이 페이지의 테스트 경로를 선택합니다. 완성된 작업에 API 및 E2E 커버리지를 추가하거나 TEA로 전환하면 됩니다.
+[`funcionario-build`](build-a-change.md)는 변경을 구현하고 기존 테스트 모음이 있다면 모두 통과하는 상태로 작업을 마칩니다. 그다음 이 페이지의 테스트 경로를 선택합니다. 완성된 작업에 API 및 E2E 커버리지를 추가하거나 TEA로 전환하면 됩니다.
 
-내장 QA는 변경 하나가 끝날 때마다 실행할 수 있습니다. 에픽이 모두 끝날 때까지 기다릴 필요가 없습니다. 일반적으로 `bmad-build`로 구현하고 필요하면 [결과를 둘러본](walk-through-a-change.md) 뒤 여기서 테스트를 생성합니다. 에픽 전체가 끝난 후 실행하는 `bmad-retrospective`는 목적이 다릅니다. 테스트 모음이 아니라 상위 사양을 기준으로 에픽 전체를 평가합니다.
+내장 QA는 변경 하나가 끝날 때마다 실행할 수 있습니다. 에픽이 모두 끝날 때까지 기다릴 필요가 없습니다. 일반적으로 `funcionario-build`로 구현하고 필요하면 [결과를 둘러본](walk-through-a-change.md) 뒤 여기서 테스트를 생성합니다. 에픽 전체가 끝난 후 실행하는 `funcionario-retrospective`는 목적이 다릅니다. 테스트 모음이 아니라 상위 사양을 기준으로 에픽 전체를 평가합니다.

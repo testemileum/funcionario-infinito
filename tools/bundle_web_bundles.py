@@ -112,8 +112,8 @@ def main() -> None:
     print(f"  gh release create {release_tag} dist/web-bundles/*.zip \\")
     print(f'    --title "{release_tag}" \\')
     print(
-        '    --notes "BMad web bundles for Gemini Gems and ChatGPT Custom GPTs. '
-        'See https://bmadcode.com/web-bundles/"\n'
+        '    --notes "Funcionário Infinito web bundles for Gemini Gems and ChatGPT Custom GPTs. '
+        'See https://funcionario-infinito.com.br/web-bundles/"\n'
     )
     print("Or, to refresh an existing release:\n")
     print(f"  gh release upload {release_tag} dist/web-bundles/*.zip --clobber\n")

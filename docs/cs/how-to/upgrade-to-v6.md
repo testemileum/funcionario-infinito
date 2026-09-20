@@ -1,41 +1,41 @@
 ---
 title: "Jak upgradovat na v6"
-description: Migrace z BMad v4 na v6
+description: Migrace z Funcionário Infinito v4 na v6
 sidebar:
   order: 2
 ---
 
-Použijte instalátor BMad pro upgrade z v4 na v6, který zahrnuje automatickou detekci starších instalací a asistenci při migraci.
+Použijte instalátor Funcionário Infinito pro upgrade z v4 na v6, který zahrnuje automatickou detekci starších instalací a asistenci při migraci.
 
 ## Kdy to použít
 
-- Máte nainstalovaný BMad v4 (složka `.bmad-method`)
+- Máte nainstalovaný Funcionário Infinito v4 (složka `.funcionario-method`)
 - Chcete migrovat na novou architekturu v6
 - Máte existující plánovací artefakty k zachování
 
 :::note[Předpoklady]
 - Node.js 20.12+
-- Existující instalace BMad v4
+- Existující instalace Funcionário Infinito v4
 :::
 
 ## Kroky
 
 ### 1. Spusťte instalátor
 
-Postupujte podle [instrukcí instalátoru](./install-bmad.md).
+Postupujte podle [instrukcí instalátoru](./install-funcionario.md).
 
 ### 2. Zpracování starší instalace
 
 Když je detekována v4, můžete:
 
-- Nechat instalátor zálohovat a odstranit `.bmad-method`
+- Nechat instalátor zálohovat a odstranit `.funcionario-method`
 - Ukončit a zpracovat vyčištění ručně
 
-Pokud jste pojmenovali složku bmad method jinak, musíte ji odstranit ručně.
+Pokud jste pojmenovali složku funcionario method jinak, musíte ji odstranit ručně.
 
 ### 3. Vyčištění IDE skills
 
-Ručně odstraňte starší v4 IDE příkazy/skills — například pokud máte Claude Code, hledejte vnořené složky začínající na bmad a odstraňte je:
+Ručně odstraňte starší v4 IDE příkazy/skills — například pokud máte Claude Code, hledejte vnořené složky začínající na funcionario a odstraňte je:
 
 - `.claude/commands/`
 
@@ -47,7 +47,7 @@ Nové v6 skills se instalují do:
 
 **Pokud máte plánovací dokumenty (Brief/PRD/UX/Architektura):**
 
-Přesuňte je do `_bmad-output/planning-artifacts/` s popisnými názvy:
+Přesuňte je do `_funcionario-output/planning-artifacts/` s popisnými názvy:
 
 - Zahrňte `PRD` v názvu souboru pro PRD dokumenty
 - Zahrňte `brief`, `architecture` nebo `ux-design` odpovídajícím způsobem
@@ -60,8 +60,8 @@ Přesuňte je do `_bmad-output/planning-artifacts/` s popisnými názvy:
 Pokud máte vytvořené nebo implementované stories:
 
 1. Dokončete instalaci v6
-2. Umístěte `epics.md` nebo `epics/epic*.md` do `_bmad-output/planning-artifacts/`
-3. Spusťte workflow `bmad-sprint-planning` Scrum Mastera
+2. Umístěte `epics.md` nebo `epics/epic*.md` do `_funcionario-output/planning-artifacts/`
+3. Spusťte workflow `funcionario-sprint-planning` Scrum Mastera
 4. Řekněte SM, které epicy/stories jsou již dokončené
 
 ## Co získáte
@@ -70,31 +70,31 @@ Pokud máte vytvořené nebo implementované stories:
 
 ```text
 váš-projekt/
-├── _bmad/               # Jedna instalační složka
+├── _funcionario/               # Jedna instalační složka
 │   ├── _config/         # Vaše přizpůsobení
 │   │   └── agents/      # Soubory přizpůsobení agentů
 │   ├── core/            # Univerzální základní framework
-│   ├── bmm/             # Modul BMad Method
-│   ├── bmb/             # BMad Builder
+│   ├── bmm/             # Modul Funcionário Infinito
+│   ├── bmb/             # Funcionário Infinito Builder
 │   └── cis/             # Creative Intelligence Suite
-└── _bmad-output/        # Výstupní složka (v4 to byla složka dokumentů)
+└── _funcionario-output/        # Výstupní složka (v4 to byla složka dokumentů)
 ```
 
 ## Migrace modulů
 
 | Modul v4                      | Stav v6                            |
 | ----------------------------- | ---------------------------------- |
-| `.bmad-2d-phaser-game-dev`    | Integrován do modulu BMGD          |
-| `.bmad-2d-unity-game-dev`     | Integrován do modulu BMGD          |
-| `.bmad-godot-game-dev`        | Integrován do modulu BMGD          |
-| `.bmad-infrastructure-devops` | Zastaralý — nový DevOps agent brzy |
-| `.bmad-creative-writing`      | Neadaptován — nový v6 modul brzy   |
+| `.funcionario-2d-phaser-game-dev`    | Integrován do modulu BMGD          |
+| `.funcionario-2d-unity-game-dev`     | Integrován do modulu BMGD          |
+| `.funcionario-godot-game-dev`        | Integrován do modulu BMGD          |
+| `.funcionario-infrastructure-devops` | Zastaralý — nový DevOps agent brzy |
+| `.funcionario-creative-writing`      | Neadaptován — nový v6 modul brzy   |
 
 ## Klíčové změny
 
 | Koncept         | v4                                   | v6                                     |
 | --------------- | ------------------------------------ | -------------------------------------- |
-| **Core**        | `_bmad-core` byl vlastně BMad Method | `_bmad/core/` je univerzální framework |
-| **Method**      | `_bmad-method`                       | `_bmad/bmm/`                           |
+| **Core**        | `_funcionario-core` byl vlastně Funcionário Infinito | `_funcionario/core/` je univerzální framework |
+| **Method**      | `_funcionario-method`                       | `_funcionario/bmm/`                           |
 | **Konfigurace** | Přímá editace souborů                | `config.yaml` pro každý modul          |
 | **Dokumenty**   | Vyžadované nastavení shardů          | Plně flexibilní, auto-skenování        |

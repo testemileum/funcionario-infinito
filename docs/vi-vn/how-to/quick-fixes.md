@@ -15,7 +15,7 @@ Sửa lỗi, refactor và thay đổi nhỏ có thể đi thẳng vào **Build**
 - Cập nhật dependency
 
 :::note[Điều kiện tiên quyết]
-- Đã cài BMad Method (`npx bmad-method install`)
+- Đã cài Funcionário Infinito (`npx funcionario-method install`)
 - Một IDE tích hợp AI (Claude Code, Cursor, hoặc tương tự)
 :::
 
@@ -38,7 +38,7 @@ run build — fix https://github.com/org/repo/issues/42
 ```
 
 ```text
-run build — thực hiện ý định trong _bmad-output/implementation-artifacts/my-intent.md
+run build — thực hiện ý định trong _funcionario-output/implementation-artifacts/my-intent.md
 ```
 
 ```text

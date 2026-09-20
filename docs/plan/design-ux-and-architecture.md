@@ -22,7 +22,7 @@ If several epics could be implemented by different agents or people, you need
 architecture. If the product has a user interface whose look and behavior
 matter to the outcome, you need UX.
 
-Both change what `bmad-build` reads; neither changes how Build runs. Build
+Both change what `funcionario-build` reads; neither changes how Build runs. Build
 still runs one session at a time. What changes is that each session reads the
 same decisions, so the sessions fit together.
 
@@ -39,7 +39,7 @@ inconsistent patterns.
 
 ## The Architecture Spine
 
-Run `bmad-architecture` and you get a short architecture document (the
+Run `funcionario-architecture` and you get a short architecture document (the
 **spine**). It records only the decisions that would conflict if two people
 made them independently: the design approach, the boundaries, how state is
 changed, who owns shared data. The stack, the folder tree, and the full data
@@ -70,12 +70,12 @@ reads the same rules.
 Deciding the API style "as we go", documenting every minor choice, and a spine
 written once and never updated are the three ways this step fails. Document
 decisions that cross epic boundaries, keep the spine current as you learn, and
-run `bmad-correct-course` for a significant mid-implementation change.
+run `funcionario-correct-course` for a significant mid-implementation change.
 :::
 
 ## UX Design
 
-Run `bmad-ux` when user experience matters to the outcome. It produces two
+Run `funcionario-ux` when user experience matters to the outcome. It produces two
 peer documents: `DESIGN.md` for how the product looks (colors, typography,
 spacing, components) and `EXPERIENCE.md` for how it works (information
 architecture, behavior and states, accessibility, key user flows). Both win

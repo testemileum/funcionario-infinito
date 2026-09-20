@@ -1,19 +1,19 @@
 ---
 title: 'Getting Deeper'
-description: Use Build and BMad Spec to extend a command in a specific Django version
+description: Use Build and Funcionário Infinito Spec to extend a command in a specific Django version
 sidebar:
   order: 3
 ---
 
 You already know Build from small projects. Here, you will use it in a specific
 version of Django: first for one bounded command change, then for three related
-stories defined by one BMad Spec. The two exercises demonstrate the
+stories defined by one Funcionário Infinito Spec. The two exercises demonstrate the
 [one-session and epic-sized planning paths](../plan/choose-a-planning-path.md).
 
 :::note[Prerequisites]
 Use a macOS or Linux shell with Git, Node.js 20.12+ and `npx`,
 [uv](https://docs.astral.sh/uv/getting-started/installation/), and a coding tool
-supported by BMad. Complete [Build Your First Change](../start/build-your-first-change.md) before
+supported by Funcionário Infinito. Complete [Build Your First Change](../start/build-your-first-change.md) before
 continuing. The exact install and launch commands below are for Claude Code. If
 you use another supported tool, you can run Build there instead.
 :::
@@ -24,10 +24,10 @@ Clone Django 5.2.4 into a new directory, confirm that you have the expected
 source code, and create a branch for the exercise:
 
 ```bash
-git clone --depth 1 --branch 5.2.4 https://github.com/django/django.git bmad-django
-cd bmad-django
+git clone --depth 1 --branch 5.2.4 https://github.com/django/django.git funcionario-django
+cd funcionario-django
 git rev-parse HEAD
-git switch -c bmad-getting-deeper
+git switch -c funcionario-getting-deeper
 ```
 
 `git rev-parse HEAD` should print:
@@ -45,8 +45,8 @@ and create a small Django project next to the repository:
 uv python install 3.12
 uv venv --python 3.12
 uv pip install -e .
-mkdir ../bmad-django-app
-uv run django-admin startproject tutorial_project ../bmad-django-app
+mkdir ../funcionario-django-app
+uv run django-admin startproject tutorial_project ../funcionario-django-app
 ```
 
 ## 3. Check the Starting Behavior
@@ -54,7 +54,7 @@ uv run django-admin startproject tutorial_project ../bmad-django-app
 Confirm that JSON output is not yet available:
 
 ```bash
-uv run python ../bmad-django-app/manage.py diffsettings --output=json
+uv run python ../funcionario-django-app/manage.py diffsettings --output=json
 ```
 
 The command ends with this error:
@@ -63,21 +63,21 @@ The command ends with this error:
 manage.py diffsettings: error: argument --output: invalid choice: 'json' (choose from hash, unified)
 ```
 
-## 4. Install BMad
+## 4. Install Funcionário Infinito
 
-Install BMad Method from the stable release channel. This exact command sets it
+Install Funcionário Infinito from the stable release channel. This exact command sets it
 up for Claude Code:
 
 ```bash
-npx bmad-method install --directory . --modules bmm --tools claude-code --yes
+npx funcionario-method install --directory . --modules bmm --tools claude-code --yes
 ```
 
-Tell Git to ignore the BMad files and uv lockfile created for this tutorial:
+Tell Git to ignore the Funcionário Infinito files and uv lockfile created for this tutorial:
 
 ```bash
 cat >> .git/info/exclude <<'EOF'
-/_bmad/
-/_bmad-output/
+/_funcionario/
+/_funcionario-output/
 /.claude/
 /uv.lock
 EOF
@@ -92,7 +92,7 @@ claude
 ```
 
 ```text
-/bmad-build Add JSON output support to django-admin diffsettings. Preserve
+/funcionario-build Add JSON output support to django-admin diffsettings. Preserve
 the existing output formats, add focused tests, and update the command
 documentation. Leave the implementation in the working tree for local
 inspection.
@@ -123,7 +123,7 @@ The tests should pass.
 Now run the command again:
 
 ```bash
-uv run python ../bmad-django-app/manage.py diffsettings --output=json
+uv run python ../funcionario-django-app/manage.py diffsettings --output=json
 ```
 
 Look through the JSON and compare it with the choices you made with Build.
@@ -135,13 +135,13 @@ codebase.
 
 ## 8. Write a Spec for the Larger Change
 
-The next change needs three Build runs. `/bmad-forge-idea` can help you decide
-what to build. `/bmad-advanced-elicitation` can help you improve a draft. You do
+The next change needs three Build runs. `/funcionario-forge-idea` can help you decide
+what to build. `/funcionario-advanced-elicitation` can help you improve a draft. You do
 not need either here because the requirements are already clear. Send them
-straight to BMad Spec:
+straight to Funcionário Infinito Spec:
 
 ```text
-/bmad-spec Create a spec named diffsettings-audit and break it into
+/funcionario-spec Create a spec named diffsettings-audit and break it into
 exactly three stories in this order: filters, redaction, then CI status.
 
 Read the current diffsettings implementation, focused tests, and command
@@ -156,9 +156,9 @@ documentation. Do not add another Django documentation file or an external
 service. Use diffsettings-audit as the spec folder slug.
 ```
 
-BMad Spec writes one spec in
-`_bmad-output/specs/spec-diffsettings-audit/` and the three ordered stories in
-its `stories.yaml`. Read the spec and stories, and answer any questions BMad
+Funcionário Infinito Spec writes one spec in
+`_funcionario-output/specs/spec-diffsettings-audit/` and the three ordered stories in
+its `stories.yaml`. Read the spec and stories, and answer any questions Funcionário Infinito
 Spec asks. Continue when they match the requirements above.
 
 ## 9. Build the Three Stories
@@ -172,14 +172,14 @@ candidates for automation.
 ### Story 1: Filters
 
 ```text
-/bmad-build Implement story 1, filters, from
-_bmad-output/specs/spec-diffsettings-audit/stories.yaml.
+/funcionario-build Implement story 1, filters, from
+_funcionario-output/specs/spec-diffsettings-audit/stories.yaml.
 ```
 
 After Build finishes, observe the result:
 
 ```bash
-uv run python ../bmad-django-app/manage.py diffsettings \
+uv run python ../funcionario-django-app/manage.py diffsettings \
   --include=DATABASES --include=DEBUG --include=SECRET_KEY \
   --exclude=DATABASES
 printf 'exit: %s\n' "$?"
@@ -191,14 +191,14 @@ The output has `DEBUG` and `SECRET_KEY`, but no `DATABASES`, followed by
 ### Story 2: Redaction
 
 ```text
-/bmad-build Implement story 2, redaction, from
-_bmad-output/specs/spec-diffsettings-audit/stories.yaml.
+/funcionario-build Implement story 2, redaction, from
+_funcionario-output/specs/spec-diffsettings-audit/stories.yaml.
 ```
 
 Observe the unified output:
 
 ```bash
-uv run python ../bmad-django-app/manage.py diffsettings \
+uv run python ../funcionario-django-app/manage.py diffsettings \
   --output=unified --include=SECRET_KEY --redact='SECRET*'
 printf 'exit: %s\n' "$?"
 ```
@@ -214,14 +214,14 @@ exit: 0
 ### Story 3: CI Status
 
 ```text
-/bmad-build Implement story 3, CI status, from
-_bmad-output/specs/spec-diffsettings-audit/stories.yaml.
+/funcionario-build Implement story 3, CI status, from
+_funcionario-output/specs/spec-diffsettings-audit/stories.yaml.
 ```
 
 Observe a difference that remains after filtering:
 
 ```bash
-uv run python ../bmad-django-app/manage.py diffsettings \
+uv run python ../funcionario-django-app/manage.py diffsettings \
   --include=DEBUG --fail-on-difference
 printf 'exit: %s\n' "$?"
 ```
@@ -234,7 +234,7 @@ The `DEBUG` difference remains visible, and the command finishes with
 Now combine the three stories in one observation:
 
 ```bash
-uv run python ../bmad-django-app/manage.py diffsettings \
+uv run python ../funcionario-django-app/manage.py diffsettings \
   --output=json --include=DEBUG --include=SECRET_KEY --exclude=DEBUG \
   --redact='SECRET*' --fail-on-difference
 printf 'exit: %s\n' "$?"
@@ -249,7 +249,7 @@ three separate Build runs one spec. Filtering, redaction, and CI status still
 work together at the end. You have extended a mature Django command, and the
 final result still does what you asked for at the start.
 
-If you want several perspectives on the result, `/bmad-party-mode` is an
+If you want several perspectives on the result, `/funcionario-party-mode` is an
 optional final step. You do not need it to finish this tutorial.
 
 ## 11. Review the Epic
@@ -257,7 +257,7 @@ optional final step. You do not need it to finish this tutorial.
 Run Retrospective against the spec folder:
 
 ```text
-/bmad-retrospective _bmad-output/specs/spec-diffsettings-audit/
+/funcionario-retrospective _funcionario-output/specs/spec-diffsettings-audit/
 ```
 
 Retrospective treats `stories.yaml` as the epic inventory, reads each story's
@@ -267,8 +267,8 @@ acceptance verdict, and any proposed follow-up work.
 
 ## 12. Keep Building
 
-Now [install BMad in your own repository](../start/install-bmad.md), then use
-the `bmad-build` skill to make a change you want. See
+Now [install Funcionário Infinito in your own repository](../start/install-funcionario.md), then use
+the `funcionario-build` skill to make a change you want. See
 [Build a Change](../build/build-a-change.md) for the attended path. Use
 [Choose a Planning Path](../plan/choose-a-planning-path.md) to decide
 when a change needs a spec, automation, or the full project flow.

@@ -5,11 +5,11 @@ sidebar:
   order: 14
 ---
 
-계획에서 구현으로 넘어갈 때 `bmad-sprint-planning`을 실행하세요. 하나의 스킬로 세 가지 질문에 답할 수 있습니다. 계획을 실제로 구현할 수 있는가(준비 상태 게이트), 어떤 작업이 있고 어디까지 진행됐는가(`sprint-status.yaml` 생성), 지금 상태는 무엇인가(상태 보기)입니다. 추적 파일 자체도 검증하고 복구합니다. "구현 준비 상태를 확인해 줘", "스프린트 계획을 실행해 줘", "스프린트 상태를 보여 줘", "스프린트 상태를 검증해 줘", "스프린트 상태를 고쳐 줘"라고 말하면 스킬이 원하는 작업을 감지합니다.
+계획에서 구현으로 넘어갈 때 `funcionario-sprint-planning`을 실행하세요. 하나의 스킬로 세 가지 질문에 답할 수 있습니다. 계획을 실제로 구현할 수 있는가(준비 상태 게이트), 어떤 작업이 있고 어디까지 진행됐는가(`sprint-status.yaml` 생성), 지금 상태는 무엇인가(상태 보기)입니다. 추적 파일 자체도 검증하고 복구합니다. "구현 준비 상태를 확인해 줘", "스프린트 계획을 실행해 줘", "스프린트 상태를 보여 줘", "스프린트 상태를 검증해 줘", "스프린트 상태를 고쳐 줘"라고 말하면 스킬이 원하는 작업을 감지합니다.
 
 ## 하나의 스킬이 담당하는 이유
 
-`sprint-status.yaml`은 전체 개발 주기가 읽고 쓰는 단일 추적 산출물입니다. Build는 스토리 상태를 이 파일과 동기화합니다. code-review는 스토리를 검토 단계로 옮기고 회고는 실행 항목을 추가합니다. 이제 이 산출물을 *만들거나* *요약하는* 모든 작업은 해당 파일을 담당하는 스킬에 모여 있습니다. 이전에는 게이트, 생성, 조회가 세 스킬(`bmad-check-implementation-readiness`, `bmad-sprint-planning`, `bmad-sprint-status`)에 흩어져 있었습니다. 하나로 통합해 담당자와 상태 용어를 통일했습니다. 게이트의 검사 기준과 추적 파일의 생성 기준도 서로 어긋나지 않습니다.
+`sprint-status.yaml`은 전체 개발 주기가 읽고 쓰는 단일 추적 산출물입니다. Build는 스토리 상태를 이 파일과 동기화합니다. code-review는 스토리를 검토 단계로 옮기고 회고는 실행 항목을 추가합니다. 이제 이 산출물을 *만들거나* *요약하는* 모든 작업은 해당 파일을 담당하는 스킬에 모여 있습니다. 이전에는 게이트, 생성, 조회가 세 스킬(`funcionario-check-implementation-readiness`, `funcionario-sprint-planning`, `funcionario-sprint-status`)에 흩어져 있었습니다. 하나로 통합해 담당자와 상태 용어를 통일했습니다. 게이트의 검사 기준과 추적 파일의 생성 기준도 서로 어긋나지 않습니다.
 
 ## 준비 상태 게이트
 
@@ -39,6 +39,6 @@ LLM은 판단이 필요한 부분만 담당합니다. 어떤 파일이 에픽인
 
 ## 마이그레이션 참고 사항
 
-- `bmad-check-implementation-readiness`는 삭제됐습니다. 에이전트 메뉴의 `IR` 트리거는 이제 이 스킬로 연결됩니다.
-- `bmad-sprint-status`는 이제 상태 보기 의도로 이 스킬에 연결되는 폐기 예정 호환 스킬입니다. `_bmad/custom/bmad-sprint-status.toml`의 오버라이드는 `_bmad/custom/bmad-sprint-planning.toml`로 옮기세요.
+- `funcionario-check-implementation-readiness`는 삭제됐습니다. 에이전트 메뉴의 `IR` 트리거는 이제 이 스킬로 연결됩니다.
+- `funcionario-sprint-status`는 이제 상태 보기 의도로 이 스킬에 연결되는 폐기 예정 호환 스킬입니다. `_funcionario/custom/funcionario-sprint-status.toml`의 오버라이드는 `_funcionario/custom/funcionario-sprint-planning.toml`로 옮기세요.
 - `sprint-status.yaml`의 출력 형식은 바뀌지 않았습니다. Build의 스프린트 동기화와 회고 도구는 이전과 똑같이 이 파일을 읽고 씁니다.

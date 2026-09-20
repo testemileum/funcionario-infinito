@@ -32,8 +32,8 @@ If no findings are generated (from either pass), the skill passes validation.
 - **Internal reference**: a file path from one file in the skill to another file in the same skill.
 - **External reference**: a file path from a skill file to a file outside the skill directory.
 - **Originating file**: the file that contains the reference (path resolution is relative to this file's location).
-- **Config value**: a key declared with a `prompt:` in `src/core-skills/module.yaml` or `src/bmm-skills/module.yaml`. The installer writes these to `{project-root}/_bmad/config.toml` (team scope) and `config.user.toml` (user scope); `_bmad/custom/` may override either. Examples: `project_name`, `output_folder`, `communication_language`, `planning_artifacts`, `project_knowledge`.
-- **Customization value**: a key from the skill's own `customize.toml`, in its `[workflow]` table (most skills) or `[agent]` table (agent skills), layered with `_bmad/custom/<skill-name>.toml` and `.user.toml`.
+- **Config value**: a key declared with a `prompt:` in `src/core-skills/module.yaml` or `src/bmm-skills/module.yaml`. The installer writes these to `{project-root}/_funcionario/config.toml` (team scope) and `config.user.toml` (user scope); `_funcionario/custom/` may override either. Examples: `project_name`, `output_folder`, `communication_language`, `planning_artifacts`, `project_knowledge`.
+- **Customization value**: a key from the skill's own `customize.toml`, in its `[workflow]` table (most skills) or `[agent]` table (agent skills), layered with `_funcionario/custom/<skill-name>.toml` and `.user.toml`.
 - **Runtime variable**: a name-value pair whose value is set during workflow execution (e.g., `spec_file`, `date`, `status`).
 - **Intra-skill path variable**: a variable whose value is a path to another file within the same skill — this is an anti-pattern.
 - **Rendered skill**: a skill whose `SKILL.md` invokes `render_skill.py`, which renders the skill's Markdown files (entry point `workflow.md`; `SKILL.md` excluded) into an immutable snapshot before execution. Only rendered skills may use render-time expressions. Every other skill interpolates customization values itself at runtime.
@@ -124,9 +124,9 @@ Every value reached during the render is part of the generation's identity. Cust
 
 - **Severity:** HIGH
 - **Applies to:** `SKILL.md`
-- **Rule:** The `name` value must be the canonical root skill `bmad`, or start with `bmad-` and use only lowercase letters, numbers, and single hyphens between segments.
-- **Detection:** Regex test: `^(?:bmad|bmad-[a-z0-9]+(?:-[a-z0-9]+)*)$`.
-- **Fix:** Rename to comply with the format (e.g., `bmad-my-skill`).
+- **Rule:** The `name` value must be the canonical root skill `funcionario`, or start with `funcionario-` and use only lowercase letters, numbers, and single hyphens between segments.
+- **Detection:** Regex test: `^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$`.
+- **Fix:** Rename to comply with the format (e.g., `funcionario-my-skill`).
 
 ### SKILL-05 — `name` Must Match Directory Name
 
@@ -205,9 +205,9 @@ Every value reached during the render is part of the generation's identity. Cust
 - **Applies to:** all files in the skill
 - **Rule:** A skill must never reference a file inside another skill's directory by path. A skill's files are private to it, and a path into another skill breaks when that skill is moved or reorganized.
 - **Detection:** For each external file reference (frontmatter values, markdown links, inline paths), check whether the resolved path points into a directory that is or contains a skill (has a `SKILL.md`). Patterns to flag:
-  - `{project-root}/_bmad/.../other-skill/anything.md`
-  - `{project-root}/_bmad/.../other-skill/steps/...`
-  - `{project-root}/_bmad/.../other-skill/templates/...`
+  - `{project-root}/_funcionario/.../other-skill/anything.md`
+  - `{project-root}/_funcionario/.../other-skill/steps/...`
+  - `{project-root}/_funcionario/.../other-skill/templates/...`
   - References to pre-conversion locations that were skill directories, where the skill has since moved
 - **Fix:**
   - If the intent is to invoke the other skill: use invoke language in prose — ``Invoke the `skill-name` skill`` (see REF-03).
@@ -289,9 +289,9 @@ Every value reached during the render is part of the generation's identity. Cust
 - **Severity:** HIGH
 - **Applies to:** all files
 - **Rule:** When a skill references another skill by name in prose, the surrounding instruction must use the word "invoke". The canonical form is ``Invoke the `skill-name` skill``. Phrases like "Read fully and follow", "Execute", "Run", "Load", "Open", or "Follow" are invalid — they imply file-level operations on a document, not skill invocation.
-- **Detection:** Find all references to other skills by name (typically backtick-quoted skill names like `bmad-foo`). Check the surrounding instruction text (same sentence or directive) for file-oriented verbs: "read", "follow", "load", "execute", "run", "open". Flag any that do not use "invoke" (or a close synonym like "activate" or "launch").
+- **Detection:** Find all references to other skills by name (typically backtick-quoted skill names like `funcionario-foo`). Check the surrounding instruction text (same sentence or directive) for file-oriented verbs: "read", "follow", "load", "execute", "run", "open". Flag any that do not use "invoke" (or a close synonym like "activate" or "launch").
 - **Fix:** Replace the instruction with ``Invoke the `skill-name` skill``. Remove any "read fully and follow" or similar file-oriented phrasing. Do NOT add a `skill:` prefix in prose — use natural language.
-- **Exception:** `skill:skill-name` is the correct form inside `customize.toml` values (for example a `persistent_facts` entry, or a directive such as `skill:bmad-review lenses=<code>`), where the string is data consumed by a resolver rather than an instruction to the agent. Do not flag it there.
+- **Exception:** `skill:skill-name` is the correct form inside `customize.toml` values (for example a `persistent_facts` entry, or a directive such as `skill:funcionario-review lenses=<code>`), where the string is data consumed by a resolver rather than an instruction to the agent. Do not flag it there.
 
 ---
 

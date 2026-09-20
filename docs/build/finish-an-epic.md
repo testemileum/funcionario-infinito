@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Run `bmad-retrospective` when an epic is done. It reads what the epic
+Run `funcionario-retrospective` when an epic is done. It reads what the epic
 produced — the specs, story records, full diff, commits, and tracking
 files — and uses that evidence instead of anyone's recollection. It
 produces a written review, proposed action items, and a verdict on whether the
@@ -26,7 +26,7 @@ is fresh and the session logs have not been cleared.
 - **Aggregate defects**: the architecture that drifted, the helper written
   twice, the file that grew a little in every session.
 - **Diff-scope review**: it hands the epic's diff to
-  [`bmad-review`](../reference/skills-and-agents.md#bmad-review), weighting the seams between
+  [`funcionario-review`](../reference/skills-and-agents.md#funcionario-review), weighting the seams between
   stories where no single session saw both sides.
 - **Spec reconciliation**: where the built code diverged from what the epic
   and PRD described.
@@ -92,14 +92,14 @@ specs automatically.
 
 ## Running It
 
-Invoke `bmad-retrospective` with the epic number or spec folder. With no input,
+Invoke `funcionario-retrospective` with the epic number or spec folder. With no input,
 it finds the completed epic from sprint status. By default, it stops at the
 written report and verdict.
 
 | You want                 | Do this                                                                                                                      |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| A standard review        | `/bmad-retrospective`                                                                                                        |
-| A specific epic          | `/bmad-retrospective 3`                                                                                                      |
-| A spec-backed epic       | `/bmad-retrospective _bmad-output/specs/spec-<slug>/`                                                                        |
+| A standard review        | `/funcionario-retrospective`                                                                                                        |
+| A specific epic          | `/funcionario-retrospective 3`                                                                                                      |
+| A spec-backed epic       | `/funcionario-retrospective _funcionario-output/specs/spec-<slug>/`                                                                        |
 | The team to talk it over | Ask to "discuss it as a team"; it convenes [party mode](../customize/run-multi-agent-discussions.md) over the real findings, off by default |
 | An unattended run        | `-H <epic>`: verdict on the evidence alone                                                                                   |

@@ -15,7 +15,7 @@ Les corrections de bugs, refactorisations et petites modifications ciblées peuv
 - Mises à jour de dépendances
 
 :::note[Prérequis]
-- Méthode BMad installée (`npx bmad-method install`)
+- Méthode Funcionário Infinito installée (`npx funcionario-method install`)
 - Un IDE IA (Claude Code, Cursor, ou similaire)
 :::
 
@@ -38,7 +38,7 @@ build — corrige https://github.com/org/repo/issues/42
 ```
 
 ```text
-build — implémente _bmad-output/implementation-artifacts/my-intent.md
+build — implémente _funcionario-output/implementation-artifacts/my-intent.md
 ```
 
 ```text

@@ -5,10 +5,10 @@ sidebar:
   order: 3
 ---
 
-모든 BMad 설치에는 **핵심 모듈**이 포함됩니다. 프로젝트, 모듈, 단계에 관계없이 두루 쓰는 작은 스킬 모음입니다. 이 페이지에서는 커널 도구와 **사고 스킬**을 설명합니다.
+모든 Funcionário Infinito 설치에는 **핵심 모듈**이 포함됩니다. 프로젝트, 모듈, 단계에 관계없이 두루 쓰는 작은 스킬 모음입니다. 이 페이지에서는 커널 도구와 **사고 스킬**을 설명합니다.
 
 :::tip[빠른 경로]
-IDE에서 스킬 이름(예: `bmad-help`)을 입력해 어떤 도구든 실행하세요. 에이전트 세션은 필요 없습니다.
+IDE에서 스킬 이름(예: `funcionario-help`)을 입력해 어떤 도구든 실행하세요. 에이전트 세션은 필요 없습니다.
 :::
 
 ## 개요
@@ -17,38 +17,38 @@ IDE에서 스킬 이름(예: `bmad-help`)을 입력해 어떤 도구든 실행�
 
 | 도구 | 목적 |
 | --- | --- |
-| [`bmad-help`](#bmad-help) | 다음에 무엇을 해야 할지 상황에 맞게 안내 |
-| [`bmad-advanced-elicitation`](#bmad-advanced-elicitation) | 반복 개선 기법으로 LLM 출력을 다시 검토하고 다듬음 |
-| [`bmad-review`](#bmad-review) | 다중 렌즈 리뷰 - 코드용 적대적·엣지 케이스·검증 공백 렌즈와 문서용 구조·문장·표현 렌즈를 제공 |
-| [`bmad-customize`](#bmad-customize) | BMad 커스터마이징 오버라이드 생성 및 검증 |
+| [`funcionario-help`](#funcionario-help) | 다음에 무엇을 해야 할지 상황에 맞게 안내 |
+| [`funcionario-advanced-elicitation`](#funcionario-advanced-elicitation) | 반복 개선 기법으로 LLM 출력을 다시 검토하고 다듬음 |
+| [`funcionario-review`](#funcionario-review) | 다중 렌즈 리뷰 - 코드용 적대적·엣지 케이스·검증 공백 렌즈와 문서용 구조·문장·표현 렌즈를 제공 |
+| [`funcionario-customize`](#funcionario-customize) | Funcionário Infinito 커스터마이징 오버라이드 생성 및 검증 |
 
 **사고 스킬:**
 
 | 도구 | 목적 |
 | --- | --- |
-| [`bmad-brainstorming`](#bmad-brainstorming) | 대화형 브레인스토밍 세션 진행 |
-| [`bmad-deep-recon`](#bmad-deep-recon) | 어떤 주제든 의사결정에 필요한 리서치를 초안·처리·실행 방식으로 수행 |
-| [`bmad-forge-idea`](#bmad-forge-idea) | 아이디어를 단련해 가능성을 입증하거나 적은 비용으로 폐기할 때까지 압박 검증 |
-| [`bmad-party-mode`](#bmad-party-mode) | 다중 에이전트 그룹 토론 조율 |
+| [`funcionario-brainstorming`](#funcionario-brainstorming) | 대화형 브레인스토밍 세션 진행 |
+| [`funcionario-deep-recon`](#funcionario-deep-recon) | 어떤 주제든 의사결정에 필요한 리서치를 초안·처리·실행 방식으로 수행 |
+| [`funcionario-forge-idea`](#funcionario-forge-idea) | 아이디어를 단련해 가능성을 입증하거나 적은 비용으로 폐기할 때까지 압박 검증 |
+| [`funcionario-party-mode`](#funcionario-party-mode) | 다중 에이전트 그룹 토론 조율 |
 
 :::note[이동 및 제거]
-`bmad-spec`은 이제 BMM 모듈의 2단계 계획 워크플로에 포함됩니다. 자세한 위치는 [워크플로 맵](./workflow-map.md#단계-2-계획)을 참고하세요.
+`funcionario-spec`은 이제 BMM 모듈의 2단계 계획 워크플로에 포함됩니다. 자세한 위치는 [워크플로 맵](./workflow-map.md#단계-2-계획)을 참고하세요.
 
-`bmad-shard-doc`과 `bmad-index-docs` 유틸리티는 제거되었습니다.
+`funcionario-shard-doc`과 `funcionario-index-docs` 유틸리티는 제거되었습니다.
 
-기존 `bmad-editorial-review`, `bmad-editorial-review-prose`, `bmad-editorial-review-structure`, `bmad-review-adversarial-general`, `bmad-review-edge-case-hunter`, `bmad-review-verification-gap` 스킬은 모두 `bmad-review`로 통합되었습니다. 별도의 편집 스킬은 문서 편집 렌즈가 대신합니다. 이전 ID 6개도 호환성을 위해 새 스킬로 계속 연결됩니다.
+기존 `funcionario-editorial-review`, `funcionario-editorial-review-prose`, `funcionario-editorial-review-structure`, `funcionario-review-adversarial-general`, `funcionario-review-edge-case-hunter`, `funcionario-review-verification-gap` 스킬은 모두 `funcionario-review`로 통합되었습니다. 별도의 편집 스킬은 문서 편집 렌즈가 대신합니다. 이전 ID 6개도 호환성을 위해 새 스킬로 계속 연결됩니다.
 
-기존 `bmad-market-research`, `bmad-domain-research`, `bmad-technical-research` 워크플로는 리서치 유형으로 `bmad-deep-recon`에 통합되었습니다. 이전 ID도 같은 방식으로 새 스킬에 연결됩니다.
+기존 `funcionario-market-research`, `funcionario-domain-research`, `funcionario-technical-research` 워크플로는 리서치 유형으로 `funcionario-deep-recon`에 통합되었습니다. 이전 ID도 같은 방식으로 새 스킬에 연결됩니다.
 :::
 
-## bmad-help
+## funcionario-help
 
 **다음에 무엇을 해야 할지 알려주는 지능형 안내자입니다.** 프로젝트 상태와 완료된 작업을 확인하고 다음 필수 또는 선택 단계를 추천합니다.
 
 **사용 시점:**
 
 - 워크플로를 끝냈고 다음 단계를 알고 싶습니다
-- BMad가 처음이라 방향 안내가 필요합니다
+- Funcionário Infinito가 처음이라 방향 안내가 필요합니다
 - 막혀서 상황에 맞는 조언이 필요합니다
 - 새 모듈을 설치한 뒤 사용할 수 있는 기능을 확인하고 싶습니다
 
@@ -59,13 +59,13 @@ IDE에서 스킬 이름(예: `bmad-help`)을 입력해 어떤 도구든 실행�
 3. 우선순위에 따라 다음 단계를 추천합니다. 필수 단계를 먼저, 선택 단계를 나중에 제시합니다
 4. 각 추천을 스킬 명령과 짧은 설명으로 보여줍니다
 
-**입력:** 선택적 자연어 질문(예: `bmad-help SaaS 아이디어가 있는데 어디서 시작하나요?`)
+**입력:** 선택적 자연어 질문(예: `funcionario-help SaaS 아이디어가 있는데 어디서 시작하나요?`)
 
 **출력:** 스킬 명령과 함께 우선순위로 정리한 다음 단계 목록
 
-## bmad-advanced-elicitation
+## funcionario-advanced-elicitation
 
-**LLM이 최근 출력을 다시 검토하고 다듬도록 합니다.** BMad의 공통 개선 지점으로, 다른 스킬이 작업 중간에 호출할 수도 있고 사용자가 대화의 최근 내용에 직접 적용할 수도 있습니다.
+**LLM이 최근 출력을 다시 검토하고 다듬도록 합니다.** Funcionário Infinito의 공통 개선 지점으로, 다른 스킬이 작업 중간에 호출할 수도 있고 사용자가 대화의 최근 내용에 직접 적용할 수도 있습니다.
 
 **사용 시점:**
 
@@ -85,7 +85,7 @@ IDE에서 스킬 이름(예: `bmad-help`)을 입력해 어떤 도구든 실행�
 
 **출력:** 개선이 적용된 버전
 
-## bmad-review
+## funcionario-review
 
 **diff, 문서, 산출물을 여러 렌즈로 검토합니다.** 리뷰 렌즈마다 기법과 관점은 다르지만 발견 사항은 하나의 표준 형식으로 보고합니다. 발견 사항이 없어도 유효한 결과입니다. 철저해 보이려고 개수를 억지로 채우지 않습니다. 렌즈마다 적용 대상이 정해져 있으므로 diff에는 코드 렌즈를, 문서에는 편집 렌즈를 적용합니다.
 
@@ -132,9 +132,9 @@ IDE에서 스킬 이름(예: `bmad-help`)을 입력해 어떤 도구든 실행�
 다른 모듈의 코드 리뷰 워크플로는 코드 렌즈를 자동으로 실행합니다. 문서 워크플로(PRD, UX, 아키텍처, 제품 브리프)는 마무리 단계에서 편집 렌즈를 실행합니다. 스킬의 `customize.toml`에서 사용자 지정 렌즈를 추가하거나 기본 렌즈를 조정하고 비활성화할 수 있습니다.
 :::
 
-## bmad-customize
+## funcionario-customize
 
-**커스터마이징 오버라이드를 만들고 검증합니다.** TOML을 직접 작성하지 않아도 설치된 BMad 에이전트나 워크플로의 동작을 바꿀 수 있습니다.
+**커스터마이징 오버라이드를 만들고 검증합니다.** TOML을 직접 작성하지 않아도 설치된 Funcionário Infinito 에이전트나 워크플로의 동작을 바꿀 수 있습니다.
 
 **사용 시점:**
 
@@ -144,22 +144,22 @@ IDE에서 스킬 이름(예: `bmad-help`)을 입력해 어떤 도구든 실행�
 
 **작동 방식:**
 
-1. 설치된 BMad 스킬에서 커스터마이징 가능한 영역을 스캔합니다
+1. 설치된 Funcionário Infinito 스킬에서 커스터마이징 가능한 영역을 스캔합니다
 2. 요청한 변경에 맞는 범위를 선택합니다
-3. `_bmad/custom/` 아래에 오버라이드 파일을 작성합니다
+3. `_funcionario/custom/` 아래에 오버라이드 파일을 작성합니다
 4. 병합된 설정을 검증합니다
 
 **입력:** 원하는 커스터마이징을 설명하는 자연어
 
-**출력:** `_bmad/custom/` 아래의 TOML 오버라이드 파일
+**출력:** `_funcionario/custom/` 아래의 TOML 오버라이드 파일
 
-BMad 커스터마이징에 대한 자세한 가이드는 [BMad 커스터마이징 방법](../how-to/customize-bmad.md)을 참고하세요.
+Funcionário Infinito 커스터마이징에 대한 자세한 가이드는 [Funcionário Infinito 커스터마이징 방법](../how-to/customize-funcionario.md)을 참고하세요.
 
 ## 사고 스킬
 
 아래 스킬은 어느 단계나 모듈에서도 쓸 수 있는 범용 사고 도구입니다.
 
-### bmad-brainstorming
+### funcionario-brainstorming
 
 **대화형 창의 기법으로 다양한 아이디어를 생성합니다.** 검증된 발상법을 기법 라이브러리에서 불러와 아이디어를 100개 이상 끌어낸 뒤 정리하는 브레인스토밍 세션입니다.
 
@@ -185,7 +185,7 @@ BMad 커스터마이징에 대한 자세한 가이드는 [BMad 커스터마이�
 핵심은 아이디어가 50개에서 100개 사이로 늘어나는 구간에서 나옵니다. 이 워크플로는 정리 전에 100개 이상의 아이디어 생성을 권장합니다.
 :::
 
-### bmad-deep-recon
+### funcionario-deep-recon
 
 **어떤 주제든 의사결정에 필요한 수준으로 세 가지 방식의 리서치를 수행합니다.** 이미 구독 중인 AI 도구에서 사용할 심층 리서치 프롬프트를 작성하거나, 완성된 보고서를 후속 스킬이 바로 쓸 수 있는 인용 포함 요약으로 정리합니다. 여러 웹 리서치를 병렬로 진행해 현재 환경에서 직접 실행할 수도 있습니다.
 
@@ -210,7 +210,7 @@ BMad 커스터마이징에 대한 자세한 가이드는 [BMad 커스터마이�
 
 세 가지 모드, 선택 기준, 실행 내부 동작은 [Deep Recon](../explanation/deep-recon.md)을 참고하세요.
 
-### bmad-forge-idea
+### funcionario-forge-idea
 
 **아이디어가 단단해지거나 가능성이 입증되거나, 적은 비용으로 폐기될 때까지 압박 검증합니다.** 적대적인 질문자가 아직 덜 다듬어진 아이디어를 한 번에 하나의 질문으로 파고듭니다. 논점마다 두 페르소나를 참여시키며, 남은 아이디어에 확신을 갖고 행동할 수 있을 때까지 진행합니다.
 
@@ -232,9 +232,9 @@ BMad 커스터마이징에 대한 자세한 가이드는 [BMad 커스터마이�
 
 **출력:** 아이디어가 단련된 경우 필요에 따라 `forged-idea.md` 정제본을 만들고, 실행할 때마다 보관용 `forge-report.html` 보고서를 생성
 
-### bmad-party-mode
+### funcionario-party-mode
 
-**다중 에이전트 그룹 토론을 조율합니다.** 설치된 모든 BMad 에이전트를 로드하고 각 에이전트가 고유한 전문성과 페르소나로 기여하는 자연스러운 대화를 진행합니다.
+**다중 에이전트 그룹 토론을 조율합니다.** 설치된 모든 Funcionário Infinito 에이전트를 로드하고 각 에이전트가 고유한 전문성과 페르소나로 기여하는 자연스러운 대화를 진행합니다.
 
 **사용 시점:**
 

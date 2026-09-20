@@ -15,9 +15,9 @@ the skills second.
 
 A single builder, or a small team that already agrees, does not need most of
 what follows. A forged idea, a PRFAQ summary, a brainstorm intent, or a
-well-written issue goes straight to `bmad-spec`, and the rest is one spec per
+well-written issue goes straight to `funcionario-spec`, and the rest is one spec per
 epic. [Choose a Planning Path](./choose-a-planning-path.md) covers that route.
-`bmad-spec` will tell you if the input is too thin; until it does, no PRD is
+`funcionario-spec` will tell you if the input is too thin; until it does, no PRD is
 required.
 
 Reach for the full path when one of these is true:
@@ -30,18 +30,18 @@ Reach for the full path when one of these is true:
 
 ## The PRD Is What the Organization Owns
 
-The PRD is the document the organization owns. It is written by `bmad-prd`,
+The PRD is the document the organization owns. It is written by `funcionario-prd`,
 validated by it, and updated through it; nothing else in the chain claims to
 say what the product is. Brainstorming, Forge Idea, Deep Recon, a product
 brief, and a PRFAQ exist to get the PRD written well. Everything after the PRD
 is derived from it:
 
-- `bmad-ux` writes `DESIGN.md` and `EXPERIENCE.md` alongside the PRD.
-- `bmad-architecture` writes a short architecture document (the spine): the
+- `funcionario-ux` writes `DESIGN.md` and `EXPERIENCE.md` alongside the PRD.
+- `funcionario-architecture` writes a short architecture document (the spine): the
   decisions that keep independently built epics compatible.
-- `bmad-spec` writes one spec per epic from the PRD, pointing at the spine and
+- `funcionario-spec` writes one spec per epic from the PRD, pointing at the spine and
   the UX documents rather than copying them.
-- `bmad-create-epics-and-stories` and `bmad-sprint-planning` turn the specs
+- `funcionario-create-epics-and-stories` and `funcionario-sprint-planning` turn the specs
   into tracked stories.
 
 Nothing downstream reinterprets the PRD. If a spec needs an answer the PRD
@@ -53,18 +53,18 @@ Nothing here asks you to replace the planning system you already run. An
 organization arrives with a PRD in Confluence or Notion, a backlog in Jira or
 Linear, and a review cadence, and all of it stays.
 
-- **Your PRD is the input.** `bmad-prd` opens with a brain dump and reads any
+- **Your PRD is the input.** `funcionario-prd` opens with a brain dump and reads any
   files you point it at, so the first run is "here is our PRD". Ask it to
   **validate** and you get a findings report on the document as it stands,
   with nothing changed. Ask it to **create** from that input and you get the
   same requirements in the shape the later skills read, with `[ASSUMPTION]`
   tags on anything it had to fill in. After that, the copy your reviewers
-  already edit is the source. When it changes, re-run `bmad-prd` in
+  already edit is the source. When it changes, re-run `funcionario-prd` in
   **Update** mode pointing at it and let the skill bring `prd.md` in line;
   never edit `prd.md` by hand to catch up.
 - **The same holds for design and architecture.** A design system, an
-  existing architecture document, or a live codebase is what `bmad-ux` and
-  `bmad-architecture` start from. On an existing system the architecture
+  existing architecture document, or a live codebase is what `funcionario-ux` and
+  `funcionario-architecture` start from. On an existing system the architecture
   skill reads the code and records the conventions already there rather than
   proposing new ones.
 - **Your tracker stays your tracker.** Jira remains where the organization
@@ -85,11 +85,11 @@ regenerated from it.
 
 | Role                     | Runs                                                                                              | Owns                                                                      |
 | ------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Product manager          | Brainstorming, Forge Idea, Deep Recon, then `bmad-product-brief` or `bmad-prfaq`, then `bmad-prd` | `prd.md` and its update cycle; the one-pager the steering committee reads |
-| Designer                 | `bmad-ux`                                                                                         | `DESIGN.md`, `EXPERIENCE.md`                                              |
-| Tech lead or architect   | `bmad-architecture`                                                                               | The architecture spine                                                    |
-| One engineer, per epic   | `bmad-spec`, Build per story, `bmad-retrospective`                                                | That epic: `SPEC.md`, `stories.yaml`, its verdict                         |
-| Whoever tracks the whole | `bmad-sprint-planning`                                                                            | `sprint-status.yaml`, open action items                                   |
+| Product manager          | Brainstorming, Forge Idea, Deep Recon, then `funcionario-product-brief` or `funcionario-prfaq`, then `funcionario-prd` | `prd.md` and its update cycle; the one-pager the steering committee reads |
+| Designer                 | `funcionario-ux`                                                                                         | `DESIGN.md`, `EXPERIENCE.md`                                              |
+| Tech lead or architect   | `funcionario-architecture`                                                                               | The architecture spine                                                    |
+| One engineer, per epic   | `funcionario-spec`, Build per story, `funcionario-retrospective`                                                | That epic: `SPEC.md`, `stories.yaml`, its verdict                         |
+| Whoever tracks the whole | `funcionario-sprint-planning`                                                                            | `sprint-status.yaml`, open action items                                   |
 
 The rows are roles, not headcount. One person can hold several; what matters
 is that each document has exactly one owner, because each has exactly one
@@ -140,17 +140,17 @@ shows what goes wrong without the spine.
 
 They will. The path for a change is the same as the path for the original:
 
-1. Run `bmad-prd` in **Update** mode with the change signal. It surfaces
+1. Run `funcionario-prd` in **Update** mode with the change signal. It surfaces
    conflicts with earlier decisions before applying anything.
 2. If the change touches a cross-epic decision, update the spine.
-3. Re-run `bmad-spec` for each affected epic. It updates `SPEC.md` in place
+3. Re-run `funcionario-spec` for each affected epic. It updates `SPEC.md` in place
    and keeps capability IDs stable, so stories that are unaffected stay
    unaffected.
-4. Re-run Story Breakdown or `bmad-sprint-planning` for the affected epics.
+4. Re-run Story Breakdown or `funcionario-sprint-planning` for the affected epics.
    Regenerating tracking is safe; finished work stays finished.
 
 For a change large enough to threaten the plan itself, run
-`bmad-correct-course` before touching documents.
+`funcionario-correct-course` before touching documents.
 
 ## What You Get
 

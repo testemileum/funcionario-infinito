@@ -1,7 +1,7 @@
 {
   "en": {
-    "title": "The bmad-walkthrough run: it reads the build spec or a pull request, then moves through orientation, the walkthrough itself, a detail pass and testing before wrapping up, where you approve, ask for rework, or open a discussion.",
-    "input-spec": "bmad-build",
+    "title": "The funcionario-walkthrough run: it reads the build spec or a pull request, then moves through orientation, the walkthrough itself, a detail pass and testing before wrapping up, where you approve, ask for rework, or open a discussion.",
+    "input-spec": "funcionario-build",
     "input-spec-2": "spec file",
     "input-pr": "PR / commit",
     "input-pr-2": "branch",
@@ -24,8 +24,8 @@
     "discuss": "Discuss"
   },
   "ko-KR": {
-    "title": "bmad-build 사양 파일, PR, 커밋 또는 브랜치에서 시작해 방향 잡기, 둘러보기, 상세 검토, 테스트, 마무리를 차례로 진행한 뒤 승인, 재작업 또는 논의를 선택합니다.",
-    "input-spec": "bmad-build",
+    "title": "funcionario-build 사양 파일, PR, 커밋 또는 브랜치에서 시작해 방향 잡기, 둘러보기, 상세 검토, 테스트, 마무리를 차례로 진행한 뒤 승인, 재작업 또는 논의를 선택합니다.",
+    "input-spec": "funcionario-build",
     "input-spec-2": "사양 파일",
     "input-pr": "PR / 커밋",
     "input-pr-2": "브랜치",
@@ -48,8 +48,8 @@
     "discuss": "논의"
   },
   "fr-FR": {
-    "title": "Le déroulé de bmad-walkthrough : il lit la spécification de build ou une pull request, puis passe par l'orientation, la visite guidée, une passe de détail et les tests avant la conclusion, où vous approuvez, demandez une reprise ou ouvrez une discussion.",
-    "input-spec": "bmad-build",
+    "title": "Le déroulé de funcionario-walkthrough : il lit la spécification de build ou une pull request, puis passe par l'orientation, la visite guidée, une passe de détail et les tests avant la conclusion, où vous approuvez, demandez une reprise ou ouvrez une discussion.",
+    "input-spec": "funcionario-build",
     "input-spec-2": "fichier de spéc",
     "input-pr": "PR / commit",
     "input-pr-2": "branche",

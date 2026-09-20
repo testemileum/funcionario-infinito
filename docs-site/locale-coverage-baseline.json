@@ -4,8 +4,8 @@
     "build/finish-an-epic",
     "build/review-a-change",
     "customize/add-modules",
-    "customize/adopt-bmad-across-a-team",
-    "customize/customize-bmad",
+    "customize/adopt-funcionario-across-a-team",
+    "customize/customize-funcionario",
     "customize/run-multi-agent-discussions",
     "customize/use-web-bundles",
     "existing-codebases/getting-deeper",
@@ -21,7 +21,7 @@
     "plan/plan-inside-an-organization",
     "plan/research-a-decision",
     "reference/skills-and-agents",
-    "start/get-answers-about-bmad"
+    "start/get-answers-about-funcionario"
   ],
   "vi-vn": [
     "build/autonomous-development-loops",
@@ -30,8 +30,8 @@
     "build/review-a-change",
     "build/test-completed-work",
     "customize/add-modules",
-    "customize/adopt-bmad-across-a-team",
-    "customize/customize-bmad",
+    "customize/adopt-funcionario-across-a-team",
+    "customize/customize-funcionario",
     "customize/run-multi-agent-discussions",
     "customize/use-web-bundles",
     "existing-codebases/getting-deeper",
@@ -48,8 +48,8 @@
     "plan/research-a-decision",
     "reference/skills-and-agents",
     "start/build-your-first-change",
-    "start/get-answers-about-bmad",
-    "start/install-bmad"
+    "start/get-answers-about-funcionario",
+    "start/install-funcionario"
   ],
   "zh-cn": [
     "build/autonomous-development-loops",
@@ -58,8 +58,8 @@
     "build/review-a-change",
     "build/test-completed-work",
     "customize/add-modules",
-    "customize/adopt-bmad-across-a-team",
-    "customize/customize-bmad",
+    "customize/adopt-funcionario-across-a-team",
+    "customize/customize-funcionario",
     "customize/run-multi-agent-discussions",
     "customize/use-web-bundles",
     "existing-codebases/getting-deeper",
@@ -76,8 +76,8 @@
     "plan/research-a-decision",
     "reference/skills-and-agents",
     "start/build-your-first-change",
-    "start/get-answers-about-bmad",
-    "start/install-bmad"
+    "start/get-answers-about-funcionario",
+    "start/install-funcionario"
   ],
   "fr": [
     "build/autonomous-development-loops",
@@ -86,8 +86,8 @@
     "build/review-a-change",
     "build/test-completed-work",
     "customize/add-modules",
-    "customize/adopt-bmad-across-a-team",
-    "customize/customize-bmad",
+    "customize/adopt-funcionario-across-a-team",
+    "customize/customize-funcionario",
     "customize/run-multi-agent-discussions",
     "customize/use-web-bundles",
     "existing-codebases/getting-deeper",
@@ -104,8 +104,8 @@
     "plan/research-a-decision",
     "reference/skills-and-agents",
     "start/build-your-first-change",
-    "start/get-answers-about-bmad",
-    "start/install-bmad"
+    "start/get-answers-about-funcionario",
+    "start/install-funcionario"
   ],
   "cs": [
     "build/autonomous-development-loops",
@@ -115,8 +115,8 @@
     "build/test-completed-work",
     "build/walk-through-a-change",
     "customize/add-modules",
-    "customize/adopt-bmad-across-a-team",
-    "customize/customize-bmad",
+    "customize/adopt-funcionario-across-a-team",
+    "customize/customize-funcionario",
     "customize/run-multi-agent-discussions",
     "customize/use-web-bundles",
     "existing-codebases/getting-deeper",
@@ -133,7 +133,7 @@
     "plan/research-a-decision",
     "reference/skills-and-agents",
     "start/build-your-first-change",
-    "start/get-answers-about-bmad",
-    "start/install-bmad"
+    "start/get-answers-about-funcionario",
+    "start/install-funcionario"
   ]
 }

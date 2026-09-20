@@ -27,7 +27,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync
 import { fileURLToPath } from 'node:url';
 
 const DIAGRAM_DIR = 'src/diagrams';
-const STAMP = 'bmad-diagrams';
+const STAMP = 'funcionario-diagrams';
 
 /** Absolute paths of every diagram and label file, sorted for a stable hash. */
 function diagramFiles(root) {
@@ -52,11 +52,11 @@ function digest(files) {
 /**
  * @returns {import('astro').AstroIntegration}
  */
-export default function bmadDiagrams() {
+export default function funcionarioDiagrams() {
   let mode = 'build';
 
   return {
-    name: 'bmad-diagrams',
+    name: 'funcionario-diagrams',
     hooks: {
       'astro:config:setup'({ command }) {
         mode = command;

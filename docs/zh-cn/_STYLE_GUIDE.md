@@ -64,8 +64,8 @@ Critical warnings only — data loss, security issues
 ```md
 | Skill                | Agent   | Purpose                              |
 | -------------------- | ------- | ------------------------------------ |
-| `bmad-brainstorming` | Analyst | Brainstorm a new project             |
-| `bmad-prd`    | PM      | Create Product Requirements Document |
+| `funcionario-brainstorming` | Analyst | Brainstorm a new project             |
+| `funcionario-prd`    | PM      | Create Product Requirements Document |
 ```
 
 ## 文件结构块（Folder Structure）
@@ -75,8 +75,8 @@ Critical warnings only — data loss, security issues
 ````md
 ```
 your-project/
-├── _bmad/                                   # BMad configuration
-├── _bmad-output/
+├── _funcionario/                                   # Funcionário Infinito configuration
+├── _funcionario-output/
 │   ├── planning-artifacts/
 │   │   └── PRD.md                           # Your requirements document
 │   ├── implementation-artifacts/
@@ -325,7 +325,7 @@ Starlight 右侧 “On this page” 来自标题层级：
 在定义开头用斜体标记适用范围：
 
 - `*Direct-entry implementation only.*`
-- `*BMad Method/Enterprise.*`
+- `*Funcionário Infinito/Enterprise.*`
 - `*Phase N.*`
 - `*BMGD.*`
 - `*Established projects.*`
@@ -353,7 +353,7 @@ Only for work that benefits from architecture. Clear work can enter implementati
 
 ### Can I change my plan later?
 
-Yes. The `bmad-correct-course` workflow handles scope changes mid-implementation.
+Yes. The `funcionario-correct-course` workflow handles scope changes mid-implementation.
 
 **Have a question not answered here?** [Open an issue](...) or ask in [Discord](...).
 ```

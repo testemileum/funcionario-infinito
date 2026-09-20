@@ -5,11 +5,11 @@
 # ///
 """File Reference Validator
 
-Validates cross-file references in BMAD source files (agents, workflows, tasks, steps).
+Validates cross-file references in FUNCIONARIO source files (agents, workflows, tasks, steps).
 Catches broken file paths, missing referenced files, and absolute path leaks.
 
 What it checks:
-- {project-root}/_bmad/ references in YAML and markdown resolve to real skills/ files
+- {project-root}/_funcionario/ references in YAML and markdown resolve to real skills/ files
 - Backticked skill-relative references (`references/help.md`, `scripts/run.py`)
   resolve from the containing file's directory or the skill root. Only paths
   whose first directory actually exists are checked; a path whose directory is
@@ -53,8 +53,8 @@ SCAN_EXTENSIONS = {".yaml", ".yml", ".md", ".xml"}
 # Skip directories
 SKIP_DIRS = {"node_modules", ".git"}
 
-# Pattern: {project-root}/_bmad/ references
-PROJECT_ROOT_REF = re.compile(r"\{project-root\}/_bmad/([^\s'\"<>})\]`]+)")
+# Pattern: {project-root}/_funcionario/ references
+PROJECT_ROOT_REF = re.compile(r"\{project-root\}/_funcionario/([^\s'\"<>})\]`]+)")
 
 # Pattern: backticked skill-relative paths — must contain a slash and a known extension
 BACKTICK_REF = re.compile(r"`([^`\s]+/[^`\s]+\.(?:md|yaml|yml|toml|json|csv|txt|xml|py))`")
@@ -63,10 +63,10 @@ BACKTICK_REF = re.compile(r"`([^`\s]+/[^`\s]+\.(?:md|yaml|yml|toml|json|csv|txt|
 ABS_PATH_LEAK = re.compile(r"/Users/|/home/|\b[A-Za-z]:[\\/]")
 
 # In-value form of the project-root pattern, for YAML scalar matching
-PROJECT_ROOT_IN_VALUE = re.compile(r"\{project-root\}/_bmad/[^\s'\"<>})\]`]+")
+PROJECT_ROOT_IN_VALUE = re.compile(r"\{project-root\}/_funcionario/[^\s'\"<>})\]`]+")
 
 # Path prefixes/patterns that only exist in installed structure, not in source
-INSTALL_ONLY_PATHS = ["_config/", "custom/", "render/bmad-build/", "render/bmad-build-auto/"]
+INSTALL_ONLY_PATHS = ["_config/", "custom/", "render/funcionario-build/", "render/funcionario-build-auto/"]
 
 # Files that are generated at install time and don't exist in the source tree
 INSTALL_GENERATED_FILES = ["config.yaml", "config.user.yaml"]
@@ -156,20 +156,20 @@ def strip_json_example_blocks(content: str) -> str:
 
 
 def map_installed_to_source(ref_path: str, skills_dir: str) -> str | None:
-    # Strip {project-root}/_bmad/ or {_bmad}/ prefix
-    cleaned = re.sub(r"^\{project-root\}/_bmad/", "", ref_path)
-    cleaned = re.sub(r"^\{_bmad\}/", "", cleaned)
+    # Strip {project-root}/_funcionario/ or {_funcionario}/ prefix
+    cleaned = re.sub(r"^\{project-root\}/_funcionario/", "", ref_path)
+    cleaned = re.sub(r"^\{_funcionario\}/", "", cleaned)
 
-    # Also handle bare _bmad/ prefix (seen in some invoke-task)
-    cleaned = re.sub(r"^_bmad/", "", cleaned)
+    # Also handle bare _funcionario/ prefix (seen in some invoke-task)
+    cleaned = re.sub(r"^_funcionario/", "", cleaned)
 
     # Skip install-only paths (generated at install time, not in source)
     if is_install_only(cleaned):
         return None
 
-    # _bmad/scripts/ is installed from the bmad hub skill's scripts/
+    # _funcionario/scripts/ is installed from the funcionario hub skill's scripts/
     if cleaned.startswith("scripts/"):
-        return os.path.join(skills_dir, "bmad", cleaned)
+        return os.path.join(skills_dir, "funcionario", cleaned)
 
     # Fallback: map directly under skills/
     return os.path.join(skills_dir, cleaned)
@@ -186,7 +186,7 @@ def is_resolvable(ref_str: str) -> bool:
 
 
 def is_install_only(cleaned_path: str) -> bool:
-    # Skip paths that only exist in the installed _bmad/ structure, not in skills/
+    # Skip paths that only exist in the installed _funcionario/ structure, not in skills/
     if any(cleaned_path.startswith(prefix) for prefix in INSTALL_ONLY_PATHS):
         return True
     # Skip files that are generated during installation
@@ -205,7 +205,7 @@ def extract_yaml_refs(file_path: str, content: str) -> list[Ref]:
         if not is_resolvable(value):
             return
 
-        # Check for {project-root}/_bmad/ refs
+        # Check for {project-root}/_funcionario/ refs
         pr_match = PROJECT_ROOT_IN_VALUE.search(value)
         if pr_match:
             refs.append(Ref(file_path, pr_match.group(0), "project-root", line, key_path))
@@ -241,7 +241,7 @@ def extract_markdown_refs(file_path: str, content: str) -> list[Ref]:
     refs: list[Ref] = []
     stripped = strip_json_example_blocks(strip_code_blocks(content))
 
-    # {project-root}/_bmad/ refs
+    # {project-root}/_funcionario/ refs
     for match in PROJECT_ROOT_REF.finditer(stripped):
         raw = match.group(1)
         if not is_resolvable(raw):
@@ -254,9 +254,9 @@ def extract_markdown_refs(file_path: str, content: str) -> list[Ref]:
         # Globs, <placeholders>, and {variables} are prose, not references
         if any(ch in raw for ch in "*<{"):
             continue
-        # Absolute paths belong to the leak scan; _bmad/ and dot-relative
+        # Absolute paths belong to the leak scan; _funcionario/ and dot-relative
         # forms are install-side or example paths, not skill-relative refs
-        if raw.startswith(("/", "./", "../", "_bmad/", "@")):
+        if raw.startswith(("/", "./", "../", "_funcionario/", "@")):
             continue
         if not is_resolvable(raw):
             continue
@@ -476,7 +476,7 @@ def run(project_root: str, strict: bool = False, verbose: bool = False) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Validate cross-file references in BMAD source files.")
+    parser = argparse.ArgumentParser(description="Validate cross-file references in FUNCIONARIO source files.")
     parser.add_argument("--strict", action="store_true", help="exit 1 on broken references")
     parser.add_argument("--verbose", action="store_true", help="show all checked references")
     args = parser.parse_args(argv)

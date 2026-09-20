@@ -1,6 +1,6 @@
 ---
 title: 'Review a Change'
-description: Use bmad-code-review for a standalone agentic review of a PR, someone else's change, an extra pass, or a review bot.
+description: Use funcionario-code-review for a standalone agentic review of a PR, someone else's change, an extra pass, or a review bot.
 sidebar:
   order: 2
 ---
@@ -12,11 +12,11 @@ Code an agent just wrote can — and should — be reviewed and cleaned up
 by an agent before any human looks at it.
 
 If you came from [Build a Change](build-a-change.md), you have already
-seen this happen. `bmad-build` has a review and triage stage baked in.
+seen this happen. `funcionario-build` has a review and triage stage baked in.
 By the time it finishes, a round of review and fixing has already
 happened.
 
-If you still suspect there is more to find, run `bmad-build` again and
+If you still suspect there is more to find, run `funcionario-build` again and
 hand it the spec from that run — the one already marked `status: done`.
 That skips straight to review and triage, and you can repeat it as many
 times as you want. Stop when the findings are mostly low-value notes
@@ -26,13 +26,13 @@ something is wrong upstream of this change: a weak spec, a
 contradiction, or ambiguity in the rules. Fix that instead of running
 another pass.
 
-To review a change that is not a single `bmad-build` run, use
-`bmad-code-review`. It is the same kind of review and triage, but you
+To review a change that is not a single `funcionario-build` run, use
+`funcionario-code-review`. It is the same kind of review and triage, but you
 can point it at any code artifact: a diff, a pull request, a file, a
 namespace, someone else's branch. See
-[how a run works](#run-bmad-code-review).
+[how a run works](#run-funcionario-code-review).
 
-## Run `bmad-code-review`
+## Run `funcionario-code-review`
 
 Start a fresh chat and name the skill. Pass the change to review: a PR,
 commit, branch, file, or the current git state. You can describe the
@@ -48,7 +48,7 @@ run code review
 ```
 
 ```text
-/bmad-code-review Review https://github.com/org/repo/pull/42
+/funcionario-code-review Review https://github.com/org/repo/pull/42
 ```
 
 The skill writes a unified diff to a file, confirms the target and spec
@@ -86,12 +86,12 @@ You can choose review depth: `thorough` or `quick`.
 lens. Slow, expensive, tuned to find as many problems as possible.
 
 **Quick** is a single reviewer, several times cheaper and somewhat
-faster. Say `/bmad-code-review quick` to use it for a run.
+faster. Say `/funcionario-code-review quick` to use it for a run.
 
 Different situations call for different review breadth, depth and cost.
 You can change the default from thorough to quick, add your own
 reviewers, replace or turn off the ones you get out of the box, run
-some on another model. Start `bmad-customize` and ask what is possible.
+some on another model. Start `funcionario-customize` and ask what is possible.
 
 ## Why Does Review Take Forever?
 
@@ -106,7 +106,7 @@ Three explanations:
 The default assumes an average bug escaping into production is worth
 more than an hour of inference. You can turn that down — see
 [Customize the Lenses](#customize-the-lenses). Skipping review in
-`bmad-build` is reasonable for a throwaway prototype. A long review can
+`funcionario-build` is reasonable for a throwaway prototype. A long review can
 also run offline.
 
 It is a bad idea to let teammates look at unreviewed LLM-generated
@@ -135,7 +135,7 @@ review quality.
 
 Some runtimes have no subagents. Vendors, including Anthropic and
 OpenAI, have also shipped changes that alter how subagents run. Until
-BMad catches up, the lenses execute one after another instead of in
+Funcionário Infinito catches up, the lenses execute one after another instead of in
 parallel — or they fall back to the main session, which is far worse
 for review quality than it sounds.
 
@@ -153,7 +153,7 @@ but really expensive, and still a generic black box.
 Almost none of them, at the time of this writing, do automatic
 triage/fixing that holds up.
 
-Or maybe it is in fact just great, and BMad review is inferior. Same
+Or maybe it is in fact just great, and Funcionário Infinito review is inferior. Same
 test as above: take several interesting diffs, run an A/B, and either
 pick one, or make the built-in command an extra lens. If you find
 something that genuinely adds quality findings without creating too

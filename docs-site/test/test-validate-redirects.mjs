@@ -28,7 +28,7 @@ export default defineConfig({
 `;
 
 function makeFixture(files) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'bmad-redirects-'));
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'funcionario-redirects-'));
   for (const [relativePath, content] of Object.entries(files)) {
     const fullPath = path.join(root, relativePath);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });

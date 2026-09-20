@@ -1,12 +1,12 @@
-# Contributing to BMad
+# Contributing to Funcionário Infinito
 
 Thank you for considering contributing! We believe in **Human Amplification, Not Replacement** — bringing out the best thinking in both humans and AI through guided collaboration.
 
-💬 **Discord**: [Join our community](https://discord.gg/gk8jAdXWmj) for real-time discussions, questions, and collaboration.
+💬 **Discord**: [Join our community](https://discord.gg/SEU-CONVITE-AQUI) for real-time discussions, questions, and collaboration.
 
 ---
 
-> **Before you write code: talk to us on [Discord](https://discord.gg/gk8jAdXWmj).**
+> **Before you write code: talk to us on [Discord](https://discord.gg/SEU-CONVITE-AQUI).**
 >
 > If your change adds features, restructures code, or touches more than a couple of files, **confirm with a maintainer that it fits**. A large PR out of the blue has a high chance of being closed — regardless of effort invested. A five-minute conversation can save you hours.
 
@@ -14,18 +14,18 @@ Thank you for considering contributing! We believe in **Human Amplification, Not
 
 ## Our Philosophy
 
-BMad strengthens human-AI collaboration through specialized agents and guided workflows. Every contribution should answer: **"Does this make humans and AI better together?"**
+Funcionário Infinito strengthens human-AI collaboration through specialized agents and guided workflows. Every contribution should answer: **"Does this make humans and AI better together?"**
 
 **✅ What we welcome:**
 - Enhanced collaboration patterns and workflows
 - Improved agent personas and prompts
-- Domain-specific modules leveraging BMad Core
+- Domain-specific modules leveraging Funcionário Infinito Core
 - Better planning and context continuity
 
 **❌ What doesn't fit:**
 - Purely automated solutions that sideline humans
 - Complexity that creates barriers to adoption
-- Features that fragment BMad Core's foundation
+- Features that fragment Funcionário Infinito Core's foundation
 
 ---
 
@@ -37,27 +37,27 @@ BMad strengthens human-AI collaboration through specialized agents and guided wo
 
 1. **Search existing issues** — Use the GitHub issue search to check if your bug or feature has already been reported
 2. **Search closed issues** — Your issue may have been fixed or addressed previously
-3. **Check discussions** — Some conversations happen in [GitHub Discussions](https://github.com/bmad-code-org/BMAD-METHOD/discussions)
+3. **Check discussions** — Some conversations happen in [GitHub Discussions](https://github.com/funcionario-infinito/funcionario-infinito/discussions)
 
 ### Bug Reports
 
-After searching, if the bug is unreported, use the [bug report template](https://github.com/bmad-code-org/BMAD-METHOD/issues/new?template=bug-report.yaml) and include:
+After searching, if the bug is unreported, use the [bug report template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=bug-report.yaml) and include:
 
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
-- Your environment (model, IDE, BMad version)
+- Your environment (model, IDE, Funcionário Infinito version)
 - Screenshots or error messages if applicable
 
 ### Feature Requests
 
-After searching, use the [feature request template](https://github.com/bmad-code-org/BMAD-METHOD/issues/new?template=feature-request.md) and explain:
+After searching, use the [feature request template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=feature-request.md) and explain:
 
 - What the feature is
-- Why it would benefit the BMad community
+- Why it would benefit the Funcionário Infinito community
 - How it strengthens human-AI collaboration
 
-**For community modules**, review [TRADEMARK.md](TRADEMARK.md) for proper naming conventions (e.g., "My Module (BMad Community Module)").
+**For community modules**, review [TRADEMARK.md](TRADEMARK.md) for proper naming conventions (e.g., "My Module (Funcionário Infinito Community Module)").
 
 ---
 
@@ -97,12 +97,12 @@ We will reject PRs that read like raw LLM output: bulk refactors nobody asked fo
 ### New to Pull Requests?
 
 1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/YOUR-USERNAME/bmad-method.git`
-3. **Branch from upstream dev**: add `git remote add upstream https://github.com/bmad-code-org/BMAD-METHOD.git`, run `git fetch upstream dev`, then `git switch -c fix/description upstream/dev` (or use `feature/description`).
+2. **Clone** your fork: `git clone https://github.com/YOUR-USERNAME/funcionario-method.git`
+3. **Branch from upstream dev**: add `git remote add upstream https://github.com/funcionario-infinito/funcionario-infinito.git`, run `git fetch upstream dev`, then `git switch -c fix/description upstream/dev` (or use `feature/description`).
 4. **Make changes** — keep them focused
 5. **Commit**: `git commit -m "fix: correct typo in README"`
 6. **Push**: `git push origin fix/description`
-7. **Open PR** from your fork into `bmad-code-org/BMAD-METHOD` with `dev` as the base branch.
+7. **Open PR** from your fork into `funcionario-infinito/funcionario-infinito` with `dev` as the base branch.
 
 ### PR Description Template
 
@@ -156,7 +156,7 @@ Keep messages under 72 characters. Each commit = one logical change.
 - Keep dev agents lean — focus on coding context, not documentation
 - Web/planning agents can be larger with complex tasks
 - Skills and workflows are natural language (markdown); deterministic helpers are Python scripts run through `uv`
-- Use BMad modules for domain-specific features
+- Use Funcionário Infinito modules for domain-specific features
 - Validate file references: `uv run tools/validate_file_refs.py --strict`
 
 ### File-Pattern-to-Validator Mapping
@@ -170,9 +170,9 @@ Keep messages under 72 characters. Each commit = one logical change.
 
 ## Need Help?
 
-- 💬 **Discord**: [Join the community](https://discord.gg/gk8jAdXWmj)
-- 🐛 **Bugs**: Use the [bug report template](https://github.com/bmad-code-org/BMAD-METHOD/issues/new?template=bug-report.yaml)
-- 💡 **Features**: Use the [feature request template](https://github.com/bmad-code-org/BMAD-METHOD/issues/new?template=feature-request.md)
+- 💬 **Discord**: [Join the community](https://discord.gg/SEU-CONVITE-AQUI)
+- 🐛 **Bugs**: Use the [bug report template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=bug-report.yaml)
+- 💡 **Features**: Use the [feature request template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=feature-request.md)
 
 ---
 

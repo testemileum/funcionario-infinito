@@ -1,26 +1,26 @@
 ---
 title: 스킬
-description: BMad 스킬의 정의, 작동 방식, 위치에 대한 참조
+description: Funcionário Infinito 스킬의 정의, 작동 방식, 위치에 대한 참조
 sidebar:
   order: 4
 ---
 
-스킬은 IDE 안에서 에이전트를 로드하거나 워크플로를 실행하거나 작업을 처리하는 미리 작성된 프롬프트입니다. BMad 설치 프로그램은 설치 시 선택한 모듈에서 스킬을 생성합니다. 나중에 모듈을 추가, 제거, 변경했다면 설치 프로그램을 다시 실행해 스킬을 동기화하세요([문제 해결](#문제-해결) 참고).
+스킬은 IDE 안에서 에이전트를 로드하거나 워크플로를 실행하거나 작업을 처리하는 미리 작성된 프롬프트입니다. Funcionário Infinito 설치 프로그램은 설치 시 선택한 모듈에서 스킬을 생성합니다. 나중에 모듈을 추가, 제거, 변경했다면 설치 프로그램을 다시 실행해 스킬을 동기화하세요([문제 해결](#문제-해결) 참고).
 
 ## 스킬 vs 에이전트 메뉴 트리거
 
-BMad는 작업을 시작하는 두 가지 방법을 제공하며 목적이 다릅니다.
+Funcionário Infinito는 작업을 시작하는 두 가지 방법을 제공하며 목적이 다릅니다.
 
 | 방식 | 호출 방법 | 일어나는 일 |
 | --- | --- | --- |
-| **스킬** | IDE에서 스킬 이름(예: `bmad-help`)을 입력 | 에이전트를 직접 로드하거나 워크플로를 실행하거나 작업을 처리 |
+| **스킬** | IDE에서 스킬 이름(예: `funcionario-help`)을 입력 | 에이전트를 직접 로드하거나 워크플로를 실행하거나 작업을 처리 |
 | **에이전트 메뉴 트리거** | 에이전트를 먼저 로드한 뒤 짧은 코드(예: `BD`) 입력 | 에이전트가 페르소나를 유지한 채 코드를 해석하고 일치하는 워크플로를 시작 |
 
 에이전트 메뉴 트리거는 활성 에이전트 세션이 필요합니다. 어떤 워크플로를 원하는지 알고 있다면 스킬을 사용하세요. 이미 에이전트와 작업 중이고 대화를 떠나지 않고 작업을 바꾸고 싶다면 트리거를 사용하세요.
 
 ## 스킬 생성 방식
 
-`npx bmad-method install`을 실행하면 설치 프로그램은 선택된 모든 모듈의 매니페스트를 읽고 에이전트, 워크플로, 작업, 도구마다 스킬 하나를 생성합니다. 각 스킬은 AI에게 해당 소스 파일을 로드하고 지시를 따르라고 안내하는 `SKILL.md` 파일이 있는 폴더입니다.
+`npx funcionario-method install`을 실행하면 설치 프로그램은 선택된 모든 모듈의 매니페스트를 읽고 에이전트, 워크플로, 작업, 도구마다 스킬 하나를 생성합니다. 각 스킬은 AI에게 해당 소스 파일을 로드하고 지시를 따르라고 안내하는 `SKILL.md` 파일이 있는 폴더입니다.
 
 설치 프로그램은 스킬 유형별 템플릿을 사용합니다.
 
@@ -50,22 +50,22 @@ BMad는 작업을 시작하는 두 가지 방법을 제공하며 목적이 다�
 
 ```text
 .claude/skills/
-├── bmad-help/
+├── funcionario-help/
 │   └── SKILL.md
-├── bmad-prd/
+├── funcionario-prd/
 │   └── SKILL.md
-├── bmad-agent-dev/
+├── funcionario-agent-dev/
 │   └── SKILL.md
 └── ...
 ```
 
-디렉터리 이름이 IDE에서의 스킬 이름을 결정합니다. 예를 들어 `bmad-agent-dev/` 디렉터리는 `bmad-agent-dev` 스킬을 등록합니다.
+디렉터리 이름이 IDE에서의 스킬 이름을 결정합니다. 예를 들어 `funcionario-agent-dev/` 디렉터리는 `funcionario-agent-dev` 스킬을 등록합니다.
 
 ## 스킬 찾기
 
 IDE에서 스킬 이름을 입력해 호출합니다. 일부 플랫폼은 스킬이 나타나기 전에 설정에서 활성화해야 합니다.
 
-다음 단계를 상황에 맞게 안내받으려면 `bmad-help`를 실행하세요.
+다음 단계를 상황에 맞게 안내받으려면 `funcionario-help`를 실행하세요.
 
 :::tip[빠른 탐색]
 프로젝트에 생성된 스킬 디렉터리가 기준 목록입니다. 파일 탐색기에서 열면 설명이 있는 모든 스킬을 볼 수 있습니다.
@@ -79,9 +79,9 @@ IDE에서 스킬 이름을 입력해 호출합니다. 일부 플랫폼은 스킬
 
 | 예시 스킬 | 에이전트 | 역할 |
 | --- | --- | --- |
-| `bmad-agent-dev` | Amelia(개발자) | 사양을 엄격히 준수해 스토리 구현 |
-| `bmad-agent-pm` | John(제품 관리자) | PRD 생성 및 검증 |
-| `bmad-agent-architect` | Winston(아키텍트) | 시스템 아키텍처 설계 |
+| `funcionario-agent-dev` | Amelia(개발자) | 사양을 엄격히 준수해 스토리 구현 |
+| `funcionario-agent-pm` | John(제품 관리자) | PRD 생성 및 검증 |
+| `funcionario-agent-architect` | Winston(아키텍트) | 시스템 아키텍처 설계 |
 
 기본 에이전트와 트리거 전체 목록은 [에이전트](./agents.md)를 참고하세요.
 
@@ -91,15 +91,15 @@ IDE에서 스킬 이름을 입력해 호출합니다. 일부 플랫폼은 스킬
 
 | 예시 스킬 | 목적 |
 | --- | --- |
-| `bmad-product-brief` | 제품 개요 생성 또는 업데이트 - 개념이 명확할 때 단계별 질문으로 구체화 |
-| `bmad-prfaq` | 제품 개념을 스트레스 테스트하는 [워킹 백워드 PRFAQ](../explanation/analysis-phase.md#prfaq워킹-백워드) 챌린지 |
-| `bmad-prd` | 제품 요구사항 문서(PRD) 생성, 업데이트, 검증 |
-| `bmad-ux` | 사용자 경험 설계 |
-| `bmad-architecture` | 시스템 아키텍처 설계 |
-| `bmad-create-epics-and-stories` | 에픽과 스토리 생성 |
-| `bmad-build` | 직접 입력한 의도, 이슈, 기능, 수정 또는 계획된 스토리 구현. [변경 사항 구현하기](../build/build-a-change.md) 참고 |
-| `bmad-code-review` | 코드 리뷰 실행 |
-| `bmad-build-auto` | Build 구현 모델을 사람 개입 없이 한 번 자동 실행 |
+| `funcionario-product-brief` | 제품 개요 생성 또는 업데이트 - 개념이 명확할 때 단계별 질문으로 구체화 |
+| `funcionario-prfaq` | 제품 개념을 스트레스 테스트하는 [워킹 백워드 PRFAQ](../explanation/analysis-phase.md#prfaq워킹-백워드) 챌린지 |
+| `funcionario-prd` | 제품 요구사항 문서(PRD) 생성, 업데이트, 검증 |
+| `funcionario-ux` | 사용자 경험 설계 |
+| `funcionario-architecture` | 시스템 아키텍처 설계 |
+| `funcionario-create-epics-and-stories` | 에픽과 스토리 생성 |
+| `funcionario-build` | 직접 입력한 의도, 이슈, 기능, 수정 또는 계획된 스토리 구현. [변경 사항 구현하기](../build/build-a-change.md) 참고 |
+| `funcionario-code-review` | 코드 리뷰 실행 |
+| `funcionario-build-auto` | Build 구현 모델을 사람 개입 없이 한 번 자동 실행 |
 
 단계별 전체 워크플로 참조는 [워크플로 맵](./workflow-map.md)을 참고하세요.
 
@@ -107,15 +107,15 @@ IDE에서 스킬 이름을 입력해 호출합니다. 일부 플랫폼은 스킬
 
 작업과 도구는 에이전트나 워크플로 컨텍스트가 필요 없는 독립 작업입니다.
 
-**BMad 도움말: 지능형 안내자**
+**Funcionário Infinito 도움말: 지능형 안내자**
 
-`bmad-help`는 다음에 무엇을 해야 할지 찾는 기본 인터페이스입니다. 프로젝트를 검사하고 자연어 요청을 이해한 뒤, 설치된 모듈을 기준으로 다음 필수 또는 선택 단계를 추천합니다.
+`funcionario-help`는 다음에 무엇을 해야 할지 찾는 기본 인터페이스입니다. 프로젝트를 검사하고 자연어 요청을 이해한 뒤, 설치된 모듈을 기준으로 다음 필수 또는 선택 단계를 추천합니다.
 
 :::note[예시]
 ```
-bmad-help
-bmad-help SaaS 아이디어가 있고 기능도 모두 알고 있습니다. 어디서 시작하나요?
-bmad-help UX 설계에는 어떤 선택지가 있나요?
+funcionario-help
+funcionario-help SaaS 아이디어가 있고 기능도 모두 알고 있습니다. 어디서 시작하나요?
+funcionario-help UX 설계에는 어떤 선택지가 있나요?
 ```
 :::
 
@@ -125,12 +125,12 @@ bmad-help UX 설계에는 어떤 선택지가 있나요?
 
 ## 이름 규칙
 
-모든 스킬은 `bmad-` 접두사 뒤에 설명적인 이름을 붙입니다(예: `bmad-agent-dev`, `bmad-prd`, `bmad-help`). 사용 가능한 모듈은 [모듈](./modules.md)을 참고하세요.
+모든 스킬은 `funcionario-` 접두사 뒤에 설명적인 이름을 붙입니다(예: `funcionario-agent-dev`, `funcionario-prd`, `funcionario-help`). 사용 가능한 모듈은 [모듈](./modules.md)을 참고하세요.
 
 ## 문제 해결
 
 **설치 후 스킬이 보이지 않음.** 일부 플랫폼은 설정에서 스킬을 명시적으로 활성화해야 합니다. IDE 문서를 확인하거나 AI 어시스턴트에게 스킬 활성화 방법을 물어보세요. IDE 재시작 또는 창 새로고침이 필요할 수도 있습니다.
 
-**예상한 스킬이 없음.** 설치 프로그램은 선택한 모듈의 스킬만 생성합니다. `npx bmad-method install`을 다시 실행하고 모듈 선택을 확인하세요. 예상 디렉터리에 스킬 파일이 있는지 확인하세요.
+**예상한 스킬이 없음.** 설치 프로그램은 선택한 모듈의 스킬만 생성합니다. `npx funcionario-method install`을 다시 실행하고 모듈 선택을 확인하세요. 예상 디렉터리에 스킬 파일이 있는지 확인하세요.
 
 **제거한 모듈의 스킬이 계속 보임.** 설치 프로그램은 오래된 스킬 파일을 자동으로 삭제하지 않습니다. IDE 스킬 디렉터리에서 오래된 디렉터리를 제거하거나 전체 스킬 디렉터리를 삭제한 뒤 설치 프로그램을 다시 실행해 깨끗한 스킬 세트를 만드세요.

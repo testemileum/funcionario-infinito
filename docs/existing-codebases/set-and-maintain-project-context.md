@@ -1,12 +1,12 @@
 ---
 title: 'Set and Maintain Project Context'
-description: Set up and maintain your repository's agent instructions with bmad-project-context — what goes in, what stays out, and how to keep it healthy.
+description: Set up and maintain your repository's agent instructions with funcionario-project-context — what goes in, what stays out, and how to keep it healthy.
 sidebar:
   order: 2
 ---
 
-Use `bmad-project-context` to set up a repository so AI agents work well in
-it. It works for a new project or an existing codebase, with or without a BMad
+Use `funcionario-project-context` to set up a repository so AI agents work well in
+it. It works for a new project or an existing codebase, with or without a Funcionário Infinito
 install. The output is a small verified block in your `AGENTS.md`. It asks
 before it writes; you approve every change.
 
@@ -23,7 +23,7 @@ before it writes; you approve every change.
 ## Step 1: Run It
 
 ```bash
-bmad-project-context
+funcionario-project-context
 ```
 
 Say what you want in plain language — "set up AGENTS.md", "adopt the AGENTS.md
@@ -64,7 +64,7 @@ catch.
 ## Step 4: Approve the Block
 
 You see the complete block before anything is written. On approval it is
-written between the `<!-- bmad:context -->` and `<!-- /bmad:context -->`
+written between the `<!-- funcionario:context -->` and `<!-- /funcionario:context -->`
 markers in `AGENTS.md` at the repo root. For a tool that reads a different
 file, such as Claude Code's `CLAUDE.md`, the skill proposes and verifies a
 one-line `@AGENTS.md` import for the tools you use. Everything outside those
@@ -142,16 +142,16 @@ personal preferences, belong in your agent's global configuration instead.
 
 ## Hand-Off to Architecture
 
-Make design decisions in `bmad-architecture`. If a decision has real
+Make design decisions in `funcionario-architecture`. If a decision has real
 tradeoffs and more than one viable shape, the skill tells you to run
-`bmad-architecture` instead of choosing for you. See
+`funcionario-architecture` instead of choosing for you. See
 [Design UX and Architecture](../plan/design-ux-and-architecture.md).
 
 ## Replaces Two Earlier Skills
 
-:::note[Looking for bmad-generate-project-context or bmad-document-project?]
+:::note[Looking for funcionario-generate-project-context or funcionario-document-project?]
 Both are deprecated and forward here; their trigger phrases still work. If you
-have a `project-context.md` from `bmad-generate-project-context`, setup offers
-to absorb its content rather than ignore it. `bmad-document-project`
+have a `project-context.md` from `funcionario-generate-project-context`, setup offers
+to absorb its content rather than ignore it. `funcionario-document-project`
 generated repository documentation, which the evidence says not to do.
 :::

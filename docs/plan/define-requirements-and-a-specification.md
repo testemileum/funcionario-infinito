@@ -6,13 +6,13 @@ sidebar:
 ---
 
 Use this page to pick the requirements skill for the work in front of you: a
-product brief or a PRFAQ, then a PRD, for a product; or `bmad-spec` for the
+product brief or a PRFAQ, then a PRD, for a product; or `funcionario-spec` for the
 contract implementation reads.
 
 ## Which Path Applies
 
 [Choose a Planning Path](./choose-a-planning-path.md) decides the size. Most
-work goes straight to `bmad-spec` from whatever defined the intent: a forged
+work goes straight to `funcionario-spec` from whatever defined the intent: a forged
 idea, a PRFAQ summary, a brainstorm intent, an issue. A PRD becomes necessary
 when several people must agree on what the product is or several epics must
 stay aligned; [Plan Inside an Organization](./plan-inside-an-organization.md)
@@ -30,7 +30,7 @@ back where an answer is thin. Sessions can be paused and resumed.
 
 ## Product Brief: Capture Conviction
 
-Run `bmad-product-brief` to create, update, or validate a brief: a one- to
+Run `funcionario-product-brief` to create, update, or validate a brief: a one- to
 two-page account of the product concept, right-sized to its purpose. A passion
 project does not get investor-grade rigor; a pitch input does. The coach reads
 the stakes early and calibrates how hard it pushes.
@@ -38,13 +38,13 @@ the stakes early and calibrates how hard it pushes.
 Use it when your concept is relatively clear and you want it written down
 before a PRD. It produces `brief.md` plus `addendum.md`, which holds the depth
 that belongs later rather than in the brief: rejected alternatives, options
-considered, technical constraints, sizing data. `bmad-prd` reads both. For
+considered, technical constraints, sizing data. `funcionario-prd` reads both. For
 serious market sizing or competitor teardowns it hands you to
 [Deep Recon](./research-a-decision.md).
 
 ## PRFAQ: Working Backwards
 
-Run `bmad-prfaq` for Amazon's Working Backwards method as a challenge. You
+Run `funcionario-prfaq` for Amazon's Working Backwards method as a challenge. You
 write the press release announcing the finished product before anything is
 built, then answer the hardest questions customers and stakeholders would
 ask. Solution-first and technology-first openings get redirected to the
@@ -64,14 +64,14 @@ produces the PRFAQ document plus a short summary a PRD or spec can read, and
 it accepts `-H` for an unattended first draft when you supply the customer,
 problem, stakes, and concept up front.
 
-Brief and PRFAQ both feed a PRD, and the PRFAQ summary can feed `bmad-spec`
+Brief and PRFAQ both feed a PRD, and the PRFAQ summary can feed `funcionario-spec`
 directly when no PRD is needed. Choose by how much challenge you want: the
 brief is collaborative discovery, the PRFAQ is the harder path. Neither is
-required; `bmad-prd` starts from a brain dump on its own.
+required; `funcionario-prd` starts from a brain dump on its own.
 
 ## PRD: Agree on What and Why
 
-Run `bmad-prd` to create, update, or validate a Product Requirements Document.
+Run `funcionario-prd` to create, update, or validate a Product Requirements Document.
 
 - **Create** runs discovery, then drafts. On the Coaching path you also pick
   an entry point: **Vision + Features** for capability-first products and
@@ -96,7 +96,7 @@ the brief or the PRFAQ instead.
 
 ## Spec: The Contract Implementation Reads
 
-Run `bmad-spec` to turn an intent into a short contract that Build reads.
+Run `funcionario-spec` to turn an intent into a short contract that Build reads.
 `SPEC.md` has five fields: Why, Capabilities (each with an intent and a
 success condition), Constraints, Non-goals, and Success signal. Tables,
 diagrams, glossaries, and documents other skills already wrote sit beside it;
@@ -106,10 +106,10 @@ The spec writes the contract; it does not help you figure out what you want.
 Rich input is extracted with no questions. Sparse input gets a choice: a
 best-effort draft where every gap becomes an open question, or a guided walk
 through the five fields. Input too thin to use ("an app for hikers") is sent
-to `bmad-prd`. Input too large is the other failure: a few tens of thousands
+to `funcionario-prd`. Input too large is the other failure: a few tens of thousands
 of tokens is the practical ceiling, so condense a pile of material first.
 
-`bmad-spec` is the only writer of `SPEC.md`. Do not hand-edit it; run the
+`funcionario-spec` is the only writer of `SPEC.md`. Do not hand-edit it; run the
 skill again with the change and it updates the spec in place, keeping
 capability IDs stable. The PRD, UX, and architecture skills can run in any
 order and feed the same spec. After every run it reports assumptions it made
@@ -124,9 +124,9 @@ after implementation. The result is the ordered `stories.yaml` beside
 for how the epic then runs.
 
 :::note[What each skill produces]
-`bmad-product-brief`: `brief.md` and `addendum.md`. `bmad-prfaq`: a PRFAQ
-document with a short summary for the PRD or spec. `bmad-prd`: `prd.md` and
-`addendum.md`, or a validation report. `bmad-spec`: `SPEC.md` plus supporting
+`funcionario-product-brief`: `brief.md` and `addendum.md`. `funcionario-prfaq`: a PRFAQ
+document with a short summary for the PRD or spec. `funcionario-prd`: `prd.md` and
+`addendum.md`, or a validation report. `funcionario-spec`: `SPEC.md` plus supporting
 files under `specs/spec-<slug>/`, and `stories.yaml` on request. Exact paths
 and options belong to each skill; see
 [Planning Skills and What They Produce](./choose-a-planning-path.md#planning-skills-and-what-they-produce).

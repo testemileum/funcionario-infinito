@@ -28,8 +28,8 @@ const REPO_ROOT = join(SITE_ROOT, '..');
 
 /** Which diagram lands where, and in which language. */
 const EXPORTS = [
-  { diagram: 'bmad-delivery-loop', out: 'docs/images/bmad-delivery-loop.svg' },
-  { diagram: 'bmad-delivery-loop', out: 'docs/images/bmad-delivery-loop-ko.svg', lang: 'ko-KR' },
+  { diagram: 'funcionario-delivery-loop', out: 'docs/images/funcionario-delivery-loop.svg' },
+  { diagram: 'funcionario-delivery-loop', out: 'docs/images/funcionario-delivery-loop-ko.svg', lang: 'ko-KR' },
 ];
 
 /**
@@ -55,41 +55,41 @@ const MONO = 'ui-monospace, SFMono-Regular, Menlo, monospace';
 
 /** The class vocabulary from `custom.css`, with the ramp already substituted. */
 const STYLE = `
-  .bmad-diagram { font-family: ${SANS}; }
-  .bmad-diagram text { fill: ${RAMP.ink}; }
-  .bmad-diagram .node { fill: ${RAMP.surface}; stroke: ${RAMP.line}; stroke-width: 1; }
-  .bmad-diagram .node.hot { stroke: ${RAMP.accent}; }
-  .bmad-diagram .gate { fill: ${RAMP.ground}; stroke: ${RAMP.accent}; stroke-width: 1.5; }
-  .bmad-diagram .chip { fill: ${RAMP.surface}; stroke: ${RAMP.line}; stroke-width: 1; }
-  .bmad-diagram .chip.ok { fill: ${RAMP['ok-tint']}; stroke: ${RAMP.ok}; }
-  .bmad-diagram .chip.warn { fill: ${RAMP['warn-tint']}; stroke: ${RAMP.warn}; }
-  .bmad-diagram .band { fill: ${RAMP.surface}; stroke: ${RAMP.line}; stroke-opacity: 0.28; stroke-width: 1; }
-  .bmad-diagram .panel { fill: none; stroke: ${RAMP.line}; stroke-width: 1; stroke-dasharray: 4 4; }
-  .bmad-diagram .panel-title { fill: ${RAMP.accent}; }
-  .bmad-diagram .slogan {
+  .funcionario-diagram { font-family: ${SANS}; }
+  .funcionario-diagram text { fill: ${RAMP.ink}; }
+  .funcionario-diagram .node { fill: ${RAMP.surface}; stroke: ${RAMP.line}; stroke-width: 1; }
+  .funcionario-diagram .node.hot { stroke: ${RAMP.accent}; }
+  .funcionario-diagram .gate { fill: ${RAMP.ground}; stroke: ${RAMP.accent}; stroke-width: 1.5; }
+  .funcionario-diagram .chip { fill: ${RAMP.surface}; stroke: ${RAMP.line}; stroke-width: 1; }
+  .funcionario-diagram .chip.ok { fill: ${RAMP['ok-tint']}; stroke: ${RAMP.ok}; }
+  .funcionario-diagram .chip.warn { fill: ${RAMP['warn-tint']}; stroke: ${RAMP.warn}; }
+  .funcionario-diagram .band { fill: ${RAMP.surface}; stroke: ${RAMP.line}; stroke-opacity: 0.28; stroke-width: 1; }
+  .funcionario-diagram .panel { fill: none; stroke: ${RAMP.line}; stroke-width: 1; stroke-dasharray: 4 4; }
+  .funcionario-diagram .panel-title { fill: ${RAMP.accent}; }
+  .funcionario-diagram .slogan {
     font-family: ${MONO};
     font-size: 16px;
     letter-spacing: 0.085em;
     text-transform: uppercase;
     fill: ${RAMP.accent};
   }
-  .bmad-diagram .slogan.alt { fill: ${RAMP.muted}; }
-  .bmad-diagram .grid { fill: none; stroke: ${RAMP.line}; stroke-opacity: 0.22; stroke-width: 1; }
-  .bmad-diagram .rule { fill: none; stroke: ${RAMP.line}; stroke-width: 1; }
-  .bmad-diagram .edge { fill: none; stroke: ${RAMP.edge}; stroke-width: 1.5; }
-  .bmad-diagram .edge.soft { stroke-width: 1.25; stroke-dasharray: 4 4; opacity: 0.85; }
-  .bmad-diagram .edge.lens { opacity: 0.5; }
-  .bmad-diagram .edge.entry { stroke: ${RAMP.accent}; }
-  .bmad-diagram .head { fill: ${RAMP.edge}; }
-  .bmad-diagram .head.accent { fill: ${RAMP.accent}; }
-  .bmad-diagram .glyph { fill: ${RAMP.muted}; }
-  .bmad-diagram .glyph .fold { fill: ${RAMP.ground}; opacity: 0.5; }
-  .bmad-diagram .n { font-size: 14px; font-weight: 500; letter-spacing: -0.012em; text-anchor: middle; }
-  .bmad-diagram .n.small { font-size: 12.5px; font-weight: 600; text-anchor: start; }
-  .bmad-diagram .sub { font-size: 11.5px; fill: ${RAMP.muted}; }
-  .bmad-diagram .sub.mid { text-anchor: middle; }
-  .bmad-diagram .mono { font-family: ${MONO}; }
-  .bmad-diagram .k {
+  .funcionario-diagram .slogan.alt { fill: ${RAMP.muted}; }
+  .funcionario-diagram .grid { fill: none; stroke: ${RAMP.line}; stroke-opacity: 0.22; stroke-width: 1; }
+  .funcionario-diagram .rule { fill: none; stroke: ${RAMP.line}; stroke-width: 1; }
+  .funcionario-diagram .edge { fill: none; stroke: ${RAMP.edge}; stroke-width: 1.5; }
+  .funcionario-diagram .edge.soft { stroke-width: 1.25; stroke-dasharray: 4 4; opacity: 0.85; }
+  .funcionario-diagram .edge.lens { opacity: 0.5; }
+  .funcionario-diagram .edge.entry { stroke: ${RAMP.accent}; }
+  .funcionario-diagram .head { fill: ${RAMP.edge}; }
+  .funcionario-diagram .head.accent { fill: ${RAMP.accent}; }
+  .funcionario-diagram .glyph { fill: ${RAMP.muted}; }
+  .funcionario-diagram .glyph .fold { fill: ${RAMP.ground}; opacity: 0.5; }
+  .funcionario-diagram .n { font-size: 14px; font-weight: 500; letter-spacing: -0.012em; text-anchor: middle; }
+  .funcionario-diagram .n.small { font-size: 12.5px; font-weight: 600; text-anchor: start; }
+  .funcionario-diagram .sub { font-size: 11.5px; fill: ${RAMP.muted}; }
+  .funcionario-diagram .sub.mid { text-anchor: middle; }
+  .funcionario-diagram .mono { font-family: ${MONO}; }
+  .funcionario-diagram .k {
     font-family: ${MONO};
     font-size: 10px;
     letter-spacing: 0.09em;

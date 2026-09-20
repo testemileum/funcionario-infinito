@@ -1,6 +1,6 @@
 ---
 /**
- * The BMad site footer: the dark ground and mono column headings bmadcode.com
+ * The Funcionário Infinito site footer: the dark ground and mono column headings funcionario-infinito.com.br
  * closes every page on.
  *
  * It is rendered inside Starlight's `.main-pane` (see TwoColumnContent.astro),
@@ -19,30 +19,30 @@ const COLUMNS = [
       { href: '/build/build-a-change/', label: 'Build a change' },
       { href: '/build/review-a-change/', label: 'Review a change' },
       { href: '/reference/skills-and-agents/', label: 'Skills and agents' },
-      { href: 'https://www.bmadcode.com/philosophy', label: 'Philosophy' },
+      { href: 'https://www.funcionario-infinito.com.br/philosophy', label: 'Philosophy' },
     ],
   },
   {
     heading: 'Enterprise',
     links: [
       { href: '/plan/plan-inside-an-organization/', label: 'Plan inside an organization' },
-      { href: '/customize/adopt-bmad-across-a-team/', label: 'Adopt across a team' },
-      { href: '/customize/customize-bmad/', label: 'Customization' },
-      { href: 'https://www.bmadcode.com/certification', label: 'Certification' },
+      { href: '/customize/adopt-funcionario-across-a-team/', label: 'Adopt across a team' },
+      { href: '/customize/customize-funcionario/', label: 'Customization' },
+      { href: 'https://www.funcionario-infinito.com.br/certification', label: 'Certification' },
     ],
   },
   {
     heading: 'Community',
     links: [
-      { href: 'https://github.com/bmad-code-org/BMAD-METHOD', label: 'GitHub' },
-      { href: 'https://www.npmjs.com/package/bmad-method', label: 'npm' },
-      { href: 'https://discord.gg/gk8jAdXWmj', label: 'Discord' },
-      { href: 'https://youtube.com/@BMadCode', label: 'YouTube' },
+      { href: 'https://github.com/funcionario-infinito/funcionario-infinito', label: 'GitHub' },
+      { href: 'https://www.npmjs.com/package/funcionario-method', label: 'npm' },
+      { href: 'https://discord.gg/SEU-CONVITE-AQUI', label: 'Discord' },
+      { href: 'https://youtube.com/@funcionarioinfinito', label: 'YouTube' },
     ],
   },
 ];
 
-const BOTTOM = ['© 2026 BMad Code, LLC', 'MIT licensed', 'BMad is a trademark of BMad Code, LLC'];
+const BOTTOM = ['© 2026 Funcionario Infinito', 'MIT licensed', 'Funcionário Infinito is a trademark of Funcionario Infinito'];
 
 /* Internal links keep the reader in their language. Every page here exists
    under each locale — Starlight generates the untranslated ones as fallbacks —
@@ -54,9 +54,9 @@ const root = locale ? `${base}/${locale}` : base;
 const href = (link: string) => (link.startsWith('/') ? `${root}${link}` : link);
 ---
 
-<div class="bmad-footer">
+<div class="funcionario-footer">
   <div class="inner">
-  <p class="brand"><a href="https://www.bmadcode.com">BMad Code</a></p>
+  <p class="brand"><a href="https://www.funcionario-infinito.com.br">Funcionario Infinito</a></p>
   <p class="tagline">
     Agile AI-Driven Development. Turn an idea or change request into working software without
     giving up the thinking.
@@ -88,18 +88,18 @@ const href = (link: string) => (link.startsWith('/') ? `${root}${link}` : link);
 <style>
   /* A full-bleed band, so it sits flush against the article rather than
      floating below it: its own top padding is the gap. */
-  .bmad-footer {
+  .funcionario-footer {
     padding-block: clamp(2.8rem, 5vw, 3.6rem) 2.2rem;
-    background: var(--bmad-dark, #111418);
-    color: var(--bmad-dark-muted, #a2acb9);
+    background: var(--funcionario-dark, #111418);
+    color: var(--funcionario-dark-muted, #a2acb9);
   }
 
   /* On the dark ramp the band's ground is the page's ground, so there is no
      band at all - only an unexplained gap where one should start. Lift it a
      step and give it an edge. */
-  :global(:root[data-theme='dark']) .bmad-footer {
-    background: var(--bmad-dark-2, #1a1e24);
-    border-top: 1px solid var(--bmad-dark-line, #2e353e);
+  :global(:root[data-theme='dark']) .funcionario-footer {
+    background: var(--funcionario-dark-2, #1a1e24);
+    border-top: 1px solid var(--funcionario-dark-line, #2e353e);
   }
 
   /* the article's own column, so the footer text sits under the prose */
@@ -137,7 +137,7 @@ const href = (link: string) => (link.startsWith('/') ? `${root}${link}` : link);
 
   .cols .col-title {
     margin: 0 0 0.9rem;
-    font-family: var(--bmad-mono, ui-monospace, monospace);
+    font-family: var(--funcionario-mono, ui-monospace, monospace);
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.09em;
@@ -164,8 +164,8 @@ const href = (link: string) => (link.startsWith('/') ? `${root}${link}` : link);
     gap: 1.4rem;
     margin: clamp(2.2rem, 4vw, 3rem) 0 0;
     padding-top: 1.3rem;
-    border-top: 1px solid var(--bmad-dark-line, #2e353e);
-    font-family: var(--bmad-mono, ui-monospace, monospace);
+    border-top: 1px solid var(--funcionario-dark-line, #2e353e);
+    font-family: var(--funcionario-mono, ui-monospace, monospace);
     font-size: 0.6875rem;
     letter-spacing: 0.05em;
     color: #78828f;

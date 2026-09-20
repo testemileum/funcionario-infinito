@@ -1,16 +1,16 @@
 ---
 title: 'Run Multi-Agent Discussions'
-description: Put your BMad agents in one conversation, choose how independently they think, build a custom cast, and use the two shipped parties.
+description: Put your Funcionário Infinito agents in one conversation, choose how independently they think, build a custom cast, and use the two shipped parties.
 sidebar:
   order: 5
 ---
 
-`bmad-party-mode` puts your installed BMad agents in one conversation, in
+`funcionario-party-mode` puts your installed Funcionário Infinito agents in one conversation, in
 character, with you steering.
 
 ## What a party is
 
-Run `/bmad-party-mode` and the agents your installed modules provide join
+Run `/funcionario-party-mode` and the agents your installed modules provide join
 the same conversation: the PM, Architect, Dev, UX Designer, and the rest.
 They answer in character, agree, disagree, and build on each other. You
 steer: ask a follow-up, push back, bring one voice forward, or change the
@@ -45,14 +45,14 @@ or build one.
 
 | Goal | Type this |
 | --- | --- |
-| Start a party in the default mode | `/bmad-party-mode` |
-| Start in a specific mode | `/bmad-party-mode --mode auto` (also `session`, `subagent`, `agent-team`) |
-| Run it once, non-interactively | `/bmad-party-mode --non-interactive "review this PR"` |
-| Open a saved party | `/bmad-party-mode --party code-review-crew` |
-| See the saved parties | `/bmad-party-mode --list-groups` |
+| Start a party in the default mode | `/funcionario-party-mode` |
+| Start in a specific mode | `/funcionario-party-mode --mode auto` (also `session`, `subagent`, `agent-team`) |
+| Run it once, non-interactively | `/funcionario-party-mode --non-interactive "review this PR"` |
+| Open a saved party | `/funcionario-party-mode --party code-review-crew` |
+| See the saved parties | `/funcionario-party-mode --list-groups` |
 | Create a cast on the spot | "party mode with the bridge crew of the Enterprise" |
 | Create or edit a party | "party mode, create a new party" or "party mode, edit the writers' room" |
-| Set the skill's defaults | `/bmad-customize bmad-party-mode` |
+| Set the skill's defaults | `/funcionario-customize funcionario-party-mode` |
 
 ## Choose a mode
 
@@ -84,7 +84,7 @@ releases any spawned agents.
 
 You can also build a cast from any personas you describe and save it to
 reuse. The same skill writes the result through
-[bmad-customize](./customize-bmad.md). Two ideas do most of the work.
+[funcionario-customize](./customize-funcionario.md). Two ideas do most of the work.
 
 **Personas** make a member unmistakable: how they talk, what they value, how
 they argue. "Skeptical CFO" is a placeholder. "Won't approve anything without
@@ -103,7 +103,7 @@ and drop them into different rooms.
 | Deliberation scaffold | A room that makes you think harder without pretending to decide for you. The Anti-Consensus Club is one. |
 | Open-cast room | No fixed roster. The scene names a universe and the room is cast on the fly. |
 
-Run `/bmad-customize bmad-party-mode` to pin a saved group as the default
+Run `/funcionario-customize funcionario-party-mode` to pin a saved group as the default
 party, choose its starting mode, and set house rules for the whole session.
 
 Any set of voices becomes a party: a founder squad, a compliance team, the
@@ -146,7 +146,7 @@ repetition, and returns the decision to you.
 | Killjoy | Loop stopper — stops repetition, fake disagreement, and unsupported speculation. |
 | Splinter | Consensus challenger — questions easy agreement and ignored tradeoffs. |
 
-Run it as `/bmad-party-mode --party anti-consensus-club --mode subagent`. The
+Run it as `/funcionario-party-mode --party anti-consensus-club --mode subagent`. The
 room recommends that mode at session start, then stops asking if you
 continue in another.
 
@@ -170,7 +170,7 @@ breaking character.
 In a remembered party, someone who joined from an open-cast scene or a
 member you add mid-conversation is kept too; at wrap-up the room offers to
 save them into the roster. The default installed-agent room remembers unless
-you turn it off in `/bmad-customize bmad-party-mode`. Both shipped parties
+you turn it off in `/funcionario-customize funcionario-party-mode`. Both shipped parties
 and any cast you create inline start fresh each time; save a cast as a party
 and choose memory to give it one.
 

@@ -1,17 +1,17 @@
 ---
 title: '웹 번들'
-description: Google Gemini Gems와 ChatGPT Custom GPT용으로 패키징된 BMad 스킬
+description: Google Gemini Gems와 ChatGPT Custom GPT용으로 패키징된 Funcionário Infinito 스킬
 ---
 
-BMad의 계획 작업은 웹 LLM 구독 환경에서 실행하고, 만들어진 산출물은 IDE로 가져오세요.
+Funcionário Infinito의 계획 작업은 웹 LLM 구독 환경에서 실행하고, 만들어진 산출물은 IDE로 가져오세요.
 
 ## 웹 번들이란?
 
-웹 번들은 **Google Gemini Gem** 또는 **ChatGPT Custom GPT**로 설치할 수 있게 다시 패키징한 BMad 스킬입니다. 각 번들에는 지식 파일로 업로드하는 `SKILL.md` 프로토콜, Gem 또는 GPT 지침에 붙여 넣는 `INSTRUCTIONS.md` 블록, 그리고 스킬에 필요한 데이터 파일(CSV, 템플릿, 검증 체크리스트, 필요에 따라 단계적으로 제공되는 추가 콘텐츠)이 포함됩니다. 페르소나는 붙여 넣은 지침에 있고, 프로토콜은 지식 파일에 있습니다. 프로토콜을 수정하지 않고도 페르소나를 바꿀 수 있습니다.
+웹 번들은 **Google Gemini Gem** 또는 **ChatGPT Custom GPT**로 설치할 수 있게 다시 패키징한 Funcionário Infinito 스킬입니다. 각 번들에는 지식 파일로 업로드하는 `SKILL.md` 프로토콜, Gem 또는 GPT 지침에 붙여 넣는 `INSTRUCTIONS.md` 블록, 그리고 스킬에 필요한 데이터 파일(CSV, 템플릿, 검증 체크리스트, 필요에 따라 단계적으로 제공되는 추가 콘텐츠)이 포함됩니다. 페르소나는 붙여 넣은 지침에 있고, 프로토콜은 지식 파일에 있습니다. 프로토콜을 수정하지 않고도 페르소나를 바꿀 수 있습니다.
 
-설치가 원클릭은 아니지만 단계는 안내됩니다. **[bmadcode.com/web-bundles](https://bmadcode.com/web-bundles/)에서 설치하세요**. 이 사이트는 모든 번들을 카드 그리드로 보여 주고, Gemini와 ChatGPT 설치 단계를 페이지 안에서 안내하며, ZIP 다운로드를 제공합니다. 공식 지원 설치 경로는 이 사이트입니다. 전체 카탈로그가 같은 방식을 따르므로 하나를 설치해 보면 다음 번들부터는 같은 절차를 그대로 따르면 됩니다.
+설치가 원클릭은 아니지만 단계는 안내됩니다. **[funcionario-infinito.com.br/web-bundles](https://funcionario-infinito.com.br/web-bundles/)에서 설치하세요**. 이 사이트는 모든 번들을 카드 그리드로 보여 주고, Gemini와 ChatGPT 설치 단계를 페이지 안에서 안내하며, ZIP 다운로드를 제공합니다. 공식 지원 설치 경로는 이 사이트입니다. 전체 카탈로그가 같은 방식을 따르므로 하나를 설치해 보면 다음 번들부터는 같은 절차를 그대로 따르면 됩니다.
 
-BMad V4에도 웹 번들이 있었습니다. V6에서는 현재의 Gem과 Custom GPT 플랫폼에 맞춰 다시 작성했으며, Canvas와 Deep Research, 이미지 생성까지 고려했습니다.
+Funcionário Infinito V4에도 웹 번들이 있었습니다. V6에서는 현재의 Gem과 Custom GPT 플랫폼에 맞춰 다시 작성했으며, Canvas와 Deep Research, 이미지 생성까지 고려했습니다.
 
 ## 사용하는 이유
 
@@ -36,20 +36,20 @@ BMad V4에도 웹 번들이 있었습니다. V6에서는 현재의 Gem과 Custom
 | 번들 | 단계 | 기반 페르소나 |
 | --- | --- | --- |
 | Brainstorming Coach | 분석 | Osborn(기본), Minto(교체) |
-| Product Brief Coach | 분석 | Mary(BMad 분석가) |
+| Product Brief Coach | 분석 | Mary(Funcionário Infinito 분석가) |
 | PRFAQ Coach | 분석 | Working Backwards(Bezos) |
 | PRD Coach | 계획 | Cagan |
 | UX Coach | 계획 | Norman |
 | Market & Industry Research | 분석 | Porter와 Christensen |
 
-각 번들은 담당 BMad 에이전트가 있는 경우 그 에이전트에서 물려받은 기본 페르소나와, 페르소나를 바꿨을 때 목소리가 어떻게 달라지는지 보여 주는 대조 예시를 함께 담고 있습니다.
+각 번들은 담당 Funcionário Infinito 에이전트가 있는 경우 그 에이전트에서 물려받은 기본 페르소나와, 페르소나를 바꿨을 때 목소리가 어떻게 달라지는지 보여 주는 대조 예시를 함께 담고 있습니다.
 
 ## 세션 작동 방식
 
 1. **Gem 또는 Custom GPT를 엽니다.** 페르소나가 캐릭터에 맞게 인사하고 대화를 시작합니다.
 2. **범위를 파악합니다.** 페르소나는 무엇을 하려는지, 이미 가진 자료는 무엇인지, 어떤 제약이 있는지 묻습니다. 정해진 양식을 채우는 방식은 아닙니다.
 3. **Canvas에서 작업합니다.** 프로토콜은 세션 시작 시 Canvas를 열고 계속 업데이트합니다. Mermaid 다이어그램과 HTML 테이블도 글과 함께 들어갑니다.
-4. **인계합니다.** 작업이 끝나면 저장소에 붙여 넣거나, 내보내거나, 다음 단계를 위해 IDE의 BMad 스킬에 전달할 수 있는 Canvas 문서가 생깁니다.
+4. **인계합니다.** 작업이 끝나면 저장소에 붙여 넣거나, 내보내거나, 다음 단계를 위해 IDE의 Funcionário Infinito 스킬에 전달할 수 있는 Canvas 문서가 생깁니다.
 
 Deep Research를 통합한 번들(현재 Market & Industry Research)은 세션 중간에 Gemini 또는 ChatGPT의 Deep Research 모드에 붙여 넣을 리서치 요청서를 작성하고, 반환된 보고서를 다시 가져와 처리합니다.
 
@@ -77,6 +77,6 @@ Deep Research를 통합한 번들(현재 Market & Industry Research)은 세션 �
 
 ## 직접 만들기
 
-웹 번들은 `bmad-os-skill-to-bundle` 유틸리티 스킬을 사용해 BMad 스킬에서 생성합니다. 어떤 BMad 스킬 폴더든 지정하면 담당 에이전트의 페르소나를 상속한 번들 파일을 만듭니다.
+웹 번들은 `funcionario-os-skill-to-bundle` 유틸리티 스킬을 사용해 Funcionário Infinito 스킬에서 생성합니다. 어떤 Funcionário Infinito 스킬 폴더든 지정하면 담당 에이전트의 페르소나를 상속한 번들 파일을 만듭니다.
 
-모든 번들은 [bmadcode.com/web-bundles](https://bmadcode.com/web-bundles/)에서 설치할 수 있습니다.
+모든 번들은 [funcionario-infinito.com.br/web-bundles](https://funcionario-infinito.com.br/web-bundles/)에서 설치할 수 있습니다.

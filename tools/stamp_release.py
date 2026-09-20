@@ -2,13 +2,13 @@
 # /// script
 # requires-python = ">=3.11"
 # ///
-"""Release version stamper for BMAD-METHOD.
+"""Release version stamper for funcionario-infinito.
 
 Writes a human-supplied SemVer version into every skills/*/module-manifest.toml,
 then verifies the result. Used by
 tools/release.md to stamp releases and the next placeholder on `dev`.
 The Claude and Codex plugins are built from the stamped manifests by
-bmad-code-org/bmad-plugins.
+funcionario-infinito/funcionario-plugins.
 
 Before writing anything it validates every manifest's exact schema: exactly
 the keys module, version, update_source, and knowledge; module is a known
@@ -40,13 +40,13 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_NAME = "module-manifest.toml"
 
 MODULES = frozenset({"method", "toolbox"})
-UPDATE_SOURCE = "github:bmad-code-org/BMAD-METHOD/skills"
-KNOWLEDGE = "`references/help.md` in the `bmad` skill"
+UPDATE_SOURCE = "github:funcionario-infinito/funcionario-infinito/skills"
+KNOWLEDGE = "`references/help.md` in the `funcionario` skill"
 MANIFEST_KEYS = frozenset({"module", "version", "update_source", "knowledge"})
 
 VERSION_LINE = re.compile(r'^version\s*=\s*".*"\s*$')
 
-# Mirrors the SEMVER regex in skills/bmad/scripts/setup.py. That script also
+# Mirrors the SEMVER regex in skills/funcionario/scripts/setup.py. That script also
 # refuses to order any version containing "-dev", so such a version can never
 # compare as current or outdated for installed copies — reject it here. It
 # likewise drops build metadata when ordering, so "1.2.0+x" compares equal to
@@ -116,7 +116,7 @@ def collect_skills(project_root: Path) -> tuple[list[Path], dict[str, str]]:
     """Return every skill's manifest path plus a skill-name -> module map."""
     skill_dirs = sorted(path for path in (project_root / "skills").glob("*") if path.is_dir())
     if not skill_dirs:
-        raise StampError(f"no skills/*/{MANIFEST_NAME} found under {project_root} — run from a BMAD-METHOD checkout")
+        raise StampError(f"no skills/*/{MANIFEST_NAME} found under {project_root} — run from a funcionario-infinito checkout")
     manifests: list[Path] = []
     modules: dict[str, str] = {}
     for skill_dir in skill_dirs:

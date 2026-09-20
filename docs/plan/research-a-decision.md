@@ -5,13 +5,13 @@ sidebar:
   order: 4
 ---
 
-Use `bmad-deep-recon` when a planning decision should rest on evidence rather
+Use `funcionario-deep-recon` when a planning decision should rest on evidence rather
 than assumption. This page explains its three modes and how to pick between
 them.
 
 ## What Deep Recon Is
 
-Run `bmad-deep-recon` when you have a decision: enter a market or skip it,
+Run `funcionario-deep-recon` when you have a decision: enter a market or skip it,
 pick a stack, choose a vendor, commit to a domain. The decision shapes which
 questions get asked, which sources count, and what the final report
 recommends. It is not only for software. Any decision that should rest on
@@ -42,7 +42,7 @@ your ask, or you name it.
 
 **Explore** (the default) builds understanding. **Select** runs a structured
 choose-between when you are picking among candidates. You can add your own
-types through [bmad-customize](../customize/customize-bmad.md).
+types through [funcionario-customize](../customize/customize-funcionario.md).
 
 ## The Three Modes
 
@@ -101,14 +101,14 @@ fastest. **Refresh** re-checks only those claims and records what changed.
 
 | Goal                         | Type this                                                                                          |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| Research something           | `/bmad-deep-recon` then describe the decision, or just "research the self-hosted analytics market" |
+| Research something           | `/funcionario-deep-recon` then describe the decision, or just "research the self-hosted analytics market" |
 | Force a type                 | "competitive research on Linear and Height"                                                        |
 | Draft a prompt for your tool | "draft a deep research prompt about X for Gemini"                                                  |
 | Process a report             | "there's a research report at ~/Downloads/report.pdf, process it"                                  |
 | Choose between options       | "help me choose between Postgres and MySQL for this"                                               |
 | Refresh an existing report   | "refresh the market research"                                                                      |
-| Customize defaults           | `/bmad-customize bmad-deep-recon`                                                                  |
+| Customize defaults           | `/funcionario-customize funcionario-deep-recon`                                                                  |
 
-The v6 `bmad-market-research`, `bmad-domain-research`, and
-`bmad-technical-research` skills merged into Deep Recon as the `market`,
+The v6 `funcionario-market-research`, `funcionario-domain-research`, and
+`funcionario-technical-research` skills merged into Deep Recon as the `market`,
 `domain`, and `technical` types; the old names still forward here.

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "bmad-docs-site",
+  "name": "funcionario-docs-site",
   "private": true,
-  "description": "Documentation site for BMAD-METHOD (Astro + Starlight)",
+  "description": "Documentation site for funcionario-infinito (Astro + Starlight)",
   "license": "MIT",
   "scripts": {
     "build": "node scripts/build-docs.mjs",

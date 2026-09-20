@@ -1,17 +1,17 @@
 ---
 title: '변경 사항 둘러보기'
-description: bmad-walkthrough로 완성된 변경을 살펴보고 승인, 재작업 또는 추가 논의 여부를 결정하는 방법
+description: funcionario-walkthrough로 완성된 변경을 살펴보고 승인, 재작업 또는 추가 논의 여부를 결정하는 방법
 sidebar:
   order: 2
 ---
 
-`bmad-walkthrough`는 완성된 변경을 목적과 컨텍스트부터 세부 사항까지 차례로 안내합니다. 사용자는 설명을 따라가며 승인할지, 다시 작업할지, 더 논의할지를 결정할 수 있습니다. 전체 실행 과정은 [`bmad-walkthrough` 실행하기](#bmad-walkthrough-실행하기)에서 확인하세요.
+`funcionario-walkthrough`는 완성된 변경을 목적과 컨텍스트부터 세부 사항까지 차례로 안내합니다. 사용자는 설명을 따라가며 승인할지, 다시 작업할지, 더 논의할지를 결정할 수 있습니다. 전체 실행 과정은 [`funcionario-walkthrough` 실행하기](#funcionario-walkthrough-실행하기)에서 확인하세요.
 
-이 스킬의 목적은 사람이 변경을 이해하도록 돕는 것입니다. `bmad-build`가 이미 수행한 리뷰나 `bmad-code-review`를 대신하지 않습니다.
+이 스킬의 목적은 사람이 변경을 이해하도록 돕는 것입니다. `funcionario-build`가 이미 수행한 리뷰나 `funcionario-code-review`를 대신하지 않습니다.
 
 ## 사용 시점
 
-가장 일반적인 사용 시점은 [`bmad-build`](build-a-change.md)가 끝난 직후입니다. 구현이 완료되고 리뷰 경로가 추가된 사양 파일이 열리면 출시 여부를 결정해야 합니다. 이때 "walkthrough"라고 말하면 됩니다.
+가장 일반적인 사용 시점은 [`funcionario-build`](build-a-change.md)가 끝난 직후입니다. 구현이 완료되고 리뷰 경로가 추가된 사양 파일이 열리면 출시 여부를 결정해야 합니다. 이때 "walkthrough"라고 말하면 됩니다.
 
 Build는 사람의 개입을 줄인 채 오래 실행됩니다. Walkthrough에서는 사용자가 다시 운전대를 잡습니다. diff를 눈으로 훑을 수도 있지만 변경이 여러 파일에 걸치면 흐름을 놓치거나, 서로 떨어진 변경의 연결을 지나치거나, 충분히 이해하지 못한 채 승인할 수 있습니다. 원본 diff는 Git의 파일 순서로 내용을 보여주는데, 이 순서는 이해가 쌓이는 순서와 거의 일치하지 않습니다.
 
@@ -23,18 +23,18 @@ Build는 사람의 개입을 줄인 채 오래 실행됩니다. Walkthrough에�
 
 "walkthrough" 또는 "이 변경을 따라가며 설명해 줘"라고 말해 실행하세요. 어떤 터미널에서도 작동하지만 VS Code나 Cursor 같은 IDE 안에서 사용하면 더 편리합니다. 각 단계에 `path:line` 참조가 표시되며 IDE 내장 터미널에서는 이 참조를 클릭할 수 있습니다.
 
-## `bmad-walkthrough` 실행하기
+## `funcionario-walkthrough` 실행하기
 
-![bmad-walkthrough 워크플로 다이어그램](/diagrams/walkthrough-run.svg)
+![funcionario-walkthrough 워크플로 다이어그램](/diagrams/walkthrough-run.svg)
 
-`bmad-build`가 끝난 뒤 같은 채팅에서 "walkthrough"라고 말하세요. 다른 변경을 검토하려면 새 채팅을 열고 `/bmad-walkthrough`에 PR, 브랜치, 사양 경로 또는 현재 Git 상태를 전달합니다.
+`funcionario-build`가 끝난 뒤 같은 채팅에서 "walkthrough"라고 말하세요. 다른 변경을 검토하려면 새 채팅을 열고 `/funcionario-walkthrough`에 PR, 브랜치, 사양 경로 또는 현재 Git 상태를 전달합니다.
 
 ```text
 walkthrough
 ```
 
 ```text
-/bmad-walkthrough https://github.com/org/repo/pull/42를 검토해 줘.
+/funcionario-walkthrough https://github.com/org/repo/pull/42를 검토해 줘.
 ```
 
 워크플로는 다섯 단계로 진행됩니다. 각 단계는 이전 단계에서 이해한 내용을 바탕으로 "무엇이 바뀌었나?"에서 "출시해도 되는가?"로 초점을 옮깁니다. 스킬은 diff와 사양이 있다면 해당 사양, 주변 코드베이스를 읽고 `git diff`의 파일 순서가 아닌 이해하기 좋은 순서로 변경을 보여줍니다.
@@ -67,7 +67,7 @@ walkthrough
 
 ### 5. 마무리
 
-승인, 재작업, 추가 논의 중 하나를 선택합니다. 로컬 `bmad-build` 결과를 승인한다면 푸시할 준비가 된 것입니다. 에이전트가 푸시와 PR 생성을 도울 수 있습니다. PR을 승인할 때는 `gh pr review --approve` 실행을 도울 수 있습니다. 재작업을 선택하면 문제가 접근 방식, 사양, 구현 중 어디에서 시작됐는지 진단하고 구체적인 코드 위치에 연결된 피드백을 작성하도록 돕습니다.
+승인, 재작업, 추가 논의 중 하나를 선택합니다. 로컬 `funcionario-build` 결과를 승인한다면 푸시할 준비가 된 것입니다. 에이전트가 푸시와 PR 생성을 도울 수 있습니다. PR을 승인할 때는 `gh pr review --approve` 실행을 도울 수 있습니다. 재작업을 선택하면 문제가 접근 방식, 사양, 구현 중 어디에서 시작됐는지 진단하고 구체적인 코드 위치에 연결된 피드백을 작성하도록 돕습니다.
 
 ## 보고서가 아닌 대화
 
@@ -87,4 +87,4 @@ Walkthrough는 사용자를 정해진 순서에 가두지 않습니다. 구조�
 
 ## 하지 않는 일
 
-`bmad-walkthrough`는 리뷰 스킬이 아닙니다. `bmad-build`가 이미 수행한 리뷰, 완료된 스토리에서 같은 실행을 다시 호출하는 작업, `bmad-code-review`를 대신하지 않습니다. 린터, 타입 검사기, 테스트 모음을 실행하지 않으며 심각도 점수나 통과·실패 판정도 만들지 않습니다. 사람이 중요한 곳에 판단을 집중하도록 돕는 읽기 안내서입니다.
+`funcionario-walkthrough`는 리뷰 스킬이 아닙니다. `funcionario-build`가 이미 수행한 리뷰, 완료된 스토리에서 같은 실행을 다시 호출하는 작업, `funcionario-code-review`를 대신하지 않습니다. 린터, 타입 검사기, 테스트 모음을 실행하지 않으며 심각도 점수나 통과·실패 판정도 만들지 않습니다. 사람이 중요한 곳에 판단을 집중하도록 돕는 읽기 안내서입니다.

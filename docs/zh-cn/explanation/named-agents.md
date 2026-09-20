@@ -1,23 +1,23 @@
 ---
 title: "命名智能体"
-description: 为什么 BMad 的智能体有名字、人设和自定义能力——相比菜单驱动或纯提示驱动的方案，这解锁了哪些可能性
+description: 为什么 Funcionário Infinito 的智能体有名字、人设和自定义能力——相比菜单驱动或纯提示驱动的方案，这解锁了哪些可能性
 sidebar:
   order: 1
 ---
 
-你说"嘿 Mary，咱们来头脑风暴"，Mary 就激活了。她用你配置的语言、以她独特的人设向你打招呼，并提醒你随时可以用 `bmad-help`。然后她跳过菜单，直接进入头脑风暴——因为你的意图已经足够明确。
+你说"嘿 Mary，咱们来头脑风暴"，Mary 就激活了。她用你配置的语言、以她独特的人设向你打招呼，并提醒你随时可以用 `funcionario-help`。然后她跳过菜单，直接进入头脑风暴——因为你的意图已经足够明确。
 
-这一页解释背后发生了什么，以及 BMad 为什么这样设计。
+这一页解释背后发生了什么，以及 Funcionário Infinito 为什么这样设计。
 
 ## 三足鼎立
 
-BMad 的智能体模型建立在三个可组合的基本要素之上：
+Funcionário Infinito 的智能体模型建立在三个可组合的基本要素之上：
 
 | 要素 | 提供什么 | 所在位置 |
 |---|---|---|
 | **技能（Skill）** | 能力——一项智能体能做的具体事（头脑风暴、撰写 PRD、实现 story） | `.claude/skills/{skill-name}/SKILL.md`（或你所用 IDE 的等价位置） |
-| **命名智能体（Named Agent）** | 人设连续性——一个可辨识的身份，把一组相关技能包装在统一的语气、原则和视觉标识下 | 目录名以 `bmad-agent-*` 开头的技能 |
-| **自定义（Customization）** | 让它成为你的——覆盖选项可以重塑智能体行为、添加 MCP 集成、替换模板、叠加组织规范 | `_bmad/custom/{skill-name}.toml`（团队提交的覆盖）和 `.user.toml`（个人，已 gitignore） |
+| **命名智能体（Named Agent）** | 人设连续性——一个可辨识的身份，把一组相关技能包装在统一的语气、原则和视觉标识下 | 目录名以 `funcionario-agent-*` 开头的技能 |
+| **自定义（Customization）** | 让它成为你的——覆盖选项可以重塑智能体行为、添加 MCP 集成、替换模板、叠加组织规范 | `_funcionario/custom/{skill-name}.toml`（团队提交的覆盖）和 `.user.toml`（个人，已 gitignore） |
 
 抽掉任何一条腿，体验就会坍塌：
 
@@ -27,7 +27,7 @@ BMad 的智能体模型建立在三个可组合的基本要素之上：
 
 ## 命名智能体带来了什么
 
-BMad 内置五个命名智能体，各自对应 BMad Method 的一个阶段：
+Funcionário Infinito 内置五个命名智能体，各自对应 Funcionário Infinito 的一个阶段：
 
 | 智能体 | 阶段 | 模块 |
 |---|---|---|
@@ -38,7 +38,7 @@ BMad 内置五个命名智能体，各自对应 BMad Method 的一个阶段：
 | 💻 **Amelia**，高级工程师 | 实现 | Story 执行、Build、代码评审、Sprint 规划 |
 
 :::note[Paige 去哪儿了？]
-📚 技术文档工程师 **Paige** 正在休整——她将在未来以更强大的能力回归。项目文档功能仍然可用：直接调用 `bmad-document-project` 技能，或通过 Mary 的菜单使用。
+📚 技术文档工程师 **Paige** 正在休整——她将在未来以更强大的能力回归。项目文档功能仍然可用：直接调用 `funcionario-document-project` 技能，或通过 Mary 的菜单使用。
 :::
 
 每位智能体都有硬编码的身份（名字、职衔、专业领域）和可自定义的层（角色、原则、沟通风格、图标、菜单）。你可以重写 Mary 的原则或添加菜单项，但无法改她的名字——这是刻意为之的。品牌辨识度经得起自定义，所以"嘿 Mary"永远激活分析师，无论团队怎样塑造她的行为。
@@ -56,7 +56,7 @@ BMad 内置五个命名智能体，各自对应 BMad Method 的一个阶段：
 7. **执行后置步骤** — 团队配置的任何问候后设置
 8. **分发或展示菜单** — 如果你的开场消息能匹配某个菜单项，直接执行；否则展示菜单等待输入
 
-第 8 步是意图与能力的交汇点。"嘿 Mary，咱们来头脑风暴"之所以跳过菜单渲染，是因为 `bmad-brainstorming` 显然对应 Mary 菜单上的 `BP`。如果你说的比较模糊，她会简短问一句，而不是走确认仪式。如果完全不匹配，她会正常继续对话。
+第 8 步是意图与能力的交汇点。"嘿 Mary，咱们来头脑风暴"之所以跳过菜单渲染，是因为 `funcionario-brainstorming` 显然对应 Mary 菜单上的 `BP`。如果你说的比较模糊，她会简短问一句，而不是走确认仪式。如果完全不匹配，她会正常继续对话。
 
 ## 为什么不只用菜单？
 
@@ -70,25 +70,25 @@ BMad 内置五个命名智能体，各自对应 BMad Method 的一个阶段：
 
 空白提示假设你知道"魔法咒语"。"帮我头脑风暴"也许有用，但"帮我发散下我这个 SaaS 创意"可能就不灵了，而结果取决于你怎么措辞。你变成了提示工程师。
 
-命名智能体在不牺牲自由度的前提下增加了结构。人设保持一致，能力随时可发现，`bmad-help` 永远只差一个命令。你不用猜智能体能做什么，也不需要翻手册才能用它。
+命名智能体在不牺牲自由度的前提下增加了结构。人设保持一致，能力随时可发现，`funcionario-help` 永远只差一个命令。你不用猜智能体能做什么，也不需要翻手册才能用它。
 
 ## 自定义是一等公民
 
 自定义模型让这套方案能从单个开发者扩展到整个组织。
 
-每个智能体自带 `customize.toml` 及合理默认值。团队在 `_bmad/custom/bmad-agent-{role}.toml` 中提交覆盖。个人可以在 `.user.toml`（已 gitignore）中叠加偏好。解析器在激活时按可预测的结构化规则合并三层配置。
+每个智能体自带 `customize.toml` 及合理默认值。团队在 `_funcionario/custom/funcionario-agent-{role}.toml` 中提交覆盖。个人可以在 `.user.toml`（已 gitignore）中叠加偏好。解析器在激活时按可预测的结构化规则合并三层配置。
 
-大多数用户从不需要手写这些文件。`bmad-customize` 技能会引导你选择目标、区分智能体/工作流作用域、撰写覆盖、验证合并结果——让自定义能力对任何理解自己意图的人开放，不限于精通 TOML 的人。
+大多数用户从不需要手写这些文件。`funcionario-customize` 技能会引导你选择目标、区分智能体/工作流作用域、撰写覆盖、验证合并结果——让自定义能力对任何理解自己意图的人开放，不限于精通 TOML 的人。
 
 举个例子：团队提交一个文件，告诉 Amelia 查库文档时一律用 Context7 MCP 工具，本地 epics 列表找不到 story 时回退到 Linear。Amelia 分发的每个开发工作流（build、code-review、qa-generate）都继承这些行为，无需改源码、无需逐工作流重复配置。
 
-此外还有第二个自定义面，用于**跨领域关注点**：中央配置 `_bmad/config.toml` 和 `_bmad/config.user.toml`（由安装器维护，从每个模块的 `module.yaml` 重建）加上 `_bmad/custom/config.toml`（团队提交）和 `_bmad/custom/config.user.toml`（个人，已 gitignore）作为覆盖。这里存放着 **智能体花名册** ——轻量级描述符，`bmad-party-mode`、`bmad-retrospective` 和 `bmad-advanced-elicitation` 等花名册消费者读取它来了解有哪些智能体可用、如何扮演它们。用团队覆盖在全组织范围重新定义某个智能体；用 `.user.toml` 覆盖添加虚构角色（Kirk、Spock、领域专家）作为个人实验——无需碰任何技能目录。每个技能的配置文件塑造 Mary **激活时的行为**；中央配置塑造其他技能**查看花名册时看到的 Mary**。
+此外还有第二个自定义面，用于**跨领域关注点**：中央配置 `_funcionario/config.toml` 和 `_funcionario/config.user.toml`（由安装器维护，从每个模块的 `module.yaml` 重建）加上 `_funcionario/custom/config.toml`（团队提交）和 `_funcionario/custom/config.user.toml`（个人，已 gitignore）作为覆盖。这里存放着 **智能体花名册** ——轻量级描述符，`funcionario-party-mode`、`funcionario-retrospective` 和 `funcionario-advanced-elicitation` 等花名册消费者读取它来了解有哪些智能体可用、如何扮演它们。用团队覆盖在全组织范围重新定义某个智能体；用 `.user.toml` 覆盖添加虚构角色（Kirk、Spock、领域专家）作为个人实验——无需碰任何技能目录。每个技能的配置文件塑造 Mary **激活时的行为**；中央配置塑造其他技能**查看花名册时看到的 Mary**。
 
 完整自定义文档和实操示例请参见：
 
-- [如何自定义 BMad](../how-to/customize-bmad.md) — 可自定义项和合并规则的参考
-- [如何为组织扩展 BMad](../how-to/expand-bmad-for-your-org.md) — 五个实操方案，覆盖智能体全局规则、工作流约定、外部发布、模板替换和花名册管理
-- `bmad-customize` 技能 — 引导式编写助手，将你的意图转换为正确放置并经过验证的覆盖文件
+- [如何自定义 Funcionário Infinito](../how-to/customize-funcionario.md) — 可自定义项和合并规则的参考
+- [如何为组织扩展 Funcionário Infinito](../how-to/expand-funcionario-for-your-org.md) — 五个实操方案，覆盖智能体全局规则、工作流约定、外部发布、模板替换和花名册管理
+- `funcionario-customize` 技能 — 引导式编写助手，将你的意图转换为正确放置并经过验证的覆盖文件
 
 ## 更大的理念
 

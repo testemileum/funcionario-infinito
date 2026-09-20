@@ -27,7 +27,7 @@ __pycache__/
 .venv/
 .ruff_cache/
 
-# BMad run artifacts (memlogs are per-run working memory, never committed)
+# Funcionário Infinito run artifacts (memlogs are per-run working memory, never committed)
 .memlog.md
 
 # System files
@@ -55,12 +55,12 @@ CLAUDE.local.md
 z*/
 !docs/zh-cn/
 
-_bmad
-_bmad-output
+_funcionario
+_funcionario-output
 
 # Personal customization files (team files are committed, personal files are not)
 .vscode/
-_bmad/custom/*.user.toml
+_funcionario/custom/*.user.toml
 .clinerules
 .augment
 .codebuddy

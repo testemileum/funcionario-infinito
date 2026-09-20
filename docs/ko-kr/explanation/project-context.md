@@ -1,11 +1,11 @@
 ---
 title: "프로젝트 컨텍스트"
-description: bmad-project-context가 저장소의 에이전트 지침을 작성하는 방식 — AGENTS.md에 작고 검증된 블록을 추가합니다
+description: funcionario-project-context가 저장소의 에이전트 지침을 작성하는 방식 — AGENTS.md에 작고 검증된 블록을 추가합니다
 sidebar:
   order: 8
 ---
 
-`bmad-project-context`는 AI 에이전트가 저장소에서 제대로 작업할 수 있도록 환경을 정비합니다. 산출물은 저장소의 `AGENTS.md` 안에 들어가는 간결하고 검증된 규칙 블록입니다. 조직이 요구하는 사항, 실제로 실행해 확인한 명령, 일반적인 예상과 다른 규칙, 에이전트가 이 저장소에서 반복하는 실수를 기록합니다.
+`funcionario-project-context`는 AI 에이전트가 저장소에서 제대로 작업할 수 있도록 환경을 정비합니다. 산출물은 저장소의 `AGENTS.md` 안에 들어가는 간결하고 검증된 규칙 블록입니다. 조직이 요구하는 사항, 실제로 실행해 확인한 명령, 일반적인 예상과 다른 규칙, 에이전트가 이 저장소에서 반복하는 실수를 기록합니다.
 
 이 스킬은 생성기가 아니라 대화형 도구입니다. 에이전트가 지켜야 할 규칙, 즉 거버넌스와 보안, 코딩 표준을 알려주면 나머지는 스킬이 찾아 검증합니다. 무엇을 쓸 때든 사람이 확인하며 무인 실행 모드는 없습니다.
 
@@ -38,7 +38,7 @@ sidebar:
 
 ## 에이전트가 불러오는 방식
 
-주요 코딩 도구가 모두 읽는 저장소 루트의 `AGENTS.md`를 사용합니다. BMad는 `<!-- bmad:context -->`와 `<!-- /bmad:context -->` 사이만 관리합니다. 사용자가 마커 밖에 작성한 내용은 바이트 단위로 그대로 보존하며 Refresh도 건드리지 않습니다.
+주요 코딩 도구가 모두 읽는 저장소 루트의 `AGENTS.md`를 사용합니다. Funcionário Infinito는 `<!-- funcionario:context -->`와 `<!-- /funcionario:context -->` 사이만 관리합니다. 사용자가 마커 밖에 작성한 내용은 바이트 단위로 그대로 보존하며 Refresh도 건드리지 않습니다.
 
 모노레포의 컴포넌트와 중첩된 저장소에는 같은 규칙으로 별도의 파일을 만들고, 상위 파일에서 포인터로 연결합니다. 특정 디렉터리에만 적용되는 규칙이 많다면 해당 디렉터리의 `AGENTS.md`로 옮길 수 있습니다. 다만 사용하는 도구가 그 위치의 파일을 실제로 읽는지 먼저 확인해야 합니다. 읽지 않는다면 규칙을 루트 파일에 두고, 각 규칙이 적용되는 디렉터리를 명시합니다.
 
@@ -48,10 +48,10 @@ sidebar:
 
 ## 아키텍처와의 관계
 
-결정은 `bmad-architecture`에서 내립니다. 서로 다른 선택지에 실제 장단점이 있어 의견이 갈리는 설계 결정을 발견하면 이 스킬이 조용히 결론을 내리지 않고 `bmad-architecture`에서 다뤄야 한다고 안내합니다.
+결정은 `funcionario-architecture`에서 내립니다. 서로 다른 선택지에 실제 장단점이 있어 의견이 갈리는 설계 결정을 발견하면 이 스킬이 조용히 결론을 내리지 않고 `funcionario-architecture`에서 다뤄야 한다고 안내합니다.
 
 ## 이전 두 스킬을 대체
 
-:::note[폐기됨: bmad-document-project 및 bmad-generate-project-context]
-이전 두 스킬은 모두 폐기되었으며 이제 이 스킬로 연결됩니다. `bmad-generate-project-context`는 단일 `project-context.md`를 만들었습니다. 기존 파일이 있다면 Setup 과정에서 내용을 흡수할지 제안하므로 그대로 방치되지 않습니다. `bmad-document-project`는 기존 저장소를 스캔해 문서를 생성했지만, 연구 결과는 이 접근이 효과적이지 않음을 보여줬습니다. 시스템과 설계 근거를 깊이 설명하는 작업은 성격이 다르며 별도 기능으로 제공될 예정입니다.
+:::note[폐기됨: funcionario-document-project 및 funcionario-generate-project-context]
+이전 두 스킬은 모두 폐기되었으며 이제 이 스킬로 연결됩니다. `funcionario-generate-project-context`는 단일 `project-context.md`를 만들었습니다. 기존 파일이 있다면 Setup 과정에서 내용을 흡수할지 제안하므로 그대로 방치되지 않습니다. `funcionario-document-project`는 기존 저장소를 스캔해 문서를 생성했지만, 연구 결과는 이 접근이 효과적이지 않음을 보여줬습니다. 시스템과 설계 근거를 깊이 설명하는 작업은 성격이 다르며 별도 기능으로 제공될 예정입니다.
 :::

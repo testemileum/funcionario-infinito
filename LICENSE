@@ -1,9 +1,15 @@
 MIT License
 
-Copyright (c) 2025 BMad Code, LLC
+Copyright (c) 2025 BMad Code, LLC (BMad Method - original work)
+Copyright (c) 2026 Funcionário Infinito (derivative work)
 
-This project incorporates contributions from the open source community.
-See [CONTRIBUTORS.md](CONTRIBUTORS.md) for contributor attribution.
+This project is derived from the BMad Method
+(https://github.com/bmad-code-org/BMAD-METHOD), created by Brian Madison
+and the BMad Method open source community. See CONTRIBUTORS.md for
+attribution of contributors to the original work.
+
+Funcionário Infinito is NOT affiliated with, endorsed by, sponsored by, or
+sanctioned by the BMad Method, BMad Code, LLC, or Brian Madison.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +30,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 TRADEMARK NOTICE:
-BMad™, BMad Method™, and BMad Core™ are trademarks of BMad Code, LLC, covering all
-casings and variations (including BMAD, bmad, BMadMethod, BMAD-METHOD, etc.). The use of
-these trademarks in this software does not grant any rights to use the trademarks
-for any other purpose. See [TRADEMARK.md](TRADEMARK.md) for detailed guidelines.
+BMad(TM), BMad Method(TM), BMad Core(TM), and BMad Code(TM) are trademarks of
+BMad Code, LLC, covering all casings and variations. These trademarks are NOT
+licensed under the MIT License and are NOT used as part of the identity of
+this project. See the BMad Method trademark guidelines at
+https://github.com/bmad-code-org/BMAD-METHOD/blob/main/TRADEMARK.md

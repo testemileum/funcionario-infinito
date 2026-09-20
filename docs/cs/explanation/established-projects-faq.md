@@ -1,10 +1,10 @@
 ---
 title: "FAQ pro existující projekty"
-description: Časté otázky o používání BMad Method na existujících projektech
+description: Časté otázky o používání Funcionário Infinito na existujících projektech
 sidebar:
   order: 9
 ---
-Rychlé odpovědi na časté otázky o práci na existujících projektech s BMad Method (BMM).
+Rychlé odpovědi na časté otázky o práci na existujících projektech s Funcionário Infinito (BMM).
 
 ## Otázky
 
@@ -29,7 +29,7 @@ Nedělejte si starosti — můžete to udělat kdykoli. Můžete to udělat i b�
 
 ### Jak funguje implementace v existujících projektech?
 
-Spusťte `bmad-build`, stejně jako u nového vývoje. Umí:
+Spusťte `funcionario-build`, stejně jako u nového vývoje. Umí:
 
 - Automaticky detekovat váš existující stack
 - Analyzovat existující vzory kódu
@@ -47,4 +47,4 @@ Build detekuje vaše konvence a zeptá se: „Mám dodržovat tyto existující 
 
 BMM respektuje vaši volbu — nevynucuje modernizaci, ale nabídne ji.
 
-**Máte otázku, na kterou jste zde nenašli odpověď?** Prosím [vytvořte issue](https://github.com/bmad-code-org/BMAD-METHOD/issues) nebo se zeptejte na [Discordu](https://discord.gg/gk8jAdXWmj), abychom ji mohli přidat!
+**Máte otázku, na kterou jste zde nenašli odpověď?** Prosím [vytvořte issue](https://github.com/funcionario-infinito/funcionario-infinito/issues) nebo se zeptejte na [Discordu](https://discord.gg/SEU-CONVITE-AQUI), abychom ji mohli přidat!

@@ -11,7 +11,7 @@ Make the main point easy to find and act on. These rules apply to every page:
 
 - At the start, make clear what the page is for and what the reader needs from it.
 - Prefer concrete, familiar words and short sentences.
-- Use specialized terms only when readers need them to use BMAD. Define an unfamiliar term at first use.
+- Use specialized terms only when readers need them to use FUNCIONARIO. Define an unfamiliar term at first use.
 - Use literal language. Avoid decorative metaphors, and do not use a metaphor instead of explaining how something works.
 - Give the gist before qualifications and detailed mechanics.
 - Include implementation details only when they help readers understand or act for that page's purpose. Put exact mechanics and contracts in reference pages or linked deeper material.
@@ -76,8 +76,8 @@ Critical warnings only — data loss, security issues
 ```md
 | Skill        | Agent   | Purpose                              |
 | ------------ | ------- | ------------------------------------ |
-| `bmad-brainstorming` | Analyst | Brainstorm a new project             |
-| `bmad-prd`        | PM      | Create Product Requirements Document |
+| `funcionario-brainstorming` | Analyst | Brainstorm a new project             |
+| `funcionario-prd`        | PM      | Create Product Requirements Document |
 ```
 
 ## Folder Structure Blocks
@@ -87,12 +87,12 @@ Show in "What You've Accomplished" sections:
 ````md
 ```
 your-project/
-├── _bmad/                                   # BMad configuration
-├── _bmad-output/
+├── _funcionario/                                   # Funcionário Infinito configuration
+├── _funcionario-output/
 │   ├── planning-artifacts/
 │   │   └── PRD.md                           # Your requirements document
 │   └── implementation-artifacts/
-├── AGENTS.md                                # agent instructions (optional, via bmad-project-context)
+├── AGENTS.md                                # agent instructions (optional, via funcionario-project-context)
 └── ...
 ```
 ````
@@ -234,7 +234,7 @@ Diagrams are hand-authored SVGs, kept in `docs-site/src/diagrams/`, and embedded
 like an image:
 
 ```markdown
-![The bmad-build run](/diagrams/build-run.svg)
+![The funcionario-build run](/diagrams/build-run.svg)
 ```
 
 They are inlined into the page rather than served as `<img>`, so one stylesheet
@@ -365,7 +365,7 @@ Starlight generates right-side "On this page" navigation from headers:
 Add italic context at definition start for limited-scope terms:
 
 - `*Direct-entry implementation only.*`
-- `*BMad Method/Enterprise.*`
+- `*Funcionário Infinito/Enterprise.*`
 - `*Phase N.*`
 - `*BMGD.*`
 - `*Established projects.*`
@@ -393,7 +393,7 @@ Only for work that benefits from architecture. Clear work can enter implementati
 
 ### Can I change my plan later?
 
-Yes. The `bmad-correct-course` workflow handles scope changes mid-implementation.
+Yes. The `funcionario-correct-course` workflow handles scope changes mid-implementation.
 
 **Have a question not answered here?** [Open an issue](...) or ask in [Discord](...).
 ```

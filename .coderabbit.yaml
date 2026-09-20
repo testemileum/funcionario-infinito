@@ -53,7 +53,7 @@ reviews:
     - '!test/template-test-generator/**'
     - '!tools/template-test-generator/test-scenarios/**'
     # --- Shared baseline: non-project dirs ---
-    - '!_bmad*/**'
+    - '!_funcionario*/**'
     - '!docs-site/public/**'
     - '!docs-site/diagrams/**'
     - '!z*/**'

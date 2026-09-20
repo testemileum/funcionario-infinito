@@ -15,7 +15,7 @@ Opravy chyb, refaktoringy a malé cílené změny mohou vstoupit do **Build** p�
 - Aktualizace závislostí
 
 :::note[Předpoklady]
-- BMad Method nainstalován (`npx bmad-method install`)
+- Funcionário Infinito nainstalován (`npx funcionario-method install`)
 - AI-powered IDE (Claude Code, Cursor nebo podobné)
 :::
 
@@ -38,7 +38,7 @@ run build — fix https://github.com/org/repo/issues/42
 ```
 
 ```text
-run build — implement the intent in _bmad-output/implementation-artifacts/my-intent.md
+run build — implement the intent in _funcionario-output/implementation-artifacts/my-intent.md
 ```
 
 ```text

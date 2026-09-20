@@ -1,6 +1,6 @@
 ---
 title: 'Start in an Existing Codebase'
-description: Start BMad work in a repository that already exists — what to prepare, how much planning the change needs, and how Build treats your conventions.
+description: Start Funcionário Infinito work in a repository that already exists — what to prepare, how much planning the change needs, and how Build treats your conventions.
 sidebar:
   order: 1
 ---
@@ -16,14 +16,14 @@ archived for the few sessions that need it, and out of reach of an
 ordinary change — an agent doing a small request should not even be
 able to find it by accident.
 
-For a small change, use `[bmad-build](../build/build-a-change.md)`.
-For one that needs several coding sessions, run `bmad-spec`, then a
+For a small change, use `[funcionario-build](../build/build-a-change.md)`.
+For one that needs several coding sessions, run `funcionario-spec`, then a
 Build for each piece, then
-optionally `bmad-retrospective`. If it is bigger than that, treat it as a project and follow [Choose a Planning Path](../plan/choose-a-planning-path.md).
+optionally `funcionario-retrospective`. If it is bigger than that, treat it as a project and follow [Choose a Planning Path](../plan/choose-a-planning-path.md).
 
 Too little planning costs one Build run: Build looks at the code
 first, and stops to ask when it cannot settle the intent. Too much
-planning costs documents nobody reads. When unsure, ask `bmad-help`
+planning costs documents nobody reads. When unsure, ask `funcionario-help`
 rather than deciding alone. It inspects the project and answers
 questions like "I have an existing Rails app, where should I start?"
 It also runs at the end of every workflow to say what comes next.
@@ -34,10 +34,10 @@ helps.
 
 ## Prepare Project Context, or Skip It
 
-`bmad-project-context` writes a small verified block of agent instructions
+`funcionario-project-context` writes a small verified block of agent instructions
 into your repo's `AGENTS.md`. See
 [Set and Maintain Project Context](./set-and-maintain-project-context.md) for
-how to run it. (The earlier `bmad-document-project` workflow is deprecated)
+how to run it. (The earlier `funcionario-document-project` workflow is deprecated)
 
 Run it when those instructions are missing, stale, or you are not sure they
 are any good. Skip it when the repo already has an `AGENTS.md`, `CLAUDE.md`,
@@ -69,7 +69,7 @@ both when the change calls for them.
 
 ## Build Follows What It Finds
 
-You do not inventory conventions beforehand. `bmad-build` investigates the
+You do not inventory conventions beforehand. `funcionario-build` investigates the
 repository, writes down what to reuse and what not to change, and follows
 that. It does not stop to ask whether to match the current codebase.
 

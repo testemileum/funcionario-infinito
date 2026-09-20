@@ -1,21 +1,21 @@
 ---
-title: Bienvenue dans la méthode BMad
+title: Bienvenue dans la méthode Funcionário Infinito
 description: Framework de développement alimenté par l’IA avec des agents spécialisés, des workflows guidés et une planification intelligente
 ---
 
-La méthode BMad (**B**uild **M**ore **A**rchitect **D**reams) est un module[^1] de développement assisté par l’IA au sein de l’écosystème BMad. Elle couvre l’intégralité du processus de création logicielle — de l’idéation et de la planification jusqu’à la mise en œuvre par des agents. BMad met à votre disposition des agents IA spécialisés[^2], des workflows guidés et une planification intelligente qui s’adapte à la complexité de votre projet, qu’il s’agisse de corriger un bug ou de bâtir une plateforme d’entreprise.
+La méthode Funcionário Infinito (**B**uild **M**ore **A**rchitect **D**reams) est un module[^1] de développement assisté par l’IA au sein de l’écosystème Funcionário Infinito. Elle couvre l’intégralité du processus de création logicielle — de l’idéation et de la planification jusqu’à la mise en œuvre par des agents. Funcionário Infinito met à votre disposition des agents IA spécialisés[^2], des workflows guidés et une planification intelligente qui s’adapte à la complexité de votre projet, qu’il s’agisse de corriger un bug ou de bâtir une plateforme d’entreprise.
 
 Si vous êtes à l’aise avec les assistants de codage IA comme Claude, Cursor ou GitHub Copilot, vous êtes prêt à commencer.
 
-## Vous découvrez BMad ? Commencez par un tutoriel
+## Vous découvrez Funcionário Infinito ? Commencez par un tutoriel
 
-La façon la plus rapide de comprendre BMad est de l’essayer.
+La façon la plus rapide de comprendre Funcionário Infinito est de l’essayer.
 
-- **[Premiers pas avec BMad](./tutorials/getting-started.md)** — Installez BMad et découvrez son fonctionnement
+- **[Premiers pas avec Funcionário Infinito](./tutorials/getting-started.md)** — Installez Funcionário Infinito et découvrez son fonctionnement
 - **[Carte des workflows](./reference/workflow-map.md)** — Vue d’ensemble visuelle des phases BMM, des workflows et de la gestion du contexte
 
 :::tip[Envie de passer à la pratique ?]
-Installez BMad et utilisez le skill[^3] `bmad-help` — il vous guidera pas à pas, en fonction de votre projet et des modules installés.
+Installez Funcionário Infinito et utilisez le skill[^3] `funcionario-help` — il vous guidera pas à pas, en fonction de votre projet et des modules installés.
 :::
 
 ## Comment utiliser cette documentation
@@ -31,34 +31,34 @@ Cette documentation est organisée en quatre sections, selon votre objectif :
 
 ## Étendre et personnaliser
 
-Vous souhaitez étendre BMad avec vos propres agents, workflows ou modules ? Le **[BMad Builder](https://bmad-builder-docs.bmad-method.org/)** met à votre disposition le framework et les outils nécessaires pour créer des extensions personnalisées — que ce soit pour ajouter de nouvelles capacités à BMad ou pour concevoir des modules entièrement nouveaux de zéro.
+Vous souhaitez étendre Funcionário Infinito avec vos propres agents, workflows ou modules ? Le **[Funcionário Infinito Builder](https://funcionario-builder-docs.funcionario-infinito.com.br/)** met à votre disposition le framework et les outils nécessaires pour créer des extensions personnalisées — que ce soit pour ajouter de nouvelles capacités à Funcionário Infinito ou pour concevoir des modules entièrement nouveaux de zéro.
 
 ## Ce dont vous aurez besoin
 
-BMad fonctionne avec tout assistant de codage IA qui prend en charge les prompts système personnalisés ou le contexte de projet. Parmi les options les plus populaires :
+Funcionário Infinito fonctionne avec tout assistant de codage IA qui prend en charge les prompts système personnalisés ou le contexte de projet. Parmi les options les plus populaires :
 
 - **[Claude Code](https://code.claude.com)** — Outil CLI d’Anthropic (recommandé)
 - **[Cursor](https://cursor.sh)** — Éditeur de code propulsé par l’IA
 - **[Codex CLI](https://github.com/openai/codex)** — Agent de codage en ligne de commande d’OpenAI
 
-Vous devriez être à l’aise avec les concepts de base du développement logiciel : gestion de versions, structure de projet et méthodologies agiles. Aucune expérience préalable des systèmes d’agents de type BMad n’est requise — c’est précisément l’objet de cette documentation.
+Vous devriez être à l’aise avec les concepts de base du développement logiciel : gestion de versions, structure de projet et méthodologies agiles. Aucune expérience préalable des systèmes d’agents de type Funcionário Infinito n’est requise — c’est précisément l’objet de cette documentation.
 
 ## Rejoindre la communauté
 
-Trouvez de l’aide, partagez vos projets ou contribuez à BMad :
+Trouvez de l’aide, partagez vos projets ou contribuez à Funcionário Infinito :
 
-- **[Discord](https://discord.gg/gk8jAdXWmj)** — Discutez avec d’autres utilisateurs de BMad, posez des questions, partagez des idées
-- **[GitHub](https://github.com/bmad-code-org/BMAD-METHOD)** — Code source, tickets et contributions
-- **[YouTube](https://www.youtube.com/@BMadCode)** — Tutoriels vidéo et démonstrations
+- **[Discord](https://discord.gg/SEU-CONVITE-AQUI)** — Discutez avec d’autres utilisateurs de Funcionário Infinito, posez des questions, partagez des idées
+- **[GitHub](https://github.com/funcionario-infinito/funcionario-infinito)** — Code source, tickets et contributions
+- **[YouTube](https://www.youtube.com/@funcionarioinfinito)** — Tutoriels vidéo et démonstrations
 
 ## Prochaine étape
 
-Prêt à vous lancer ? **[Commencez avec BMad](./tutorials/getting-started.md)** et réalisez votre premier projet.
+Prêt à vous lancer ? **[Commencez avec Funcionário Infinito](./tutorials/getting-started.md)** et réalisez votre premier projet.
 
 ---
 ## Glossaire
 
-[^1]: **Module** : composant autonome du système BMad qui peut être installé et utilisé indépendamment, offrant des fonctionnalités spécifiques.
+[^1]: **Module** : composant autonome du système Funcionário Infinito qui peut être installé et utilisé indépendamment, offrant des fonctionnalités spécifiques.
 
 [^2]: **Agent** : assistant IA spécialisé avec une expertise spécifique qui guide les utilisateurs dans les workflows.
 

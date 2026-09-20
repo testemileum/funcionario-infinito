@@ -17,7 +17,7 @@ function test(name, run) {
 }
 
 function makeSiteDir() {
-  return fs.mkdtempSync(path.join(os.tmpdir(), 'bmad-site-'));
+  return fs.mkdtempSync(path.join(os.tmpdir(), 'funcionario-site-'));
 }
 
 test('succeeds on a clean site directory with HTML only', () => {

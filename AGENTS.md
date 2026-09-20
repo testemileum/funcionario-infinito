@@ -1,4 +1,4 @@
-# BMAD-METHOD
+# funcionario-infinito
 
 Open source framework for structured, agent-assisted software delivery.
 
