@@ -59,7 +59,7 @@ para o Cerne.
 - **TEN** — a virada, e por que ela recontextualiza:
 - **KETSU** — como a oferta entra:
 - **Ganchos por bloco:**
-- **A história é real ou ficção rotulada?**
+- **A história é real, composta ou ficção rotulada?** (e como isso fica claro para quem lê):
 
 ## Restrições
 
@@ -87,8 +87,10 @@ Preenchido pela Régia a cada handoff.
 
 Preenchido na saída, antes de publicar.
 
+- **Rigor aplicado:** alto / padrão / baixo
 - **Veredito:** LIBERADO / LIBERADO COM RESSALVAS / BLOQUEADO
-- **Bloqueios:**
-- **Graves:**
+- **Bloqueios (núcleo):**
+- **Graves (borda sem lastro):**
 - **Menores:**
 - **Contagem de gatilhos:**
+- **Se bloqueado, qual é a versão liberável da mesma peça:**

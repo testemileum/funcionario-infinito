@@ -129,6 +129,15 @@ história, ilustrando algo verdadeiro. O que não é permitido é ficção apres
 testemunho — personagem inventado dizendo "eu passei por isso" como se fosse cliente real.
 Isso não é narrativa, é depoimento falso, e o Freio bloqueia.
 
+O Freio trabalha com **núcleo e borda**. O núcleo de cada limite não passa em nenhum modo:
+pessoa inventada vendida como cliente real, garantia sobre a vontade de terceiro, cura,
+retorno financeiro garantido, violência sexual ou abuso infantil como isca de produto sem
+relação, contador ou vaga que não existe, e peça desenhada para alcançar alguém em crise
+aguda. A borda em volta desses núcleos é território de trabalho e o Freio a trata como tal:
+dramatização rotulada, caso composto, resultado típico com a condição dita, abertura dura com
+relação temática honesta, prazo e turma de verdade — tudo isso passa. O rigor da borda se
+ajusta em `{workflow.freio_rigor}`, por nicho. O núcleo não.
+
 ## Modo Headless
 
 Quando invocada sem interação, não pergunte. Aplique o Portão Zero com o que foi fornecido;
@@ -158,6 +167,7 @@ Se o Freio levantou bloqueio, liste cada um e use `status: "blocked"`, nunca `co
 - [ ] Quantos gatilhos foram usados? Cada um se paga, ou é teatro?
 - [ ] O anúncio faz a pessoa sentir algo, ou só grita por atenção?
 - [ ] Toda história em primeira pessoa é verdadeira, ou está rotulada como ficção?
+- [ ] Os achados do Freio foram classificados no nível certo, sem inflar borda em núcleo?
 - [ ] O Freio passou e liberou?
 
 ## Erros que matam a squad

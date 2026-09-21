@@ -119,17 +119,21 @@ entende que é uma história ilustrando algo verdadeiro. O que não é legítimo
 inventado dizendo "eu passei por isso, e foi assim que resolvi", posicionado como cliente
 real. Isso não é narrativa, é prova fabricada, e o Freio bloqueia.
 
-Na prática: se a peça usa primeira pessoa e a pessoa que fala não existe, ou a história não
-aconteceu, isso precisa estar claro para quem lê — ou a peça precisa ser reescrita em terceira
-pessoa, como ilustração.
+Na prática, o teste é a atribuição, não a literalidade. Cabem aqui, sem problema: história
+real com nome e detalhes trocados por privacidade; caso composto de vários clientes, dito
+como composto; cena em terceira pessoa como ilustração; dramatização com aviso. O que não
+cabe é a peça deixar o leitor acreditar que existe uma pessoa específica por trás daquela
+fala quando não existe.
 
-**A abertura precisa ter relação com o que se vende.** Abrir com violência, abuso ou tragédia
-para prender atenção e depois vender algo sem relação com aquilo não é técnica narrativa. É
-exploração, e converte mal: a pessoa se sente traída quando descobre a troca, e é assim que se
-fabrica um mercado desconfiado.
+**A abertura precisa ter relação com o que se vende.** Abrir com violência sexual, abuso
+infantil ou a tragédia de alguém identificável para prender atenção e depois vender algo sem
+relação com aquilo não é técnica narrativa. É exploração, e converte mal: a pessoa se sente
+traída quando descobre a troca.
 
-Tensão forte é permitida — e às vezes necessária — quando o produto trata de fato daquele
-assunto.
+Fora disso, a régua é a relação temática, não a intensidade. Abertura dura, desconfortável ou
+emocionalmente pesada é permitida — e muitas vezes é o que faz a peça funcionar — quando o
+assunto da abertura tem a ver com o que está sendo vendido. Dívida, traição, demissão,
+doença, medo, vergonha e fracasso são material legítimo de KI.
 
 **A virada revela, não fabrica.** A informação do TEN precisa ser verdadeira. Uma virada
 construída sobre um dado inventado é mentira com boa estrutura, e a estrutura só faz a mentira
@@ -148,4 +152,5 @@ funcionar melhor por mais tempo — até não funcionar.
 - [ ] O KETSU entrega a oferta sem pressão artificial?
 - [ ] Cada bloco fecha com uma pergunta aberta real?
 - [ ] Toda história em primeira pessoa é verdadeira, ou está rotulada como ficção?
+- [ ] Se há personagem, quem lê consegue saber se ele é real, composto ou ilustração?
 - [ ] A tensão da abertura tem relação com o que está sendo vendido?

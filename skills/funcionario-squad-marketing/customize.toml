@@ -50,10 +50,26 @@ campanha_output_path = "{output_folder}/campanha"
 run_folder_pattern = "campanha-{project_name}-{date}"
 
 # Whether the Freio review is mandatory before any material is declared ready.
-# Leave true. The Freio's absolute blocks (fabricated testimonial, promise outside the
-# seller's control, disconnected trauma bait, false scarcity, exploitation of acute distress)
-# are not configurable and hold regardless of this setting.
+# Leave true.
 freio_obrigatorio = true
+
+# How strictly the Freio treats a borderline finding -- one near a limit but not at its core.
+# "alto"   - a borderline finding without backing is a BLOQUEIO. For regulated niches
+#            (health, finance, legal) where a claim without paperwork is a real liability.
+# "padrao" - default. A borderline finding without backing is GRAVE: it is reported, the
+#            backing or the label is requested, and the material still ships if the user
+#            decides to.
+# "baixo"  - a borderline finding is MENOR and only logged. For internal drafts, tests and
+#            organic content that is not a paid claim.
+#
+# This lever moves the border only. Each of the Freio's five limits has a core that holds in
+# all three modes: a fabricated person presented as a real client; a guarantee over a third
+# party's will, a cure, or a guaranteed financial return; sexual violence or child abuse as a
+# hook for an unrelated product; a counter or a vacancy that does not exist; and material
+# targeted at someone in acute crisis. Everything around those cores is negotiable and the
+# Freio treats it as such -- labeled dramatization, composite cases, typical-results framing,
+# hard but thematically honest openings, and real deadlines all pass.
+freio_rigor = "padrao"
 
 # Extra checks the Freio applies on top of its standard list. Plain-text directives.
 # Use for niche-specific legal requirements.
