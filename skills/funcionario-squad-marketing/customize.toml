@@ -1,0 +1,51 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for funcionario-squad-marketing.
+#
+# Override files (not edited here):
+#   {project-root}/_funcionario/custom/funcionario-squad-marketing.toml         (team)
+#   {project-root}/_funcionario/custom/funcionario-squad-marketing.user.toml    (personal)
+
+[workflow]
+
+# --- Configurable below. Overrides merge per Funcionário Infinito structural rules: ---
+#   scalars: override wins • arrays: append
+
+# Steps to run before the standard activation (config load, greet).
+activation_steps_prepend = []
+
+# Steps to run after greet but before the workflow begins.
+activation_steps_append = []
+
+# Persistent facts the squad keeps in mind for the whole run.
+# Each entry is either a literal sentence, a skill prefixed with `skill:`, or a `file:`-prefixed
+# path/glob whose contents are loaded as facts.
+#
+# Common opt-ins (set in team/user override TOML):
+#   "file:{project-root}/marca/tom-de-voz.md"        # guia de tom da marca
+#   "file:{project-root}/marca/claims-aprovados.md"  # alegacoes que o juridico ja liberou
+#   "Nunca prometer resultado financeiro especifico."
+persistent_facts = []
+
+# Briefing structure used when the work is large enough to justify a document.
+briefing_template = "assets/briefing-de-campanha.md"
+
+# Where campaign artifacts land.
+campanha_output_path = "{output_folder}/campanha"
+run_folder_pattern = "campanha-{project_name}-{date}"
+
+# Whether the Freio review is mandatory before any material is declared ready.
+# Leave true. Setting false removes the squad's only safeguard against false claims
+# and is intended solely for drafts that will never be published.
+freio_obrigatorio = true
+
+# Extra checks the Freio applies on top of its standard list. Each entry is a plain-text
+# directive. Use for niche-specific legal requirements.
+#
+# Examples (set in team/user override TOML):
+#   "Nicho de saude: nenhuma alegacao de cura ou tratamento."
+#   "Nicho financeiro: incluir aviso de risco em toda peca de investimento."
+freio_checagens_extras = []
+
+# Executed when the squad completes the work.
+on_complete = ""
