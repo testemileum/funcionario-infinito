@@ -48,7 +48,7 @@ Vous devriez être à l’aise avec les concepts de base du développement logic
 Trouvez de l’aide, partagez vos projets ou contribuez à Funcionário Infinito :
 
 - **[Discord](https://discord.gg/SEU-CONVITE-AQUI)** — Discutez avec d’autres utilisateurs de Funcionário Infinito, posez des questions, partagez des idées
-- **[GitHub](https://github.com/funcionario-infinito/funcionario-infinito)** — Code source, tickets et contributions
+- **[GitHub](https://github.com/testemileum/funcionario-infinito)** — Code source, tickets et contributions
 - **[YouTube](https://www.youtube.com/@funcionarioinfinito)** — Tutoriels vidéo et démonstrations
 
 ## Prochaine étape

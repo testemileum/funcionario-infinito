@@ -39,7 +39,7 @@ Cách này giúp bạn nhận các thay đổi mới sớm hơn, đổi lại kh
 :::tip[Bản rất mới]
 Để cài đặt trực tiếp từ nhánh `main` mới nhất (có thể không ổn định):
 ```bash
-npx github:funcionario-infinito/funcionario-infinito install
+npx github:testemileum/funcionario-infinito install
 ```
 :::
 

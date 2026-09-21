@@ -89,9 +89,9 @@ can resume. Nothing needs merging back.
 ## 5. Rebuild and verify
 
 In the `funcionario-infinito/funcionario-plugins` checkout, confirm its release script sources
-`funcionario-infinito/funcionario-infinito` `main`, then run `python3 release.py`. Follow that
+`testemileum/funcionario-infinito` `main`, then run `python3 release.py`. Follow that
 repository's instructions to review, validate, commit, and push the plugins.
-Verify the release through `npx skills add funcionario-infinito/funcionario-infinito` and both
+Verify the release through `npx skills add testemileum/funcionario-infinito` and both
 the Claude and Codex marketplaces.
 
 Installed copies check `main` through `raw.githubusercontent.com`, which caches

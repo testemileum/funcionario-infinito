@@ -23,7 +23,7 @@ You can also use `/funcionario-help` or `$funcionario-help` depending on your pl
 
 Funcionário Infinito-Help draws on your installed configuration. For questions about Funcionário Infinito's internals, history, or architecture — or if you're researching Funcionário Infinito before installing — point your AI at the source directly.
 
-Clone or open the [funcionario-infinito repo](https://github.com/funcionario-infinito/funcionario-infinito) and ask your AI about it. Any agent-capable tool (Claude Code, Cursor, Windsurf, etc.) can read the source and answer questions directly.
+Clone or open the [funcionario-infinito repo](https://github.com/testemileum/funcionario-infinito) and ask your AI about it. Any agent-capable tool (Claude Code, Cursor, Windsurf, etc.) can read the source and answer questions directly.
 
 :::note[Example]
 **Q:** "Tell me the fastest way to build something with Funcionário Infinito"
@@ -51,7 +51,7 @@ If neither Funcionário Infinito-Help nor the source answered your question, you
 
 **Discord:** [discord.gg/SEU-CONVITE-AQUI](https://discord.gg/SEU-CONVITE-AQUI)
 
-**GitHub Issues:** [github.com/funcionario-infinito/funcionario-infinito/issues](https://github.com/funcionario-infinito/funcionario-infinito/issues)
+**GitHub Issues:** [github.com/testemileum/funcionario-infinito/issues](https://github.com/testemileum/funcionario-infinito/issues)
 
 _You!_  
 &emsp;&emsp;_Stuck_  

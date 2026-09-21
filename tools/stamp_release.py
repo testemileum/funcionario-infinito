@@ -40,7 +40,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_NAME = "module-manifest.toml"
 
 MODULES = frozenset({"method", "toolbox"})
-UPDATE_SOURCE = "github:funcionario-infinito/funcionario-infinito/skills"
+UPDATE_SOURCE = "github:testemileum/funcionario-infinito/skills"
 KNOWLEDGE = "`references/help.md` in the `funcionario` skill"
 MANIFEST_KEYS = frozenset({"module", "version", "update_source", "knowledge"})
 

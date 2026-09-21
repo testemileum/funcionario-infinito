@@ -66,7 +66,7 @@ Funcionário Infinito-Help 通常会返回：
 **如果你的 AI 可以直接读文件（如 Claude Code、Cursor）：**
 
 - **已安装 Funcionário Infinito：** 直接让它读取 `_funcionario` 并提问
-- **想看更深上下文：** 克隆[完整仓库](https://github.com/funcionario-infinito/funcionario-infinito)
+- **想看更深上下文：** 克隆[完整仓库](https://github.com/testemileum/funcionario-infinito)
 
 **如果你使用 ChatGPT 或 Claude.ai：**
 
@@ -101,7 +101,7 @@ Funcionário Infinito-Help 通常会返回：
 | `#report-bugs-and-issues` | Bug 报告 |
 
 **Discord：** [discord.gg/SEU-CONVITE-AQUI](https://discord.gg/SEU-CONVITE-AQUI)  
-**GitHub Issues：** [github.com/funcionario-infinito/funcionario-infinito/issues](https://github.com/funcionario-infinito/funcionario-infinito/issues)（用于可复现问题）
+**GitHub Issues：** [github.com/testemileum/funcionario-infinito/issues](https://github.com/testemileum/funcionario-infinito/issues)（用于可复现问题）
 
 *你！*  
 &emsp;&emsp;*卡住*  

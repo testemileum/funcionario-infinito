@@ -165,4 +165,4 @@ Build does not update the ticket. Before you start, say "start story 02" to the 
 
 ## Tell Us What You Find
 
-Preview feedback decides what ships in v7. The most useful reports say what you gave the skill, what you asked for, what it produced, and what you expected instead. Open a [GitHub issue](https://github.com/funcionario-infinito/funcionario-infinito/issues) with "v7 preview" in the title, or post in [Discord](https://discord.gg/SEU-CONVITE-AQUI).
+Preview feedback decides what ships in v7. The most useful reports say what you gave the skill, what you asked for, what it produced, and what you expected instead. Open a [GitHub issue](https://github.com/testemileum/funcionario-infinito/issues) with "v7 preview" in the title, or post in [Discord](https://discord.gg/SEU-CONVITE-AQUI).

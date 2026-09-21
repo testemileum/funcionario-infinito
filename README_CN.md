@@ -49,7 +49,7 @@ Funcionário Infinito 可通过官方模块扩展到不同专业场景。你可�
 
 | 模块                                                                                                             | 用途                                                                    |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **[Funcionário Infinito](https://github.com/funcionario-infinito/funcionario-infinito)**                                                  | 规划并交付软件，覆盖全新原型到成熟代码库                                |
+| **[Funcionário Infinito](https://github.com/testemileum/funcionario-infinito)**                                                  | 规划并交付软件，覆盖全新原型到成熟代码库                                |
 | **[Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder)**                                                | 技能、工作流与智能体构建器                                              |
 | **[Funcionário Infinito Creative Intelligence Suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)** | 创意思考伙伴：创新、设计思维与叙事                                      |
 | **[Funcionário Infinito Test Architect](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)**             | 面向 Funcionário Infinito 的企业级测试扩展模块                                   |
@@ -70,8 +70,8 @@ Funcionário Infinito 可通过官方模块扩展到不同专业场景。你可�
 
 - [Discord](https://discord.gg/SEU-CONVITE-AQUI) — 获取帮助、分享想法、协作
 - [在 YouTube 上订阅](https://www.youtube.com/@funcionarioinfinito) — 教程、大师课和播客（2025 年 2 月推出）
-- [GitHub Issues](https://github.com/funcionario-infinito/funcionario-infinito/issues) — 错误报告和功能请求
-- [讨论](https://github.com/funcionario-infinito/funcionario-infinito/discussions) — 社区对话
+- [GitHub Issues](https://github.com/testemileum/funcionario-infinito/issues) — 错误报告和功能请求
+- [讨论](https://github.com/testemileum/funcionario-infinito/discussions) — 社区对话
 
 ## 支持 Funcionário Infinito
 

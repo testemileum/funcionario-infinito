@@ -1,7 +1,7 @@
 # Development tooling for the funcionario-infinito repository.
 #
 # This is not a distributable package: the repository tree itself is what
-# `npx skills add funcionario-infinito/funcionario-infinito` and the plugin marketplaces
+# `npx skills add testemileum/funcionario-infinito` and the plugin marketplaces
 # install, and each shipped script under skills/*/scripts declares its own
 # dependencies inline (PEP 723) so `uv run` works without this file.
 # The release version lives in skills/*/module-manifest.toml, not here.

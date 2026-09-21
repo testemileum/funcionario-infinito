@@ -1,6 +1,6 @@
 
 
-[![Version](https://img.shields.io/github/v/tag/funcionario-infinito/funcionario-infinito?color=blue&label=version)](https://github.com/funcionario-infinito/funcionario-infinito/tags)
+[![Version](https://img.shields.io/github/v/tag/testemileum/funcionario-infinito?color=blue&label=version)](https://github.com/testemileum/funcionario-infinito/tags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/SEU-CONVITE-AQUI)
 
@@ -20,7 +20,7 @@ Choose one install route. You need an AI coding tool that supports skills and
 **Skills CLI** — with [Node.js and npm](https://nodejs.org) and Git, run in your project:
 
 ```bash
-npx skills add funcionario-infinito/funcionario-infinito
+npx skills add testemileum/funcionario-infinito
 ```
 
 Select the skills and coding tool you want; include `funcionario` for setup and help.
@@ -72,7 +72,7 @@ Install the core method or add official modules for specialized work.
 
 | Module | Purpose |
 | --- | --- |
-| **[Funcionário Infinito](https://github.com/funcionario-infinito/funcionario-infinito)** | Plan and deliver software, from new prototypes to established codebases |
+| **[Funcionário Infinito](https://github.com/testemileum/funcionario-infinito)** | Plan and deliver software, from new prototypes to established codebases |
 | **[Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder)** | Skill, workflow, and agent builder |
 | **[Funcionário Infinito Creative Intelligence Suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)** | Creative thinking partners for innovation, design thinking, and storytelling |
 | **[Funcionário Infinito Test Architect](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)** | Enterprise testing add-on for Funcionário Infinito |
@@ -93,8 +93,8 @@ Install the core method or add official modules for specialized work.
 
 - [Discord](https://discord.gg/SEU-CONVITE-AQUI) — Get help, share ideas, and collaborate.
 - [YouTube](https://youtube.com/@funcionarioinfinito) — Watch tutorials and master classes.
-- [GitHub Issues](https://github.com/funcionario-infinito/funcionario-infinito/issues) — Report bugs and request features.
-- [GitHub Discussions](https://github.com/funcionario-infinito/funcionario-infinito/discussions) — Join longer community conversations.
+- [GitHub Issues](https://github.com/testemileum/funcionario-infinito/issues) — Report bugs and request features.
+- [GitHub Discussions](https://github.com/testemileum/funcionario-infinito/discussions) — Join longer community conversations.
 - [Funcionario Infinito](https://funcionario-infinito.com.br) — Explore the wider ecosystem.
 
 ## Support and Contributing

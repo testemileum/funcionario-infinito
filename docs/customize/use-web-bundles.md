@@ -140,5 +140,5 @@ the skill's agent as the default persona and adding a contrasting swap
 example.
 
 To submit your bundle to the shelf, open a PR on
-[funcionario-infinito](https://github.com/funcionario-infinito/funcionario-infinito) that adds the
+[funcionario-infinito](https://github.com/testemileum/funcionario-infinito) that adds the
 bundle directory and an entry in `web-bundles/bundles.json`.

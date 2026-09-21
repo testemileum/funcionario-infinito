@@ -48,7 +48,7 @@ Funcionário Infinito 可与任何支持自定义系统提示词或项目上下�
 获取帮助、分享成果，或参与贡献：
 
 - **[Discord](https://discord.gg/SEU-CONVITE-AQUI)** — 与其他 Funcionário Infinito 用户聊天、提问、分享想法
-- **[GitHub](https://github.com/funcionario-infinito/funcionario-infinito)** — 源代码、问题和贡献
+- **[GitHub](https://github.com/testemileum/funcionario-infinito)** — 源代码、问题和贡献
 - **[YouTube](https://www.youtube.com/@funcionarioinfinito)** — 视频教程和演练
 
 ## 下一步

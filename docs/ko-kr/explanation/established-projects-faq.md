@@ -48,4 +48,4 @@ Build는 관례를 감지한 뒤 "이 기존 관례를 따를까요?"라고 묻�
 
 BMM은 선택을 존중합니다. 현대화를 강제하지 않지만 필요한 제안은 합니다.
 
-**여기에 답이 없는 질문이 있나요?** [GitHub Issue](https://github.com/funcionario-infinito/funcionario-infinito/issues)를 열거나 [Discord](https://discord.gg/SEU-CONVITE-AQUI)에서 물어보세요. 추가하겠습니다.
+**여기에 답이 없는 질문이 있나요?** [GitHub Issue](https://github.com/testemileum/funcionario-infinito/issues)를 열거나 [Discord](https://discord.gg/SEU-CONVITE-AQUI)에서 물어보세요. 추가하겠습니다.

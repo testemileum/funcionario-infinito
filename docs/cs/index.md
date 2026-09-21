@@ -48,7 +48,7 @@ Měli byste být obeznámeni se základními koncepty vývoje softwaru jako spr�
 Získejte pomoc, sdílejte co budujete, nebo přispějte do Funcionário Infinito:
 
 - **[Discord](https://discord.gg/SEU-CONVITE-AQUI)** — Chatujte s ostatními uživateli Funcionário Infinito, pokládejte otázky, sdílejte nápady
-- **[GitHub](https://github.com/funcionario-infinito/funcionario-infinito)** — Zdrojový kód, issues a příspěvky
+- **[GitHub](https://github.com/testemileum/funcionario-infinito)** — Zdrojový kód, issues a příspěvky
 - **[YouTube](https://www.youtube.com/@funcionarioinfinito)** — Video tutoriály a návody
 
 ## Další krok

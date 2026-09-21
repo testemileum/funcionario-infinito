@@ -38,4 +38,4 @@ Web LLM 偶尔在长会话中途掉 persona。若模型开始 out of character�
 
 ## 自己构建
 
-要把现有 Funcionário Infinito skill 变成 web bundle，用 [funcionario-utility-skills](https://github.com/funcionario-infinito/funcionario-utility-skills) 里的 `funcionario-os-skill-to-bundle` 工具 skill。它产出 bundle 文件，persona 从所属 agent 继承，并带 swap-example 对比 voice。提交 bundle 到架子：在 [funcionario-infinito](https://github.com/funcionario-infinito/funcionario-infinito) 开 PR，添加 bundle 目录并在 `web-bundles/bundles.json` 里加条目。
+要把现有 Funcionário Infinito skill 变成 web bundle，用 [funcionario-utility-skills](https://github.com/funcionario-infinito/funcionario-utility-skills) 里的 `funcionario-os-skill-to-bundle` 工具 skill。它产出 bundle 文件，persona 从所属 agent 继承，并带 swap-example 对比 voice。提交 bundle 到架子：在 [funcionario-infinito](https://github.com/testemileum/funcionario-infinito) 开 PR，添加 bundle 目录并在 `web-bundles/bundles.json` 里加条目。

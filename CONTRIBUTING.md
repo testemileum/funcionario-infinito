@@ -37,11 +37,11 @@ Funcionário Infinito strengthens human-AI collaboration through specialized age
 
 1. **Search existing issues** — Use the GitHub issue search to check if your bug or feature has already been reported
 2. **Search closed issues** — Your issue may have been fixed or addressed previously
-3. **Check discussions** — Some conversations happen in [GitHub Discussions](https://github.com/funcionario-infinito/funcionario-infinito/discussions)
+3. **Check discussions** — Some conversations happen in [GitHub Discussions](https://github.com/testemileum/funcionario-infinito/discussions)
 
 ### Bug Reports
 
-After searching, if the bug is unreported, use the [bug report template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=bug-report.yaml) and include:
+After searching, if the bug is unreported, use the [bug report template](https://github.com/testemileum/funcionario-infinito/issues/new?template=bug-report.yaml) and include:
 
 - Clear description of the problem
 - Steps to reproduce
@@ -51,7 +51,7 @@ After searching, if the bug is unreported, use the [bug report template](https:/
 
 ### Feature Requests
 
-After searching, use the [feature request template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=feature-request.md) and explain:
+After searching, use the [feature request template](https://github.com/testemileum/funcionario-infinito/issues/new?template=feature-request.md) and explain:
 
 - What the feature is
 - Why it would benefit the Funcionário Infinito community
@@ -98,11 +98,11 @@ We will reject PRs that read like raw LLM output: bulk refactors nobody asked fo
 
 1. **Fork** the repository
 2. **Clone** your fork: `git clone https://github.com/YOUR-USERNAME/funcionario-method.git`
-3. **Branch from upstream dev**: add `git remote add upstream https://github.com/funcionario-infinito/funcionario-infinito.git`, run `git fetch upstream dev`, then `git switch -c fix/description upstream/dev` (or use `feature/description`).
+3. **Branch from upstream dev**: add `git remote add upstream https://github.com/testemileum/funcionario-infinito.git`, run `git fetch upstream dev`, then `git switch -c fix/description upstream/dev` (or use `feature/description`).
 4. **Make changes** — keep them focused
 5. **Commit**: `git commit -m "fix: correct typo in README"`
 6. **Push**: `git push origin fix/description`
-7. **Open PR** from your fork into `funcionario-infinito/funcionario-infinito` with `dev` as the base branch.
+7. **Open PR** from your fork into `testemileum/funcionario-infinito` with `dev` as the base branch.
 
 ### PR Description Template
 
@@ -171,8 +171,8 @@ Keep messages under 72 characters. Each commit = one logical change.
 ## Need Help?
 
 - 💬 **Discord**: [Join the community](https://discord.gg/SEU-CONVITE-AQUI)
-- 🐛 **Bugs**: Use the [bug report template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=bug-report.yaml)
-- 💡 **Features**: Use the [feature request template](https://github.com/funcionario-infinito/funcionario-infinito/issues/new?template=feature-request.md)
+- 🐛 **Bugs**: Use the [bug report template](https://github.com/testemileum/funcionario-infinito/issues/new?template=bug-report.yaml)
+- 💡 **Features**: Use the [feature request template](https://github.com/testemileum/funcionario-infinito/issues/new?template=feature-request.md)
 
 ---
 

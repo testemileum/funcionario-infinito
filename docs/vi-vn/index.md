@@ -48,7 +48,7 @@ Bạn nên quen với các khái niệm phát triển phần mềm cơ bản nh�
 Nhận trợ giúp, chia sẻ những gì bạn đang xây dựng, hoặc đóng góp cho Funcionário Infinito:
 
 - **[Discord](https://discord.gg/SEU-CONVITE-AQUI)** — Trao đổi với những người dùng Funcionário Infinito khác, đặt câu hỏi, chia sẻ ý tưởng
-- **[GitHub](https://github.com/funcionario-infinito/funcionario-infinito)** — Mã nguồn, issues, và đóng góp
+- **[GitHub](https://github.com/testemileum/funcionario-infinito)** — Mã nguồn, issues, và đóng góp
 - **[YouTube](https://www.youtube.com/@funcionarioinfinito)** — Video hướng dẫn và walkthrough
 
 ## Bước tiếp theo

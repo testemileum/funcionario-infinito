@@ -39,7 +39,7 @@ npx funcionario-method@next install
 :::tip[前沿版本]
 要从主分支安装最新版本（可能不稳定）：
 ```bash
-npx github:funcionario-infinito/funcionario-infinito install
+npx github:testemileum/funcionario-infinito install
 ```
 :::
 

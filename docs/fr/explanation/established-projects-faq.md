@@ -47,4 +47,4 @@ Build détecte vos conventions et demande : « Dois-je suivre ces conventions
 
 BMM respecte votre choix — il ne forcera pas la modernisation, mais la proposera.
 
-**Une question sans réponse ici ?** Veuillez [ouvrir un ticket](https://github.com/funcionario-infinito/funcionario-infinito/issues) ou poser votre question sur [Discord](https://discord.gg/SEU-CONVITE-AQUI) afin que nous puissions l’ajouter !
+**Une question sans réponse ici ?** Veuillez [ouvrir un ticket](https://github.com/testemileum/funcionario-infinito/issues) ou poser votre question sur [Discord](https://discord.gg/SEU-CONVITE-AQUI) afin que nous puissions l’ajouter !

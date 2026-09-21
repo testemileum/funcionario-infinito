@@ -142,7 +142,7 @@ export default defineConfig({
       // Social links
       social: [
         { icon: 'discord', label: 'Discord', href: 'https://discord.gg/SEU-CONVITE-AQUI' },
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/funcionario-infinito/funcionario-infinito' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/testemileum/funcionario-infinito' },
         { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@funcionarioinfinito' },
       ],
 

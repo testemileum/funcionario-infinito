@@ -66,7 +66,7 @@ Složka `_funcionario` se vytvoří při instalaci Funcionário Infinito. Pokud 
 **Pokud vaše AI umí číst soubory (Claude Code, Cursor atd.):**
 
 - **Funcionário Infinito nainstalován:** Nasměrujte na složku `_funcionario` a ptejte se přímo
-- **Chcete hlubší kontext:** Naklonujte si [celé repo](https://github.com/funcionario-infinito/funcionario-infinito)
+- **Chcete hlubší kontext:** Naklonujte si [celé repo](https://github.com/testemileum/funcionario-infinito)
 
 **Pokud používáte ChatGPT nebo Claude.ai:**
 
@@ -102,4 +102,4 @@ Zkusili jste přístup přes LLM a stále potřebujete pomoc? Nyní máte mnohem
 
 **Discord:** [discord.gg/SEU-CONVITE-AQUI](https://discord.gg/SEU-CONVITE-AQUI)
 
-**GitHub Issues:** [github.com/funcionario-infinito/funcionario-infinito/issues](https://github.com/funcionario-infinito/funcionario-infinito/issues) (pro jasné chyby)
+**GitHub Issues:** [github.com/testemileum/funcionario-infinito/issues](https://github.com/testemileum/funcionario-infinito/issues) (pro jasné chyby)

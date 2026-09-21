@@ -48,4 +48,4 @@ Build sẽ nhận diện quy ước hiện có và hỏi: "Tôi có nên tuân t
 
 BMM tôn trọng lựa chọn của bạn - nó không ép buộc hiện đại hóa, nhưng sẽ đưa ra lựa chọn đó.
 
-**Có câu hỏi chưa được trả lời ở đây?** Hãy [mở issue](https://github.com/funcionario-infinito/funcionario-infinito/issues) hoặc hỏi trên [Discord](https://discord.gg/SEU-CONVITE-AQUI) để chúng tôi bổ sung!
+**Có câu hỏi chưa được trả lời ở đây?** Hãy [mở issue](https://github.com/testemileum/funcionario-infinito/issues) hoặc hỏi trên [Discord](https://discord.gg/SEU-CONVITE-AQUI) để chúng tôi bổ sung!

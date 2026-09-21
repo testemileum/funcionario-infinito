@@ -1702,7 +1702,7 @@ class FuncionarioUpdateDoctorTests(unittest.TestCase):
                 root,
                 "github-skill",
                 "githubmod",
-                update_source="github:funcionario-infinito/funcionario-infinito/skills",
+                update_source="github:testemileum/funcionario-infinito/skills",
             )
             copies = {copy_item.skill: copy_item for copy_item in setup.discover_installed_copies(skill)}
             response = mock.MagicMock()
@@ -1724,7 +1724,7 @@ class FuncionarioUpdateDoctorTests(unittest.TestCase):
             )
             self.assertEqual(
                 urls[1],
-                "https://raw.githubusercontent.com/funcionario-infinito/funcionario-infinito/main/"
+                "https://raw.githubusercontent.com/testemileum/funcionario-infinito/main/"
                 "skills/github-skill/module-manifest.toml",
             )
 

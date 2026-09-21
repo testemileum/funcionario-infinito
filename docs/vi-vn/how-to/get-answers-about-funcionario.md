@@ -25,7 +25,7 @@ Bạn cũng có thể dùng `/funcionario-help` hoặc `$funcionario-help` tùy 
 
 Funcionário Infinito-Help dựa trên cấu hình bạn đã cài đặt. Nếu bạn cần tìm hiểu nội bộ, lịch sử, hay kiến trúc của Funcionário Infinito, hoặc đang nghiên cứu Funcionário Infinito trước khi cài, hãy để AI đọc trực tiếp mã nguồn.
 
-Hãy clone hoặc mở [repo funcionario-infinito](https://github.com/funcionario-infinito/funcionario-infinito) rồi hỏi AI của bạn về nó. Bất kỳ công cụ nào có hỗ trợ agent như Claude Code, Cursor, Windsurf... đều có thể đọc mã nguồn và trả lời trực tiếp.
+Hãy clone hoặc mở [repo funcionario-infinito](https://github.com/testemileum/funcionario-infinito) rồi hỏi AI của bạn về nó. Bất kỳ công cụ nào có hỗ trợ agent như Claude Code, Cursor, Windsurf... đều có thể đọc mã nguồn và trả lời trực tiếp.
 
 :::note[Ví dụ]
 **Q:** "Hãy chỉ tôi cách nhanh nhất để xây dựng một thứ gì đó bằng Funcionário Infinito"
@@ -53,7 +53,7 @@ Nếu cả Funcionário Infinito-Help lẫn mã nguồn vẫn chưa trả lời 
 
 **Discord:** [discord.gg/SEU-CONVITE-AQUI](https://discord.gg/SEU-CONVITE-AQUI)
 
-**GitHub Issues:** [github.com/funcionario-infinito/funcionario-infinito/issues](https://github.com/funcionario-infinito/funcionario-infinito/issues)
+**GitHub Issues:** [github.com/testemileum/funcionario-infinito/issues](https://github.com/testemileum/funcionario-infinito/issues)
 
 *Chính bạn,*
         *đang mắc kẹt*

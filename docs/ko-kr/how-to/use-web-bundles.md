@@ -38,4 +38,4 @@ description: Funcionário Infinito 웹 번들을 Google Gemini Gem 또는 ChatGP
 
 ## 직접 만들기
 
-기존 Funcionário Infinito 스킬을 웹 번들로 바꾸려면 [funcionario-utility-skills](https://github.com/funcionario-infinito/funcionario-utility-skills)의 `funcionario-os-skill-to-bundle` 유틸리티 스킬을 사용하세요. 이 스킬은 담당 에이전트의 페르소나를 상속하고 목소리가 확연히 다른 페르소나 교체 예시를 포함한 번들 파일을 만듭니다. 번들을 카탈로그에 제출하려면 `web-bundles/bundles.json` 항목과 번들 디렉터리를 추가하는 PR을 [funcionario-infinito](https://github.com/funcionario-infinito/funcionario-infinito)에 여세요.
+기존 Funcionário Infinito 스킬을 웹 번들로 바꾸려면 [funcionario-utility-skills](https://github.com/funcionario-infinito/funcionario-utility-skills)의 `funcionario-os-skill-to-bundle` 유틸리티 스킬을 사용하세요. 이 스킬은 담당 에이전트의 페르소나를 상속하고 목소리가 확연히 다른 페르소나 교체 예시를 포함한 번들 파일을 만듭니다. 번들을 카탈로그에 제출하려면 `web-bundles/bundles.json` 항목과 번들 디렉터리를 추가하는 PR을 [funcionario-infinito](https://github.com/testemileum/funcionario-infinito)에 여세요.

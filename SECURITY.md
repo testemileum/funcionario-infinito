@@ -21,7 +21,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 Instead, please report them via one of these methods:
 
-1. **GitHub Security Advisories** (Preferred): Use [GitHub's private vulnerability reporting](https://github.com/funcionario-infinito/funcionario-infinito/security/advisories/new) to submit a confidential report.
+1. **GitHub Security Advisories** (Preferred): Use [GitHub's private vulnerability reporting](https://github.com/testemileum/funcionario-infinito/security/advisories/new) to submit a confidential report.
 
 2. **Email**: Send a report to [security@funcionario-infinito.com.br](mailto:security@funcionario-infinito.com.br). Please avoid including exploit code in the body if the issue is severe — send a short description and we will arrange a channel for details.
 

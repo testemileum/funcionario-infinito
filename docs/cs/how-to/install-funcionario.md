@@ -39,7 +39,7 @@ Získáte novější změny dříve, s vyšší šancí na nestabilitu oproti v�
 :::tip[Bleeding edge]
 Pro instalaci nejnovější verze z hlavní větve (může být nestabilní):
 ```bash
-npx github:funcionario-infinito/funcionario-infinito install
+npx github:testemileum/funcionario-infinito install
 ```
 :::
 

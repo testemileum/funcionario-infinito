@@ -25,7 +25,7 @@ funcionario-help PRD 워크플로에서 막혔어요
 
 Funcionário Infinito 도움말은 설치된 설정을 바탕으로 답합니다. Funcionário Infinito의 내부 구조, 역사, 아키텍처에 대한 질문이 있거나 설치 전에 Funcionário Infinito를 조사하고 있다면 AI가 소스를 직접 보게 하세요.
 
-[funcionario-infinito 저장소](https://github.com/funcionario-infinito/funcionario-infinito)를 복제하거나 열고 AI에게 질문하세요. 에이전트 기능이 있는 도구(Claude Code, Cursor, Windsurf 등)는 소스를 읽고 직접 답할 수 있습니다.
+[funcionario-infinito 저장소](https://github.com/testemileum/funcionario-infinito)를 복제하거나 열고 AI에게 질문하세요. 에이전트 기능이 있는 도구(Claude Code, Cursor, Windsurf 등)는 소스를 읽고 직접 답할 수 있습니다.
 
 :::note[예시]
 **Q:** "Funcionário Infinito로 무언가를 가장 빠르게 만드는 방법을 알려줘"
@@ -53,7 +53,7 @@ Funcionário Infinito 도움말이나 소스로도 답을 얻지 못했다면, �
 
 **Discord:** [discord.gg/SEU-CONVITE-AQUI](https://discord.gg/SEU-CONVITE-AQUI)
 
-**GitHub Issues:** [github.com/funcionario-infinito/funcionario-infinito/issues](https://github.com/funcionario-infinito/funcionario-infinito/issues)
+**GitHub Issues:** [github.com/testemileum/funcionario-infinito/issues](https://github.com/testemileum/funcionario-infinito/issues)
 
 _막힌 채_<br>
 &emsp;&emsp;_줄을 서서_<br>

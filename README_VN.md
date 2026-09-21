@@ -53,7 +53,7 @@ Funcionário Infinito có thể được mở rộng bằng các mô-đun chính
 
 | Module                                                                                                           | Mục đích                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **[Funcionário Infinito](https://github.com/funcionario-infinito/funcionario-infinito)**                                                  | Lập kế hoạch và bàn giao phần mềm, từ nguyên mẫu mới đến codebase lâu năm                       |
+| **[Funcionário Infinito](https://github.com/testemileum/funcionario-infinito)**                                                  | Lập kế hoạch và bàn giao phần mềm, từ nguyên mẫu mới đến codebase lâu năm                       |
 | **[Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder)**                                                | Trình tạo skill, quy trình và agent                                                             |
 | **[Funcionário Infinito Creative Intelligence Suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)** | Đối tác tư duy sáng tạo cho đổi mới, tư duy thiết kế và kể chuyện                               |
 | **[Funcionário Infinito Test Architect](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)**             | Mô-đun kiểm thử doanh nghiệp bổ trợ cho Funcionário Infinito                                             |
@@ -76,8 +76,8 @@ Funcionário Infinito có thể được mở rộng bằng các mô-đun chính
 - [YouTube](https://youtube.com/@funcionarioinfinito) - Video hướng dẫn, master class và nhiều nội dung khác
 - [X / Twitter](https://x.com/funcionarioinfinito)
 - [Website](https://funcionario-infinito.com.br)
-- [GitHub Issues](https://github.com/funcionario-infinito/funcionario-infinito/issues) - Báo lỗi và yêu cầu tính năng
-- [Discussions](https://github.com/funcionario-infinito/funcionario-infinito/discussions) - Trao đổi cộng đồng
+- [GitHub Issues](https://github.com/testemileum/funcionario-infinito/issues) - Báo lỗi và yêu cầu tính năng
+- [Discussions](https://github.com/testemileum/funcionario-infinito/discussions) - Trao đổi cộng đồng
 
 ## Hỗ trợ Funcionário Infinito
 

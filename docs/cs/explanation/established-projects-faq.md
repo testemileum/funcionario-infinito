@@ -47,4 +47,4 @@ Build detekuje vaše konvence a zeptá se: „Mám dodržovat tyto existující 
 
 BMM respektuje vaši volbu — nevynucuje modernizaci, ale nabídne ji.
 
-**Máte otázku, na kterou jste zde nenašli odpověď?** Prosím [vytvořte issue](https://github.com/funcionario-infinito/funcionario-infinito/issues) nebo se zeptejte na [Discordu](https://discord.gg/SEU-CONVITE-AQUI), abychom ji mohli přidat!
+**Máte otázku, na kterou jste zde nenašli odpověď?** Prosím [vytvořte issue](https://github.com/testemileum/funcionario-infinito/issues) nebo se zeptejte na [Discordu](https://discord.gg/SEU-CONVITE-AQUI), abychom ji mohli přidat!

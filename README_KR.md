@@ -48,7 +48,7 @@ Funcionário Infinito는 무료 오픈 소스이며 유료 전용 워크플로�
 
 | 모듈 | 용도 |
 | --- | --- |
-| **[Funcionário Infinito](https://github.com/funcionario-infinito/funcionario-infinito)** | 새 프로토타입부터 기존 코드베이스까지 소프트웨어를 계획하고 완성합니다. |
+| **[Funcionário Infinito](https://github.com/testemileum/funcionario-infinito)** | 새 프로토타입부터 기존 코드베이스까지 소프트웨어를 계획하고 완성합니다. |
 | **[Funcionário Infinito Builder](https://github.com/funcionario-infinito/funcionario-builder)** | 스킬, 워크플로, 에이전트를 만듭니다. |
 | **[Funcionário Infinito Creative Intelligence Suite](https://github.com/funcionario-infinito/funcionario-module-creative-intelligence-suite)** | 혁신, 디자인 사고, 스토리텔링을 위한 창의적 사고 파트너를 제공합니다. |
 | **[Funcionário Infinito Test Architect](https://github.com/funcionario-infinito/funcionario-method-test-architecture-enterprise)** | Funcionário Infinito에 엔터프라이즈 테스트 기능을 더합니다. |
@@ -70,8 +70,8 @@ Funcionário Infinito는 무료 오픈 소스이며 유료 전용 워크플로�
 
 - [Discord](https://discord.gg/SEU-CONVITE-AQUI) — 도움을 받고 아이디어를 나누며 협업합니다.
 - [YouTube](https://youtube.com/@funcionarioinfinito) — 튜토리얼과 마스터 클래스를 시청합니다.
-- [GitHub Issues](https://github.com/funcionario-infinito/funcionario-infinito/issues) — 버그를 제보하고 기능을 요청합니다.
-- [GitHub Discussions](https://github.com/funcionario-infinito/funcionario-infinito/discussions) — 커뮤니티의 긴 대화에 참여합니다.
+- [GitHub Issues](https://github.com/testemileum/funcionario-infinito/issues) — 버그를 제보하고 기능을 요청합니다.
+- [GitHub Discussions](https://github.com/testemileum/funcionario-infinito/discussions) — 커뮤니티의 긴 대화에 참여합니다.
 - [Funcionario Infinito](https://funcionario-infinito.com.br) — 더 넓은 Funcionário Infinito 생태계를 둘러봅니다.
 
 ## 후원과 기여
