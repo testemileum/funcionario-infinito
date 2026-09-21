@@ -18,14 +18,29 @@ activation_steps_prepend = []
 activation_steps_append = []
 
 # Persistent facts the squad keeps in mind for the whole run.
-# Each entry is either a literal sentence, a skill prefixed with `skill:`, or a `file:`-prefixed
+# Each entry is a literal sentence, a `skill:`-prefixed skill, or a `file:`-prefixed
 # path/glob whose contents are loaded as facts.
 #
 # Common opt-ins (set in team/user override TOML):
 #   "file:{project-root}/marca/tom-de-voz.md"        # guia de tom da marca
-#   "file:{project-root}/marca/claims-aprovados.md"  # alegacoes que o juridico ja liberou
+#   "file:{project-root}/marca/claims-aprovados.md"  # alegacoes ja liberadas
 #   "Nunca prometer resultado financeiro especifico."
 persistent_facts = []
+
+# Portao Zero: the three questions put to the creator before any execution.
+# "exigir"   - default. A "no" on any of the three routes to Espelho instead of writing copy.
+# "avisar"   - asks, warns on a "no", and proceeds anyway.
+# "ignorar"  - skips the gate entirely. Intended only for drafts that will never be published.
+#
+# Leave "exigir". This gate is what separates the squad from a text generator: it stops the
+# work when the product, not the copy, is the problem.
+portao_zero = "exigir"
+
+# Default narrative structure used by Enredo.
+# "quatro-atos" - KI / SHO / TEN / KETSU, driven by revelation (default).
+# "jornada"     - the conventional problem-and-resolution arc.
+# "livre"       - Enredo picks per campaign.
+estrutura_narrativa = "quatro-atos"
 
 # Briefing structure used when the work is large enough to justify a document.
 briefing_template = "assets/briefing-de-campanha.md"
@@ -35,16 +50,18 @@ campanha_output_path = "{output_folder}/campanha"
 run_folder_pattern = "campanha-{project_name}-{date}"
 
 # Whether the Freio review is mandatory before any material is declared ready.
-# Leave true. Setting false removes the squad's only safeguard against false claims
-# and is intended solely for drafts that will never be published.
+# Leave true. The Freio's absolute blocks (fabricated testimonial, promise outside the
+# seller's control, disconnected trauma bait, false scarcity, exploitation of acute distress)
+# are not configurable and hold regardless of this setting.
 freio_obrigatorio = true
 
-# Extra checks the Freio applies on top of its standard list. Each entry is a plain-text
-# directive. Use for niche-specific legal requirements.
+# Extra checks the Freio applies on top of its standard list. Plain-text directives.
+# Use for niche-specific legal requirements.
 #
 # Examples (set in team/user override TOML):
 #   "Nicho de saude: nenhuma alegacao de cura ou tratamento."
-#   "Nicho financeiro: incluir aviso de risco em toda peca de investimento."
+#   "Nicho financeiro: incluir aviso de risco em toda peca."
+#   "Nicho espiritual: nenhuma promessa de efeito sobre a vontade de terceiros."
 freio_checagens_extras = []
 
 # Executed when the squad completes the work.
