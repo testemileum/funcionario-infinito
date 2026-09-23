@@ -22,7 +22,7 @@ JS_JSON_MISSING_TRIGGER = [
         "severity": "HIGH",
         "file": "SKILL.md",
         "line": None,
-        "detail": 'name "missing-trigger" does not match pattern: /^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
+        "detail": 'name "missing-trigger" does not match pattern: /^(?:funcionario|(?:funcionario|esquadrao)-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
         "fix": "Rename to comply with lowercase letters, numbers, and hyphens only (max 64 chars).",
     },
     {
@@ -208,7 +208,7 @@ class TestRules(ProjectCase):
         self.assertEqual(findings[0]["severity"], "HIGH")
         self.assertEqual(
             findings[0]["detail"],
-            'name "NotValid" does not match pattern: /^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
+            'name "NotValid" does not match pattern: /^(?:funcionario|(?:funcionario|esquadrao)-[a-z0-9]+(?:-[a-z0-9]+)*)$/',
         )
 
     def test_skill_05_name_must_match_directory(self):

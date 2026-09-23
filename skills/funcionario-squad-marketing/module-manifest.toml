@@ -1,4 +1,0 @@
-module = "method"
-version = "6.13.0-next"
-update_source = "github:testemileum/funcionario-infinito/skills"
-knowledge = "`references/help.md` in the `funcionario` skill"

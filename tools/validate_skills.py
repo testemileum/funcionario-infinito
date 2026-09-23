@@ -40,9 +40,14 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DIR = os.path.join(PROJECT_ROOT, "skills")
 
 # JS RegExp#toString() forms — Python's re.Pattern repr is not load-bearing for messages.
-NAME_REGEX_DISPLAY = r"/^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$/"
+# Two namespaces: "funcionario-" for the open method, "esquadrao-" for the squads module.
+NAME_REGEX_DISPLAY = (
+    r"/^(?:funcionario|(?:funcionario|esquadrao)-[a-z0-9]+(?:-[a-z0-9]+)*)$/"
+)
 
-NAME_REGEX = re.compile(r"^(?:funcionario|funcionario-[a-z0-9]+(?:-[a-z0-9]+)*)$")
+NAME_REGEX = re.compile(
+    r"^(?:funcionario|(?:funcionario|esquadrao)-[a-z0-9]+(?:-[a-z0-9]+)*)$"
+)
 TIME_ESTIMATE_PATTERNS = [
     re.compile(r"takes?\s+\d+\s*min", re.I),
     re.compile(r"~\s*\d+\s*min", re.I),
